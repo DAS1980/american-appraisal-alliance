@@ -1,0 +1,1295 @@
+{
+  "site": {
+    "name": "American Appraisal Alliance",
+    "type": "website",
+    "domain": "https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com",
+    "language": "en",
+    "defaultSeo": {
+      "titleTemplate": "%s | American Appraisal Alliance",
+      "ogImage": "/og-default.png"
+    },
+    "business_type": "real_estate",
+    "description": "USPAP-compliant real estate appraisal firm serving the Dallas\u2013Fort Worth metroplex",
+    "image_pool": {
+      "hero": [
+        {
+          "url": "https://images.unsplash.com/photo-1777428762767-e3a797da389a",
+          "alt": "A large house with manicured bushes and red flowers.",
+          "width": 6720,
+          "height": 4480
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1773427617774-d9ce7493b3d8",
+          "alt": "A large brick house with a manicured lawn.",
+          "width": 4744,
+          "height": 2753
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1776142380510-916bcdafb0c5",
+          "alt": "Suburban houses nestled against a misty, forested hillside.",
+          "width": 5385,
+          "height": 3590
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1775686381778-dcab010bb976",
+          "alt": "Brick house with attached garage and green lawn.",
+          "width": 4928,
+          "height": 2805
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1770697455385-a5838cfe430f",
+          "alt": "Tudor style house covered in autumn foliage.",
+          "width": 4517,
+          "height": 3011
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1773427646596-01b53d5b6196",
+          "alt": "A large brick house with a stone facade.",
+          "width": 4823,
+          "height": 2884
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1759015395326-6e877ae6cb7c",
+          "alt": "White house with dark trim and autumn trees",
+          "width": 4898,
+          "height": 3265
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1771273142770-9af224cf2050",
+          "alt": "Suburban street with houses and parked cars",
+          "width": 5767,
+          "height": 3845
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1766603636700-e9d80473f40f",
+          "alt": "Modern house with large windows and a green lawn",
+          "width": 6000,
+          "height": 3375
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1773427640897-98400b5fe05f",
+          "alt": "A modern brick house with a large green lawn.",
+          "width": 4284,
+          "height": 2330
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1775686388119-0162bf72df80",
+          "alt": "A large brick house with a covered porch.",
+          "width": 4736,
+          "height": 3264
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1759355787174-044355f63c55",
+          "alt": "A white stucco house with a red tile roof.",
+          "width": 5100,
+          "height": 3400
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1760229090663-fe14715d4efe",
+          "alt": "A grey house with a porch and trees.",
+          "width": 3950,
+          "height": 3201
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1623784929309-703b81d39eec",
+          "alt": "white flowers with green leaves during daytime",
+          "width": 5534,
+          "height": 3381
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1761013320045-d29e4f10bcbc",
+          "alt": "A large white farmhouse with a wrap-around porch.",
+          "width": 4277,
+          "height": 2440
+        }
+      ],
+      "general": [
+        {
+          "url": "https://images.unsplash.com/photo-1678837047193-23291e525599",
+          "alt": "a large building with a clock on the top of it",
+          "width": 4480,
+          "height": 6720
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1678837045065-246dd69363da",
+          "alt": "a tall building with a traffic light in front of it",
+          "width": 6720,
+          "height": 4480
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1678837048746-600f8b0a1835",
+          "alt": "a large building with a clock on the top of it",
+          "width": 4480,
+          "height": 6720
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1678837047142-5a668d7b6e05",
+          "alt": "a large building with many windows and a statue in front of it",
+          "width": 6720,
+          "height": 4480
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1678837048532-ab29cc8faebe",
+          "alt": "a tall building with a clock on the front of it",
+          "width": 4315,
+          "height": 6472
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1678837048624-3f2af30608f0",
+          "alt": "a blurry photo of a city street with a building in the background",
+          "width": 6720,
+          "height": 4480
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1678837048523-aff2889ecbf1",
+          "alt": "a large building with a clock on the top of it",
+          "width": 6720,
+          "height": 4480
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1678837046901-5719fe11c1e2",
+          "alt": "a large building with a clock on the top of it",
+          "width": 4480,
+          "height": 6720
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1678837049045-5d28336ecd1d",
+          "alt": "a brick building on a city street",
+          "width": 6564,
+          "height": 4376
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1678837048839-c40ddf9066d0",
+          "alt": "a building with a mural on the side of it",
+          "width": 6720,
+          "height": 4480
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1678837046682-56b00cd1751f",
+          "alt": "a traffic light sitting next to a tall building",
+          "width": 6720,
+          "height": 4480
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1678837045012-3dc371ba1573",
+          "alt": "a large building with many windows and a clock on it",
+          "width": 4334,
+          "height": 6501
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1678837046606-6cdc351dcd39",
+          "alt": "a large building with a fountain in front of it",
+          "width": 4413,
+          "height": 6619
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1678837046678-3eeaf083e38e",
+          "alt": "a large building with a clock on the top of it",
+          "width": 4476,
+          "height": 6714
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1678837050083-09bb2c29d1db",
+          "alt": "a bunch of plants that are sitting on a window sill",
+          "width": 4480,
+          "height": 6720
+        }
+      ],
+      "people": [
+        {
+          "url": "https://images.unsplash.com/photo-1768247695726-022586dea3a1",
+          "alt": "Young woman with hand on chin in black and white.",
+          "width": 4476,
+          "height": 4476
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1542909168-6296a31d7689",
+          "alt": "man wearing yellow crew-neck top near white wall",
+          "width": 3456,
+          "height": 3456
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1710778044102-56a3a6b69a1b",
+          "alt": "a woman standing with her arms crossed",
+          "width": 3780,
+          "height": 3780
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1681500920181-0aff411f8cab",
+          "alt": "a woman in a suit and tie with red lipstick",
+          "width": 2309,
+          "height": 2412
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1710777915903-a7d7f159f2c0",
+          "alt": "a woman with curly hair wearing a striped shirt",
+          "width": 4480,
+          "height": 4480
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1633625576932-348e73c45e82",
+          "alt": "a man with a beard and a black shirt",
+          "width": 5906,
+          "height": 6000
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1741455620227-3b1c51e01419",
+          "alt": "Smiling man looks at the camera for a portrait.",
+          "width": 3200,
+          "height": 3200
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1701878133751-8279cb13aabd",
+          "alt": "a black and white photo of a smiling man",
+          "width": 5000,
+          "height": 4889
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1645107914072-6f16b732f224",
+          "alt": "a woman with long black hair smiling at the camera",
+          "width": 3543,
+          "height": 3543
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1713456047082-4e844b81c494",
+          "alt": "a man with curly hair standing in front of a wall",
+          "width": 4000,
+          "height": 4137
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1542909168-82c3e7fdca5c",
+          "alt": "boy's face close-up photography",
+          "width": 3456,
+          "height": 3456
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1605857840732-188f2f08cb31",
+          "alt": "man in black framed eyeglasses and black crew neck shirt",
+          "width": 3680,
+          "height": 3680
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1678282955795-200c1e18bc7d",
+          "alt": "a black man in a black turtle neck shirt",
+          "width": 2962,
+          "height": 2963
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1517588632672-9758d6acba04",
+          "alt": "man wearing black denim jacket with black background",
+          "width": 3712,
+          "height": 3712
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1710777932534-2a58edf3603d",
+          "alt": "a woman with a smile on her face",
+          "width": 4480,
+          "height": 4480
+        }
+      ]
+    }
+  },
+  "pages": [
+    {
+      "id": "home",
+      "name": "Home",
+      "slug": "",
+      "isHome": true,
+      "seo": {
+        "title": "American Appraisal Alliance | DFW Certified Appraisals",
+        "description": "USPAP-compliant, court-accepted real estate appraisals for the Dallas\u2013Fort Worth metroplex. Licensed appraisers. Request yours today.",
+        "keywords": [
+          "real estate appraisal Dallas Fort Worth",
+          "USPAP compliant appraisal DFW",
+          "certified residential appraiser Texas",
+          "home appraisal Dallas",
+          "American Appraisal Alliance"
+        ],
+        "ogImage": "",
+        "canonicalUrl": "",
+        "noindex": false,
+        "structuredDataType": "LocalBusiness",
+        "structuredData": null
+      },
+      "sections": [
+        "Header",
+        "Hero",
+        "HomeServices",
+        "ServiceArea",
+        "TrustBar",
+        "WhyChooseUs",
+        "Testimonials",
+        "HomeCTA",
+        "Footer"
+      ],
+      "inNavigation": true
+    },
+    {
+      "id": "core-appraisal-services",
+      "name": "Core Appraisal Services",
+      "slug": "core-appraisal-services",
+      "isHome": false,
+      "seo": {
+        "title": "Core Appraisal Services - American Appraisal Alliance",
+        "description": "Browse all 9 USPAP-compliant residential appraisal services from American Appraisal Alliance \u2014 serving the Dallas\u2013Fort Worth metroplex. Request an appraisal today.",
+        "keywords": [
+          "residential appraisal DFW",
+          "USPAP appraisal services Dallas Fort Worth",
+          "divorce appraisal Texas",
+          "estate appraisal DFW",
+          "tax assessment appeal appraisal"
+        ],
+        "ogImage": "",
+        "canonicalUrl": "",
+        "noindex": false,
+        "structuredDataType": "ProfessionalService",
+        "structuredData": null
+      },
+      "sections": [
+        "Header",
+        "ServiceCardsGrid9ServicesResidentialUrar",
+        "CoreAppraisalServiceCards",
+        "CoreAppraisalWhyChooseUs",
+        "Footer"
+      ],
+      "inNavigation": true
+    },
+    {
+      "id": "valuation-updates-reports",
+      "name": "Valuation Updates & Reports",
+      "slug": "valuation-updates-reports",
+      "isHome": false,
+      "seo": {
+        "title": "Valuation Updates & Reports | American Appraisal Alliance",
+        "description": "USPAP-compliant Market Value Updates (1004D) and FHA/HUD Compliance Observation Reports for DFW lenders, homeowners, and real estate professionals.",
+        "keywords": [
+          "market value update 1004D DFW",
+          "FHA compliance observation report Dallas",
+          "appraisal recertification Fort Worth",
+          "valuation update lender appraisal Texas",
+          "American Appraisal Alliance"
+        ],
+        "ogImage": "",
+        "canonicalUrl": "",
+        "noindex": false,
+        "structuredDataType": "Service",
+        "structuredData": null
+      },
+      "sections": [
+        "Header",
+        "ValuationUpdatesHero",
+        "ValuationUpdatesServiceCards",
+        "ValuationUpdatesWhoNeeds",
+        "ValuationUpdatesCTA",
+        "Footer"
+      ],
+      "inNavigation": true
+    },
+    {
+      "id": "measurement-analysis-services",
+      "name": "Measurement & Analysis Services",
+      "slug": "measurement-analysis-services",
+      "isHome": false,
+      "seo": {
+        "title": "Measurement & Analysis Services | American Appraisal Alliance",
+        "description": "USPAP-compliant property measurement and GLA certification services in Dallas\u2013Fort Worth. ANSI Z765-2021 standards. Request your report today.",
+        "keywords": [
+          "property measurement appraisal DFW",
+          "ANSI Z765 measurement Dallas",
+          "GLA certification Fort Worth",
+          "square footage verification Texas",
+          "floor plan sketch report DFW"
+        ],
+        "ogImage": "",
+        "canonicalUrl": "",
+        "noindex": false,
+        "structuredDataType": "Service",
+        "structuredData": null
+      },
+      "sections": [
+        "Header",
+        "MeasurementAnalysisHero",
+        "MeasurementServiceCards",
+        "MeasurementWhyItMatters",
+        "MeasurementCTA",
+        "Footer"
+      ],
+      "inNavigation": true
+    },
+    {
+      "id": "request",
+      "name": "Request an Appraisal",
+      "slug": "request",
+      "isHome": false,
+      "seo": {
+        "title": "Request an Appraisal - American Appraisal Alliance",
+        "description": "Submit your real estate appraisal request to American Appraisal Alliance. Serving all of DFW \u2014 confidential, USPAP-compliant, 1-business-day response.",
+        "keywords": [
+          "request real estate appraisal DFW",
+          "appraisal request form Dallas Fort Worth",
+          "USPAP appraisal inquiry Texas",
+          "order home appraisal DFW",
+          "American Appraisal Alliance contact"
+        ],
+        "ogImage": "",
+        "canonicalUrl": "",
+        "noindex": false,
+        "structuredDataType": "ContactPage",
+        "structuredData": null
+      },
+      "sections": [
+        "Header",
+        "RequestHero",
+        "RequestServiceArea",
+        "RequestIntakeForm",
+        "RequestReassurance",
+        "Footer"
+      ],
+      "inNavigation": true
+    },
+    {
+      "id": "about",
+      "name": "About Us",
+      "slug": "about",
+      "isHome": false,
+      "seo": {
+        "title": "About Us - American Appraisal Alliance | DFW",
+        "description": "Learn about American Appraisal Alliance \u2014 licensed, USPAP-compliant real estate appraisers serving the Dallas\u2013Fort Worth metroplex with accurate, defensible valuations.",
+        "keywords": [
+          "American Appraisal Alliance",
+          "DFW certified real estate appraiser",
+          "USPAP compliant appraisal firm",
+          "licensed appraiser Dallas Fort Worth",
+          "real estate appraisal credentials"
+        ],
+        "ogImage": "",
+        "canonicalUrl": "",
+        "noindex": false,
+        "structuredDataType": "AboutPage",
+        "structuredData": null
+      },
+      "sections": [
+        "Header",
+        "AboutHero",
+        "AboutCompanyOverview",
+        "AboutUSPAPCompliance",
+        "AboutAppraiserCredentials",
+        "AboutMissionStatement",
+        "AboutCTA",
+        "Footer"
+      ],
+      "inNavigation": true
+    },
+    {
+      "id": "contact",
+      "name": "Contact",
+      "slug": "contact",
+      "isHome": false,
+      "seo": {
+        "title": "Contact Us - American Appraisal Alliance | DFW",
+        "description": "Reach American Appraisal Alliance by phone, email, or office visit. USPAP-compliant appraisals across Dallas\u2013Fort Worth. We respond within 1 business day.",
+        "keywords": [
+          "contact real estate appraiser DFW",
+          "Dallas Fort Worth appraisal contact",
+          "American Appraisal Alliance phone email",
+          "USPAP appraiser DFW contact",
+          "request appraisal Dallas"
+        ],
+        "ogImage": "",
+        "canonicalUrl": "",
+        "noindex": false,
+        "structuredDataType": "ContactPage",
+        "structuredData": null
+      },
+      "sections": [
+        "Header",
+        "ContactHero",
+        "ContactServiceArea",
+        "ContactDetails",
+        "ContactAppraisalLink",
+        "Footer"
+      ],
+      "inNavigation": true
+    },
+    {
+      "id": "residential-appraisal",
+      "name": "Residential Appraisal (Full URAR)",
+      "slug": "residential-appraisal",
+      "isHome": false,
+      "seo": {
+        "title": "Full URAR Residential Appraisal - American Appraisal Alliance",
+        "description": "USPAP-compliant Full URAR residential appraisals for lenders, attorneys & homeowners in Dallas\u2013Fort Worth. Fast turnaround. Request yours today.",
+        "keywords": [
+          "full URAR appraisal DFW",
+          "residential appraisal Dallas Fort Worth",
+          "Fannie Mae Form 1004 appraisal",
+          "USPAP compliant home appraisal",
+          "American Appraisal Alliance"
+        ],
+        "ogImage": "",
+        "canonicalUrl": "",
+        "noindex": false,
+        "structuredDataType": "Service",
+        "structuredData": null
+      },
+      "sections": [
+        "Header",
+        "ResidentialAppraisalHero",
+        "ResidentialAppraisalWhatItIs",
+        "ResidentialAppraisalWhoNeedsIt",
+        "ResidentialAppraisalWhatsIncluded",
+        "ResidentialAppraisalTurnaround",
+        "ResidentialAppraisalCTA",
+        "Footer"
+      ],
+      "inNavigation": false
+    },
+    {
+      "id": "divorce-appraisal",
+      "name": "Divorce Appraisal",
+      "slug": "divorce-appraisal",
+      "isHome": false,
+      "seo": {
+        "title": "Divorce Appraisal Dallas\u2013Fort Worth | American Appraisal Alliance",
+        "description": "Court-accepted, USPAP-compliant divorce appraisals in DFW. Neutral property valuations and retroactive date-of-separation reports for attorneys and courts.",
+        "keywords": [
+          "divorce appraisal Dallas Fort Worth",
+          "court-accepted property appraisal divorce",
+          "date of separation appraisal DFW",
+          "USPAP divorce appraisal Texas",
+          "real estate appraisal divorce proceedings"
+        ],
+        "ogImage": "",
+        "canonicalUrl": "",
+        "noindex": false,
+        "structuredDataType": "ProfessionalService",
+        "structuredData": null
+      },
+      "sections": [
+        "Header",
+        "DivorceAppraisalHero",
+        "DivorceAppraisalWhatItIs",
+        "DivorceAppraisalWhoNeedsIt",
+        "DivorceAppraisalWhatsIncluded",
+        "DivorceAppraisalTurnaround",
+        "DivorceAppraisalCTA",
+        "Footer"
+      ],
+      "inNavigation": false
+    },
+    {
+      "id": "tax-assessment-appeal",
+      "name": "Tax Assessment Appeal Appraisal",
+      "slug": "tax-assessment-appeal",
+      "isHome": false,
+      "seo": {
+        "title": "Tax Assessment Appeal Appraisal | American Appraisal Alliance",
+        "description": "Challenge your Dallas, Tarrant, Collin, or Denton CAD tax assessment with a certified, USPAP-compliant appraisal. DFW experts. Fast turnaround.",
+        "keywords": [
+          "tax assessment appeal appraisal DFW",
+          "property tax protest appraisal Dallas",
+          "CAD appeal appraisal Tarrant Collin Denton",
+          "USPAP appraisal tax protest Texas",
+          "American Appraisal Alliance tax assessment"
+        ],
+        "ogImage": "",
+        "canonicalUrl": "",
+        "noindex": false,
+        "structuredDataType": "Service",
+        "structuredData": null
+      },
+      "sections": [
+        "Header",
+        "TaxAssessmentAppealHero",
+        "TaxAssessmentWhatItIs",
+        "TaxAssessmentWhoNeedsIt",
+        "TaxAssessmentWhatsIncluded",
+        "TaxAssessmentTurnaround",
+        "TaxAssessmentCTA",
+        "Footer"
+      ],
+      "inNavigation": false
+    },
+    {
+      "id": "desktop-appraisal",
+      "name": "Desktop Appraisal",
+      "slug": "desktop-appraisal",
+      "isHome": false,
+      "seo": {
+        "title": "Desktop Appraisal - American Appraisal Alliance | DFW",
+        "description": "Get a fast, USPAP-compliant desktop appraisal in the Dallas\u2013Fort Worth area. No interior inspection required. Licensed appraisers, lender-accepted reports.",
+        "keywords": [
+          "desktop appraisal DFW",
+          "desktop appraisal Dallas Fort Worth",
+          "USPAP desktop appraisal Texas",
+          "no inspection appraisal",
+          "American Appraisal Alliance"
+        ],
+        "ogImage": "",
+        "canonicalUrl": "",
+        "noindex": false,
+        "structuredDataType": "Service",
+        "structuredData": null
+      },
+      "sections": [
+        "Header",
+        "DesktopAppraisalHero",
+        "DesktopAppraisalOverview",
+        "DesktopAppraisalWhyChooseUs",
+        "Footer"
+      ],
+      "inNavigation": true
+    },
+    {
+      "id": "exterior-only-drive-by-appraisal",
+      "name": "Exterior-Only (Drive-By) Appraisal",
+      "slug": "exterior-only-drive-by-appraisal",
+      "isHome": false,
+      "seo": {
+        "title": "Exterior-Only Drive-By Appraisal | DFW - American Appraisal Alliance",
+        "description": "Fast, USPAP-compliant exterior-only (drive-by) appraisals for HELOCs and loans in Dallas\u2013Fort Worth. Licensed appraisers. 2\u20133 day turnaround.",
+        "keywords": [
+          "exterior-only appraisal DFW",
+          "drive-by appraisal Dallas Fort Worth",
+          "HELOC appraisal Texas",
+          "drive-by home appraisal",
+          "USPAP drive-by appraisal"
+        ],
+        "ogImage": "",
+        "canonicalUrl": "",
+        "noindex": false,
+        "structuredDataType": "Service",
+        "structuredData": null
+      },
+      "sections": [
+        "Header",
+        "ExteriorOnlyDriveByAppraisalHero",
+        "ExteriorOnlyServiceDetail",
+        "ExteriorOnlyWhyChooseUs",
+        "ExteriorOnlyAppraisalCTA",
+        "Footer"
+      ],
+      "inNavigation": true
+    },
+    {
+      "id": "pre-listing-appraisal",
+      "name": "Pre-Listing Appraisal",
+      "slug": "pre-listing-appraisal",
+      "isHome": false,
+      "seo": {
+        "title": "Pre-Listing Appraisal DFW | American Appraisal Alliance",
+        "description": "Get a USPAP-compliant pre-listing appraisal in Dallas\u2013Fort Worth before you list. Price confidently, negotiate from strength. Licensed DFW appraisers.",
+        "keywords": [
+          "pre-listing appraisal DFW",
+          "home appraisal before selling Dallas",
+          "seller appraisal Fort Worth",
+          "independent real estate appraisal DFW",
+          "USPAP appraisal pre-listing Texas"
+        ],
+        "ogImage": "",
+        "canonicalUrl": "",
+        "noindex": false,
+        "structuredDataType": "Service",
+        "structuredData": null
+      },
+      "sections": [
+        "Header",
+        "PreListingAppraisalHero",
+        "PreListingServiceDetail",
+        "PreListingWhyChooseUs",
+        "PreListingCTA",
+        "Footer"
+      ],
+      "inNavigation": true
+    },
+    {
+      "id": "pre-purchase-appraisal",
+      "name": "Pre-Purchase Appraisal",
+      "slug": "pre-purchase-appraisal",
+      "isHome": false,
+      "seo": {
+        "title": "Pre-Purchase Appraisal DFW | American Appraisal Alliance",
+        "description": "Get an independent pre-purchase appraisal before closing. USPAP-compliant, licensed DFW appraisers confirm fair market value and protect buyers from overpaying.",
+        "keywords": [
+          "pre-purchase appraisal Dallas Fort Worth",
+          "buyer appraisal DFW",
+          "independent home appraisal before closing",
+          "USPAP appraisal DFW",
+          "American Appraisal Alliance"
+        ],
+        "ogImage": "",
+        "canonicalUrl": "",
+        "noindex": false,
+        "structuredDataType": "Service",
+        "structuredData": null
+      },
+      "sections": [
+        "Header",
+        "PrePurchaseAppraisalHero",
+        "PrePurchaseAppraisalDetails",
+        "PrePurchaseWhyChooseUs",
+        "PrePurchaseAppraisalCTA",
+        "Footer"
+      ],
+      "inNavigation": true
+    },
+    {
+      "id": "estate-date-of-death-appraisal",
+      "name": "Estate / Date of Death Appraisal",
+      "slug": "estate-date-of-death-appraisal",
+      "isHome": false,
+      "seo": {
+        "title": "Estate & Date of Death Appraisal | American Appraisal Alliance",
+        "description": "USPAP-compliant retrospective appraisals for estate settlement, probate, and IRS Form 706. Accepted by attorneys, CPAs, and courts across DFW.",
+        "keywords": [
+          "estate appraisal Dallas Fort Worth",
+          "date of death appraisal DFW",
+          "IRS Form 706 appraisal Texas",
+          "probate appraisal Dallas",
+          "retrospective real estate appraisal"
+        ],
+        "ogImage": "",
+        "canonicalUrl": "",
+        "noindex": false,
+        "structuredDataType": "ProfessionalService",
+        "structuredData": null
+      },
+      "sections": [
+        "Header",
+        "EstateAppraisalHero",
+        "EstateAppraisalWhatItIs",
+        "EstateAppraisalWhatsIncluded",
+        "EstateAppraisalWhyChooseUs",
+        "EstateAppraisalCTA",
+        "Footer"
+      ],
+      "inNavigation": true
+    },
+    {
+      "id": "pmi-removal-appraisal",
+      "name": "PMI Removal Appraisal",
+      "slug": "pmi-removal-appraisal",
+      "isHome": false,
+      "seo": {
+        "title": "PMI Removal Appraisal - American Appraisal Alliance",
+        "description": "Get a USPAP-compliant PMI removal appraisal in Dallas\u2013Fort Worth. Prove your home's value, drop below 80% LTV, and stop paying Private Mortgage Insurance.",
+        "keywords": [
+          "PMI removal appraisal DFW",
+          "private mortgage insurance appraisal Dallas",
+          "remove PMI appraisal Fort Worth",
+          "80% LTV appraisal Texas",
+          "USPAP appraisal PMI cancellation"
+        ],
+        "ogImage": "",
+        "canonicalUrl": "",
+        "noindex": false,
+        "structuredDataType": "Service",
+        "structuredData": null
+      },
+      "sections": [
+        "Header",
+        "PMIRemovalAppraisalHero",
+        "PMIRemovalWhatItIs",
+        "PMIRemovalWhyChooseUs",
+        "PMIRemovalCTA",
+        "Footer"
+      ],
+      "inNavigation": true
+    },
+    {
+      "id": "market-value-update-1004d-recertification",
+      "name": "Market Value Update (1004D / Recertification)",
+      "slug": "market-value-update-1004d-recertification",
+      "isHome": false,
+      "seo": {
+        "title": "Market Value Update 1004D | American Appraisal Alliance",
+        "description": "Get a Fannie Mae Form 1004D Market Value Update or Recertification from licensed DFW appraisers. USPAP-compliant, lender-approved, fast turnaround.",
+        "keywords": [
+          "1004D appraisal update",
+          "market value recertification DFW",
+          "Fannie Mae Form 1004D",
+          "appraisal update Dallas Fort Worth",
+          "USPAP compliant recertification"
+        ],
+        "ogImage": "",
+        "canonicalUrl": "",
+        "noindex": false,
+        "structuredDataType": "Service",
+        "structuredData": null
+      },
+      "sections": [
+        "Header",
+        "MarketValueUpdateHero",
+        "MarketValueUpdateDetails",
+        "MarketValueUpdateWhyChooseUs",
+        "MarketValueUpdateCTA",
+        "Footer"
+      ],
+      "inNavigation": true
+    },
+    {
+      "id": "fhahud-compliance-observation-report",
+      "name": "FHA/HUD Compliance Observation Report",
+      "slug": "fhahud-compliance-observation-report",
+      "isHome": false,
+      "seo": {
+        "title": "FHA/HUD Compliance Observation Report | American Appraisal Alliance",
+        "description": "Get a USPAP-compliant FHA/HUD Compliance Observation Report in Dallas\u2013Fort Worth. Documents health, safety, and structural conditions for FHA loan eligibility.",
+        "keywords": [
+          "FHA HUD compliance observation report",
+          "FHA appraisal Dallas Fort Worth",
+          "HUD property condition report DFW",
+          "FHA loan compliance appraisal",
+          "American Appraisal Alliance"
+        ],
+        "ogImage": "",
+        "canonicalUrl": "",
+        "noindex": false,
+        "structuredDataType": "Service",
+        "structuredData": null
+      },
+      "sections": [
+        "Header",
+        "FhaHudComplianceHero",
+        "FhaHudWhatItIs",
+        "FhaHudWhyChooseUs",
+        "FhaHudCTA",
+        "Footer"
+      ],
+      "inNavigation": true
+    },
+    {
+      "id": "property-measurement-ansi-z765",
+      "name": "Property Measurement (ANSI Z765)",
+      "slug": "property-measurement-ansi-z765",
+      "isHome": false,
+      "seo": {
+        "title": "ANSI Z765 Property Measurement | American Appraisal Alliance",
+        "description": "Licensed DFW appraisers providing precise ANSI Z765-2021 property measurement reports. USPAP-compliant GLA calculations accepted by lenders and MLS.",
+        "keywords": [
+          "ANSI Z765 property measurement",
+          "home square footage measurement DFW",
+          "USPAP-compliant measurement report",
+          "gross living area calculation Dallas",
+          "American Appraisal Alliance"
+        ],
+        "ogImage": "",
+        "canonicalUrl": "",
+        "noindex": false,
+        "structuredDataType": "Service",
+        "structuredData": null
+      },
+      "sections": [
+        "Header",
+        "PropertyMeasurementAnsiHero",
+        "PropertyMeasurementAnsiWhatItIs",
+        "PropertyMeasurementAnsiWhyChooseUs",
+        "PropertyMeasurementAnsiCTA",
+        "Footer"
+      ],
+      "inNavigation": true
+    },
+    {
+      "id": "gross-living-area-gla-certification",
+      "name": "Gross Living Area (GLA) Certification",
+      "slug": "gross-living-area-gla-certification",
+      "isHome": false,
+      "seo": {
+        "title": "GLA Certification - American Appraisal Alliance DFW",
+        "description": "USPAP-compliant Gross Living Area (GLA) certification using ANSI Z765-2021 standards. Trusted by DFW lenders, attorneys & homeowners. Request yours today.",
+        "keywords": [
+          "GLA certification Dallas Fort Worth",
+          "gross living area appraisal DFW",
+          "ANSI Z765 home measurement Texas",
+          "USPAP compliant GLA report",
+          "square footage certification DFW appraiser"
+        ],
+        "ogImage": "",
+        "canonicalUrl": "",
+        "noindex": false,
+        "structuredDataType": "Service",
+        "structuredData": null
+      },
+      "sections": [
+        "Header",
+        "GrossLivingAreaCertificationHero",
+        "GrossLivingAreaWhatItIs",
+        "GrossLivingAreaWhyChooseUs",
+        "GrossLivingAreaCTA",
+        "Footer"
+      ],
+      "inNavigation": true
+    },
+    {
+      "id": "desktop_appraisal",
+      "name": "Desktop Appraisal",
+      "slug": "desktop-appraisal",
+      "isHome": false,
+      "seo": {
+        "title": "Desktop Appraisal - American Appraisal Alliance | DFW",
+        "description": "Get a fast, USPAP-compliant desktop appraisal in the Dallas\u2013Fort Worth area. No interior inspection required. Licensed appraisers, lender-accepted reports.",
+        "keywords": [
+          "desktop appraisal DFW",
+          "desktop appraisal Dallas Fort Worth",
+          "USPAP desktop appraisal Texas",
+          "no inspection appraisal",
+          "American Appraisal Alliance"
+        ],
+        "ogImage": "",
+        "canonicalUrl": "",
+        "noindex": false,
+        "structuredDataType": "Service",
+        "structuredData": null
+      },
+      "sections": [
+        "Header",
+        "DesktopAppraisalHero",
+        "DesktopAppraisalOverview",
+        "DesktopAppraisalWhyChooseUs",
+        "Footer"
+      ],
+      "inNavigation": true
+    },
+    {
+      "id": "exterior_only__drive_by__appraisal",
+      "name": "Exterior-Only (Drive-By) Appraisal",
+      "slug": "exterior-only-drive-by-appraisal",
+      "isHome": false,
+      "seo": {
+        "title": "Exterior-Only Drive-By Appraisal | DFW - American Appraisal Alliance",
+        "description": "Fast, USPAP-compliant exterior-only (drive-by) appraisals for HELOCs and loans in Dallas\u2013Fort Worth. Licensed appraisers. 2\u20133 day turnaround. Request today.",
+        "keywords": [
+          "exterior-only appraisal DFW",
+          "drive-by appraisal Dallas Fort Worth",
+          "HELOC appraisal Texas",
+          "drive-by home appraisal",
+          "USPAP drive-by appraisal"
+        ],
+        "ogImage": "",
+        "canonicalUrl": "",
+        "noindex": false,
+        "structuredDataType": "Service",
+        "structuredData": null
+      },
+      "sections": [
+        "Header",
+        "ExteriorOnlyDriveByAppraisalHero",
+        "ExteriorOnlyServiceDetail",
+        "ExteriorOnlyWhyChooseUs",
+        "ExteriorOnlyAppraisalCTA",
+        "Footer"
+      ],
+      "inNavigation": true
+    },
+    {
+      "id": "pre_listing_appraisal",
+      "name": "Pre-Listing Appraisal",
+      "slug": "pre-listing-appraisal",
+      "isHome": false,
+      "seo": {
+        "title": "Pre-Listing Appraisal DFW | American Appraisal Alliance",
+        "description": "Get a USPAP-compliant pre-listing appraisal in Dallas\u2013Fort Worth before you list. Price confidently, negotiate from strength. Licensed DFW appraisers.",
+        "keywords": [
+          "pre-listing appraisal DFW",
+          "home appraisal before selling Dallas",
+          "seller appraisal Fort Worth",
+          "independent real estate appraisal DFW",
+          "USPAP appraisal pre-listing Texas"
+        ],
+        "ogImage": "",
+        "canonicalUrl": "",
+        "noindex": false,
+        "structuredDataType": "Service",
+        "structuredData": null
+      },
+      "sections": [
+        "Header",
+        "PreListingAppraisalHero",
+        "PreListingServiceDetail",
+        "PreListingWhyChooseUs",
+        "PreListingCTA",
+        "Footer"
+      ],
+      "inNavigation": true
+    },
+    {
+      "id": "pre_purchase_appraisal",
+      "name": "Pre-Purchase Appraisal",
+      "slug": "pre-purchase-appraisal",
+      "isHome": false,
+      "seo": {
+        "title": "Pre-Purchase Appraisal DFW | American Appraisal Alliance",
+        "description": "Get an independent pre-purchase appraisal before closing. USPAP-compliant, licensed DFW appraisers confirm fair market value and protect buyers from overpaying.",
+        "keywords": [
+          "pre-purchase appraisal Dallas Fort Worth",
+          "buyer appraisal DFW",
+          "independent home appraisal before closing",
+          "USPAP appraisal DFW",
+          "American Appraisal Alliance"
+        ],
+        "ogImage": "",
+        "canonicalUrl": "",
+        "noindex": false,
+        "structuredDataType": "Service",
+        "structuredData": null
+      },
+      "sections": [
+        "Header",
+        "PrePurchaseAppraisalHero",
+        "PrePurchaseAppraisalDetails",
+        "PrePurchaseWhyChooseUs",
+        "PrePurchaseAppraisalCTA",
+        "Footer"
+      ],
+      "inNavigation": true
+    },
+    {
+      "id": "estate___date_of_death_appraisal",
+      "name": "Estate / Date of Death Appraisal",
+      "slug": "estate-date-of-death-appraisal",
+      "isHome": false,
+      "seo": {
+        "title": "Estate & Date of Death Appraisal | American Appraisal Alliance",
+        "description": "USPAP-compliant retrospective appraisals for estate settlement, probate, and IRS Form 706. Accepted by attorneys, CPAs, and courts across the DFW metroplex.",
+        "keywords": [
+          "estate appraisal Dallas Fort Worth",
+          "date of death appraisal DFW",
+          "IRS Form 706 appraisal Texas",
+          "probate appraisal Dallas",
+          "retrospective real estate appraisal"
+        ],
+        "ogImage": "",
+        "canonicalUrl": "",
+        "noindex": false,
+        "structuredDataType": "ProfessionalService",
+        "structuredData": null
+      },
+      "sections": [
+        "Header",
+        "EstateAppraisalHero",
+        "EstateAppraisalWhatItIs",
+        "EstateAppraisalWhatsIncluded",
+        "EstateAppraisalWhyChooseUs",
+        "EstateAppraisalCTA",
+        "Footer"
+      ],
+      "inNavigation": true
+    },
+    {
+      "id": "pmi_removal_appraisal",
+      "name": "PMI Removal Appraisal",
+      "slug": "pmi-removal-appraisal",
+      "isHome": false,
+      "seo": {
+        "title": "PMI Removal Appraisal - American Appraisal Alliance",
+        "description": "Get a USPAP-compliant PMI removal appraisal in Dallas\u2013Fort Worth. Prove your home's value, drop below 80% LTV, and stop paying Private Mortgage Insurance.",
+        "keywords": [
+          "PMI removal appraisal DFW",
+          "private mortgage insurance appraisal Dallas",
+          "remove PMI appraisal Fort Worth",
+          "80% LTV appraisal Texas",
+          "USPAP appraisal PMI cancellation"
+        ],
+        "ogImage": "",
+        "canonicalUrl": "",
+        "noindex": false,
+        "structuredDataType": "Service",
+        "structuredData": null
+      },
+      "sections": [
+        "Header",
+        "PMIRemovalAppraisalHero",
+        "PMIRemovalWhatItIs",
+        "PMIRemovalWhyChooseUs",
+        "PMIRemovalCTA",
+        "Footer"
+      ],
+      "inNavigation": true
+    },
+    {
+      "id": "market_value_update__1004d___recertification",
+      "name": "Market Value Update (1004D / Recertification)",
+      "slug": "market-value-update-1004d-recertification",
+      "isHome": false,
+      "seo": {
+        "title": "Market Value Update 1004D | American Appraisal Alliance",
+        "description": "Get a Fannie Mae Form 1004D Market Value Update or Recertification from licensed DFW appraisers. USPAP-compliant, lender-approved, fast turnaround.",
+        "keywords": [
+          "1004D appraisal update",
+          "market value recertification DFW",
+          "Fannie Mae Form 1004D",
+          "appraisal update Dallas Fort Worth",
+          "USPAP compliant recertification"
+        ],
+        "ogImage": "",
+        "canonicalUrl": "",
+        "noindex": false,
+        "structuredDataType": "Service",
+        "structuredData": null
+      },
+      "sections": [
+        "Header",
+        "MarketValueUpdateHero",
+        "MarketValueUpdateDetails",
+        "MarketValueUpdateWhyChooseUs",
+        "MarketValueUpdateCTA",
+        "Footer"
+      ],
+      "inNavigation": true
+    },
+    {
+      "id": "fha_hud_compliance_observation_report",
+      "name": "FHA/HUD Compliance Observation Report",
+      "slug": "fhahud-compliance-observation-report",
+      "isHome": false,
+      "seo": {
+        "title": "FHA/HUD Compliance Observation Report | American Appraisal Alliance",
+        "description": "Get a USPAP-compliant FHA/HUD Compliance Observation Report in Dallas\u2013Fort Worth. Documents health, safety, and structural conditions for FHA loan eligibility.",
+        "keywords": [
+          "FHA HUD compliance observation report",
+          "FHA appraisal Dallas Fort Worth",
+          "HUD property condition report DFW",
+          "FHA loan compliance appraisal",
+          "American Appraisal Alliance"
+        ],
+        "ogImage": "",
+        "canonicalUrl": "",
+        "noindex": false,
+        "structuredDataType": "Service",
+        "structuredData": null
+      },
+      "sections": [
+        "Header",
+        "FhaHudComplianceHero",
+        "FhaHudWhatItIs",
+        "FhaHudWhyChooseUs",
+        "FhaHudCTA",
+        "Footer"
+      ],
+      "inNavigation": true
+    },
+    {
+      "id": "property_measurement__ansi_z765",
+      "name": "Property Measurement (ANSI Z765)",
+      "slug": "property-measurement-ansi-z765",
+      "isHome": false,
+      "seo": {
+        "title": "ANSI Z765 Property Measurement | American Appraisal Alliance",
+        "description": "Licensed DFW appraisers providing precise ANSI Z765-2021 property measurement reports. USPAP-compliant GLA calculations accepted by lenders and MLS. Request yours today.",
+        "keywords": [
+          "ANSI Z765 property measurement",
+          "home square footage measurement DFW",
+          "USPAP-compliant measurement report",
+          "gross living area calculation Dallas",
+          "American Appraisal Alliance"
+        ],
+        "ogImage": "",
+        "canonicalUrl": "",
+        "noindex": false,
+        "structuredDataType": "Service",
+        "structuredData": null
+      },
+      "sections": [
+        "Header",
+        "PropertyMeasurementAnsiHero",
+        "PropertyMeasurementAnsiWhatItIs",
+        "PropertyMeasurementAnsiWhyChooseUs",
+        "PropertyMeasurementAnsiCTA",
+        "Footer"
+      ],
+      "inNavigation": true
+    },
+    {
+      "id": "gross_living_area__gla__certification",
+      "name": "Gross Living Area (GLA) Certification",
+      "slug": "gross-living-area-gla-certification",
+      "isHome": false,
+      "seo": {
+        "title": "GLA Certification - American Appraisal Alliance DFW",
+        "description": "USPAP-compliant Gross Living Area (GLA) certification using ANSI Z765-2021 standards. Trusted by DFW lenders, attorneys & homeowners. Request yours today.",
+        "keywords": [
+          "GLA certification Dallas Fort Worth",
+          "gross living area appraisal DFW",
+          "ANSI Z765 home measurement Texas",
+          "USPAP compliant GLA report",
+          "square footage certification DFW appraiser"
+        ],
+        "ogImage": "",
+        "canonicalUrl": "",
+        "noindex": false,
+        "structuredDataType": "Service",
+        "structuredData": null
+      },
+      "sections": [
+        "Header",
+        "GrossLivingAreaCertificationHero",
+        "GrossLivingAreaWhatItIs",
+        "GrossLivingAreaWhyChooseUs",
+        "GrossLivingAreaCTA",
+        "Footer"
+      ],
+      "inNavigation": true
+    }
+  ],
+  "navigation": {
+    "header": [
+      "home",
+      "core-appraisal-services",
+      "valuation-updates-reports",
+      "measurement-analysis-services",
+      "request",
+      "about",
+      "contact",
+      "desktop-appraisal",
+      "exterior-only-drive-by-appraisal",
+      "pre-listing-appraisal",
+      "pre-purchase-appraisal",
+      "estate-date-of-death-appraisal",
+      "pmi-removal-appraisal",
+      "market-value-update-1004d-recertification",
+      "fhahud-compliance-observation-report",
+      "property-measurement-ansi-z765",
+      "gross-living-area-gla-certification",
+      "desktop_appraisal",
+      "exterior_only__drive_by__appraisal",
+      "pre_listing_appraisal",
+      "pre_purchase_appraisal",
+      "estate___date_of_death_appraisal",
+      "pmi_removal_appraisal",
+      "market_value_update__1004d___recertification",
+      "fha_hud_compliance_observation_report",
+      "property_measurement__ansi_z765",
+      "gross_living_area__gla__certification"
+    ],
+    "footer": [
+      "home",
+      "core-appraisal-services",
+      "valuation-updates-reports",
+      "measurement-analysis-services",
+      "request",
+      "about",
+      "contact",
+      "desktop-appraisal",
+      "exterior-only-drive-by-appraisal",
+      "pre-listing-appraisal",
+      "pre-purchase-appraisal",
+      "estate-date-of-death-appraisal",
+      "pmi-removal-appraisal",
+      "market-value-update-1004d-recertification",
+      "fhahud-compliance-observation-report",
+      "property-measurement-ansi-z765",
+      "gross-living-area-gla-certification",
+      "desktop_appraisal",
+      "exterior_only__drive_by__appraisal",
+      "pre_listing_appraisal",
+      "pre_purchase_appraisal",
+      "estate___date_of_death_appraisal",
+      "pmi_removal_appraisal",
+      "market_value_update__1004d___recertification",
+      "fha_hud_compliance_observation_report",
+      "property_measurement__ansi_z765",
+      "gross_living_area__gla__certification"
+    ]
+  },
+  "sections": {}
+}
