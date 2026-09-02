@@ -73,7 +73,7 @@ const itemVariants = {
 const GrossLivingAreaWhyChooseUs = React.forwardRef<HTMLElement>(
   (props, ref) => {
     return (
-      <section
+      <section data-section-id="75c23b0b-a3b5-419d-9537-65d948c1d7a8"
         ref={ref}
         id="gross-living-area-why-choose-us"
         className="relative py-20 md:py-32 bg-background"

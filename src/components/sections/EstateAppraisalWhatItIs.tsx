@@ -80,7 +80,7 @@ const comparisonRows = [
 
 const EstateAppraisalWhatItIs = React.forwardRef<HTMLElement>((props, ref) => {
   return (
-    <section
+    <section data-section-id="e8302f95-a908-48c5-bb0d-2493eb5cc355"
       ref={ref}
       id="estate-appraisal-what-it-is"
       className="relative py-20 md:py-32 bg-background"

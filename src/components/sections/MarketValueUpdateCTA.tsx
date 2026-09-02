@@ -13,7 +13,7 @@ const MarketValueUpdateCTA = React.forwardRef<HTMLElement>((props, ref) => {
   ];
 
   return (
-    <section
+    <section data-section-id="19c18917-5695-45e6-be10-bf25926bad5c"
       ref={ref}
       id="market-value-update-cta"
       className="relative py-20 md:py-32 bg-primary overflow-hidden"

@@ -61,10 +61,10 @@ const itemVariants = {
 
 const WhyChooseUs = React.forwardRef<HTMLElement>((props, ref) => {
   return (
-    <section
+    <section data-section-id="48fa8807-9c51-4c8d-899f-3319b23f0134"
       ref={ref}
       id="why-choose-us"
-      className="relative py-20 md:py-32 bg-background"
+      className="relative py-20 md:py-32 bg-background overflow-x-hidden"
       aria-labelledby="why-choose-us-heading"
     >
       {/* Subtle decorative top border accent */}

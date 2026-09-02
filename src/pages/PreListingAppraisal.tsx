@@ -16,7 +16,7 @@ const PreListingAppraisal = React.forwardRef<HTMLDivElement>((props, ref) => {
       currentPage="pre_listing_appraisal"
       canonicalUrl={`${SITE_BASE_URL}/pre-listing-appraisal`}
     >
-      <div ref={ref}>
+      <div ref={ref} className="overflow-x-hidden w-full max-w-[100vw]">
         <Header />
         <SectionErrorBoundary sectionName="PreListingAppraisalHero">
           <PreListingAppraisalHero />

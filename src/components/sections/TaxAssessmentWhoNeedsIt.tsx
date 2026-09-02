@@ -70,10 +70,10 @@ const itemVariants = {
 
 const TaxAssessmentWhoNeedsIt = React.forwardRef<HTMLElement>((props, ref) => {
   return (
-    <section
+    <section data-section-id="cacfb05f-7e8e-450f-9f78-6a76adfe0b53"
       ref={ref}
       id="tax-assessment-who-needs-it"
-      className="relative py-20 md:py-32 bg-background"
+      className="relative py-20 md:py-32 bg-background overflow-x-hidden"
       aria-labelledby="who-needs-it-heading"
     >
       <div className="container max-w-6xl mx-auto px-4">

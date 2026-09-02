@@ -8,6 +8,13 @@ import PreviewBootError from "./components/PreviewBootError";
 // Must patch Element.prototype before any framer-motion code runs.
 import "./lib/animateGuard";
 
+// Runtime contrast guard (LPS-1025): shape-agnostic safety net that injects a
+// dark scrim under any full-bleed background image carrying light text that
+// lacks one — catches the cases the agent's write-time overlay fix can't see
+// (CSS background-image, nested images, weak via-black mid-stops, vibe/clone
+// writes). Reads the rendered DOM, so it works regardless of source shape.
+import "./lib/contrastGuard";
+
 // Quiet-HMR bridge — listens for lps:quiet:* HMR events from the
 // dev server plugin and forwards to the HIDE_VITE_ERROR_OVERLAY
 // postMessage handler in index.html. Loaded before React mounts so
@@ -22,8 +29,49 @@ import "./lib/EmbeddingsLoader";
 // Visual editor inspector (handles element selection in iframe)
 import "./lib/inspector";
 
-// Performance-by-default: optimize images, LCP preloading, lazy loading
-import "./lib/PerformanceDefaults";
+// LPS-903 — forwards Vite HMR connect/disconnect to the parent so
+// PreviewFrame can react instantly when the dev server dies (pod
+// evicted, OOM, Vite crash) instead of waiting for Django's status push.
+import "./lib/previewHealthEmitter";
+
+// LPS-943 — `PerformanceDefaults` was removed: it ran client-side after React
+// hydration, mutating `<img src>` on every Unsplash image AFTER the browser
+// had already started fetching the original. That caused a second HTTP
+// request per image and a `<link rel="preload">` injected after `load`
+// (useless for LCP). Image optimisation now happens at SSR/build time in
+// `scripts/prerender.mjs` where the bytes can actually be saved before they
+// hit the wire.
+
+// LPS Validation Phase 3 — permanent runtime error observer.
+// Generalizes the LPS-700 boot-window observer into a session-wide observer.
+// Captures window.error, unhandledrejection, blank-#root, ReportingObserver
+// and routes batches through telemetry_client — via the editor in builder
+// context, direct to the public endpoint in production.
+// The legacy APP_BOOT_FAILED postMessage path below is preserved as a
+// parallel fallback signal (per Phase 3 D-13) and will be removed in a
+// later phase once the new path is proven.
+import { installErrorObserver } from "./lib/error_observer";
+import { isFromEditor, postToEditor } from "./lib/editor_channel";
+
+// LPS-1727 — earliest possible "the real boilerplate booted" signal, read by
+// PreviewFrame's boot-confirm watchdog to tell a live preview from a gateway
+// error page (LPS-1598). This replaces the old LPS_REQUEST_AUTH message, which
+// served double duty as the boot ping while also asking the editor to hand over
+// its auth token; the token exchange is gone entirely.
+postToEditor({ type: "LPS_BOOT_PING" });
+
+// Upload projects (react_source / static_html / static_zip) cold-start with a
+// heavier first-paint graph than AI-generated sites — real hero imagery, full
+// route table, npm install just finished. The 10s blank-root default catches
+// healthy-but-slow renders as defects and fires a useless repair turn. Widen
+// to 20s for uploads; JS exceptions still fire repair via window.error /
+// unhandledrejection / dynamic-import .catch.
+const _uploadType = (import.meta.env.VITE_UPLOAD_TYPE ?? "") as string;
+const _isUpload =
+  _uploadType === "react_source" ||
+  _uploadType === "static_html" ||
+  _uploadType === "static_zip";
+installErrorObserver(_isUpload ? { blankRootTimeoutMs: 20_000 } : {});
 
 /**
  * LPS-700 — Guarded bootstrap.
@@ -51,9 +99,6 @@ import "./lib/PerformanceDefaults";
  *   - Imports App dynamically via `import("./App")` so a throw during
  *     module evaluation lands in `.catch(...)` instead of a top-level
  *     uncaught exception.
- *   - Hooks `window.error` and `window.unhandledrejection` so we also
- *     capture failures that happen asynchronously (late `import()` of
- *     a lazy page, for example).
  *   - Renders `<PreviewBootError />` as a visible fallback so the user
  *     never sees a blank iframe.
  *   - Posts `APP_BOOT_FAILED` upward so the parent frame can surface a
@@ -63,6 +108,13 @@ import "./lib/PerformanceDefaults";
  * actually visible" signal) and is NOT posted here — we don't want to
  * lie to the parent about successful render when only the module
  * resolution succeeded but rendering hasn't happened yet.
+ *
+ * Phase 3 (LPS validation v2-lite+): the boot-window scope of the
+ * window.error / unhandledrejection / MutationObserver listeners is
+ * now owned by `lib/error_observer.ts` which runs for the full
+ * session, not just the boot window. The dynamic-import .catch and
+ * the `APP_BOOT_FAILED` postMessage below stay as a backwards-compat
+ * fallback path so existing PreviewFrame handlers keep working.
  */
 
 const rootEl = document.getElementById("root");
@@ -82,27 +134,30 @@ const root: Root | null = rootEl ? createRoot(rootEl) : null;
 // dynamic-import .catch already handled) don't spam the parent.
 let bootFailureReported = false;
 
-// LPS-700 review gap: track whether the app has successfully mounted.
-//
-// The window.error / unhandledrejection listeners below are ONLY
-// meaningful during the boot window.  Once React has committed and
-// user code is running, runtime errors (click handler TypeError,
-// failed async fetch, etc.) are owned by React error boundaries
-// (`SectionErrorBoundary` / `RouteErrorBoundary` / `ErrorBoundary`),
-// not by these global listeners.  Treating a post-mount click-handler
-// throw as a "boot failure" would render `<PreviewBootError />` over
-// the working app and post a spurious `APP_BOOT_FAILED` upward — the
-// opposite of what we want.
-//
-// The flag flips when EITHER:
-//   * a MutationObserver sees React commit the first child to
-//     `#root` (the precise "app has mounted" signal), or
-//   * a 10s safety timer fires (belt-and-suspenders for the case
-//     where React never commits — e.g. the agent wrote a broken
-//     App and `.catch` didn't fire because the throw happened
-//     elsewhere).  10s is well past the parent's 6s overlay
-//     ceiling.
-let bootComplete = false;
+let bootRepairPending = false;
+let lastBootError: unknown = null;
+
+function renderBootError(): void {
+  try {
+    root?.render(
+      <PreviewBootError error={lastBootError} repairPending={bootRepairPending} />
+    );
+  } catch (renderErr) {
+    // eslint-disable-next-line no-console
+    console.error("[main] PreviewBootError itself failed to render", renderErr);
+  }
+}
+
+window.addEventListener("message", (event: MessageEvent) => {
+  if (!isFromEditor(event)) return;
+  const data = event.data;
+  if (!data || data.type !== "PREVIEW_BOOT_REPAIR_STATE") return;
+  const pending = Boolean(data.repairPending);
+  if (pending === bootRepairPending) return;
+  bootRepairPending = pending;
+  
+  if (bootFailureReported) renderBootError();
+});
 
 /**
  * Serialize an arbitrary error-ish value into a plain object that can
@@ -176,13 +231,6 @@ function reportBootFailure(
   locationHint?: { file?: string; line?: number; column?: number }
 ): void {
   if (bootFailureReported) return;
-  // LPS-700 review gap: ignore errors that arrive after the app has
-  // mounted.  A post-mount click-handler TypeError or async fetch
-  // rejection is NOT a boot failure — it's a runtime error React
-  // boundaries are responsible for catching / reporting via the
-  // RUNTIME_ERROR postMessage path.  Returning early here prevents
-  // the overlay + spurious `APP_BOOT_FAILED` signal.
-  if (bootComplete) return;
   bootFailureReported = true;
 
   const serialized = serializeError(error);
@@ -215,136 +263,100 @@ function reportBootFailure(
   console.error("[main] APP_BOOT_FAILED", payload);
 
   // Render the fallback inside the iframe first — if this also throws
-  // the catch below keeps us from looping back into another failure.
-  try {
-    root?.render(<PreviewBootError error={error} />);
-  } catch (renderErr) {
-    // eslint-disable-next-line no-console
-    console.error("[main] PreviewBootError itself failed to render", renderErr);
-  }
+  
+  lastBootError = error;
+  renderBootError();
 
   // Notify the parent frame (Next.js PreviewFrame) so it can clear the
-  // loading overlay and surface an actionable state.  `window.parent`
-  // is always defined (same window if not framed, so the postMessage
-  // is harmless).
-  try {
-    window.parent.postMessage(
-      { type: "APP_BOOT_FAILED", payload },
-      "*"
-    );
-  } catch {
-    // postMessage can throw on exotic cross-origin scenarios — there's
-    // no reasonable recovery so we swallow silently.
-  }
+  // loading overlay and surface an actionable state. No-op when unframed.
+  postToEditor({ type: "APP_BOOT_FAILED", payload });
 }
 
-// Global listeners — catch errors that escape the dynamic-import path
-// DURING the boot window only.
-//
-// Named handler references so `markBootComplete` can detach them once
-// React commits.  If we kept the anonymous arrow inline, we couldn't
-// remove them later and every post-mount click-handler TypeError
-// would incorrectly call `reportBootFailure`.
-const onWindowError = (event: ErrorEvent) => {
-  // `event.error` may be null for some cross-origin script errors; fall
-  // back to a synthesized message so we still post something useful.
-  // ErrorEvent carries exact filename/lineno/colno — hand them to
-  // reportBootFailure so downstream /repair-runtime/ gets a precise
-  // source location without having to parse the stack.
-  const hint = {
-    // Normalize dev-server URLs so downstream sees a stable src/ path.
-    file: normalizeWorkspaceFilePath(event.filename),
-    line: event.lineno ?? 0,
-    column: event.colno ?? 0,
-  };
-  reportBootFailure(event.error ?? event.message, "window.error", hint);
-};
-
-const onUnhandledRejection = (event: PromiseRejectionEvent) => {
-  reportBootFailure(event.reason, "unhandledrejection");
-};
-
-window.addEventListener("error", onWindowError);
-window.addEventListener("unhandledrejection", onUnhandledRejection);
-
-/**
- * Close the boot window.
- *
- * Called when React commits the first child to `#root` (via
- * MutationObserver) or when the 10s safety timer fires, whichever
- * comes first.  After this runs:
- *
- *   * `bootComplete = true` — `reportBootFailure` becomes a no-op, so
- *     any stray post-mount error that slips past the removeListener
- *     below still can't produce a spurious `APP_BOOT_FAILED`.
- *   * The window-level error and unhandledrejection listeners are
- *     detached — React error boundaries + the section-level
- *     `RUNTIME_ERROR` postMessage path own post-mount error reporting
- *     from this point on.
- *
- * Idempotent: safe to call multiple times (MutationObserver may fire
- * before the safety timer expires, etc.).
- */
-function markBootComplete(): void {
-  if (bootComplete) return;
-  bootComplete = true;
-  window.removeEventListener("error", onWindowError);
-  window.removeEventListener("unhandledrejection", onUnhandledRejection);
+interface ViteErrorPayload {
+  plugin?: string;
+  id?: string;
+  loc?: { file?: string; line?: number; column?: number };
+  message?: string;
 }
 
-// Precise "app has mounted" signal: React's first commit adds an
-// element child to `#root`.  MutationObserver fires synchronously
-// after that commit, so we close the boot window at the exact moment
-// the user starts seeing content.  Much tighter than a fixed timer
-// for the common case — a slow click handler error at t+500ms no
-// longer races a 5s/10s timer.
-if (rootEl) {
-  const mountObserver = new MutationObserver((mutations) => {
-    for (const m of mutations) {
-      if (m.type === "childList" && m.addedNodes.length > 0) {
-        markBootComplete();
-        mountObserver.disconnect();
-        return;
-      }
+let lastViteError: ViteErrorPayload | null = null;
+
+if (typeof import.meta !== "undefined" && import.meta.hot) {
+  import.meta.hot.on(
+    "vite:error",
+    (info: { err?: ViteErrorPayload } | ViteErrorPayload) => {
+      const err =
+        (info as { err?: ViteErrorPayload }).err ?? (info as ViteErrorPayload);
+      if (err) lastViteError = err;
     }
-  });
-  mountObserver.observe(rootEl, { childList: true });
+  );
 }
 
-// Safety timer: if React never commits (broken App that didn't throw
-// via dynamic-import — e.g. a runtime throw inside a top-level
-// component's module init that the browser reports via window.error
-// before `.catch` resolves) close the boot window anyway after 10s
-// so subsequent unrelated errors aren't still funneled into the boot
-// path.  10s is deliberately past the parent PreviewFrame's 6s
-// overlay ceiling: by the time this fires, the parent has already
-// either rendered our `<PreviewBootError />` or given up waiting.
-const BOOT_WINDOW_MAX_MS = 10_000;
-setTimeout(markBootComplete, BOOT_WINDOW_MAX_MS);
+function normalizeViteId(id: string): string {
+  const match = id.match(/(src\/[^\s?)#]+)/);
+  return match ? match[1] : id.replace(/^\/?(?:workspace\/)?/, "");
+}
 
-// Dynamic App import — the primary bootstrap path.  Any throw during
-// module evaluation (missing React binding, syntax error in a top-level
-// import, etc.) lands in `.catch` instead of crashing uncaught.
+async function resolveDynamicImportLocation(
+  importError: unknown
+): Promise<{ file: string; line: number; column: number } | undefined> {
+  if (lastViteError) {
+    const file =
+      lastViteError.loc?.file ?? lastViteError.id ?? "";
+    if (file) {
+      return {
+        file: normalizeViteId(file),
+        line: lastViteError.loc?.line ?? 0,
+        column: lastViteError.loc?.column ?? 0,
+      };
+    }
+    if (lastViteError.message) {
+      const m = lastViteError.message.match(
+        /from\s+["'](?:\/?)(src\/[^"']+)["']/
+      );
+      if (m) return { file: m[1], line: 0, column: 0 };
+    }
+  }
+
+  const message =
+    importError instanceof Error ? importError.message : String(importError ?? "");
+  const stackMatch =
+    importError instanceof Error
+      ? importError.stack?.match(/(src\/[^\s?:)#]+):(\d+):(\d+)/)
+      : null;
+  if (stackMatch) {
+    return {
+      file: stackMatch[1],
+      line: parseInt(stackMatch[2], 10) || 0,
+      column: parseInt(stackMatch[3], 10) || 0,
+    };
+  }
+  const messageMatch = message.match(/(src\/[^\s?:)#]+):(\d+):(\d+)/);
+  if (messageMatch) {
+    return {
+      file: messageMatch[1],
+      line: parseInt(messageMatch[2], 10) || 0,
+      column: parseInt(messageMatch[3], 10) || 0,
+    };
+  }
+  return undefined;
+}
+
 import("./App")
   .then(({ default: App }) => {
     if (!root) return;
     try {
       root.render(<App />);
-      // NOTE: APP_RENDERED is posted from inside App.tsx's own mount
-      // useEffect, not here.  Doing it from here would signal success
-      // as soon as `render()` returns, but React 18 concurrent render
-      // doesn't guarantee the tree is actually committed by then.
     } catch (renderError) {
       reportBootFailure(renderError, "render");
     }
   })
-  .catch((importError) => {
+  .catch(async (importError) => {
     // "Failed to fetch dynamically imported module" is browser-generated for
     // network-level fetch failures (Vite dev server momentarily unavailable).
-    // It is distinct from Vite transform errors, which produce specific
-    // messages.  Retry once after 2s before declaring a boot failure —
-    // covers the case where a concurrent production build briefly invalidated
-    // the module graph.
+    // Retry once after 2s before declaring a boot failure — covers the case
+    // where a concurrent production build briefly invalidated the module graph
+    // (mpaHtmlGeneratorPlugin add/unlink during multi-page builds).
     const isTransientFetchError =
       typeof (importError as { message?: unknown })?.message === "string" &&
       (importError as { message: string }).message.includes(
@@ -364,13 +376,16 @@ import("./App")
               reportBootFailure(renderError, "render");
             }
           })
-          .catch((retryError) => {
+          .catch(async (retryError) => {
             // Retry also failed — treat as a genuine boot failure.
-            reportBootFailure(retryError, "dynamic-import");
+            const location = await resolveDynamicImportLocation(retryError);
+            reportBootFailure(retryError, "dynamic-import", location);
           });
       }, 2000);
       return;
     }
 
-    reportBootFailure(importError, "dynamic-import");
+    const location = await resolveDynamicImportLocation(importError);
+    reportBootFailure(importError, "dynamic-import", location);
+
   });

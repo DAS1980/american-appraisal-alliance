@@ -80,7 +80,7 @@ const PrePurchaseAppraisalDetails = React.forwardRef<HTMLElement>(
     ];
 
     return (
-      <section
+      <section data-section-id="aae3f83f-a304-4341-83c9-1da889621ba4"
         ref={ref}
         id="pre-purchase-appraisal-details"
         className="relative py-20 md:py-32 bg-background"

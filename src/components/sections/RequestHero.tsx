@@ -2,15 +2,15 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Shield, Clock, MapPin, Award } from "lucide-react";
+import { Shield, Clock, MapPin, Award, Icon } from "lucide-react";
 
 const RequestHero = React.forwardRef<HTMLElement>((props, ref) => {
   return (
-    <section
+    <section data-section-id="33545a4d-3ba9-495a-941e-23c2a8e9875a"
       ref={ref}
       id="request-hero"
       aria-label="Request an Appraisal Hero"
-      className="relative isolate min-h-[60vh] md:min-h-[70vh] flex items-center py-20 md:py-32"
+      className="relative isolate overflow-x-hidden min-h-[60vh] md:min-h-[70vh] flex items-center py-20 md:py-32"
     >
       {/* Background image */}
       <img
@@ -40,7 +40,7 @@ const RequestHero = React.forwardRef<HTMLElement>((props, ref) => {
         <div className="max-w-3xl">
           {/* Eyebrow badge */}
           <motion.div
-            initial={{ opacity: 0, y: 16 }}
+            initial={{ opacity: 1, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
           >
@@ -54,7 +54,7 @@ const RequestHero = React.forwardRef<HTMLElement>((props, ref) => {
 
           {/* Page heading — H1 role for this page */}
           <motion.h1
-            initial={{ opacity: 0, y: 24 }}
+            initial={{ opacity: 1, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
             className="text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4"
@@ -65,7 +65,7 @@ const RequestHero = React.forwardRef<HTMLElement>((props, ref) => {
 
           {/* Subheadline */}
           <motion.p
-            initial={{ opacity: 0, y: 24 }}
+            initial={{ opacity: 1, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
             className="text-lg md:text-xl text-white/90 leading-relaxed mb-6 max-w-2xl"
@@ -77,7 +77,7 @@ const RequestHero = React.forwardRef<HTMLElement>((props, ref) => {
 
           {/* Verbatim reassurance copy */}
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
             className="text-sm md:text-base text-amber-300 font-medium mb-8"
@@ -87,7 +87,7 @@ const RequestHero = React.forwardRef<HTMLElement>((props, ref) => {
 
           {/* CTA button scrolls to the intake form */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4, ease: "easeOut" }}
           >
@@ -102,13 +102,13 @@ const RequestHero = React.forwardRef<HTMLElement>((props, ref) => {
                 boxShadow: "0 4px 20px -4px hsl(42 88% 48% / 0.45)",
               }}
             >
-              <a href="#intake-form">Request an Appraisal</a>
+              <a href="#request-intake-form">Request an Appraisal</a>
             </Button>
           </motion.div>
 
           {/* Trust indicators */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.55, ease: "easeOut" }}
             className="mt-10 flex flex-wrap gap-5"

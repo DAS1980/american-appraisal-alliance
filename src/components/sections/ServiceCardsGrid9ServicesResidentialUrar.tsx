@@ -19,7 +19,7 @@ interface ServiceCard {
 const services: ServiceCard[] = [
   {
     name: "Residential Appraisal (Full URAR)",
-    slug: "/residential-appraisal",
+    slug: "/residential-appraisal/",
     description:
       "Full Uniform Residential Appraisal Report for lenders, attorneys, and private clients. The most comprehensive residential valuation report available, prepared in full USPAP compliance.",
     useCases: "Mortgage lending, estate planning, legal proceedings",
@@ -33,7 +33,7 @@ const services: ServiceCard[] = [
   },
   {
     name: "Desktop Appraisal",
-    slug: "/desktop-appraisal",
+    slug: "/desktop-appraisal/",
     description:
       "Remote appraisal using MLS data, public records, and digital tools — no on-site inspection required. A USPAP-compliant solution for refinances and low-risk transactions.",
     useCases: "Refinancing, low-risk loan products",
@@ -46,7 +46,7 @@ const services: ServiceCard[] = [
   },
   {
     name: "Exterior-Only (Drive-By) Appraisal",
-    slug: "/exterior-only-drive-by-appraisal",
+    slug: "/exterior-only-drive-by-appraisal/",
     description:
       "Appraiser inspects exterior only; no interior access needed. Balances professional accuracy with efficiency for eligible transaction types.",
     useCases: "HELOCs and certain loan types",
@@ -59,7 +59,7 @@ const services: ServiceCard[] = [
   },
   {
     name: "Pre-Listing Appraisal",
-    slug: "/pre-listing-appraisal",
+    slug: "/pre-listing-appraisal/",
     description:
       "Independent valuation before listing a home for sale. Helps sellers price accurately and negotiate confidently in the competitive DFW real estate market.",
     useCases: "Home sellers, real estate agents",
@@ -73,7 +73,7 @@ const services: ServiceCard[] = [
   },
   {
     name: "Pre-Purchase Appraisal",
-    slug: "/pre-purchase-appraisal",
+    slug: "/pre-purchase-appraisal/",
     description:
       "Independent appraisal for buyers before closing. Confirms fair market value independent of lender's appraisal to protect buyers from overpaying.",
     useCases: "Home buyers seeking unbiased valuation",
@@ -87,7 +87,7 @@ const services: ServiceCard[] = [
   },
   {
     name: "Divorce Appraisal",
-    slug: "/divorce-appraisal",
+    slug: "/divorce-appraisal/",
     description:
       "Court-accepted, USPAP-compliant appraisal for divorce proceedings. Neutral, unbiased valuations for equitable asset division, including retroactive date-of-separation valuations.",
     useCases: "Divorce attorneys, family law courts",
@@ -101,7 +101,7 @@ const services: ServiceCard[] = [
   },
   {
     name: "Estate / Date of Death Appraisal",
-    slug: "/estate-date-of-death-appraisal",
+    slug: "/estate-date-of-death-appraisal/",
     description:
       "Retrospective appraisal for estate settlement, probate, and IRS Form 706. Establishes fair market value as of a specific historical date — accepted by attorneys, CPAs, and courts.",
     useCases: "Estate planners, probate attorneys, CPAs",
@@ -115,7 +115,7 @@ const services: ServiceCard[] = [
   },
   {
     name: "PMI Removal Appraisal",
-    slug: "/pmi-removal-appraisal",
+    slug: "/pmi-removal-appraisal/",
     description:
       "Demonstrates current market value exceeds 80% LTV threshold. Saves DFW homeowners hundreds of dollars per year by supporting private mortgage insurance cancellation.",
     useCases: "Homeowners seeking to cancel PMI",
@@ -129,7 +129,7 @@ const services: ServiceCard[] = [
   },
   {
     name: "Tax Assessment Appeal Appraisal",
-    slug: "/tax-assessment-appeal",
+    slug: "/tax-assessment-appeal/",
     description:
       "Independent appraisal to challenge inflated county tax assessments. Supports formal appeals with Dallas CAD, Tarrant CAD, Collin CAD, and Denton CAD.",
     useCases: "Property tax appeal filers in DFW",
@@ -164,16 +164,16 @@ const cardVariants = {
 const ServiceCardsGrid9ServicesResidentialUrar = React.forwardRef<HTMLElement>(
   (props, ref) => {
     return (
-      <section
+      <section data-section-id="bf08551d-b543-44ab-9704-670ea78c66af"
         ref={ref}
         id="service-cards-grid9services-residential-urar"
-        className="relative py-20 md:py-32 bg-background"
+        className="relative py-20 md:py-32 bg-background overflow-x-hidden"
         aria-labelledby="service-grid-heading"
       >
         {/* Subtle background texture */}
         <div className="absolute inset-0 bg-gradient-to-b from-muted/40 via-background to-background pointer-events-none" />
 
-        <div className="container max-w-6xl mx-auto px-4 relative z-10">
+        <div className="container max-w-6xl mx-auto px-4 sm:px-6 relative z-10 w-full">
           {/* Section header */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}
@@ -204,7 +204,7 @@ const ServiceCardsGrid9ServicesResidentialUrar = React.forwardRef<HTMLElement>(
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-60px" }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-7"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-7 w-full"
           >
             {services.map((service, index) => {
               const IconComponent = service.icon;
@@ -225,7 +225,7 @@ const ServiceCardsGrid9ServicesResidentialUrar = React.forwardRef<HTMLElement>(
                     />
 
                     <CardHeader className="pb-3 pt-5 px-5">
-                      <div className="flex items-start justify-between gap-3 mb-3">
+                      <div className="flex items-start justify-between gap-3 mb-3 flex-wrap">
                         {/* Icon container */}
                         <div
                           className="flex-shrink-0 flex h-11 w-11 items-center justify-center rounded-lg"
@@ -349,7 +349,7 @@ const ServiceCardsGrid9ServicesResidentialUrar = React.forwardRef<HTMLElement>(
                   boxShadow: "0 4px 20px -4px hsl(42 88% 48% / 0.45)",
                 }}
               >
-                <Link to="/request">Request an Appraisal</Link>
+                <Link to="/request/">Request an Appraisal</Link>
               </Button>
               <p className="text-white/60 text-xs font-['Inter',_sans-serif] flex items-center gap-1.5">
                 <span

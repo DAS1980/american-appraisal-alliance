@@ -15,7 +15,7 @@ import Footer from "@/components/sections/Footer";
 const DivorceAppraisal = React.forwardRef<HTMLDivElement>((props, ref) => {
   return (
     <PageLayout currentPage="divorce-appraisal" baseUrl={SITE_BASE_URL}>
-      <div ref={ref}>
+      <div ref={ref} className="overflow-x-hidden w-full max-w-[100vw]">
         <Header />
         <SectionErrorBoundary sectionName="DivorceAppraisalHero">
           <DivorceAppraisalHero />

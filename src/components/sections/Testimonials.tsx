@@ -71,11 +71,11 @@ const cardVariants = {
 
 const Testimonials = React.forwardRef<HTMLElement>((props, ref) => {
   return (
-    <section
+    <section data-section-id="081a79b2-e733-4a94-8594-25f6cfcdc8d7"
       ref={ref}
       id="testimonials"
       aria-labelledby="testimonials-heading"
-      className="relative py-20 md:py-32 bg-muted/30"
+      className="relative py-20 md:py-32 bg-muted/30 overflow-x-hidden"
     >
       {/* Subtle background accent */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">

@@ -82,10 +82,10 @@ const stagger = {
 
 const AboutUSPAPCompliance = React.forwardRef<HTMLElement>((props, ref) => {
   return (
-    <section
+    <section data-section-id="90e5bda1-3670-4107-9834-cd297e7ada68"
       ref={ref}
       id="about-uspapcompliance"
-      className="relative py-20 md:py-32 bg-background"
+      className="relative py-20 md:py-32 bg-background overflow-x-hidden"
       aria-labelledby="uspap-heading"
     >
       <div className="container max-w-6xl mx-auto px-4">
@@ -139,7 +139,7 @@ const AboutUSPAPCompliance = React.forwardRef<HTMLElement>((props, ref) => {
         >
           {/* Decorative gold accent */}
           <div
-            className="absolute top-0 right-0 w-48 h-48 rounded-full opacity-10 pointer-events-none"
+            className="absolute top-0 right-0 w-48 h-48 max-w-full rounded-full opacity-10 pointer-events-none"
             style={{
               background:
                 "radial-gradient(circle, hsl(42 92% 52%) 0%, transparent 70%)",

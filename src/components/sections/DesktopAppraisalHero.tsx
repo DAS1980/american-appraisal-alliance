@@ -17,11 +17,11 @@ const DesktopAppraisalHero = React.forwardRef<HTMLElement>((props, ref) => {
   ];
 
   return (
-    <section
+    <section data-section-id="9571fc7a-d290-43fd-8b95-355b742c9920"
       ref={ref}
       id="desktop-appraisal-hero"
       aria-label="Desktop Appraisal Hero"
-      className="relative isolate min-h-[85vh] md:min-h-[80vh] flex items-center py-20 md:py-32"
+      className="relative isolate min-h-[85vh] md:min-h-[80vh] flex items-center py-20 md:py-32 overflow-hidden w-full max-w-full"
     >
       {/* Layer 1 — Background image */}
       <img
@@ -42,7 +42,7 @@ const DesktopAppraisalHero = React.forwardRef<HTMLElement>((props, ref) => {
         <div className="max-w-3xl">
           {/* Eyebrow badge */}
           <motion.div
-            initial={{ opacity: 0, y: 16 }}
+            initial={{ opacity: 1, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
             className="mb-6"
@@ -61,7 +61,7 @@ const DesktopAppraisalHero = React.forwardRef<HTMLElement>((props, ref) => {
 
           {/* Pre-header label */}
           <motion.p
-            initial={{ opacity: 0, y: 16 }}
+            initial={{ opacity: 1, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.08, ease: "easeOut" }}
             className="text-sm uppercase tracking-[0.2em] text-white/70 mb-3 font-medium"
@@ -72,7 +72,7 @@ const DesktopAppraisalHero = React.forwardRef<HTMLElement>((props, ref) => {
 
           {/* H1 — Desktop Appraisal Service headline */}
           <motion.h1
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.15, ease: "easeOut" }}
             className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 max-w-2xl"
@@ -83,7 +83,7 @@ const DesktopAppraisalHero = React.forwardRef<HTMLElement>((props, ref) => {
 
           {/* Subheadline */}
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.25, ease: "easeOut" }}
             className="text-lg md:text-xl text-white/85 leading-relaxed mb-8 max-w-2xl"
@@ -96,7 +96,7 @@ const DesktopAppraisalHero = React.forwardRef<HTMLElement>((props, ref) => {
 
           {/* CTA Buttons */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.35, ease: "easeOut" }}
             className="flex flex-wrap gap-4 mb-10"
@@ -113,7 +113,7 @@ const DesktopAppraisalHero = React.forwardRef<HTMLElement>((props, ref) => {
                 boxShadow: "0 4px 20px -4px hsl(42 88% 48% / 0.5)",
               }}
             >
-              <Link to="/request">Request an Appraisal</Link>
+              <Link to="/request/">Request an Appraisal</Link>
             </Button>
 
             <Button
@@ -122,13 +122,13 @@ const DesktopAppraisalHero = React.forwardRef<HTMLElement>((props, ref) => {
               variant="outline"
               className="text-base font-medium h-12 px-8 bg-transparent text-white border-white/40 hover:bg-white/10 hover:border-white/70"
             >
-              <Link to="/core-appraisal-services">View All Services</Link>
+              <Link to="/core-appraisal-services/">View All Services</Link>
             </Button>
           </motion.div>
 
           {/* Highlights row */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.45, ease: "easeOut" }}
             className="grid grid-cols-2 md:grid-cols-4 gap-3"

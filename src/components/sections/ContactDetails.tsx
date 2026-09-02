@@ -53,7 +53,7 @@ const ContactDetails = React.forwardRef<HTMLElement>((props, ref) => {
   };
 
   return (
-    <section
+    <section data-section-id="1178b5bb-1df6-43e7-918c-368df4ff6405"
       ref={ref}
       id="contact-details"
       className="relative py-20 md:py-32 bg-background"

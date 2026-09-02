@@ -13,7 +13,7 @@ export const SITE_BASE_URL = "https://americanappraisalalliance.com";
 const DesktopAppraisal = React.forwardRef<HTMLDivElement>((props, ref) => {
   return (
     <PageLayout currentPage="desktop_appraisal">
-      <div ref={ref}>
+      <div ref={ref} className="w-full max-w-[100vw] overflow-x-hidden">
         <Header />
         <SectionErrorBoundary sectionName="DesktopAppraisalHero">
           <DesktopAppraisalHero />

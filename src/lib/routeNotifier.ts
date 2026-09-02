@@ -8,6 +8,8 @@
  * Usage: Import and call initRouteNotifier() in App.tsx after BrowserRouter
  */
 
+import { postToEditor } from './editor_channel';
+
 interface PageChangedPayload {
   path: string;
   pageId?: string;
@@ -34,7 +36,7 @@ async function loadManifest(): Promise<PagesManifest | null> {
   if (manifest) return manifest;
   
   try {
-    const response = await fetch('/pages.manifest.json');
+    const response = await fetch(`${import.meta.env.BASE_URL}pages.manifest.json`);
     if (response.ok) {
       manifest = await response.json();
       return manifest;
@@ -80,18 +82,22 @@ function notifyPageChange(path: string, pageId?: string, pageName?: string) {
   };
   
   console.debug('[RouteNotifier] Sending PAGE_CHANGED:', payload);
-  
-  window.parent.postMessage({
-    type: 'PAGE_CHANGED',
-    payload,
-  }, '*');
+
+  postToEditor({ type: 'PAGE_CHANGED', payload });
 }
 
 /**
  * Handle route changes
  */
 async function handleRouteChange() {
-  const path = window.location.pathname;
+  // Static-HTML uploads serve home from `/index.html`, but the editor's
+  // home `Page.path` is `/` — collapse both forms to the directory shape
+  // so PreviewFrame's path match resolves the home row either way.
+  // Same logic for any nested directory index file. Free-mode SPAs
+  // (BrowserRouter) never produce URLs ending in `/index.html`, so this
+  // is a no-op for them.
+  const rawPath = window.location.pathname;
+  const path = rawPath.replace(/(^|\/)index\.html?$/i, '$1') || '/';
   const loadedManifest = await loadManifest();
   
   if (loadedManifest) {

@@ -10,7 +10,7 @@ const services = [
     title: "Market Value Update (1004D / Recertification)",
     description:
       "Updates a prior appraisal to reflect current market conditions. Required by lenders when the original appraisal has expired. Fannie Mae Form 1004D compliant.",
-    link: "/market-value-update-1004d-recertification",
+    link: "/market-value-update-1004d-recertification/",
     compliance: "Fannie Mae Form 1004D",
     bullets: [
       "Updates a prior appraisal to current market conditions",
@@ -26,7 +26,7 @@ const services = [
     title: "FHA/HUD Compliance Observation Report",
     description:
       "Identifies property conditions that may affect FHA loan eligibility. Documents health, safety, and structural observations. Supports FHA/HUD underwriting requirements.",
-    link: "/fhahud-compliance-observation-report",
+    link: "/fhahud-compliance-observation-report/",
     compliance: "FHA/HUD Compliant",
     bullets: [
       "Identifies property conditions that may affect FHA loan eligibility",
@@ -61,10 +61,10 @@ const cardVariants = {
 const ValuationUpdatesServiceCards = React.forwardRef<HTMLElement>(
   (props, ref) => {
     return (
-      <section
+      <section data-section-id="6d73ef23-407a-4c5c-af75-bad0955b1538"
         ref={ref}
         id="valuation-updates-service-cards"
-        className="relative py-20 md:py-32 bg-background"
+        className="relative py-20 md:py-32 bg-background overflow-x-hidden"
         aria-labelledby="valuation-services-heading"
       >
         <div className="container max-w-6xl mx-auto px-4">

@@ -51,10 +51,10 @@ const itemVariants = {
 
 const MeasurementWhyItMatters = React.forwardRef<HTMLElement>((props, ref) => {
   return (
-    <section
+    <section data-section-id="bdfe078a-c28c-4210-9ee8-f0c6e3305deb"
       ref={ref}
       id="measurement-why-it-matters"
-      className="relative py-20 md:py-32 bg-background"
+      className="relative py-20 md:py-32 bg-background overflow-x-hidden"
       aria-labelledby="why-measurements-heading"
     >
       <div className="container max-w-6xl mx-auto px-4">

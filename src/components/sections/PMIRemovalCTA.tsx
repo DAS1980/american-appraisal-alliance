@@ -2,15 +2,15 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ShieldCheck, Clock, CheckCircle } from "lucide-react";
+import { ShieldCheck, Clock, CheckCircle, Icon } from "lucide-react";
 import { siteConfig } from "@/config/site";
 
 const PMIRemovalCTA = React.forwardRef<HTMLElement>((props, ref) => {
   return (
-    <section
+    <section data-section-id="f14b3326-bcfb-434f-8e95-b3c091300123"
       ref={ref}
       id="pmiremoval-cta"
-      className="py-20 md:py-32 relative overflow-hidden"
+      className="py-16 sm:py-20 md:py-32 relative overflow-hidden"
       style={{ background: "linear-gradient(135deg, hsl(42 92% 52%) 0%, hsl(36 88% 44%) 100%)" }}
     >
       {/* Subtle background texture overlay */}
@@ -44,7 +44,7 @@ const PMIRemovalCTA = React.forwardRef<HTMLElement>((props, ref) => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.08 }}
-            className="text-3xl md:text-4xl lg:text-5xl font-bold mb-5 leading-tight"
+            className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-5 leading-tight break-words"
             style={{
               fontFamily: "'Playfair Display', Georgia, serif",
               color: "hsl(218 65% 14%)",
@@ -110,7 +110,7 @@ const PMIRemovalCTA = React.forwardRef<HTMLElement>((props, ref) => {
                 color: "hsl(42 92% 58%)",
               }}
             >
-              <Link to="/request">Request an Appraisal</Link>
+              <Link to="/request/">Request an Appraisal</Link>
             </Button>
 
             <Button
@@ -124,7 +124,7 @@ const PMIRemovalCTA = React.forwardRef<HTMLElement>((props, ref) => {
                 background: "transparent",
               }}
             >
-              <Link to="/contact">Speak With an Appraiser</Link>
+              <Link to="/contact/">Speak With an Appraiser</Link>
             </Button>
           </motion.div>
 

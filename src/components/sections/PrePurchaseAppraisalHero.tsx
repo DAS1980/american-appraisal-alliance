@@ -17,7 +17,7 @@ const PrePurchaseAppraisalHero = React.forwardRef<HTMLElement>((props, ref) => {
   ];
 
   return (
-    <section
+    <section data-section-id="d80c780d-65f9-4718-b6d9-b256518aaa85"
       ref={ref}
       id="pre-purchase-appraisal-hero"
       className="relative isolate min-h-[85vh] md:min-h-[80vh] flex items-center py-20 md:py-32 bg-[image:var(--gradient-hero)]"

@@ -8,9 +8,10 @@ import { ArrowRight, FileText, BarChart2, Ruler, Section, Square } from "lucide-
 const services = [
   {
     title: "Core Appraisal Services",
+    buttonLabel: "Core Appraisal Services",
     description:
       "Full URAR, divorce, estate, PMI removal, tax appeal, and more — USPAP-compliant reports for every need.",
-    link: "/core-appraisal-services",
+    link: "/core-appraisal-services/",
     icon: FileText,
     detail:
       "Our licensed appraisers deliver certified, court-accepted, and lender-approved reports for residential properties across the Dallas–Fort Worth metroplex. Every engagement meets USPAP standards.",
@@ -22,9 +23,10 @@ const services = [
   },
   {
     title: "Valuation Updates & Reports",
+    buttonLabel: "Valuation Updates & Reports",
     description:
       "Market value updates, 1004D recertifications, and FHA/HUD compliance observation reports.",
-    link: "/valuation-updates-reports",
+    link: "/valuation-updates-reports/",
     icon: BarChart2,
     detail:
       "When your prior appraisal has expired or your lender requires updated documentation, our valuation update services keep your transaction on track — fully compliant with Fannie Mae Form 1004D and FHA/HUD requirements.",
@@ -36,9 +38,10 @@ const services = [
   },
   {
     title: "Measurement & Analysis Services",
+    buttonLabel: "Measurement & Analysis Services",
     description:
       "ANSI Z765-2021 property measurement, GLA certification, floor plans, and square footage analysis.",
-    link: "/measurement-analysis-services",
+    link: "/measurement-analysis-services/",
     icon: Ruler,
     detail:
       "Precise, defensible property measurements following ANSI Z765-2021 standards. From Gross Living Area certification to detailed floor plan sketches, our measurement services protect buyers, sellers, lenders, and agents in the DFW market.",
@@ -66,10 +69,10 @@ const cardVariants = {
 
 const HomeServices = React.forwardRef<HTMLElement>((props, ref) => {
   return (
-    <section
+    <section data-section-id="31dc0408-df64-4fa5-aa0c-ec323c7c231d"
       ref={ref}
       id="home-services"
-      className="relative py-20 md:py-32 bg-background"
+      className="relative py-20 md:py-32 bg-background overflow-x-hidden"
       aria-labelledby="home-services-heading"
     >
       <div className="container max-w-6xl mx-auto px-4">
@@ -171,16 +174,16 @@ const HomeServices = React.forwardRef<HTMLElement>((props, ref) => {
                     <Button
                       asChild
                       variant="outline"
-                      className="w-full group font-semibold border-2 transition-colors duration-200"
+                      className="w-full h-auto min-h-10 group font-semibold border-2 transition-colors duration-200 whitespace-normal text-center py-2.5"
                       style={{
                         borderColor: "hsl(218 60% 20%)",
                         color: "hsl(218 60% 20%)",
                       }}
                     >
-                      <Link to={service.link}>
-                        Explore {service.title}
+                      <Link to={service.link} className="flex items-center justify-center gap-2 leading-snug">
+                        <span>{service.buttonLabel ?? service.title}</span>
                         <ArrowRight
-                          className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-200"
+                          className="h-4 w-4 flex-shrink-0 group-hover:translate-x-1 transition-transform duration-200"
                           aria-hidden="true"
                         />
                       </Link>
@@ -212,7 +215,7 @@ const HomeServices = React.forwardRef<HTMLElement>((props, ref) => {
               color: "hsl(218 60% 20%)",
             }}
           >
-            <Link to="/request">Request an Appraisal</Link>
+            <Link to="/request/">Request an Appraisal</Link>
           </Button>
         </motion.div>
       </div>

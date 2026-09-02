@@ -6,7 +6,7 @@ import { Shield, Clock, MapPin, Lock, Contact, Icon } from "lucide-react";
 
 const HomeCTA = React.forwardRef<HTMLElement>((props, ref) => {
   return (
-    <section
+    <section data-section-id="19eda0cd-f15e-45f1-b301-ad1d27d1f94a"
       ref={ref}
       id="home-cta"
       className="relative py-20 md:py-32 overflow-hidden"

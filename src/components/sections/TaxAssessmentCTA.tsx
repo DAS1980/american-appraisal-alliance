@@ -25,7 +25,7 @@ const TaxAssessmentCTA = React.forwardRef<HTMLElement>((props, ref) => {
   ];
 
   return (
-    <section
+    <section data-section-id="6fa1ad81-edd6-4939-8f1f-d38f55196a58"
       ref={ref}
       id="tax-assessment-cta"
       className="relative py-20 md:py-32 overflow-hidden"

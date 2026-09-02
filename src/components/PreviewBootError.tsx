@@ -39,10 +39,17 @@ interface PreviewBootErrorProps {
    * the visible UI.
    */
   error?: unknown;
+  /**
+   * LPS-1439: whether the parent frame is actively running an auto-repair
+   * for this failure. Only when `true` do we promise automatic repair —
+   * otherwise this fallback is showing precisely because no repair is
+   * happening, so claiming one would be the misleading state QA reported.
+   * Toggled at runtime via the `PREVIEW_BOOT_REPAIR_STATE` postMessage.
+   */
+  repairPending?: boolean;
 }
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-export default function PreviewBootError(_props: PreviewBootErrorProps) {
+export default function PreviewBootError({ repairPending = false }: PreviewBootErrorProps) {
   return (
     <div
       role="alert"
@@ -86,9 +93,9 @@ export default function PreviewBootError(_props: PreviewBootErrorProps) {
             margin: "0",
           }}
         >
-          We hit an issue while starting your preview. The builder will
-          attempt to repair this automatically — please hold on a
-          moment.
+          {repairPending
+            ? "We hit an issue while starting your preview. The builder is repairing it automatically — please hold on a moment."
+            : "We hit an issue while starting your preview. Try reloading the preview to continue."}
         </p>
         {/*
           NO raw error message / stack trace in the visible UI.  Seeing

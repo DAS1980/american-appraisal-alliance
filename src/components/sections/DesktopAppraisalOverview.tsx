@@ -135,10 +135,10 @@ const DesktopAppraisalOverview = React.forwardRef<HTMLElement>((props, ref) => {
   ];
 
   return (
-    <section
+    <section data-section-id="180d5def-41b5-4aa5-bc92-6ddc678863b6"
       ref={ref}
       id="desktop-appraisal-overview"
-      className="relative py-20 md:py-32 bg-background"
+      className="relative py-20 md:py-32 bg-background overflow-x-hidden w-full max-w-full"
     >
       <div className="container max-w-6xl mx-auto px-4">
 

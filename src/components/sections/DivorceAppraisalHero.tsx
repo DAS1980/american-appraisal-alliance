@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
-import { Scale, ShieldCheck, Clock, CheckCircle } from "lucide-react";
+import { Scale, ShieldCheck, Clock, CheckCircle, Icon } from "lucide-react";
 
 const CANONICAL_BASE = "https://americanappraisalalliance.com";
 
@@ -28,11 +28,11 @@ const DivorceAppraisalHero = React.forwardRef<HTMLElement>((props, ref) => {
   ];
 
   return (
-    <section
+    <section data-section-id="a7ef7cbc-4ed4-404c-88c5-725a1fb3de89"
       ref={ref}
       id="divorce-appraisal-hero"
       aria-label="Divorce Appraisal Hero"
-      className="relative isolate min-h-[85vh] md:min-h-screen flex items-center overflow-hidden"
+      className="relative isolate min-h-[85vh] md:min-h-screen flex items-center overflow-hidden max-w-[100vw]"
     >
       {/* Layer 1 — Background Image */}
       <img
@@ -53,7 +53,7 @@ const DivorceAppraisalHero = React.forwardRef<HTMLElement>((props, ref) => {
         <div className="max-w-3xl">
           {/* Eyebrow / Service label */}
           <motion.div
-            initial={{ opacity: 0, y: 16 }}
+            initial={{ opacity: 1, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
           >
@@ -67,7 +67,7 @@ const DivorceAppraisalHero = React.forwardRef<HTMLElement>((props, ref) => {
 
           {/* Service Name */}
           <motion.p
-            initial={{ opacity: 0, y: 16 }}
+            initial={{ opacity: 1, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.08, ease: "easeOut" }}
             className="text-[hsl(42_88%_48%)] text-lg md:text-xl font-semibold mb-3 tracking-wide"
@@ -78,7 +78,7 @@ const DivorceAppraisalHero = React.forwardRef<HTMLElement>((props, ref) => {
 
           {/* H1 — Page-level heading */}
           <motion.h1
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.15, ease: "easeOut" }}
             className="text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-5 max-w-3xl"
@@ -89,7 +89,7 @@ const DivorceAppraisalHero = React.forwardRef<HTMLElement>((props, ref) => {
 
           {/* Subheadline */}
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.25, ease: "easeOut" }}
             className="text-white/90 text-lg md:text-xl leading-relaxed mb-8 max-w-2xl"
@@ -99,7 +99,7 @@ const DivorceAppraisalHero = React.forwardRef<HTMLElement>((props, ref) => {
 
           {/* Key bullet points */}
           <motion.ul
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.33, ease: "easeOut" }}
             className="space-y-2 mb-8"
@@ -121,7 +121,7 @@ const DivorceAppraisalHero = React.forwardRef<HTMLElement>((props, ref) => {
 
           {/* CTA Button */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.42, ease: "easeOut" }}
             className="flex flex-col sm:flex-row gap-4 items-start sm:items-center"
@@ -131,7 +131,7 @@ const DivorceAppraisalHero = React.forwardRef<HTMLElement>((props, ref) => {
               size="lg"
               className="h-12 px-8 text-base font-semibold bg-[hsl(42_88%_48%)] hover:bg-[hsl(42_88%_42%)] text-[hsl(218_65%_14%)] border-0 shadow-lg"
             >
-              <Link to="/request">Request an Appraisal</Link>
+              <Link to="/request/">Request an Appraisal</Link>
             </Button>
 
             <p className="text-white/75 text-sm leading-snug">
@@ -141,7 +141,7 @@ const DivorceAppraisalHero = React.forwardRef<HTMLElement>((props, ref) => {
 
           {/* Trust indicators row */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.52, ease: "easeOut" }}
             className="mt-10 pt-8 border-t border-white/20"

@@ -62,7 +62,7 @@ const itemVariants = {
 
 const FhaHudWhyChooseUs = React.forwardRef<HTMLElement>((props, ref) => {
   return (
-    <section
+    <section data-section-id="82eb31ed-c825-4fc1-a3e1-e2c2d4a66144"
       ref={ref}
       id="fha-hud-why-choose-us"
       className="relative py-20 md:py-32 bg-background"

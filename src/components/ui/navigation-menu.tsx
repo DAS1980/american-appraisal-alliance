@@ -73,21 +73,69 @@ NavigationMenuContent.displayName = NavigationMenuPrimitive.Content.displayName;
 
 const NavigationMenuLink = NavigationMenuPrimitive.Link;
 
+// Anchors the shared Viewport under the active trigger. Radix only sets the Viewport's
+// width per active trigger, not its horizontal position — without this, narrow content
+// opens at the menu root's left edge instead of under its trigger.
 const NavigationMenuViewport = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Viewport>,
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Viewport>
->(({ className, ...props }, ref) => (
-  <div className={cn("absolute left-0 top-full flex justify-center")}>
-    <NavigationMenuPrimitive.Viewport
-      className={cn(
-        "origin-top-center relative mt-1.5 h-[var(--radix-navigation-menu-viewport-height)] w-full overflow-hidden rounded-md border bg-popover text-popover-foreground shadow-lg data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-90 md:w-[var(--radix-navigation-menu-viewport-width)]",
-        className,
-      )}
-      ref={ref}
-      {...props}
-    />
-  </div>
-));
+>(({ className, ...props }, ref) => {
+  const wrapperRef = React.useRef<HTMLDivElement>(null);
+
+  React.useEffect(() => {
+    const wrapper = wrapperRef.current;
+    const root = wrapper?.parentElement;
+    if (!wrapper || !root) return;
+    let sizeObs: ResizeObserver | null = null;
+    let observed: Element | null = null;
+
+    const reposition = () => {
+      const trigger = root.querySelector<HTMLElement>('button[data-state="open"]');
+      const viewport = wrapper.firstElementChild as HTMLElement | null;
+      if (!trigger || !viewport) return void (wrapper.style.left = "");
+      if (viewport !== observed) {
+        sizeObs?.disconnect();
+        (sizeObs = new ResizeObserver(reposition)).observe(viewport);
+        observed = viewport;
+      }
+      const w = viewport.offsetWidth;
+      if (w === 0) return; // Radix applies width on a later frame; ResizeObserver will re-fire
+      const tr = trigger.getBoundingClientRect();
+      const desired = tr.left + tr.width / 2 - w / 2;
+      const max = Math.max(8, window.innerWidth - w - 8);
+      const left = Math.min(Math.max(desired, 8), max) - root.getBoundingClientRect().left;
+      wrapper.style.left = `${left}px`;
+    };
+
+    const obs = new MutationObserver(reposition);
+    obs.observe(root, {
+      attributes: true,
+      attributeFilter: ["data-state"],
+      childList: true,
+      subtree: true,
+    });
+    window.addEventListener("resize", reposition);
+    reposition();
+    return () => {
+      obs.disconnect();
+      sizeObs?.disconnect();
+      window.removeEventListener("resize", reposition);
+    };
+  }, []);
+
+  return (
+    <div ref={wrapperRef} className={cn("absolute left-0 top-full flex justify-center")}>
+      <NavigationMenuPrimitive.Viewport
+        className={cn(
+          "origin-top-center relative mt-1.5 h-[var(--radix-navigation-menu-viewport-height)] w-full overflow-hidden rounded-md border bg-popover text-popover-foreground shadow-lg data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-90 md:w-[var(--radix-navigation-menu-viewport-width)]",
+          className,
+        )}
+        ref={ref}
+        {...props}
+      />
+    </div>
+  );
+});
 NavigationMenuViewport.displayName = NavigationMenuPrimitive.Viewport.displayName;
 
 const NavigationMenuIndicator = React.forwardRef<

@@ -27,11 +27,11 @@ const MarketValueUpdateHero = React.forwardRef<HTMLElement>((props, ref) => {
   ];
 
   return (
-    <section
+    <section data-section-id="0e1ceee1-e5e3-4179-962e-38086cdce880"
       ref={ref}
       id="market-value-update-hero"
       aria-label="Market Value Update Hero"
-      className="relative isolate min-h-[85vh] md:min-h-[80vh] flex items-center py-20 md:py-28"
+      className="relative isolate min-h-[85vh] md:min-h-[80vh] flex items-center py-20 md:py-28 overflow-hidden"
     >
       {/* Background Image — Layer 1 */}
       <img
@@ -52,7 +52,7 @@ const MarketValueUpdateHero = React.forwardRef<HTMLElement>((props, ref) => {
         <div className="max-w-3xl">
           {/* Eyebrow / category label */}
           <motion.div
-            initial={{ opacity: 0, y: 16 }}
+            initial={{ opacity: 1, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
             className="mb-4"
@@ -67,7 +67,7 @@ const MarketValueUpdateHero = React.forwardRef<HTMLElement>((props, ref) => {
 
           {/* Service Name / H1 */}
           <motion.h1
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
             className="font-bold text-white leading-tight mb-4"
@@ -77,12 +77,12 @@ const MarketValueUpdateHero = React.forwardRef<HTMLElement>((props, ref) => {
             }}
           >
             Market Value Update{" "}
-            <span className="whitespace-nowrap">(1004D / Recertification)</span>
+            <span className="sm:whitespace-nowrap">(1004D / Recertification)</span>
           </motion.h1>
 
           {/* Subheadline */}
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
             className="text-white/90 text-lg md:text-xl leading-relaxed mb-8 max-w-2xl"
@@ -96,7 +96,7 @@ const MarketValueUpdateHero = React.forwardRef<HTMLElement>((props, ref) => {
 
           {/* Key Points */}
           <motion.ul
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
             className="space-y-3 mb-10"
@@ -120,7 +120,7 @@ const MarketValueUpdateHero = React.forwardRef<HTMLElement>((props, ref) => {
 
           {/* CTA Button */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
             className="flex flex-col sm:flex-row gap-4 items-start sm:items-center"
@@ -135,7 +135,7 @@ const MarketValueUpdateHero = React.forwardRef<HTMLElement>((props, ref) => {
                 fontFamily: "'Inter', sans-serif",
               }}
             >
-              <Link to="/request">Request an Appraisal</Link>
+              <Link to="/request/">Request an Appraisal</Link>
             </Button>
 
             <Button
@@ -145,13 +145,13 @@ const MarketValueUpdateHero = React.forwardRef<HTMLElement>((props, ref) => {
               className="text-base font-medium px-8 py-3 h-12 bg-transparent text-white border-white/60 hover:bg-white/10"
               style={{ fontFamily: "'Inter', sans-serif" }}
             >
-              <Link to="/valuation-updates-reports">View All Valuation Reports</Link>
+              <Link to="/valuation-updates-reports/">View All Valuation Reports</Link>
             </Button>
           </motion.div>
 
           {/* Reassurance note */}
           <motion.p
-            initial={{ opacity: 0 }}
+            initial={{ opacity: 1 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.55 }}
             className="mt-5 text-white/65 text-sm"

@@ -1,4 +1,5 @@
 import React from "react";
+import { postToEditor } from "../lib/editor_channel";
 
 interface SectionErrorBoundaryProps {
   children: React.ReactNode;
@@ -30,23 +31,14 @@ class SectionErrorBoundary extends React.Component<SectionErrorBoundaryProps, Se
     console.error(`[SectionErrorBoundary] ${name} crashed:`, error.message);
 
     // Notify parent frame with section-level detail
-    if (window !== window.parent) {
-      try {
-        window.parent.postMessage(
-          {
-            type: "RUNTIME_ERROR",
-            payload: {
-              message: `Section "${name}" crashed: ${error.message}`,
-              componentStack: errorInfo.componentStack || "",
-              timestamp: Date.now(),
-            },
-          },
-          "*"
-        );
-      } catch {
-        // postMessage failed — silently ignore
-      }
-    }
+    postToEditor({
+      type: "RUNTIME_ERROR",
+      payload: {
+        message: `Section "${name}" crashed: ${error.message}`,
+        componentStack: errorInfo.componentStack || "",
+        timestamp: Date.now(),
+      },
+    });
   }
 
   render() {

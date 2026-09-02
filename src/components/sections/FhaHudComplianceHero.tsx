@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
-import { ShieldCheck, FileCheck, Home, CheckCircle } from "lucide-react";
+import { ShieldCheck, FileCheck, Home, CheckCircle, Icon } from "lucide-react";
 
 const FhaHudComplianceHero = React.forwardRef<HTMLElement>((props, ref) => {
   const highlights = [
@@ -26,7 +26,7 @@ const FhaHudComplianceHero = React.forwardRef<HTMLElement>((props, ref) => {
   ];
 
   return (
-    <section
+    <section data-section-id="849d3662-0000-4ea9-bb19-efadbbc66851"
       ref={ref}
       id="fha-hud-compliance-hero"
       aria-label="FHA/HUD Compliance Observation Report Hero"
@@ -60,7 +60,7 @@ const FhaHudComplianceHero = React.forwardRef<HTMLElement>((props, ref) => {
         <div className="max-w-3xl">
           {/* Service Category Badge */}
           <motion.div
-            initial={{ opacity: 0, y: 16 }}
+            initial={{ opacity: 1, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
           >
@@ -74,7 +74,7 @@ const FhaHudComplianceHero = React.forwardRef<HTMLElement>((props, ref) => {
 
           {/* H1 — Service Name */}
           <motion.h1
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
             className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-4"
@@ -85,7 +85,7 @@ const FhaHudComplianceHero = React.forwardRef<HTMLElement>((props, ref) => {
 
           {/* Subheadline */}
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
             className="text-lg md:text-xl text-white/85 leading-relaxed mb-8 max-w-2xl"
@@ -97,7 +97,7 @@ const FhaHudComplianceHero = React.forwardRef<HTMLElement>((props, ref) => {
 
           {/* Key Bullets */}
           <motion.ul
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
             className="space-y-2 mb-8"
@@ -116,7 +116,7 @@ const FhaHudComplianceHero = React.forwardRef<HTMLElement>((props, ref) => {
 
           {/* CTA Button */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
             className="flex flex-wrap gap-4 items-center"
@@ -132,7 +132,7 @@ const FhaHudComplianceHero = React.forwardRef<HTMLElement>((props, ref) => {
                 border: "none",
               }}
             >
-              <Link to="/request">Request an Appraisal</Link>
+              <Link to="/request/">Request an Appraisal</Link>
             </Button>
 
             <Button
@@ -141,7 +141,7 @@ const FhaHudComplianceHero = React.forwardRef<HTMLElement>((props, ref) => {
               variant="outline"
               className="h-12 px-8 text-base font-medium bg-transparent text-white border-white/50 hover:bg-white/10 hover:border-white"
             >
-              <Link to="/valuation-updates-reports">View All Reports</Link>
+              <Link to="/valuation-updates-reports/">View All Reports</Link>
             </Button>
 
 
@@ -149,7 +149,7 @@ const FhaHudComplianceHero = React.forwardRef<HTMLElement>((props, ref) => {
 
           {/* Reassurance copy */}
           <motion.p
-            initial={{ opacity: 0 }}
+            initial={{ opacity: 1 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.55, ease: "easeOut" }}
             className="mt-5 text-sm text-white/60 italic"
@@ -160,7 +160,7 @@ const FhaHudComplianceHero = React.forwardRef<HTMLElement>((props, ref) => {
 
         {/* Highlight Pills Row */}
         <motion.div
-          initial={{ opacity: 0, y: 24 }}
+          initial={{ opacity: 1, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.6, ease: "easeOut" }}
           className="mt-14 grid grid-cols-2 md:grid-cols-4 gap-3"
@@ -168,7 +168,7 @@ const FhaHudComplianceHero = React.forwardRef<HTMLElement>((props, ref) => {
           {highlights.map(({ icon: Icon, label }, i) => (
             <motion.div
               key={label}
-              initial={{ opacity: 0, y: 16 }}
+              initial={{ opacity: 1, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.65 + i * 0.08, ease: "easeOut" }}
               className="flex items-center gap-2.5 rounded-lg px-4 py-3 border border-white/15 bg-white/8"

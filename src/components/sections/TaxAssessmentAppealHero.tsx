@@ -20,7 +20,7 @@ const TaxAssessmentAppealHero = React.forwardRef<HTMLElement>((props, ref) => {
   ];
 
   return (
-    <section
+    <section data-section-id="d1385ce0-1d15-4115-a1cf-1aad59f083a1"
       ref={ref}
       id="tax-assessment-appeal-hero"
       aria-label="Tax Assessment Appeal Appraisal Hero"

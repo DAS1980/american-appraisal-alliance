@@ -54,24 +54,46 @@ function NavDropdownGroup({
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <button
-        type="button"
-        onClick={() => setOpen((prev) => !prev)}
-        className={cn(
-          linkClassName,
-          "inline-flex items-center gap-1 cursor-pointer"
-        )}
-        aria-expanded={open}
-        aria-haspopup="true"
-      >
-        {item.label}
-        <ChevronDown
+      {item.to ? (
+        // LPS-850: parent page is clickable; chevron toggles the submenu.
+        <span className={cn(linkClassName, "inline-flex items-center gap-1")}>
+          <Link to={item.to}>{item.label}</Link>
+          <button
+            type="button"
+            onClick={() => setOpen((prev) => !prev)}
+            className="inline-flex items-center cursor-pointer"
+            aria-expanded={open}
+            aria-haspopup="true"
+            aria-label={`Toggle ${item.label} submenu`}
+          >
+            <ChevronDown
+              className={cn(
+                "h-3.5 w-3.5 transition-transform duration-200",
+                open && "rotate-180"
+              )}
+            />
+          </button>
+        </span>
+      ) : (
+        <button
+          type="button"
+          onClick={() => setOpen((prev) => !prev)}
           className={cn(
-            "h-3.5 w-3.5 transition-transform duration-200",
-            open && "rotate-180"
+            linkClassName,
+            "inline-flex items-center gap-1 cursor-pointer"
           )}
-        />
-      </button>
+          aria-expanded={open}
+          aria-haspopup="true"
+        >
+          {item.label}
+          <ChevronDown
+            className={cn(
+              "h-3.5 w-3.5 transition-transform duration-200",
+              open && "rotate-180"
+            )}
+          />
+        </button>
+      )}
 
       {open && (
         <div className="absolute top-full left-0 mt-2 min-w-[12rem] max-h-[70vh] overflow-y-auto rounded-md border bg-popover p-1 text-popover-foreground shadow-md z-50 animate-in fade-in-0 zoom-in-95">
@@ -217,20 +239,45 @@ function MobileNavGroup({
 
   return (
     <Collapsible open={open} onOpenChange={setOpen}>
-      <CollapsibleTrigger
-        className={cn(
-          "flex w-full items-center justify-between rounded-md px-3 py-2.5 transition-colors hover:bg-accent hover:text-accent-foreground cursor-pointer",
-          linkClassName
-        )}
-      >
-        {item.label}
-        <ChevronDown
+      {item.to ? (
+        // LPS-850: parent page is a tappable link; chevron toggles children.
+        <div
           className={cn(
-            "h-4 w-4 transition-transform duration-200",
-            open && "rotate-180"
+            "flex w-full items-center justify-between rounded-md px-3 py-2.5 transition-colors hover:bg-accent hover:text-accent-foreground",
+            linkClassName
           )}
-        />
-      </CollapsibleTrigger>
+        >
+          <Link to={item.to} onClick={onNavigate} className="flex-1">
+            {item.label}
+          </Link>
+          <CollapsibleTrigger
+            className="cursor-pointer pl-2"
+            aria-label={`Toggle ${item.label} submenu`}
+          >
+            <ChevronDown
+              className={cn(
+                "h-4 w-4 transition-transform duration-200",
+                open && "rotate-180"
+              )}
+            />
+          </CollapsibleTrigger>
+        </div>
+      ) : (
+        <CollapsibleTrigger
+          className={cn(
+            "flex w-full items-center justify-between rounded-md px-3 py-2.5 transition-colors hover:bg-accent hover:text-accent-foreground cursor-pointer",
+            linkClassName
+          )}
+        >
+          {item.label}
+          <ChevronDown
+            className={cn(
+              "h-4 w-4 transition-transform duration-200",
+              open && "rotate-180"
+            )}
+          />
+        </CollapsibleTrigger>
+      )}
       <CollapsibleContent>
         <div className="ml-3 border-l border-border pl-3 mt-1 flex flex-col gap-0.5">
           {item.children?.map((child) => (

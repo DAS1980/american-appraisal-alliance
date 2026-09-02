@@ -1,4 +1,5 @@
 import React from "react";
+import { postToEditor } from "../lib/editor_channel";
 
 interface ErrorBoundaryProps {
   children: React.ReactNode;
@@ -37,23 +38,14 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
     console.error("[ErrorBoundary] Component stack:", errorInfo.componentStack);
 
     // Send error to parent frame for agent repair pipeline
-    if (window !== window.parent) {
-      try {
-        window.parent.postMessage(
-          {
-            type: "RUNTIME_ERROR",
-            payload: {
-              message: error.message,
-              componentStack: errorInfo.componentStack || "",
-              timestamp: Date.now(),
-            },
-          },
-          "*"
-        );
-      } catch {
-        // postMessage failed — silently ignore
-      }
-    }
+    postToEditor({
+      type: "RUNTIME_ERROR",
+      payload: {
+        message: error.message,
+        componentStack: errorInfo.componentStack || "",
+        timestamp: Date.now(),
+      },
+    });
   }
 
   handleRetry = () => {
@@ -62,24 +54,15 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
 
   handleFixWithAI = () => {
     const errorMsg = this.state.error?.message || "unknown error";
-    if (window !== window.parent) {
-      try {
-        window.parent.postMessage(
-          {
-            type: "RUNTIME_ERROR",
-            payload: {
-              message: errorMsg,
-              componentStack: "",
-              timestamp: Date.now(),
-              userInitiated: true,
-            },
-          },
-          "*"
-        );
-      } catch {
-        // silently ignore
-      }
-    }
+    postToEditor({
+      type: "RUNTIME_ERROR",
+      payload: {
+        message: errorMsg,
+        componentStack: "",
+        timestamp: Date.now(),
+        userInitiated: true,
+      },
+    });
   };
 
   render() {

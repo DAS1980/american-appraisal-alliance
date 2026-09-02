@@ -60,12 +60,12 @@ const ExteriorOnlyServiceDetail = React.forwardRef<HTMLElement>((props, ref) => 
   ];
 
   return (
-    <section
+    <section data-section-id="8661924a-038b-459c-a7db-1474f4f61e61"
       ref={ref}
       id="exterior-only-service-detail"
-      className="relative py-20 md:py-32 bg-background"
+      className="relative py-20 md:py-32 bg-background overflow-x-hidden"
     >
-      <div className="container max-w-6xl mx-auto px-4">
+      <div className="container max-w-6xl mx-auto px-4 w-full">
 
         {/* Section Header */}
         <motion.div
@@ -439,7 +439,7 @@ const ExteriorOnlyServiceDetail = React.forwardRef<HTMLElement>((props, ref) => 
           <p className="text-muted-foreground text-sm">
             Ready to get started?{" "}
             <Link
-              to="/request"
+              to="/request/"
               className="text-primary font-medium hover:underline underline-offset-2 transition-colors"
             >
               Request an Appraisal →

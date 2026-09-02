@@ -65,7 +65,7 @@ const cardVariants = {
 
 const EstateAppraisalWhyChooseUs = React.forwardRef<HTMLElement>((props, ref) => {
   return (
-    <section
+    <section data-section-id="f794b176-0855-407e-bd24-248af41e9d51"
       ref={ref}
       id="estate-appraisal-why-choose-us"
       className="relative py-20 md:py-32 bg-background"

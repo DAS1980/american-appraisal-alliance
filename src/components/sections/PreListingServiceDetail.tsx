@@ -66,10 +66,10 @@ const whoNeedsIt = [
 
 const PreListingServiceDetail = React.forwardRef<HTMLElement>((props, ref) => {
   return (
-    <section
+    <section data-section-id="1c8fa2f6-be97-4908-a373-af2d95214f85"
       ref={ref}
       id="pre-listing-service-detail"
-      className="py-20 md:py-32 bg-background"
+      className="py-20 md:py-32 bg-background overflow-x-hidden"
     >
       <div className="container max-w-6xl mx-auto px-4">
 

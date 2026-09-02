@@ -35,13 +35,13 @@ const commitments = [
 
 const AboutMissionStatement = React.forwardRef<HTMLElement>((props, ref) => {
   return (
-    <section
+    <section data-section-id="9a143aa8-7ee9-4ca2-916a-d71e0a26e485"
       ref={ref}
       id="about-mission-statement"
-      className="relative py-20 md:py-32 bg-background overflow-hidden"
+      className="relative py-20 md:py-32 bg-background overflow-x-hidden"
     >
       {/* Subtle background texture */}
-      <div className="absolute inset-0 pointer-events-none opacity-30">
+      <div className="absolute inset-0 pointer-events-none opacity-30 overflow-hidden">
         <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/5 to-transparent" />
         <div className="absolute bottom-0 left-0 w-1/3 h-1/2 bg-gradient-to-tr from-[hsl(42_88%_48%/0.05)] to-transparent rounded-full blur-3xl" />
       </div>

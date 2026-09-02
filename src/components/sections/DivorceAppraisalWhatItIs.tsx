@@ -30,10 +30,10 @@ const keyPoints = [
 
 const DivorceAppraisalWhatItIs = React.forwardRef<HTMLElement>((props, ref) => {
   return (
-    <section
+    <section data-section-id="4b19ed33-4feb-43e2-9e4e-ed5acdff0a60"
       ref={ref}
       id="divorce-appraisal-what-it-is"
-      className="relative py-20 md:py-32 bg-background"
+      className="relative py-20 md:py-32 bg-background overflow-x-hidden"
     >
       <div className="container max-w-6xl mx-auto px-4">
         {/* Section Header */}

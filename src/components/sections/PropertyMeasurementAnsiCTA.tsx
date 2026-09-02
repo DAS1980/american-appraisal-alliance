@@ -29,7 +29,7 @@ const PropertyMeasurementAnsiCTA = React.forwardRef<HTMLElement>((props, ref) =>
   ];
 
   return (
-    <section
+    <section data-section-id="262ce66e-e1c3-476a-b4cc-a333157b75a1"
       ref={ref}
       id="property-measurement-ansi-cta"
       className="relative py-20 md:py-32 bg-primary overflow-hidden"

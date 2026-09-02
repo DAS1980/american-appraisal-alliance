@@ -63,7 +63,7 @@ const cardVariants = {
 
 const PreListingWhyChooseUs = React.forwardRef<HTMLElement>((props, ref) => {
   return (
-    <section
+    <section data-section-id="71afad6a-622e-4da9-bd89-92b7193da772"
       ref={ref}
       id="pre-listing-why-choose-us"
       className="relative py-20 md:py-32 bg-background"

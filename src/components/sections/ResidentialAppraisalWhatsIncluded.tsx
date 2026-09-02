@@ -81,7 +81,7 @@ const cardVariants = {
 
 const ResidentialAppraisalWhatsIncluded = React.forwardRef<HTMLElement>((props, ref) => {
   return (
-    <section
+    <section data-section-id="9bae8bda-785b-485e-a00a-c463cb5ec904"
       ref={ref}
       id="residential-appraisal-whats-included"
       className="relative py-20 md:py-32 bg-background"

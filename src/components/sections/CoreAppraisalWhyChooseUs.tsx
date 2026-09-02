@@ -57,10 +57,10 @@ const cardVariants = {
 
 const CoreAppraisalWhyChooseUs = React.forwardRef<HTMLElement>((props, ref) => {
   return (
-    <section
+    <section data-section-id="727aa790-25c0-4929-940f-533e167a0619"
       ref={ref}
       id="core-appraisal-why-choose-us"
-      className="relative py-20 md:py-32 bg-background"
+      className="relative py-20 md:py-32 bg-background overflow-x-hidden"
       aria-labelledby="why-choose-heading"
     >
       {/* Subtle top accent line */}
@@ -70,7 +70,7 @@ const CoreAppraisalWhyChooseUs = React.forwardRef<HTMLElement>((props, ref) => {
         aria-hidden="true"
       />
 
-      <div className="container max-w-6xl mx-auto px-4">
+      <div className="container max-w-6xl mx-auto px-4 sm:px-6 w-full">
         {/* Section header */}
         <motion.div
           className="text-center mb-14"
@@ -157,7 +157,7 @@ const CoreAppraisalWhyChooseUs = React.forwardRef<HTMLElement>((props, ref) => {
           transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
         >
           <div
-            className="inline-flex items-center gap-3 px-6 py-3 rounded-full border text-sm font-medium text-foreground"
+            className="inline-flex items-center gap-3 px-6 py-3 rounded-full border text-sm font-medium text-foreground max-w-full flex-wrap justify-center text-left"
             style={{ borderColor: "hsl(42 88% 48% / 0.5)", background: "hsl(42 92% 52% / 0.07)" }}
           >
             <ShieldCheck

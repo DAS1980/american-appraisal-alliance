@@ -61,7 +61,7 @@ const GrossLivingAreaWhatItIs = React.forwardRef<HTMLElement>((props, ref) => {
   ];
 
   return (
-    <section
+    <section data-section-id="ec16ea36-7605-4ca0-86f9-42a70a84f619"
       ref={ref}
       id="gross-living-area-what-it-is"
       className="relative py-20 md:py-32 bg-background"

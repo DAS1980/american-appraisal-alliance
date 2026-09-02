@@ -23,7 +23,7 @@ const cities = [
 
 const ContactServiceArea = React.forwardRef<HTMLElement>((props, ref) => {
   return (
-    <section
+    <section data-section-id="7ded8a93-48d8-4159-8fb0-ab67a1899144"
       ref={ref}
       id="contact-service-area"
       className="relative py-20 md:py-32 bg-background"
@@ -93,12 +93,12 @@ const ContactServiceArea = React.forwardRef<HTMLElement>((props, ref) => {
           transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
           className="text-center"
         >
-          <div className="inline-flex items-center gap-3 rounded-xl border border-amber-200 bg-amber-50 px-6 py-4 shadow-sm">
-            <MapPin className="h-5 w-5 text-amber-600 flex-shrink-0" />
-            <p className="text-sm text-amber-900 font-medium">
+          <div className="inline-flex items-start sm:items-center gap-3 rounded-xl border border-amber-200 bg-amber-50 px-4 sm:px-6 py-4 shadow-sm max-w-full text-left">
+            <MapPin className="h-5 w-5 text-amber-600 flex-shrink-0 mt-0.5 sm:mt-0" />
+            <p className="text-sm text-amber-900 font-medium break-words">
               Not sure if we cover your area?{" "}
               <a
-                href="/contact"
+                href="/contact/"
                 className="underline underline-offset-2 hover:text-amber-700 transition-colors font-semibold"
               >
                 Contact us

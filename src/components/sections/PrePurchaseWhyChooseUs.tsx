@@ -61,7 +61,7 @@ const itemVariants = {
 
 const PrePurchaseWhyChooseUs = React.forwardRef<HTMLElement>((props, ref) => {
   return (
-    <section
+    <section data-section-id="90c6d8a7-8689-42e4-98b3-f770daadb6e3"
       ref={ref}
       id="pre-purchase-why-choose-us"
       className="relative py-20 md:py-32 bg-background"

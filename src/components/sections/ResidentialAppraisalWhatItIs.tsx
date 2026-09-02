@@ -67,7 +67,7 @@ const complianceItems = [
 const ResidentialAppraisalWhatItIs = React.forwardRef<HTMLElement>(
   (props, ref) => {
     return (
-      <section
+      <section data-section-id="bd982cc5-127a-42a4-87ea-cfe0dd43e9dd"
         ref={ref}
         id="residential-appraisal-what-it-is"
         className="relative py-20 md:py-32 bg-background"
@@ -267,7 +267,7 @@ const ResidentialAppraisalWhatItIs = React.forwardRef<HTMLElement>(
               className="overflow-hidden rounded-xl border border-border"
             >
               {/* Table header row */}
-              <div className="grid grid-cols-[1fr_2fr] bg-[hsl(218_60%_20%)] px-6 py-4 gap-4">
+              <div className="hidden sm:grid grid-cols-[1fr_2fr] bg-[hsl(218_60%_20%)] px-6 py-4 gap-4">
                 <span
                   className="text-xs font-semibold uppercase tracking-widest text-[hsl(42_92%_58%)]"
                   style={{ fontFamily: "'Playfair Display', serif" }}
@@ -286,14 +286,14 @@ const ResidentialAppraisalWhatItIs = React.forwardRef<HTMLElement>(
                 <div
                   key={row.label}
                   className={[
-                    "grid grid-cols-[1fr_2fr] px-6 py-5 gap-4 items-start border-t border-border",
+                    "grid grid-cols-1 sm:grid-cols-[1fr_2fr] px-4 sm:px-6 py-5 gap-2 sm:gap-4 items-start border-t border-border",
                     i % 2 === 0 ? "bg-background" : "bg-muted/30",
                     row.highlight ? "bg-[hsl(218_60%_20%)]/5" : "",
                   ]
                     .filter(Boolean)
                     .join(" ")}
                 >
-                  <div className="flex flex-wrap items-center gap-2">
+                  <div className="flex flex-wrap items-center gap-2 min-w-0">
                     {row.highlight && (
                       <span className="inline-block w-2 h-2 rounded-full bg-[hsl(42_88%_48%)] flex-shrink-0" />
                     )}
@@ -317,7 +317,7 @@ const ResidentialAppraisalWhatItIs = React.forwardRef<HTMLElement>(
                       </span>
                     )}
                   </div>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
+                  <p className="text-sm text-muted-foreground leading-relaxed min-w-0">
                     {row.description}
                   </p>
                 </div>
@@ -334,7 +334,7 @@ const ResidentialAppraisalWhatItIs = React.forwardRef<HTMLElement>(
               licensed appraisers serving the Dallas&ndash;Fort Worth metroplex
               are available to help you determine the most appropriate product.{" "}
               <Link
-                to="/contact"
+                to="/contact/"
                 className="font-medium underline underline-offset-2 text-[hsl(218_60%_20%)] hover:text-[hsl(42_88%_48%)] transition-colors"
               >
                 Contact us for a no-obligation consultation.

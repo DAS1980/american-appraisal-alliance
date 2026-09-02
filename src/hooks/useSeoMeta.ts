@@ -120,25 +120,18 @@ export function useSeoMeta(): void {
         updateMetaTag('meta[name="twitter:description"]', description);
       }
       
-      // Derive production canonical URL — use manifest value if set,
-      // otherwise fall back to the production domain + current path.
-      const PRODUCTION_ORIGIN = 'https://americanappraisalalliance.com';
-      const pagePath = currentPage.isHome ? '/' : `/${currentPage.slug}`;
-      const resolvedCanonical = canonicalUrl || `${PRODUCTION_ORIGIN}${pagePath}`;
-
-      // Update <link rel="canonical">
-      let link = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
-      if (link) {
-        link.href = resolvedCanonical;
-      } else {
-        link = document.createElement('link');
-        link.rel = 'canonical';
-        link.href = resolvedCanonical;
-        document.head.appendChild(link);
+      // Update canonical URL
+      if (canonicalUrl) {
+        let link = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
+        if (link) {
+          link.href = canonicalUrl;
+        } else {
+          link = document.createElement('link');
+          link.rel = 'canonical';
+          link.href = canonicalUrl;
+          document.head.appendChild(link);
+        }
       }
-
-      // Update <meta property="og:url">
-      updateMetaTag('meta[property="og:url"]', resolvedCanonical);
     }
   }, [location.pathname, manifest]);
 }

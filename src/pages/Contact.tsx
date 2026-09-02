@@ -11,7 +11,7 @@ import Footer from "@/components/sections/Footer";
 const Contact = React.forwardRef<HTMLDivElement>((props, ref) => {
   return (
     <PageLayout currentPage="contact">
-      <div ref={ref}>
+      <div ref={ref} className="overflow-x-hidden w-full max-w-[100vw]">
         <Header />
         <SectionErrorBoundary sectionName="ContactHero">
           <ContactHero />

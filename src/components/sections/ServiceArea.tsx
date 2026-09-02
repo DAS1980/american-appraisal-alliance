@@ -34,7 +34,7 @@ const cities = [
 
 const ServiceArea = React.forwardRef<HTMLElement>((props, ref) => {
   return (
-    <section
+    <section data-section-id="7b33efce-5700-4e7f-94c2-ac20fe793576"
       ref={ref}
       id="service-area"
       className="relative py-20 md:py-32 bg-background overflow-hidden"
@@ -135,7 +135,7 @@ const ServiceArea = React.forwardRef<HTMLElement>((props, ref) => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
-          className="relative rounded-xl px-6 py-6 md:px-10 md:py-8 flex flex-col md:flex-row items-center justify-between gap-4 border"
+          className="relative rounded-xl px-6 py-6 md:px-10 md:py-8 flex flex-col md:flex-row items-center justify-between gap-4 border overflow-hidden"
           style={{
             backgroundColor: "hsl(218 60% 20%)",
             borderColor: "hsl(218 60% 20%)",

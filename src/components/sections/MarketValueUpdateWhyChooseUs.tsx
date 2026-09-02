@@ -53,7 +53,7 @@ const cardVariants = {
 
 const MarketValueUpdateWhyChooseUs = React.forwardRef<HTMLElement>((props, ref) => {
   return (
-    <section
+    <section data-section-id="9988abbf-dab6-4aa8-85b4-bde0b8e67399"
       ref={ref}
       id="market-value-update-why-choose-us"
       className="relative py-20 md:py-32 bg-background"

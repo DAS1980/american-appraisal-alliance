@@ -21,7 +21,7 @@ const ValuationUpdatesCTA = React.forwardRef<HTMLElement>((props, ref) => {
   ];
 
   return (
-    <section
+    <section data-section-id="2b7a4503-1bf7-4c86-992b-3efcc2f09c7d"
       ref={ref}
       id="valuation-updates-cta"
       className="relative py-20 md:py-28 bg-primary overflow-hidden"

@@ -34,6 +34,8 @@ import {
   type PagesManifest,
 } from './manifest';
 
+import { isFromEditor, postToEditor } from './editor_channel';
+
 // =============================================================================
 // Debug Logging
 // =============================================================================
@@ -152,6 +154,8 @@ interface ElementStyles {
 interface ElementAttributes {
   // Image attributes
   src?: string;
+  /** LPS-1755: `src` resolved against the preview origin — display only; edits still match on `src`. */
+  srcResolved?: string;
   alt?: string;
   // Link attributes
   href?: string;
@@ -195,6 +199,16 @@ type ElementTypeHint =
   | 'list'           // ul, ol, li
   | 'unknown';
 
+/** LPS-1360: one selectable crumb in the selected element's ancestry, so the
+ *  editor can offer "select the icon OR its enclosing link" (index 0 = the
+ *  selected element itself, ascending toward the section root). */
+interface AncestorCrumb {
+  index: number;
+  tag: string;
+  elementType: ElementTypeHint;
+  href?: string;
+}
+
 interface SelectedElement {
   location: ElementLocation;
   tagName: string;
@@ -224,6 +238,14 @@ interface SelectedElement {
     instanceIndex: number;
     instanceCount: number;
   } | null;
+  /** LPS-1053: set when the clicked element is blog content rendered from
+   *  blog.json (a derived view). Routes the edit to Django (source of truth)
+   *  instead of mutating blog.json, which is overwritten on the next sync. */
+  blog?: { postId: string; field: string } | null;
+  /** LPS-1360: selectable ancestry (self → section root) so the editor can
+   *  render a breadcrumb; e.g. a social <svg>/<img> exposes its enclosing <a>
+   *  so the URL field becomes reachable. */
+  ancestry?: AncestorCrumb[];
 }
 
 interface VisualEdit {
@@ -240,6 +262,7 @@ type ParentMessage =
   | { type: 'REVERT_PREVIEW' }
   | { type: 'SELECT_ELEMENT'; payload: { lovId: string; instanceIndex?: number } }
   | { type: 'SELECT_PARENT' }  // Select parent of currently selected element
+  | { type: 'SELECT_ANCESTOR'; payload: { index: number } }  // LPS-1360: select nth crumb of the selected element's ancestry (0 = self)
   | { type: 'SELECT_CHILD'; payload: { index: number } }  // Select nth child of current element
   | { type: 'SELECT_SIBLING'; payload: { direction: 'prev' | 'next' } }  // Select previous/next sibling
   // Virtual overrides - for live code preview without persisting to disk
@@ -258,10 +281,13 @@ type ParentMessage =
 class VisualInspector {
   private isActive = false;
   private overlay: HTMLDivElement | null = null;
+  private overlayBadge: HTMLDivElement | null = null;
   private selectedOverlay: HTMLDivElement | null = null;
   private contextMenu: HTMLDivElement | null = null;
   private currentHoveredElement: HTMLElement | null = null;
   private selectedElement: HTMLElement | null = null;
+  // LPS-1360: cached ancestry elements backing the editor's selection breadcrumb.
+  private selectionAncestry: HTMLElement[] = [];
   // Track original classNames per element (lovId) for proper revert
   private originalClassNames: Map<string, string> = new Map();
   private previewedChanges: Map<string, { 
@@ -274,6 +300,13 @@ class VisualInspector {
   // Interaction blocking for vibe coding
   private interactionsDisabled = false;
   private interactionBlockerStyle: HTMLStyleElement | null = null;
+  // LPS-913: shields for cross-origin iframes — see Iframe Click-Shield section below.
+  private iframeShields: Map<HTMLIFrameElement, HTMLDivElement> = new Map();
+  private shieldToIframe: WeakMap<HTMLDivElement, HTMLIFrameElement> = new WeakMap();
+  private iframeMutationObserver: MutationObserver | null = null;
+  private iframeResizeObservers: Map<HTMLIFrameElement, ResizeObserver> = new Map();
+  private iframeReposScheduled = false;
+  private iframeReposListener: (() => void) | null = null;
 
   constructor() {
     log('Init', '🚀 VisualInspector constructor called');
@@ -408,6 +441,27 @@ class VisualInspector {
     `;
     document.body.appendChild(this.overlay);
 
+    // LPS-913: shown on the hover overlay when target is an iframe shield.
+    // Sibling of `overlay` so it can extend above the overlay's top edge.
+    this.overlayBadge = document.createElement('div');
+    this.overlayBadge.id = 'lps-inspector-overlay-badge';
+    this.overlayBadge.textContent = 'Embedded iframe';
+    this.overlayBadge.style.cssText = `
+      position: fixed;
+      pointer-events: none;
+      background: rgba(245, 158, 11, 0.95);
+      color: #1a1a1a;
+      font: 600 11px/1 -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      padding: 3px 7px;
+      border-radius: 4px 4px 0 0;
+      z-index: 99999;
+      display: none;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+      letter-spacing: 0.02em;
+      white-space: nowrap;
+    `;
+    document.body.appendChild(this.overlayBadge);
+
     // Selected overlay (green)
     this.selectedOverlay = document.createElement('div');
     this.selectedOverlay.id = 'lps-inspector-selected';
@@ -450,9 +504,12 @@ class VisualInspector {
     log('Setup', 'Setting up postMessage listener...');
     
     window.addEventListener('message', (event) => {
+      // LPS-1727 — only the embedding editor may drive the inspector. This
+      // replaces a comment that said "Security: In production, verify origin"
+      // with nothing under it.
+      if (!isFromEditor(event)) return;
       log('Message', `Received message from origin: ${event.origin}`, event.data);
-      
-      // Security: In production, verify origin
+
       const message = event.data as ParentMessage;
       if (!message || typeof message.type !== 'string') {
         log('Message', 'Ignoring non-inspector message');
@@ -497,6 +554,11 @@ class VisualInspector {
       case 'SELECT_PARENT':
         log('Message', 'SELECT_PARENT received');
         this.selectParentElement();
+        break;
+
+      case 'SELECT_ANCESTOR':
+        log('Message', 'SELECT_ANCESTOR received', message.payload);
+        this.selectAncestorElement(message.payload.index);
         break;
 
       case 'SELECT_CHILD':
@@ -551,42 +613,42 @@ class VisualInspector {
 
   private handleSetVirtualOverride(filePath: string, content: string) {
     const success = setVirtualOverride(filePath, content);
-    window.parent.postMessage({
+    postToEditor({
       type: 'VIRTUAL_OVERRIDE_RESULT',
       payload: { filePath, success, action: 'set' }
-    }, '*');
+    });
   }
 
   private handleClearVirtualOverride(filePath: string) {
     const success = clearVirtualOverride(filePath);
-    window.parent.postMessage({
+    postToEditor({
       type: 'VIRTUAL_OVERRIDE_RESULT',
       payload: { filePath, success, action: 'clear' }
-    }, '*');
+    });
   }
 
   private handleClearAllVirtualOverrides() {
     const success = clearAllVirtualOverrides();
-    window.parent.postMessage({
+    postToEditor({
       type: 'VIRTUAL_OVERRIDE_RESULT',
       payload: { success, action: 'clear_all' }
-    }, '*');
+    });
   }
 
   private sendCapabilities() {
-    window.parent.postMessage({
+    postToEditor({
       type: 'CAPABILITIES',
       payload: {
         virtualOverrides: isVirtualOverridesAvailable(),
         tailwindConfig: this.tailwindConfigLoaded,
         jsxSource: true,
       }
-    }, '*');
+    });
   }
 
   private notifyReady() {
     log('Setup', '📤 Sending INSPECTOR_READY to parent...');
-    window.parent.postMessage({ 
+    postToEditor({ 
       type: 'INSPECTOR_READY',
       payload: {
         capabilities: {
@@ -595,7 +657,7 @@ class VisualInspector {
           jsxSource: true,
         }
       }
-    }, '*');
+    });
     log('Setup', '✅ INSPECTOR_READY sent');
   }
 
@@ -623,7 +685,10 @@ class VisualInspector {
     document.body.style.cursor = 'crosshair';
     
     log('State', '✅ Inspector ENABLED - cursor set to crosshair');
-    
+
+    // LPS-913: cross-origin iframes swallow clicks — shields make them selectable.
+    this.installIframeShields();
+
     // Re-check for elements with source info after enabling
     this.debugCheckSourceElements();
   }
@@ -644,8 +709,11 @@ class VisualInspector {
     document.removeEventListener('contextmenu', this.handleContextMenu, true);
     window.removeEventListener('scroll', this.handleScroll, true);
 
+    // LPS-913: restore native iframe interaction when not editing.
+    this.removeIframeShields();
+
     // Hide both overlays (hover/blue and selected/green) and context menu
-    if (this.overlay) this.overlay.style.display = 'none';
+    this.hideOverlay();
     this.hideSelectedOverlay();
     this.hideContextMenu();
 
@@ -657,8 +725,8 @@ class VisualInspector {
     this.selectedElement = null;
 
     // Send deselect messages to parent
-    window.parent.postMessage({ type: 'ELEMENT_HOVER', payload: null }, '*');
-    window.parent.postMessage({ type: 'ELEMENT_DESELECT' }, '*');
+    postToEditor({ type: 'ELEMENT_HOVER', payload: null });
+    postToEditor({ type: 'ELEMENT_DESELECT' });
 
     log('State', '❌ Inspector DISABLED');
   }
@@ -733,42 +801,202 @@ class VisualInspector {
   }
 
   // ===========================================================================
+  // Iframe Click-Shield (LPS-913)
+  // ===========================================================================
+  // Transparent overlays over every iframe while the inspector is active so
+  // clicks land on the parent doc and route through the normal selection path.
+
+  private installIframeShields() {
+    const iframes = Array.from(document.querySelectorAll('iframe'));
+    log('IframeShield', `Found ${iframes.length} iframe(s) to shield`);
+    for (const iframe of iframes) {
+      this.createShieldFor(iframe);
+    }
+
+    // Watch for iframes added/removed later (route nav, lazy load, agent edits)
+    this.iframeMutationObserver = new MutationObserver((mutations) => {
+      for (const m of mutations) {
+        m.addedNodes.forEach((node) => {
+          if (node instanceof HTMLIFrameElement) {
+            this.createShieldFor(node);
+          } else if (node instanceof HTMLElement) {
+            node.querySelectorAll('iframe').forEach((f) =>
+              this.createShieldFor(f as HTMLIFrameElement),
+            );
+          }
+        });
+        m.removedNodes.forEach((node) => {
+          if (node instanceof HTMLIFrameElement) {
+            this.destroyShieldFor(node);
+          } else if (node instanceof HTMLElement) {
+            node.querySelectorAll('iframe').forEach((f) =>
+              this.destroyShieldFor(f as HTMLIFrameElement),
+            );
+          }
+        });
+      }
+    });
+    this.iframeMutationObserver.observe(document.body, {
+      childList: true,
+      subtree: true,
+    });
+
+    // Reposition on scroll/resize so shields track their iframes.
+    // Capture phase + a RAF coalesce keeps this cheap during fast scrolls.
+    this.iframeReposListener = () => this.scheduleShieldReposition();
+    window.addEventListener('scroll', this.iframeReposListener, true);
+    window.addEventListener('resize', this.iframeReposListener);
+  }
+
+  private createShieldFor(iframe: HTMLIFrameElement) {
+    if (iframe.id?.startsWith('lps-')) return;
+    if (this.iframeShields.has(iframe)) return;
+
+    const shield = document.createElement('div');
+    shield.dataset.lpsIframeShield = 'true';
+    shield.style.cssText = `
+      position: fixed;
+      pointer-events: auto;
+      background: transparent;
+      z-index: 99990;
+      cursor: crosshair;
+      display: none;
+    `;
+
+    document.body.appendChild(shield);
+    this.iframeShields.set(iframe, shield);
+    this.shieldToIframe.set(shield, iframe);
+    this.positionShield(iframe, shield);
+
+    // Track iframe size changes (e.g. lazy-load, responsive resize).
+    const ro = new ResizeObserver(() => this.positionShield(iframe, shield));
+    ro.observe(iframe);
+    this.iframeResizeObservers.set(iframe, ro);
+  }
+
+  private destroyShieldFor(iframe: HTMLIFrameElement) {
+    const shield = this.iframeShields.get(iframe);
+    if (shield) {
+      shield.remove();
+      this.iframeShields.delete(iframe);
+      this.shieldToIframe.delete(shield);
+    }
+    const ro = this.iframeResizeObservers.get(iframe);
+    if (ro) {
+      ro.disconnect();
+      this.iframeResizeObservers.delete(iframe);
+    }
+  }
+
+  private positionShield(iframe: HTMLIFrameElement, shield: HTMLDivElement) {
+    const rect = iframe.getBoundingClientRect();
+    if (rect.width === 0 || rect.height === 0) {
+      shield.style.display = 'none';
+      return;
+    }
+    shield.style.display = 'block';
+    shield.style.top = `${rect.top}px`;
+    shield.style.left = `${rect.left}px`;
+    shield.style.width = `${rect.width}px`;
+    shield.style.height = `${rect.height}px`;
+  }
+
+  private scheduleShieldReposition() {
+    if (this.iframeReposScheduled) return;
+    this.iframeReposScheduled = true;
+    requestAnimationFrame(() => {
+      this.iframeReposScheduled = false;
+      for (const [iframe, shield] of this.iframeShields) {
+        this.positionShield(iframe, shield);
+      }
+    });
+  }
+
+  private removeIframeShields() {
+    if (this.iframeMutationObserver) {
+      this.iframeMutationObserver.disconnect();
+      this.iframeMutationObserver = null;
+    }
+    if (this.iframeReposListener) {
+      window.removeEventListener('scroll', this.iframeReposListener, true);
+      window.removeEventListener('resize', this.iframeReposListener);
+      this.iframeReposListener = null;
+    }
+    // Snapshot keys: destroyShieldFor mutates the map.
+    for (const iframe of Array.from(this.iframeShields.keys())) {
+      this.destroyShieldFor(iframe);
+    }
+  }
+
+  private iframeForShield(element: HTMLElement | null): HTMLIFrameElement | null {
+    if (!element) return null;
+    if (element.dataset?.lpsIframeShield !== 'true') return null;
+    return this.shieldToIframe.get(element as HTMLDivElement) ?? null;
+  }
+
+  // ===========================================================================
   // Event Handlers
   // ===========================================================================
 
   private handleMouseMove = (event: MouseEvent) => {
     if (!this.isActive) return;
 
-    const target = event.target as HTMLElement;
-    
-    // Skip if same element or is our overlay
-    if (target === this.currentHoveredElement) return;
+    let target = event.target as HTMLElement;
+
+    // Skip our own overlays
     if (target.id?.startsWith('lps-inspector')) return;
+
+    // LPS-913: hover on shield → highlight the iframe's owning section.
+    const shieldedIframe = this.iframeForShield(target);
+    if (shieldedIframe) {
+      target = shieldedIframe;
+    }
+
+    // Skip if same element (compared after shield resolution)
+    if (target === this.currentHoveredElement) return;
 
     // Find element with source info
     const elementWithId = this.findElementWithSource(target);
     if (!elementWithId) {
+      // LPS-1352: plain-HTML/imported uploads have no __jsxSource__ — fall back
+      // to data-lps-eid, mirroring the click-path fallback (LPS-1104), so the
+      // hover overlay renders for imported projects too.
+      const eidEl = this.findElementWithEid(target);
+      if (eidEl) {
+        this.currentHoveredElement = eidEl;
+        this.showOverlay(eidEl, shieldedIframe !== null);
+        const elementInfo = this.extractHtmlElementInfo(eidEl);
+        log('Hover', '📤 Sending ELEMENT_HOVER to parent (eid fallback)');
+        postToEditor({ type: 'ELEMENT_HOVER', payload: elementInfo });
+        return;
+      }
       this.hideOverlay();
       this.currentHoveredElement = null;
       return;
     }
 
-    // Only log when we find a valid element (to avoid spam)
-    const source = elementWithId[SOURCE_KEY];
-    log('Hover', `Found element: <${elementWithId.tagName.toLowerCase()}> source=${source?.fileName}:${source?.lineNumber}`);
+    // LPS-1542: mirror the click-path retarget so the hover highlight lands on
+    // the image beneath a decorative overlay, matching what a click will select.
+    const hoverTarget = this.isDecorativeOverlay(elementWithId)
+      ? (this.imageTargetBeneath(event.clientX, event.clientY) ?? elementWithId)
+      : elementWithId;
 
-    this.currentHoveredElement = elementWithId;
-    this.showOverlay(elementWithId);
+    // Only log when we find a valid element (to avoid spam)
+    const source = hoverTarget[SOURCE_KEY];
+    log('Hover', `Found element: <${hoverTarget.tagName.toLowerCase()}> source=${source?.fileName}:${source?.lineNumber}`);
+
+    this.currentHoveredElement = hoverTarget;
+    this.showOverlay(hoverTarget, shieldedIframe !== null);
 
     // Send hover info to parent
-    const elementInfo = this.extractElementInfo(elementWithId);
+    const elementInfo = this.extractElementInfo(hoverTarget);
     log('Hover', '📤 Sending ELEMENT_HOVER to parent');
-    window.parent.postMessage({ type: 'ELEMENT_HOVER', payload: elementInfo }, '*');
+    postToEditor({ type: 'ELEMENT_HOVER', payload: elementInfo });
   };
 
   private handleClick = (event: MouseEvent) => {
     log('Click', `Click event received, isActive=${this.isActive}`);
-    
+
     if (!this.isActive) {
       log('Click', 'Not active, ignoring click');
       return;
@@ -776,7 +1004,7 @@ class VisualInspector {
 
     const target = event.target as HTMLElement;
     log('Click', `Clicked element: <${target.tagName.toLowerCase()}> id=${target.id} class=${target.className}`);
-    
+
     // Skip our overlays
     if (target.id?.startsWith('lps-inspector')) {
       log('Click', 'Clicked on inspector overlay, ignoring');
@@ -788,18 +1016,39 @@ class VisualInspector {
     event.stopPropagation();
     log('Click', 'Prevented default and stopped propagation');
 
+    // LPS-913: shield click → resolve to the iframe so findElementWithSource
+    // walks up to the section that rendered it.
+    const shieldedIframe = this.iframeForShield(target);
+    const effectiveTarget = shieldedIframe ?? target;
+    if (shieldedIframe) {
+      log('Click', `Iframe shield → forwarding click to <iframe> source`);
+    }
+
     // Find element with source info
-    const elementWithId = this.findElementWithSource(target);
+    const elementWithId = this.findElementWithSource(effectiveTarget);
     if (!elementWithId) {
-      log('Click', '⚠️ No element with __jsxSource__ found in click target or ancestors');
+      // LPS-1104: plain-HTML uploads have no __jsxSource__ — fall back to data-lps-eid.
+      const eidEl = this.findElementWithEid(effectiveTarget);
+      if (eidEl) {
+        this.selectHtmlElement(eidEl);
+        return;
+      }
+      log('Click', '⚠️ No __jsxSource__ or data-lps-eid found in click target or ancestors');
       return;
     }
 
     const source = elementWithId[SOURCE_KEY];
     log('Click', `✅ Found selectable element: <${elementWithId.tagName.toLowerCase()}> source=${source?.fileName}:${source?.lineNumber}`);
 
+    // LPS-1542: a photo click usually lands on a scrim/gradient overlay stacked
+    // over the <img> (absolute inset-0, no text). Retarget to the image beneath
+    // so the Image controls show and replace the actual photo, not the overlay.
+    const retarget = this.isDecorativeOverlay(elementWithId)
+      ? this.imageTargetBeneath(event.clientX, event.clientY)
+      : null;
+
     // Select the element
-    this.selectElement(elementWithId);
+    this.selectElement(retarget ?? elementWithId);
   };
 
   private handleKeyDown = (event: KeyboardEvent) => {
@@ -810,7 +1059,7 @@ class VisualInspector {
       } else {
         log('Keyboard', 'Escape pressed, clearing selection');
         this.clearSelection();
-        window.parent.postMessage({ type: 'ELEMENT_DESELECT' }, '*');
+        postToEditor({ type: 'ELEMENT_DESELECT' });
       }
     }
   };
@@ -836,7 +1085,7 @@ class VisualInspector {
     if (this.selectedElement) {
       log('Scroll', 'Scroll threshold exceeded, clearing selection');
       this.clearSelection();
-      window.parent.postMessage({ type: 'ELEMENT_DESELECT' }, '*');
+      postToEditor({ type: 'ELEMENT_DESELECT' });
     }
     this.hideOverlay();
     this.scrollStartY = null;
@@ -1157,7 +1406,34 @@ class VisualInspector {
     log('Find', `No __jsxSource__ found after traversing ${depth} ancestors`);
     return null;
   }
-  
+
+  // LPS-1542: helpers for retargeting a click that lands on a decorative
+  // overlay (gradient scrim / spacer) stacked over a real image.
+
+  /** An <img>, or any element painting a real image via a url() background. */
+  private isImageTarget(element: HTMLElement): boolean {
+    if (element.tagName.toLowerCase() === 'img') return true;
+    return window.getComputedStyle(element).backgroundImage.includes('url(');
+  }
+
+  /** Empty (text-less) div/span/section whose only role is visual — the kind of
+   *  scrim/gradient overlay that sits on top of a photo. Anything with text, or
+   *  any real image target, is NOT decorative and is left untouched. */
+  private isDecorativeOverlay(element: HTMLElement): boolean {
+    if (this.isImageTarget(element)) return false;
+    if (!['div', 'span', 'section'].includes(element.tagName.toLowerCase())) return false;
+    return (element.textContent ?? '').trim().length === 0;
+  }
+
+  /** Topmost source-bearing image target under the cursor, or null. */
+  private imageTargetBeneath(x: number, y: number): HTMLElement | null {
+    for (const element of document.elementsFromPoint(x, y) as HTMLElement[]) {
+      if (element.id?.startsWith('lps-inspector')) continue;
+      if (this.isImageTarget(element) && element[SOURCE_KEY]) return element;
+    }
+    return null;
+  }
+
   private sourceToLovId(source: JsxSourceInfo): string {
     // Convert source info to lovId format: "filepath:line:col"
     return `${source.fileName}:${source.lineNumber}:${source.columnNumber}`;
@@ -1176,12 +1452,26 @@ class VisualInspector {
     // component under /components/.
     let wasUIRedirected = false;
     let parentSectionElement: HTMLElement | null = null;
+    let ownerRedirectSource: JsxSourceInfo | null = null;
     if (this.isReusableComponent(location.filePath)) {
       const parentSource = this.findParentSectionSource(element);
-      if (parentSource) {
+      // Fall back to fiber owner only when DOM walk misses the section
+      // (returns null or overshoots to /pages/) — e.g. Hero → ImageBackground.
+      const domOvershot = !parentSource || /\/pages\//.test(parentSource.fileName);
+      const ownerSource = domOvershot ? this.findOwnerSectionSource(element) : null;
+
+      if (ownerSource) {
+        log('Extract', `Owner-chain redirect: ${location.filePath} → ${ownerSource.fileName}:${ownerSource.lineNumber}` + (parentSource ? ` (DOM walk overshot to ${parentSource.fileName})` : ' (DOM walk found nothing)'));
+        ownerRedirectSource = ownerSource;
+        wasUIRedirected = true;
+        location = {
+          ...location,
+          filePath: ownerSource.fileName,
+          lineNumber: ownerSource.lineNumber,
+          columnNumber: ownerSource.columnNumber,
+        };
+      } else if (parentSource) {
         log('Extract', `Reusable redirect: ${location.filePath} → ${parentSource.fileName}:${parentSource.lineNumber}`);
-        // Find the DOM element that corresponds to the parent section source,
-        // so we can scope loop detection to within this section only.
         parentSectionElement = this.findSectionContainer(element, parentSource);
         wasUIRedirected = true;
         location = {
@@ -1224,11 +1514,17 @@ class VisualInspector {
           .map(r => r.deref())
           .filter((el): el is HTMLElement => !!el && document.contains(el));
 
-        // For UI-redirected elements, scope to only siblings within the same
-        // section container so we don't count buttons from other sections.
-        if (wasUIRedirected && parentSectionElement && instances.length > 1) {
-          instances = instances.filter(el => parentSectionElement!.contains(el));
-          log('Extract', `Loop scoped to section: ${instances.length} instances (was ${refs.size})`);
+        // Scope a UI-redirected loop to the matched section so the same
+        // reusable used in multiple sections isn't collapsed into one loop.
+        if (wasUIRedirected && instances.length > 1) {
+          const before = instances.length;
+          if (ownerRedirectSource) {
+            instances = instances.filter(el => this.isInstanceInSection(el, ownerRedirectSource!));
+            log('Extract', `Loop scoped to section (owner): ${instances.length} instances (was ${before})`);
+          } else if (parentSectionElement) {
+            instances = instances.filter(el => parentSectionElement!.contains(el));
+            log('Extract', `Loop scoped to section (DOM): ${instances.length} instances (was ${before})`);
+          }
         }
 
         if (instances.length > 1) {
@@ -1294,7 +1590,114 @@ class VisualInspector {
       sectionName,
       // Loop context
       loopContext: loopContext ?? null,
+      // LPS-1053: blog post target (null unless inside a tagged blog element)
+      blog: this.extractBlogTarget(element),
     };
+  }
+
+  // ===========================================================================
+  // Plain-HTML fallback (LPS-1104)
+  // ===========================================================================
+  // static_html / static_zip uploads carry no __jsxSource__. Identity comes
+  // from the data-lps-eid baked at upload (CSS selector only for untagged nodes).
+
+  private findElementWithEid(element: HTMLElement): HTMLElement | null {
+    let cur: HTMLElement | null = element;
+    while (cur) {
+      if (cur.getAttribute && cur.getAttribute('data-lps-eid')) return cur;
+      cur = cur.parentElement;
+    }
+    return null;
+  }
+
+  private currentHtmlFile(): string {
+    const path = window.location.pathname.replace(/^\/+|\/+$/g, '');
+    if (!path) return 'index.html';
+    return /\.html?$/i.test(path) ? path : `${path}.html`;
+  }
+
+  /** Minimal unique-ish CSS selector — fallback only for untagged nodes. */
+  private buildCssSelector(element: HTMLElement): string {
+    if (element.id) return `#${CSS.escape(element.id)}`;
+    const parts: string[] = [];
+    let cur: HTMLElement | null = element;
+    while (cur && cur.nodeType === 1 && cur.tagName.toLowerCase() !== 'html') {
+      if (cur.id) {
+        parts.unshift(`#${CSS.escape(cur.id)}`);
+        break;
+      }
+      let part = cur.tagName.toLowerCase();
+      const parent = cur.parentElement;
+      if (parent) {
+        const sameTag = Array.from(parent.children).filter(c => c.tagName === cur!.tagName);
+        if (sameTag.length > 1) part += `:nth-of-type(${sameTag.indexOf(cur) + 1})`;
+      }
+      parts.unshift(part);
+      cur = cur.parentElement;
+    }
+    return parts.join(' > ');
+  }
+
+  private extractHtmlElementInfo(element: HTMLElement): SelectedElement {
+    const eid = element.getAttribute('data-lps-eid');
+    const htmlFile = this.currentHtmlFile();
+    const selector = eid ? '' : this.buildCssSelector(element);
+    const computed = window.getComputedStyle(element);
+    const rect = element.getBoundingClientRect();
+
+    let classNameStr: string | undefined;
+    if (typeof element.className === 'string') {
+      classNameStr = element.className || undefined;
+    } else if (element.className instanceof SVGAnimatedString) {
+      classNameStr = element.className.baseVal || undefined;
+    }
+
+    return {
+      location: { lovId: eid ?? selector, filePath: htmlFile, lineNumber: 0, columnNumber: 0 },
+      tagName: element.tagName.toLowerCase(),
+      textContent: this.getDirectTextContent(element),
+      className: classNameStr,
+      computedStyles: this.extractComputedStyles(element),
+      boundingRect: {
+        x: rect.x, y: rect.y, width: rect.width, height: rect.height,
+        top: rect.top, right: rect.right, bottom: rect.bottom, left: rect.left,
+      },
+      attributes: this.extractAttributes(element),
+      detectedClasses: this.extractDetectedClasses(computed),
+      elementType: this.determineElementType(element, computed),
+      hasBackgroundImage: this.hasBackgroundImage(computed),
+      hasBorder: this.hasBorder(computed),
+      isFlexContainer: computed.display === 'flex' || computed.display === 'inline-flex',
+      isGridContainer: computed.display === 'grid' || computed.display === 'inline-grid',
+      hasDynamicStyling: this.detectDynamicStyling(element),
+      affectedPages: [],
+      isSharedComponent: false,
+      sectionName: undefined,
+      loopContext: null,
+    };
+  }
+
+  private selectHtmlElement(element: HTMLElement) {
+    log('Select', `Selecting HTML element: <${element.tagName.toLowerCase()}> eid=${element.getAttribute('data-lps-eid')}`);
+    this.selectedElement = element;
+    this.scrollStartY = window.scrollY;
+    this.showSelectedOverlay(element);
+    const info = this.extractHtmlElementInfo(element);
+    postToEditor({ type: 'ELEMENT_SELECT', payload: info });
+  }
+
+  /**
+   * LPS-1053: resolve a blog post target from data-blog-* attributes on the
+   * clicked element or its nearest tagged ancestor. Returns null for normal
+   * (non-blog) elements so the standard source-file edit path is unaffected.
+   */
+  private extractBlogTarget(
+    element: HTMLElement
+  ): { postId: string; field: string } | null {
+    const tagged = element.closest('[data-blog-post-id]') as HTMLElement | null;
+    const postId = tagged?.dataset?.blogPostId;
+    if (!postId) return null;
+    return { postId, field: tagged.dataset.blogField || 'body' };
   }
 
   /**
@@ -1465,6 +1868,53 @@ class VisualInspector {
     return lastMatch;
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  private getReactFiber(element: HTMLElement): any {
+    for (const key of Object.keys(element)) {
+      if (key.startsWith('__reactFiber$')) {
+        return (element as unknown as Record<string, unknown>)[key];
+      }
+    }
+    return null;
+  }
+
+  /** Walk fiber _debugOwner chain for the nearest non-reusable JSX source. */
+  private findOwnerSectionSource(element: HTMLElement): JsxSourceInfo | null {
+    const fiber = this.getReactFiber(element);
+    if (!fiber) return null;
+    let owner = fiber._debugOwner;
+    while (owner) {
+      const src = owner._debugSource;
+      if (src && src.fileName && !this.isReusableComponent(src.fileName)) {
+        return {
+          fileName: src.fileName,
+          lineNumber: src.lineNumber,
+          columnNumber: src.columnNumber ?? 1,
+        };
+      }
+      owner = owner._debugOwner;
+    }
+    return null;
+  }
+
+  /** Owner-chain membership test: did `sectionSource` render `instance`? */
+  private isInstanceInSection(instance: HTMLElement, sectionSource: JsxSourceInfo): boolean {
+    const fiber = this.getReactFiber(instance);
+    if (!fiber) return false;
+    let owner = fiber._debugOwner;
+    while (owner) {
+      const src = owner._debugSource;
+      if (src && src.fileName === sectionSource.fileName && src.lineNumber === sectionSource.lineNumber) {
+        return true;
+      }
+      if (src && src.fileName && !this.isReusableComponent(src.fileName)) {
+        return false;
+      }
+      owner = owner._debugOwner;
+    }
+    return false;
+  }
+
   private getDirectTextContent(element: HTMLElement): string | undefined {
     // Allow text extraction when children are inline/phrasing elements (LPS-498).
     // Banner headings often contain <span> for gradient text, <strong>, <em>, etc.
@@ -1552,6 +2002,28 @@ class VisualInspector {
   }
 
   /**
+   * Find the <img> that identifies the element the user clicked.
+   *
+   * The click target for a card image is usually not the <img>: it can be a wrapper
+   * (img is a descendant) or an overlay laid over the image (img is a SIBLING), so
+   * searching only the element's own subtree finds nothing. Climb until a subtree
+   * holds exactly one <img>, and bail as soon as one holds several — every level
+   * above is at least as ambiguous, and a wrong src sends the agent to the wrong
+   * loop item, which is worse than sending none. (LPS-1842)
+   */
+  private findAssociatedImage(element: HTMLElement): HTMLImageElement | null {
+    let node: HTMLElement | null = element;
+
+    for (let depth = 0; node && depth < 4; depth++, node = node.parentElement) {
+      const imgs = node.querySelectorAll('img');
+      if (imgs.length === 1) return imgs[0] as HTMLImageElement;
+      if (imgs.length > 1) return null;
+    }
+
+    return null;
+  }
+
+  /**
    * Extract relevant attributes from an element
    */
   private extractAttributes(element: HTMLElement): ElementAttributes {
@@ -1561,7 +2033,14 @@ class VisualInspector {
     // Image attributes
     if (tag === 'img') {
       attrs.src = element.getAttribute('src') || undefined;
+      attrs.srcResolved = this.resolveImageSrc(element as HTMLImageElement, attrs.src);
       attrs.alt = element.getAttribute('alt') || undefined;
+    } else {
+      const associated = this.findAssociatedImage(element);
+      if (associated) {
+        attrs.src = associated.getAttribute('src') || undefined;
+        attrs.alt = associated.getAttribute('alt') || undefined;
+      }
     }
 
     // Link attributes
@@ -1585,6 +2064,21 @@ class VisualInspector {
     attrs.ariaLabel = element.getAttribute('aria-label') || undefined;
 
     return attrs;
+  }
+
+  /**
+   * LPS-1755: bundled-asset imports render a root-relative `src` (`/src/assets/hero.jpg`),
+   * which the editor — a different origin — cannot load. Only the iframe knows the preview
+   * origin, so resolve here. `currentSrc` also picks the chosen srcset/<picture> candidate.
+   */
+  private resolveImageSrc(element: HTMLImageElement, rawSrc?: string): string | undefined {
+    if (element.currentSrc) return element.currentSrc;
+    if (!rawSrc) return undefined;
+    try {
+      return new URL(rawSrc, document.baseURI).href;
+    } catch {
+      return rawSrc;
+    }
   }
 
   /**
@@ -1711,21 +2205,47 @@ class VisualInspector {
   // Overlay Management
   // ===========================================================================
 
-  private showOverlay(element: HTMLElement) {
+  private showOverlay(element: HTMLElement, isIframeTarget = false) {
     if (!this.overlay) return;
 
     const rect = element.getBoundingClientRect();
-    
+
+    // LPS-913: dashed amber + badge when hovering an iframe shield.
+    if (isIframeTarget) {
+      this.overlay.style.background = 'rgba(245, 158, 11, 0.18)';
+      this.overlay.style.borderStyle = 'dashed';
+      this.overlay.style.borderColor = 'rgba(245, 158, 11, 0.95)';
+    } else {
+      this.overlay.style.background = 'rgba(59, 130, 246, 0.15)';
+      this.overlay.style.borderStyle = 'solid';
+      this.overlay.style.borderColor = 'rgba(59, 130, 246, 0.8)';
+    }
+
     this.overlay.style.display = 'block';
     this.overlay.style.top = `${rect.top}px`;
     this.overlay.style.left = `${rect.left}px`;
     this.overlay.style.width = `${rect.width}px`;
     this.overlay.style.height = `${rect.height}px`;
+
+    if (this.overlayBadge) {
+      if (isIframeTarget) {
+        // Pin above the overlay, clamped to viewport top.
+        const badgeTop = Math.max(rect.top - 18, 4);
+        this.overlayBadge.style.display = 'block';
+        this.overlayBadge.style.top = `${badgeTop}px`;
+        this.overlayBadge.style.left = `${rect.left}px`;
+      } else {
+        this.overlayBadge.style.display = 'none';
+      }
+    }
   }
 
   private hideOverlay() {
     if (this.overlay) {
       this.overlay.style.display = 'none';
+    }
+    if (this.overlayBadge) {
+      this.overlayBadge.style.display = 'none';
     }
   }
 
@@ -1760,6 +2280,7 @@ class VisualInspector {
 
     // Extract and send element info
     const elementInfo = this.extractElementInfo(element);
+    elementInfo.ancestry = this.buildAncestry(element);  // LPS-1360
     log('Select', '📤 Sending ELEMENT_SELECT to parent:', {
       tagName: elementInfo.tagName,
       lovId: elementInfo.location.lovId,
@@ -1767,7 +2288,7 @@ class VisualInspector {
       lineNumber: elementInfo.location.lineNumber,
     });
     
-    window.parent.postMessage({ type: 'ELEMENT_SELECT', payload: elementInfo }, '*');
+    postToEditor({ type: 'ELEMENT_SELECT', payload: elementInfo });
     log('Select', '✅ ELEMENT_SELECT sent');
   }
 
@@ -1795,6 +2316,12 @@ class VisualInspector {
    * first-match behavior.
    */
   private findElementByLovId(lovId: string, instanceIndex?: number): HTMLElement | null {
+    // LPS-1104: plain-HTML uploads identify by data-lps-eid (no sourceElementMap).
+    if (/^[\w-]+-e\d+$/.test(lovId)) {
+      const byEid = document.querySelector(`[data-lps-eid="${lovId}"]`);
+      if (byEid) return byEid as HTMLElement;
+    }
+
     // Try sourceElementMap first (lovable-tagger style)
     if (window.sourceElementMap) {
       const refs = window.sourceElementMap.get(lovId);
@@ -1869,10 +2396,53 @@ class VisualInspector {
 
     log('Select', 'No parent with __jsxSource__ found');
     // Notify parent that there's no parent element available
-    window.parent.postMessage({ 
+    postToEditor({
       type: 'NO_PARENT_ELEMENT',
       payload: { message: 'No parent element with source info available' }
-    }, '*');
+    });
+  }
+
+  /**
+   * LPS-1360: select a crumb from the selected element's ancestry breadcrumb.
+   * @param index Index into the cached ancestry (0 = selected element, ascending to root)
+   */
+  private selectAncestorElement(index: number) {
+    const el = this.selectionAncestry[index];
+    if (!el || !document.contains(el)) {
+      log('Select', `SELECT_ANCESTOR index ${index} out of range or detached`);
+      return;
+    }
+    if (el === this.selectedElement) return;
+    this.selectElement(el);
+  }
+
+  /**
+   * LPS-1360: build the selectable ancestry (self → section root) so the editor
+   * can offer a breadcrumb — e.g. a social <svg>/<img> exposes its enclosing <a>,
+   * making the link's URL field reachable. Caches the elements for SELECT_ANCESTOR
+   * and returns lightweight crumbs for the payload.
+   */
+  private buildAncestry(element: HTMLElement): AncestorCrumb[] {
+    const MAX_DEPTH = 8;
+    const chain: HTMLElement[] = [];
+    let cur: HTMLElement | null = element;
+    while (cur && cur.nodeType === 1 && cur !== document.body && chain.length < MAX_DEPTH) {
+      // Include the selected element itself, any ancestor carrying JSX source, and
+      // any enclosing <a> (always — reaching the link is the whole point; selectElement's
+      // fiber fallback resolves its location even when the anchor lacks JSX source).
+      if (cur === element || cur[SOURCE_KEY] || cur.tagName === 'A') chain.push(cur);
+      cur = cur.parentElement;
+    }
+    this.selectionAncestry = chain;
+    return chain.map((el, index) => {
+      const tag = el.tagName.toLowerCase();
+      return {
+        index,
+        tag,
+        elementType: this.determineElementType(el, window.getComputedStyle(el)),
+        href: tag === 'a' ? (el.getAttribute('href') || undefined) : undefined,
+      };
+    });
   }
 
   /**
@@ -2058,10 +2628,10 @@ class VisualInspector {
     }
 
     // Notify parent
-    window.parent.postMessage({
+    postToEditor({
       type: 'PREVIEW_APPLIED',
       payload: { lovId, editCount: this.previewedChanges.size },
-    }, '*');
+    });
   }
 
   /**

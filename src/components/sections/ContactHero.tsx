@@ -6,7 +6,7 @@ import { Phone, Mail, MapPin, Clock, Contact, Heading } from "lucide-react";
 
 const ContactHero = React.forwardRef<HTMLElement>((props, ref) => {
   return (
-    <section
+    <section data-section-id="a9f7cf36-dc1d-47d6-9579-9a9a0757d936"
       ref={ref}
       id="contact-hero"
       aria-label="Contact Hero"

@@ -25,10 +25,10 @@ const ExteriorOnlyAppraisalCTA = React.forwardRef<HTMLElement>((props, ref) => {
   ];
 
   return (
-    <section
+    <section data-section-id="fa548d76-aa5d-4343-a0f0-cb2415743279"
       ref={ref}
       id="exterior-only-appraisal-cta"
-      className="relative py-20 md:py-32 overflow-hidden"
+      className="relative py-20 md:py-32 overflow-hidden max-w-[100vw]"
       style={{ background: "linear-gradient(150deg, hsl(218 65% 14%) 0%, hsl(218 55% 22%) 55%, hsl(220 45% 28%) 100%)" }}
     >
       {/* Decorative background pattern */}
@@ -134,7 +134,7 @@ const ExteriorOnlyAppraisalCTA = React.forwardRef<HTMLElement>((props, ref) => {
                 fontFamily: "'Inter', sans-serif",
               }}
             >
-              <Link to="/request">Request an Appraisal</Link>
+              <Link to="/request/">Request an Appraisal</Link>
             </Button>
 
             <Button
@@ -144,7 +144,7 @@ const ExteriorOnlyAppraisalCTA = React.forwardRef<HTMLElement>((props, ref) => {
               className="h-13 px-10 text-base font-semibold w-full sm:w-auto bg-transparent text-white border-white/40 hover:bg-white/10 transition-all duration-300"
               style={{ fontFamily: "'Inter', sans-serif" }}
             >
-              <Link to="/contact">Speak With an Appraiser</Link>
+              <Link to="/contact/">Speak With an Appraiser</Link>
             </Button>
           </motion.div>
 

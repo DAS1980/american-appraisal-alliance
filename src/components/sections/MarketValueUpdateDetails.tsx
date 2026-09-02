@@ -48,7 +48,7 @@ const fadeUp = {
 
 const MarketValueUpdateDetails = React.forwardRef<HTMLElement>((props, ref) => {
   return (
-    <section
+    <section data-section-id="681af771-9e68-44da-a457-24c7a467ecec"
       ref={ref}
       id="market-value-update-details"
       className="relative py-20 md:py-32 bg-background"

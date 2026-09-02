@@ -70,7 +70,7 @@ const FhaHudWhatItIs = React.forwardRef<HTMLElement>((props, ref) => {
   ];
 
   return (
-    <section
+    <section data-section-id="4f1c2b4c-3b3a-4b72-a70f-838148fa1362"
       ref={ref}
       id="fha-hud-what-it-is"
       className="relative py-20 md:py-32 bg-background"

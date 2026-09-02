@@ -20,7 +20,7 @@ const EstateDateOfDeathAppraisal = React.forwardRef<HTMLDivElement>((props, ref)
         rel="canonical"
         href={`${SITE_BASE_URL}/estate-date-of-death-appraisal`}
       />
-      <div ref={ref}>
+      <div ref={ref} className="overflow-x-hidden w-full max-w-[100vw]">
         <Header />
         <SectionErrorBoundary sectionName="EstateAppraisalHero">
           <EstateAppraisalHero />

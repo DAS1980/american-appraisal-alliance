@@ -17,7 +17,7 @@ interface ServiceCard {
 const services: ServiceCard[] = [
   {
     name: "Residential Appraisal (Full URAR)",
-    slug: "/residential-appraisal",
+    slug: "/residential-appraisal/",
     description:
       "Full URAR appraisal for lenders, attorneys, and private clients. The most comprehensive residential valuation report.",
     useCases: "Mortgage lending, estate planning, legal proceedings",
@@ -25,7 +25,7 @@ const services: ServiceCard[] = [
   },
   {
     name: "Desktop Appraisal",
-    slug: "/desktop-appraisal",
+    slug: "/desktop-appraisal/",
     description:
       "Remote appraisal using MLS data and public records — no on-site inspection required. Ideal for refinances and low-risk loan products.",
     useCases: "Refinancing, low-risk loan products",
@@ -33,7 +33,7 @@ const services: ServiceCard[] = [
   },
   {
     name: "Exterior-Only (Drive-By) Appraisal",
-    slug: "/exterior-only-drive-by-appraisal",
+    slug: "/exterior-only-drive-by-appraisal/",
     description:
       "Appraiser inspects exterior only; no interior access needed. Faster turnaround, lower cost. Common for HELOCs and certain loan types.",
     useCases: "HELOCs and certain loan types",
@@ -46,7 +46,7 @@ const services: ServiceCard[] = [
   },
   {
     name: "Pre-Listing Appraisal",
-    slug: "/pre-listing-appraisal",
+    slug: "/pre-listing-appraisal/",
     description:
       "Independent valuation before listing a home for sale. Helps sellers price accurately and negotiate confidently.",
     useCases: "Home sellers, real estate agents",
@@ -54,7 +54,7 @@ const services: ServiceCard[] = [
   },
   {
     name: "Pre-Purchase Appraisal",
-    slug: "/pre-purchase-appraisal",
+    slug: "/pre-purchase-appraisal/",
     description:
       "Independent appraisal for buyers before closing. Confirms fair market value independent of the lender's appraisal.",
     useCases: "Home buyers seeking unbiased valuation",
@@ -62,7 +62,7 @@ const services: ServiceCard[] = [
   },
   {
     name: "Divorce Appraisal",
-    slug: "/divorce-appraisal",
+    slug: "/divorce-appraisal/",
     description:
       "Court-accepted, USPAP-compliant appraisal for divorce proceedings. Neutral, unbiased valuation with retroactive date-of-separation valuations available.",
     useCases: "Divorce attorneys, family law courts",
@@ -70,7 +70,7 @@ const services: ServiceCard[] = [
   },
   {
     name: "Estate / Date of Death Appraisal",
-    slug: "/estate-date-of-death-appraisal",
+    slug: "/estate-date-of-death-appraisal/",
     description:
       "Retrospective appraisal for estate settlement, probate, and IRS Form 706. Accepted by attorneys, CPAs, and courts.",
     useCases: "Estate planners, probate attorneys, CPAs",
@@ -78,7 +78,7 @@ const services: ServiceCard[] = [
   },
   {
     name: "PMI Removal Appraisal",
-    slug: "/pmi-removal-appraisal",
+    slug: "/pmi-removal-appraisal/",
     description:
       "Demonstrates current market value exceeds the 80% LTV threshold. Saves homeowners hundreds per year in mortgage insurance premiums.",
     useCases: "Homeowners seeking to cancel PMI",
@@ -86,7 +86,7 @@ const services: ServiceCard[] = [
   },
   {
     name: "Tax Assessment Appeal Appraisal",
-    slug: "/tax-assessment-appeal",
+    slug: "/tax-assessment-appeal/",
     description:
       "Independent appraisal to challenge inflated county tax assessments. Supports formal appeal with Dallas CAD, Tarrant CAD, Collin CAD, Denton CAD.",
     useCases: "Property tax appeal filers in DFW",
@@ -119,12 +119,12 @@ const cardVariants = {
 
 const CoreAppraisalServiceCards = React.forwardRef<HTMLElement>((props, ref) => {
   return (
-    <section
+    <section data-section-id="81502ca1-2c53-43e3-910d-74ac0c5ac481"
       ref={ref}
       id="core-appraisal-service-cards"
-      className="relative py-20 md:py-32 bg-background"
+      className="relative py-20 md:py-32 bg-background overflow-x-hidden"
     >
-      <div className="container max-w-6xl mx-auto px-4">
+      <div className="container max-w-6xl mx-auto px-4 sm:px-6 w-full">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
@@ -155,7 +155,7 @@ const CoreAppraisalServiceCards = React.forwardRef<HTMLElement>((props, ref) => 
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-60px" }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 w-full"
         >
           {services.map((service) => {
             const IconComponent = service.icon;
@@ -173,7 +173,7 @@ const CoreAppraisalServiceCards = React.forwardRef<HTMLElement>((props, ref) => 
                   <Card className="h-full border-2 border-border hover:border-primary/40 bg-white shadow-sm hover:shadow-lg transition-all duration-300 rounded-lg overflow-hidden group-hover:-translate-y-1">
                     <CardHeader className="pb-3 pt-6 px-6">
                       {/* Gold/amber icon background */}
-                      <div className="flex items-start gap-4 mb-2">
+                      <div className="flex items-start gap-4 mb-2 min-w-0">
                         <div
                           className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-lg"
                           style={{

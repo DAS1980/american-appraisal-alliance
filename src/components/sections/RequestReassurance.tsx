@@ -33,10 +33,10 @@ const RequestReassurance = React.forwardRef<HTMLElement>((props, ref) => {
   ];
 
   return (
-    <section
+    <section data-section-id="3cc9a845-c3fc-42dc-97ae-25771196221e"
       ref={ref}
       id="request-reassurance"
-      className="relative py-20 md:py-32 bg-background"
+      className="relative overflow-x-hidden py-20 md:py-32 bg-background"
       aria-labelledby="reassurance-heading"
     >
       <div className="container max-w-6xl mx-auto px-4">

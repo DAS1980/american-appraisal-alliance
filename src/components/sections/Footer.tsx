@@ -10,23 +10,27 @@ const Footer = React.forwardRef<HTMLElement>((props, ref) => {
   const serviceCategories = [
     {
       label: "Core Appraisal Services",
-      to: "/core-appraisal-services",
+      to: "/core-appraisal-services/",
     },
     {
       label: "Valuation Updates & Reports",
-      to: "/valuation-updates-reports",
+      to: "/valuation-updates-reports/",
     },
     {
       label: "Measurement & Analysis Services",
-      to: "/measurement-analysis-services",
+      to: "/measurement-analysis-services/",
     },
+  
+    { to: "/blog/", label: "Appraisal Insights" },
   ];
 
   const quickLinks = [
     { label: "Home", to: "/" },
-    { label: "About Us", to: "/about" },
-    { label: "Request an Appraisal", to: "/request" },
-    { label: "Contact", to: "/contact" },
+    { label: "About Us", to: "/about/" },
+    { label: "Request an Appraisal", to: "/request/" },
+    { label: "Contact", to: "/contact/" },
+  
+    { to: "/blog/", label: "Appraisal Insights" },
   ];
 
   const fadeInUp = {
@@ -37,15 +41,15 @@ const Footer = React.forwardRef<HTMLElement>((props, ref) => {
   };
 
   return (
-    <footer
+    <footer data-section-id="c8f97b84-9abf-4b1b-ab3c-df9c7211d7aa"
       ref={ref}
       id="footer"
-      className="relative bg-primary text-primary-foreground"
+      className="relative bg-primary text-primary-foreground w-full max-w-[100vw] overflow-x-hidden"
     >
       {/* Top accent bar */}
       <div className="h-1 w-full bg-[image:var(--gradient-gold)]" />
 
-      <div className="container max-w-6xl mx-auto px-4 py-12">
+      <div className="container max-w-6xl mx-auto px-4 py-12 w-full max-w-[100vw]">
         {/* Main footer grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
 

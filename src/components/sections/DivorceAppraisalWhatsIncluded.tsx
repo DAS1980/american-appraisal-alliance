@@ -72,10 +72,10 @@ const itemVariants = {
 const DivorceAppraisalWhatsIncluded = React.forwardRef<HTMLElement>(
   (props, ref) => {
     return (
-      <section
+      <section data-section-id="d73b92c4-81a0-46aa-903b-ac613e2eaf02"
         ref={ref}
         id="divorce-appraisal-whats-included"
-        className="relative py-20 md:py-32 bg-background"
+        className="relative py-20 md:py-32 bg-background overflow-x-hidden"
       >
         <div className="container max-w-6xl mx-auto px-4">
           {/* Section Header */}

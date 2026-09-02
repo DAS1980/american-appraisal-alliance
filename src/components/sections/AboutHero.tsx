@@ -15,7 +15,7 @@ const AboutHero = React.forwardRef<HTMLElement>((props, ref) => {
   ];
 
   return (
-    <section
+    <section data-section-id="77fe3a29-7fef-4526-b328-b775016525ae"
       ref={ref}
       id="about-hero"
       aria-label="About American Appraisal Alliance"

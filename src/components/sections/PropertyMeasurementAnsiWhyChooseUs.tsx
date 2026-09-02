@@ -62,7 +62,7 @@ const itemVariants = {
 const PropertyMeasurementAnsiWhyChooseUs = React.forwardRef<HTMLElement>(
   (props, ref) => {
     return (
-      <section
+      <section data-section-id="6e3b4db7-b62d-46e6-99d2-4028f2dfba0a"
         ref={ref}
         id="property-measurement-ansi-why-choose-us"
         className="relative py-20 md:py-32 bg-background"

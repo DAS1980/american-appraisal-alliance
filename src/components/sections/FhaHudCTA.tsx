@@ -6,7 +6,7 @@ import { MapPin, Phone, Shield } from "lucide-react";
 
 const FhaHudCTA = React.forwardRef<HTMLElement>((props, ref) => {
   return (
-    <section
+    <section data-section-id="7f01daa7-a1d9-4748-8d22-292f4511b0e7"
       ref={ref}
       id="fha-hud-cta"
       className="relative py-20 md:py-28 overflow-hidden"

@@ -79,7 +79,7 @@ export async function loadTailwindConfig(): Promise<TailwindConfig | null> {
   try {
     // Fetch the config file from Vite dev server
     // The plugin generates it at src/tailwind.config.sa.json
-    const response = await fetch('/src/tailwind.config.sa.json');
+    const response = await fetch(`${import.meta.env.BASE_URL}src/tailwind.config.sa.json`);
     if (!response.ok) {
       // File might not exist yet if plugin hasn't run - this is expected on first load
       if (response.status === 404) {

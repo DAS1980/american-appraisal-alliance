@@ -28,7 +28,7 @@ const PrePurchaseAppraisalCTA = React.forwardRef<HTMLElement>((props, ref) => {
   ];
 
   return (
-    <section
+    <section data-section-id="cde47a14-59ff-4f12-a318-d4d2b0f169bc"
       ref={ref}
       id="pre-purchase-appraisal-cta"
       className="relative py-20 md:py-32 overflow-hidden"

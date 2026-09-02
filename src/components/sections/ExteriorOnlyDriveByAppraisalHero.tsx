@@ -22,11 +22,11 @@ const ExteriorOnlyDriveByAppraisalHero = React.forwardRef<HTMLElement>((props, r
   ];
 
   return (
-    <section
+    <section data-section-id="0b727661-f55c-4e92-ab0c-02fcaf19da59"
       ref={ref}
       id="exterior-only-drive-by-appraisal-hero"
       aria-label="Exterior-Only Drive-By Appraisal Hero"
-      className="relative isolate min-h-[85vh] md:min-h-screen flex items-center overflow-hidden"
+      className="relative isolate min-h-[85vh] md:min-h-screen flex items-center overflow-hidden max-w-[100vw]"
     >
       {/* Layer 1 — Background image */}
       <img
@@ -47,7 +47,7 @@ const ExteriorOnlyDriveByAppraisalHero = React.forwardRef<HTMLElement>((props, r
         <div className="max-w-3xl">
           {/* Pre-header badge */}
           <motion.div
-            initial={{ opacity: 0, y: 16 }}
+            initial={{ opacity: 1, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
           >
@@ -61,7 +61,7 @@ const ExteriorOnlyDriveByAppraisalHero = React.forwardRef<HTMLElement>((props, r
 
           {/* H1 — verbatim */}
           <motion.h1
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
             className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-5"
@@ -72,7 +72,7 @@ const ExteriorOnlyDriveByAppraisalHero = React.forwardRef<HTMLElement>((props, r
 
           {/* Subheadline */}
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
             className="text-lg md:text-xl text-white/85 mb-8 max-w-2xl leading-relaxed"
@@ -82,7 +82,7 @@ const ExteriorOnlyDriveByAppraisalHero = React.forwardRef<HTMLElement>((props, r
 
           {/* Key highlights */}
           <motion.ul
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
             className="space-y-3 mb-10"
@@ -98,7 +98,7 @@ const ExteriorOnlyDriveByAppraisalHero = React.forwardRef<HTMLElement>((props, r
 
           {/* CTA buttons */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
             className="flex flex-wrap gap-4 items-center"
@@ -108,7 +108,7 @@ const ExteriorOnlyDriveByAppraisalHero = React.forwardRef<HTMLElement>((props, r
               size="lg"
               className="bg-amber-500 hover:bg-amber-400 text-white font-semibold px-8 h-12 text-base shadow-lg transition-colors duration-200"
             >
-              <Link to="/request">Request an Appraisal</Link>
+              <Link to="/request/">Request an Appraisal</Link>
             </Button>
 
             <Button
@@ -117,13 +117,13 @@ const ExteriorOnlyDriveByAppraisalHero = React.forwardRef<HTMLElement>((props, r
               variant="outline"
               className="bg-transparent text-white border-white/60 hover:bg-white/10 h-12 text-base transition-colors duration-200"
             >
-              <Link to="/core-appraisal-services">View All Services</Link>
+              <Link to="/core-appraisal-services/">View All Services</Link>
             </Button>
           </motion.div>
 
           {/* Reassurance copy — verbatim */}
           <motion.p
-            initial={{ opacity: 0 }}
+            initial={{ opacity: 1 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.55 }}
             className="mt-5 text-sm text-white/65 flex items-center gap-2"
@@ -135,7 +135,7 @@ const ExteriorOnlyDriveByAppraisalHero = React.forwardRef<HTMLElement>((props, r
 
         {/* USPAP compliance note */}
         <motion.div
-          initial={{ opacity: 0 }}
+          initial={{ opacity: 1 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.7, ease: "easeOut", delay: 0.65 }}
           className="mt-14 md:mt-16 inline-flex flex-wrap items-center gap-x-6 gap-y-3"

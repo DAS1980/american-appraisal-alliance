@@ -116,7 +116,7 @@ export async function loadManifest(): Promise<PagesManifest> {
   try {
     // Dynamic import of the manifest file
     // Vite handles this correctly in both dev and prod
-    const response = await fetch('/pages.manifest.json');
+    const response = await fetch(`${import.meta.env.BASE_URL}pages.manifest.json`);
     if (response.ok) {
       cachedManifest = await response.json();
       return cachedManifest!;

@@ -291,7 +291,7 @@
     "generator": "lps-website-builder",
     "manifestSchemaVersion": 1,
     "lpsProjectId": "6ff7ae24-db0c-4586-8bdb-779ac4413c02",
-    "lpsSignature": "9735eacc4a7ba6085a7dcb177564fe082732d7369160991dc66c0ff981b23340"
+    "lpsSignature": "7150baa79c15d28242e47b0f2a8b3c6bb7fea18d2bb83678e5999afd3b342153"
   },
   "pages": [
     {
@@ -356,7 +356,8 @@
         "CoreAppraisalWhyChooseUs",
         "Footer"
       ],
-      "inNavigation": true
+      "inNavigation": true,
+      "filePath": "src/pages/CoreAppraisalServices.tsx"
     },
     {
       "id": "valuation-updates-reports",
@@ -387,7 +388,8 @@
         "ValuationUpdatesCTA",
         "Footer"
       ],
-      "inNavigation": true
+      "inNavigation": true,
+      "filePath": "src/pages/ValuationUpdatesReports.tsx"
     },
     {
       "id": "measurement-analysis-services",
@@ -418,7 +420,8 @@
         "MeasurementCTA",
         "Footer"
       ],
-      "inNavigation": true
+      "inNavigation": true,
+      "filePath": "src/pages/MeasurementAnalysisServices.tsx"
     },
     {
       "id": "request",
@@ -449,7 +452,8 @@
         "RequestReassurance",
         "Footer"
       ],
-      "inNavigation": true
+      "inNavigation": true,
+      "filePath": "src/pages/Request.tsx"
     },
     {
       "id": "about",
@@ -482,7 +486,8 @@
         "AboutCTA",
         "Footer"
       ],
-      "inNavigation": true
+      "inNavigation": true,
+      "filePath": "src/pages/About.tsx"
     },
     {
       "id": "contact",
@@ -513,7 +518,8 @@
         "ContactAppraisalLink",
         "Footer"
       ],
-      "inNavigation": true
+      "inNavigation": true,
+      "filePath": "src/pages/Contact.tsx"
     },
     {
       "id": "residential-appraisal",
@@ -546,7 +552,8 @@
         "ResidentialAppraisalCTA",
         "Footer"
       ],
-      "inNavigation": false
+      "inNavigation": false,
+      "filePath": "src/pages/ResidentialAppraisal.tsx"
     },
     {
       "id": "divorce-appraisal",
@@ -579,7 +586,8 @@
         "DivorceAppraisalCTA",
         "Footer"
       ],
-      "inNavigation": false
+      "inNavigation": false,
+      "filePath": "src/pages/DivorceAppraisal.tsx"
     },
     {
       "id": "tax-assessment-appeal",
@@ -612,7 +620,8 @@
         "TaxAssessmentCTA",
         "Footer"
       ],
-      "inNavigation": false
+      "inNavigation": false,
+      "filePath": "src/pages/TaxAssessmentAppeal.tsx"
     },
     {
       "id": "desktop-appraisal",
@@ -642,7 +651,8 @@
         "DesktopAppraisalWhyChooseUs",
         "Footer"
       ],
-      "inNavigation": true
+      "inNavigation": true,
+      "filePath": "src/pages/DesktopAppraisal.tsx"
     },
     {
       "id": "exterior-only-drive-by-appraisal",
@@ -673,7 +683,8 @@
         "ExteriorOnlyAppraisalCTA",
         "Footer"
       ],
-      "inNavigation": true
+      "inNavigation": true,
+      "filePath": "src/pages/ExteriorOnlyDriveByAppraisal.tsx"
     },
     {
       "id": "pre-listing-appraisal",
@@ -704,7 +715,8 @@
         "PreListingCTA",
         "Footer"
       ],
-      "inNavigation": true
+      "inNavigation": true,
+      "filePath": "src/pages/PreListingAppraisal.tsx"
     },
     {
       "id": "pre-purchase-appraisal",
@@ -735,7 +747,8 @@
         "PrePurchaseAppraisalCTA",
         "Footer"
       ],
-      "inNavigation": true
+      "inNavigation": true,
+      "filePath": "src/pages/PrePurchaseAppraisal.tsx"
     },
     {
       "id": "estate-date-of-death-appraisal",
@@ -767,7 +780,8 @@
         "EstateAppraisalCTA",
         "Footer"
       ],
-      "inNavigation": true
+      "inNavigation": true,
+      "filePath": "src/pages/EstateDateOfDeathAppraisal.tsx"
     },
     {
       "id": "pmi-removal-appraisal",
@@ -798,7 +812,8 @@
         "PMIRemovalCTA",
         "Footer"
       ],
-      "inNavigation": true
+      "inNavigation": true,
+      "filePath": "src/pages/PmiRemovalAppraisal.tsx"
     },
     {
       "id": "market-value-update-1004d-recertification",
@@ -829,7 +844,8 @@
         "MarketValueUpdateCTA",
         "Footer"
       ],
-      "inNavigation": true
+      "inNavigation": true,
+      "filePath": "src/pages/MarketValueUpdate1004dRecertification.tsx"
     },
     {
       "id": "fhahud-compliance-observation-report",
@@ -860,7 +876,8 @@
         "FhaHudCTA",
         "Footer"
       ],
-      "inNavigation": true
+      "inNavigation": true,
+      "filePath": "src/pages/FhahudComplianceObservationReport.tsx"
     },
     {
       "id": "property-measurement-ansi-z765",
@@ -891,7 +908,8 @@
         "PropertyMeasurementAnsiCTA",
         "Footer"
       ],
-      "inNavigation": true
+      "inNavigation": true,
+      "filePath": "src/pages/PropertyMeasurementAnsiZ765.tsx"
     },
     {
       "id": "gross-living-area-gla-certification",
@@ -922,7 +940,8 @@
         "GrossLivingAreaCTA",
         "Footer"
       ],
-      "inNavigation": true
+      "inNavigation": true,
+      "filePath": "src/pages/GrossLivingAreaGlaCertification.tsx"
     },
     {
       "id": "desktop_appraisal",
@@ -1233,17 +1252,38 @@
         "Footer"
       ],
       "inNavigation": true
+    },
+    {
+      "id": "blog",
+      "name": "Blog",
+      "slug": "blog",
+      "isHome": false,
+      "filePath": "src/pages/Blog.tsx",
+      "hasBlogSection": true,
+      "hasInlineBlogSection": true,
+      "inNavigation": true,
+      "seo": {
+        "title": "Blog",
+        "description": "Latest articles, updates, and stories.",
+        "keywords": [],
+        "ogImage": "",
+        "canonicalUrl": "",
+        "noindex": false,
+        "structuredDataType": "Blog",
+        "structuredData": null
+      },
+      "sections": [
+        "BlogListingSection"
+      ]
     }
   ],
   "navigation": {
     "header": [
-      "home",
       "core-appraisal-services",
       "valuation-updates-reports",
       "measurement-analysis-services",
-      "request",
       "about",
-      "contact",
+      "blog",
       "desktop-appraisal",
       "exterior-only-drive-by-appraisal",
       "pre-listing-appraisal",
@@ -1254,16 +1294,8 @@
       "fhahud-compliance-observation-report",
       "property-measurement-ansi-z765",
       "gross-living-area-gla-certification",
-      "desktop_appraisal",
-      "exterior_only__drive_by__appraisal",
-      "pre_listing_appraisal",
-      "pre_purchase_appraisal",
-      "estate___date_of_death_appraisal",
-      "pmi_removal_appraisal",
-      "market_value_update__1004d___recertification",
-      "fha_hud_compliance_observation_report",
-      "property_measurement__ansi_z765",
-      "gross_living_area__gla__certification"
+      "contact",
+      "request"
     ],
     "footer": [
       "home",
@@ -1293,7 +1325,1483 @@
       "fha_hud_compliance_observation_report",
       "property_measurement__ansi_z765",
       "gross_living_area__gla__certification"
+    ],
+    "header_tree": [
+      {
+        "page_id": "core-appraisal-services",
+        "label": "Appraisal Services"
+      },
+      {
+        "page_id": "valuation-updates-reports",
+        "label": "Valuation Reports"
+      },
+      {
+        "page_id": "measurement-analysis-services",
+        "label": "Property Measurement"
+      },
+      {
+        "page_id": "about"
+      },
+      {
+        "page_id": "blog",
+        "label": "Appraisal Insights"
+      },
+      {
+        "group": "More",
+        "children": [
+          {
+            "page_id": "desktop-appraisal"
+          },
+          {
+            "page_id": "exterior-only-drive-by-appraisal"
+          },
+          {
+            "page_id": "pre-listing-appraisal"
+          },
+          {
+            "page_id": "pre-purchase-appraisal"
+          },
+          {
+            "page_id": "estate-date-of-death-appraisal"
+          },
+          {
+            "page_id": "pmi-removal-appraisal"
+          },
+          {
+            "page_id": "market-value-update-1004d-recertification"
+          },
+          {
+            "page_id": "fhahud-compliance-observation-report"
+          },
+          {
+            "page_id": "property-measurement-ansi-z765"
+          },
+          {
+            "page_id": "gross-living-area-gla-certification"
+          }
+        ]
+      },
+      {
+        "page_id": "contact"
+      },
+      {
+        "page_id": "request"
+      }
     ]
   },
-  "sections": {}
+  "sections": {},
+  "sectionInstances": {
+    "d2506e14-a528-4d96-b733-c5634bf84f8d": {
+      "component": "AboutAppraiserCredentials",
+      "file": "src/components/sections/AboutAppraiserCredentials.tsx",
+      "heading": "Licensed & Certified Appraisers",
+      "pages": [
+        {
+          "page": "about",
+          "order": 4
+        }
+      ]
+    },
+    "cce97ed8-e990-4189-bd3a-7a952ef49d38": {
+      "component": "AboutCTA",
+      "file": "src/components/sections/AboutCTA.tsx",
+      "heading": "Ready to Request an Appraisal?",
+      "pages": [
+        {
+          "page": "about",
+          "order": 6
+        }
+      ]
+    },
+    "9b437f85-43f5-41ee-aac1-a5f9ca50e9fb": {
+      "component": "AboutCompanyOverview",
+      "file": "src/components/sections/AboutCompanyOverview.tsx",
+      "heading": "Serving the DFW Metroplex",
+      "pages": [
+        {
+          "page": "about",
+          "order": 2
+        }
+      ]
+    },
+    "77fe3a29-7fef-4526-b328-b775016525ae": {
+      "component": "AboutHero",
+      "file": "src/components/sections/AboutHero.tsx",
+      "heading": "",
+      "pages": [
+        {
+          "page": "about",
+          "order": 1
+        }
+      ]
+    },
+    "9a143aa8-7ee9-4ca2-916a-d71e0a26e485": {
+      "component": "AboutMissionStatement",
+      "file": "src/components/sections/AboutMissionStatement.tsx",
+      "heading": "Accurate, unbiased, defensible valuations.",
+      "pages": [
+        {
+          "page": "about",
+          "order": 5
+        }
+      ]
+    },
+    "90e5bda1-3670-4107-9834-cd297e7ada68": {
+      "component": "AboutUSPAPCompliance",
+      "file": "src/components/sections/AboutUSPAPCompliance.tsx",
+      "heading": "What Does USPAP Compliance Mean for You?",
+      "pages": [
+        {
+          "page": "about",
+          "order": 3
+        }
+      ]
+    },
+    "039d4dfd-ff6b-43c2-a34f-9142760b6382": {
+      "component": "ContactAppraisalLink",
+      "file": "src/components/sections/ContactAppraisalLink.tsx",
+      "heading": "",
+      "pages": [
+        {
+          "page": "contact",
+          "order": 4
+        }
+      ]
+    },
+    "1178b5bb-1df6-43e7-918c-368df4ff6405": {
+      "component": "ContactDetails",
+      "file": "src/components/sections/ContactDetails.tsx",
+      "heading": "Reach Our Appraisal Team",
+      "pages": [
+        {
+          "page": "contact",
+          "order": 3
+        }
+      ]
+    },
+    "a9f7cf36-dc1d-47d6-9579-9a9a0757d936": {
+      "component": "ContactHero",
+      "file": "src/components/sections/ContactHero.tsx",
+      "heading": "",
+      "pages": [
+        {
+          "page": "contact",
+          "order": 1
+        }
+      ]
+    },
+    "7ded8a93-48d8-4159-8fb0-ab67a1899144": {
+      "component": "ContactServiceArea",
+      "file": "src/components/sections/ContactServiceArea.tsx",
+      "heading": "Proudly Serving the DFW Metroplex",
+      "pages": [
+        {
+          "page": "contact",
+          "order": 2
+        }
+      ]
+    },
+    "81502ca1-2c53-43e3-910d-74ac0c5ac481": {
+      "component": "CoreAppraisalServiceCards",
+      "file": "src/components/sections/CoreAppraisalServiceCards.tsx",
+      "heading": "Our Core Appraisal Services",
+      "pages": [
+        {
+          "page": "core-appraisal-services",
+          "order": 2
+        }
+      ]
+    },
+    "727aa790-25c0-4929-940f-533e167a0619": {
+      "component": "CoreAppraisalWhyChooseUs",
+      "file": "src/components/sections/CoreAppraisalWhyChooseUs.tsx",
+      "heading": "Why Choose American Appraisal Alliance?",
+      "pages": [
+        {
+          "page": "core-appraisal-services",
+          "order": 3
+        }
+      ]
+    },
+    "9571fc7a-d290-43fd-8b95-355b742c9920": {
+      "component": "DesktopAppraisalHero",
+      "file": "src/components/sections/DesktopAppraisalHero.tsx",
+      "heading": "",
+      "pages": [
+        {
+          "page": "desktop-appraisal",
+          "order": 1
+        },
+        {
+          "page": "desktop_appraisal",
+          "order": 1
+        }
+      ]
+    },
+    "180d5def-41b5-4aa5-bc92-6ddc678863b6": {
+      "component": "DesktopAppraisalOverview",
+      "file": "src/components/sections/DesktopAppraisalOverview.tsx",
+      "heading": "Comparing Appraisal Types",
+      "pages": [
+        {
+          "page": "desktop-appraisal",
+          "order": 2
+        },
+        {
+          "page": "desktop_appraisal",
+          "order": 2
+        }
+      ]
+    },
+    "83712761-9611-4da5-9b95-784426bf3f9e": {
+      "component": "DesktopAppraisalWhyChooseUs",
+      "file": "src/components/sections/DesktopAppraisalWhyChooseUs.tsx",
+      "heading": "Why Choose American Appraisal Alliance",
+      "pages": [
+        {
+          "page": "desktop-appraisal",
+          "order": 3
+        },
+        {
+          "page": "desktop_appraisal",
+          "order": 3
+        }
+      ]
+    },
+    "1e1aab61-f939-412a-8b72-6ed79c8f3739": {
+      "component": "DivorceAppraisalCTA",
+      "file": "src/components/sections/DivorceAppraisalCTA.tsx",
+      "heading": "",
+      "pages": [
+        {
+          "page": "divorce-appraisal",
+          "order": 6
+        }
+      ]
+    },
+    "a7ef7cbc-4ed4-404c-88c5-725a1fb3de89": {
+      "component": "DivorceAppraisalHero",
+      "file": "src/components/sections/DivorceAppraisalHero.tsx",
+      "heading": "",
+      "pages": [
+        {
+          "page": "divorce-appraisal",
+          "order": 1
+        }
+      ]
+    },
+    "19c2eeed-51e2-4fc4-9155-3bfa0281c1f1": {
+      "component": "DivorceAppraisalTurnaround",
+      "file": "src/components/sections/DivorceAppraisalTurnaround.tsx",
+      "heading": "Fast, Reliable Turnaround",
+      "pages": [
+        {
+          "page": "divorce-appraisal",
+          "order": 5
+        }
+      ]
+    },
+    "4b19ed33-4feb-43e2-9e4e-ed5acdff0a60": {
+      "component": "DivorceAppraisalWhatItIs",
+      "file": "src/components/sections/DivorceAppraisalWhatItIs.tsx",
+      "heading": "What Is a Divorce Appraisal?",
+      "pages": [
+        {
+          "page": "divorce-appraisal",
+          "order": 2
+        }
+      ]
+    },
+    "d73b92c4-81a0-46aa-903b-ac613e2eaf02": {
+      "component": "DivorceAppraisalWhatsIncluded",
+      "file": "src/components/sections/DivorceAppraisalWhatsIncluded.tsx",
+      "heading": "What's Included in Your Divorce Appraisal",
+      "pages": [
+        {
+          "page": "divorce-appraisal",
+          "order": 4
+        }
+      ]
+    },
+    "1e8a0e40-5243-4656-b924-04d67d713bec": {
+      "component": "DivorceAppraisalWhoNeedsIt",
+      "file": "src/components/sections/DivorceAppraisalWhoNeedsIt.tsx",
+      "heading": "Who Needs a Divorce Appraisal?",
+      "pages": [
+        {
+          "page": "divorce-appraisal",
+          "order": 3
+        }
+      ]
+    },
+    "d8cd7181-3167-4159-b00b-699459aba6ee": {
+      "component": "EstateAppraisalCTA",
+      "file": "src/components/sections/EstateAppraisalCTA.tsx",
+      "heading": "Ready to get started?",
+      "pages": [
+        {
+          "page": "estate-date-of-death-appraisal",
+          "order": 5
+        },
+        {
+          "page": "estate___date_of_death_appraisal",
+          "order": 5
+        }
+      ]
+    },
+    "342a0531-95b3-4859-9b90-a3806ee40b0a": {
+      "component": "EstateAppraisalHero",
+      "file": "src/components/sections/EstateAppraisalHero.tsx",
+      "heading": "",
+      "pages": [
+        {
+          "page": "estate-date-of-death-appraisal",
+          "order": 1
+        },
+        {
+          "page": "estate___date_of_death_appraisal",
+          "order": 1
+        }
+      ]
+    },
+    "e8302f95-a908-48c5-bb0d-2493eb5cc355": {
+      "component": "EstateAppraisalWhatItIs",
+      "file": "src/components/sections/EstateAppraisalWhatItIs.tsx",
+      "heading": "Who Needs an Estate Appraisal?",
+      "pages": [
+        {
+          "page": "estate-date-of-death-appraisal",
+          "order": 2
+        },
+        {
+          "page": "estate___date_of_death_appraisal",
+          "order": 2
+        }
+      ]
+    },
+    "926be3ac-a75e-4512-9a0e-3c30cb1db36f": {
+      "component": "EstateAppraisalWhatsIncluded",
+      "file": "src/components/sections/EstateAppraisalWhatsIncluded.tsx",
+      "heading": "What's Included in Your Estate Appraisal",
+      "pages": [
+        {
+          "page": "estate-date-of-death-appraisal",
+          "order": 3
+        },
+        {
+          "page": "estate___date_of_death_appraisal",
+          "order": 3
+        }
+      ]
+    },
+    "f794b176-0855-407e-bd24-248af41e9d51": {
+      "component": "EstateAppraisalWhyChooseUs",
+      "file": "src/components/sections/EstateAppraisalWhyChooseUs.tsx",
+      "heading": "Why Choose American Appraisal Alliance",
+      "pages": [
+        {
+          "page": "estate-date-of-death-appraisal",
+          "order": 4
+        },
+        {
+          "page": "estate___date_of_death_appraisal",
+          "order": 4
+        }
+      ]
+    },
+    "fa548d76-aa5d-4343-a0f0-cb2415743279": {
+      "component": "ExteriorOnlyAppraisalCTA",
+      "file": "src/components/sections/ExteriorOnlyAppraisalCTA.tsx",
+      "heading": "",
+      "pages": [
+        {
+          "page": "exterior-only-drive-by-appraisal",
+          "order": 4
+        },
+        {
+          "page": "exterior_only__drive_by__appraisal",
+          "order": 4
+        }
+      ]
+    },
+    "0b727661-f55c-4e92-ab0c-02fcaf19da59": {
+      "component": "ExteriorOnlyDriveByAppraisalHero",
+      "file": "src/components/sections/ExteriorOnlyDriveByAppraisalHero.tsx",
+      "heading": "",
+      "pages": [
+        {
+          "page": "exterior-only-drive-by-appraisal",
+          "order": 1
+        },
+        {
+          "page": "exterior_only__drive_by__appraisal",
+          "order": 1
+        }
+      ]
+    },
+    "8661924a-038b-459c-a7db-1474f4f61e61": {
+      "component": "ExteriorOnlyServiceDetail",
+      "file": "src/components/sections/ExteriorOnlyServiceDetail.tsx",
+      "heading": "What's Included in Your Report",
+      "pages": [
+        {
+          "page": "exterior-only-drive-by-appraisal",
+          "order": 2
+        },
+        {
+          "page": "exterior_only__drive_by__appraisal",
+          "order": 2
+        }
+      ]
+    },
+    "dea79df5-c3cf-4249-91e8-e06b4892ad28": {
+      "component": "ExteriorOnlyWhyChooseUs",
+      "file": "src/components/sections/ExteriorOnlyWhyChooseUs.tsx",
+      "heading": "The Right Choice for Drive-By Appraisals in DFW",
+      "pages": [
+        {
+          "page": "exterior-only-drive-by-appraisal",
+          "order": 3
+        },
+        {
+          "page": "exterior_only__drive_by__appraisal",
+          "order": 3
+        }
+      ]
+    },
+    "7f01daa7-a1d9-4748-8d22-292f4511b0e7": {
+      "component": "FhaHudCTA",
+      "file": "src/components/sections/FhaHudCTA.tsx",
+      "heading": "",
+      "pages": [
+        {
+          "page": "fha_hud_compliance_observation_report",
+          "order": 4
+        },
+        {
+          "page": "fhahud-compliance-observation-report",
+          "order": 4
+        }
+      ]
+    },
+    "849d3662-0000-4ea9-bb19-efadbbc66851": {
+      "component": "FhaHudComplianceHero",
+      "file": "src/components/sections/FhaHudComplianceHero.tsx",
+      "heading": "",
+      "pages": [
+        {
+          "page": "fha_hud_compliance_observation_report",
+          "order": 1
+        },
+        {
+          "page": "fhahud-compliance-observation-report",
+          "order": 1
+        }
+      ]
+    },
+    "4f1c2b4c-3b3a-4b72-a70f-838148fa1362": {
+      "component": "FhaHudWhatItIs",
+      "file": "src/components/sections/FhaHudWhatItIs.tsx",
+      "heading": "What Is an FHA/HUD Compliance Observation Report?",
+      "pages": [
+        {
+          "page": "fha_hud_compliance_observation_report",
+          "order": 2
+        },
+        {
+          "page": "fhahud-compliance-observation-report",
+          "order": 2
+        }
+      ]
+    },
+    "82eb31ed-c825-4fc1-a3e1-e2c2d4a66144": {
+      "component": "FhaHudWhyChooseUs",
+      "file": "src/components/sections/FhaHudWhyChooseUs.tsx",
+      "heading": "The Trusted Choice for FHA/HUD Compliance Reports in the DFW Metroplex",
+      "pages": [
+        {
+          "page": "fha_hud_compliance_observation_report",
+          "order": 3
+        },
+        {
+          "page": "fhahud-compliance-observation-report",
+          "order": 3
+        }
+      ]
+    },
+    "c8f97b84-9abf-4b1b-ab3c-df9c7211d7aa": {
+      "component": "Footer",
+      "file": "src/components/sections/Footer.tsx",
+      "heading": "",
+      "pages": [
+        {
+          "page": "about",
+          "order": 7
+        },
+        {
+          "page": "blog",
+          "order": 2
+        },
+        {
+          "page": "contact",
+          "order": 5
+        },
+        {
+          "page": "core-appraisal-services",
+          "order": 4
+        },
+        {
+          "page": "desktop-appraisal",
+          "order": 4
+        },
+        {
+          "page": "desktop_appraisal",
+          "order": 4
+        },
+        {
+          "page": "divorce-appraisal",
+          "order": 7
+        },
+        {
+          "page": "estate-date-of-death-appraisal",
+          "order": 6
+        },
+        {
+          "page": "estate___date_of_death_appraisal",
+          "order": 6
+        },
+        {
+          "page": "exterior-only-drive-by-appraisal",
+          "order": 5
+        },
+        {
+          "page": "exterior_only__drive_by__appraisal",
+          "order": 5
+        },
+        {
+          "page": "fha_hud_compliance_observation_report",
+          "order": 5
+        },
+        {
+          "page": "fhahud-compliance-observation-report",
+          "order": 5
+        },
+        {
+          "page": "gross-living-area-gla-certification",
+          "order": 5
+        },
+        {
+          "page": "gross_living_area__gla__certification",
+          "order": 5
+        },
+        {
+          "page": "home",
+          "order": 8
+        },
+        {
+          "page": "market-value-update-1004d-recertification",
+          "order": 5
+        },
+        {
+          "page": "market_value_update__1004d___recertification",
+          "order": 5
+        },
+        {
+          "page": "measurement-analysis-services",
+          "order": 5
+        },
+        {
+          "page": "pmi-removal-appraisal",
+          "order": 5
+        },
+        {
+          "page": "pmi_removal_appraisal",
+          "order": 5
+        },
+        {
+          "page": "pre-listing-appraisal",
+          "order": 5
+        },
+        {
+          "page": "pre-purchase-appraisal",
+          "order": 5
+        },
+        {
+          "page": "pre_listing_appraisal",
+          "order": 5
+        },
+        {
+          "page": "pre_purchase_appraisal",
+          "order": 5
+        },
+        {
+          "page": "property-measurement-ansi-z765",
+          "order": 5
+        },
+        {
+          "page": "property_measurement__ansi_z765",
+          "order": 5
+        },
+        {
+          "page": "request",
+          "order": 5
+        },
+        {
+          "page": "residential-appraisal",
+          "order": 7
+        },
+        {
+          "page": "tax-assessment-appeal",
+          "order": 7
+        },
+        {
+          "page": "valuation-updates-reports",
+          "order": 5
+        }
+      ]
+    },
+    "b1f61631-f3ef-49fd-86ba-18eedf2705f8": {
+      "component": "GrossLivingAreaCTA",
+      "file": "src/components/sections/GrossLivingAreaCTA.tsx",
+      "heading": "Get Your GLA Certification Today",
+      "pages": [
+        {
+          "page": "gross-living-area-gla-certification",
+          "order": 4
+        },
+        {
+          "page": "gross_living_area__gla__certification",
+          "order": 4
+        }
+      ]
+    },
+    "1e82d31b-d1b1-4161-9f4a-4ace1f2cb710": {
+      "component": "GrossLivingAreaCertificationHero",
+      "file": "src/components/sections/GrossLivingAreaCertificationHero.tsx",
+      "heading": "",
+      "pages": [
+        {
+          "page": "gross-living-area-gla-certification",
+          "order": 1
+        },
+        {
+          "page": "gross_living_area__gla__certification",
+          "order": 1
+        }
+      ]
+    },
+    "ec16ea36-7605-4ca0-86f9-42a70a84f619": {
+      "component": "GrossLivingAreaWhatItIs",
+      "file": "src/components/sections/GrossLivingAreaWhatItIs.tsx",
+      "heading": "Service at a Glance",
+      "pages": [
+        {
+          "page": "gross-living-area-gla-certification",
+          "order": 2
+        },
+        {
+          "page": "gross_living_area__gla__certification",
+          "order": 2
+        }
+      ]
+    },
+    "75c23b0b-a3b5-419d-9537-65d948c1d7a8": {
+      "component": "GrossLivingAreaWhyChooseUs",
+      "file": "src/components/sections/GrossLivingAreaWhyChooseUs.tsx",
+      "heading": "The DFW Standard for GLA Certification",
+      "pages": [
+        {
+          "page": "gross-living-area-gla-certification",
+          "order": 3
+        },
+        {
+          "page": "gross_living_area__gla__certification",
+          "order": 3
+        }
+      ]
+    },
+    "f942fa6e-4c80-4f91-a2ec-0171a7fd9ede": {
+      "component": "Header",
+      "file": "src/components/sections/Header.tsx",
+      "heading": "",
+      "pages": [
+        {
+          "page": "about",
+          "order": 0
+        },
+        {
+          "page": "blog",
+          "order": 0
+        },
+        {
+          "page": "contact",
+          "order": 0
+        },
+        {
+          "page": "core-appraisal-services",
+          "order": 0
+        },
+        {
+          "page": "desktop-appraisal",
+          "order": 0
+        },
+        {
+          "page": "desktop_appraisal",
+          "order": 0
+        },
+        {
+          "page": "divorce-appraisal",
+          "order": 0
+        },
+        {
+          "page": "estate-date-of-death-appraisal",
+          "order": 0
+        },
+        {
+          "page": "estate___date_of_death_appraisal",
+          "order": 0
+        },
+        {
+          "page": "exterior-only-drive-by-appraisal",
+          "order": 0
+        },
+        {
+          "page": "exterior_only__drive_by__appraisal",
+          "order": 0
+        },
+        {
+          "page": "fha_hud_compliance_observation_report",
+          "order": 0
+        },
+        {
+          "page": "fhahud-compliance-observation-report",
+          "order": 0
+        },
+        {
+          "page": "gross-living-area-gla-certification",
+          "order": 0
+        },
+        {
+          "page": "gross_living_area__gla__certification",
+          "order": 0
+        },
+        {
+          "page": "home",
+          "order": 0
+        },
+        {
+          "page": "market-value-update-1004d-recertification",
+          "order": 0
+        },
+        {
+          "page": "market_value_update__1004d___recertification",
+          "order": 0
+        },
+        {
+          "page": "measurement-analysis-services",
+          "order": 0
+        },
+        {
+          "page": "pmi-removal-appraisal",
+          "order": 0
+        },
+        {
+          "page": "pmi_removal_appraisal",
+          "order": 0
+        },
+        {
+          "page": "pre-listing-appraisal",
+          "order": 0
+        },
+        {
+          "page": "pre-purchase-appraisal",
+          "order": 0
+        },
+        {
+          "page": "pre_listing_appraisal",
+          "order": 0
+        },
+        {
+          "page": "pre_purchase_appraisal",
+          "order": 0
+        },
+        {
+          "page": "property-measurement-ansi-z765",
+          "order": 0
+        },
+        {
+          "page": "property_measurement__ansi_z765",
+          "order": 0
+        },
+        {
+          "page": "request",
+          "order": 0
+        },
+        {
+          "page": "residential-appraisal",
+          "order": 0
+        },
+        {
+          "page": "tax-assessment-appeal",
+          "order": 0
+        },
+        {
+          "page": "valuation-updates-reports",
+          "order": 0
+        }
+      ]
+    },
+    "d708a601-55d1-49cb-ba2e-1c07690631e3": {
+      "component": "Hero",
+      "file": "src/components/sections/Hero.tsx",
+      "heading": "",
+      "pages": [
+        {
+          "page": "home",
+          "order": 1
+        }
+      ]
+    },
+    "19eda0cd-f15e-45f1-b301-ad1d27d1f94a": {
+      "component": "HomeCTA",
+      "file": "src/components/sections/HomeCTA.tsx",
+      "heading": "",
+      "pages": [
+        {
+          "page": "home",
+          "order": 7
+        }
+      ]
+    },
+    "31dc0408-df64-4fa5-aa0c-ec323c7c231d": {
+      "component": "HomeServices",
+      "file": "src/components/sections/HomeServices.tsx",
+      "heading": "Comprehensive Appraisal Services for the Dallas\u2013Fort Worth Metroplex",
+      "pages": [
+        {
+          "page": "home",
+          "order": 2
+        }
+      ]
+    },
+    "19c18917-5695-45e6-be10-bf25926bad5c": {
+      "component": "MarketValueUpdateCTA",
+      "file": "src/components/sections/MarketValueUpdateCTA.tsx",
+      "heading": "",
+      "pages": [
+        {
+          "page": "market-value-update-1004d-recertification",
+          "order": 4
+        },
+        {
+          "page": "market_value_update__1004d___recertification",
+          "order": 4
+        }
+      ]
+    },
+    "681af771-9e68-44da-a457-24c7a467ecec": {
+      "component": "MarketValueUpdateDetails",
+      "file": "src/components/sections/MarketValueUpdateDetails.tsx",
+      "heading": "What Is a Market Value Update?",
+      "pages": [
+        {
+          "page": "market-value-update-1004d-recertification",
+          "order": 2
+        },
+        {
+          "page": "market_value_update__1004d___recertification",
+          "order": 2
+        }
+      ]
+    },
+    "0e1ceee1-e5e3-4179-962e-38086cdce880": {
+      "component": "MarketValueUpdateHero",
+      "file": "src/components/sections/MarketValueUpdateHero.tsx",
+      "heading": "",
+      "pages": [
+        {
+          "page": "market-value-update-1004d-recertification",
+          "order": 1
+        },
+        {
+          "page": "market_value_update__1004d___recertification",
+          "order": 1
+        }
+      ]
+    },
+    "9988abbf-dab6-4aa8-85b4-bde0b8e67399": {
+      "component": "MarketValueUpdateWhyChooseUs",
+      "file": "src/components/sections/MarketValueUpdateWhyChooseUs.tsx",
+      "heading": "The Trusted Choice for 1004D Recertifications in DFW",
+      "pages": [
+        {
+          "page": "market-value-update-1004d-recertification",
+          "order": 3
+        },
+        {
+          "page": "market_value_update__1004d___recertification",
+          "order": 3
+        }
+      ]
+    },
+    "7cb1fa0b-53a9-4c26-88be-07dd5fc9ad5d": {
+      "component": "MeasurementAnalysisHero",
+      "file": "src/components/sections/MeasurementAnalysisHero.tsx",
+      "heading": "",
+      "pages": [
+        {
+          "page": "measurement-analysis-services",
+          "order": 1
+        }
+      ]
+    },
+    "4a62afe7-b110-451c-a709-82591e53b177": {
+      "component": "MeasurementCTA",
+      "file": "src/components/sections/MeasurementCTA.tsx",
+      "heading": "",
+      "pages": [
+        {
+          "page": "measurement-analysis-services",
+          "order": 4
+        }
+      ]
+    },
+    "2b93fbdc-f5b4-44fe-a2a1-875ef31ff659": {
+      "component": "MeasurementServiceCards",
+      "file": "src/components/sections/MeasurementServiceCards.tsx",
+      "heading": "Our Measurement & Analysis Services",
+      "pages": [
+        {
+          "page": "measurement-analysis-services",
+          "order": 2
+        }
+      ]
+    },
+    "bdfe078a-c28c-4210-9ee8-f0c6e3305deb": {
+      "component": "MeasurementWhyItMatters",
+      "file": "src/components/sections/MeasurementWhyItMatters.tsx",
+      "heading": "Why Accurate Measurements Matter",
+      "pages": [
+        {
+          "page": "measurement-analysis-services",
+          "order": 3
+        }
+      ]
+    },
+    "333b99d3-bd9a-4e40-b709-4ac942a270b1": {
+      "component": "PMIRemovalAppraisalHero",
+      "file": "src/components/sections/PMIRemovalAppraisalHero.tsx",
+      "heading": "",
+      "pages": [
+        {
+          "page": "pmi-removal-appraisal",
+          "order": 1
+        },
+        {
+          "page": "pmi_removal_appraisal",
+          "order": 1
+        }
+      ]
+    },
+    "f14b3326-bcfb-434f-8e95-b3c091300123": {
+      "component": "PMIRemovalCTA",
+      "file": "src/components/sections/PMIRemovalCTA.tsx",
+      "heading": "",
+      "pages": [
+        {
+          "page": "pmi-removal-appraisal",
+          "order": 4
+        },
+        {
+          "page": "pmi_removal_appraisal",
+          "order": 4
+        }
+      ]
+    },
+    "fbe38064-30c3-4351-8b39-3610f68c8a9c": {
+      "component": "PMIRemovalWhatItIs",
+      "file": "src/components/sections/PMIRemovalWhatItIs.tsx",
+      "heading": "What Is a PMI Removal Appraisal?",
+      "pages": [
+        {
+          "page": "pmi-removal-appraisal",
+          "order": 2
+        },
+        {
+          "page": "pmi_removal_appraisal",
+          "order": 2
+        }
+      ]
+    },
+    "62d7319d-d549-4683-a4a6-b4037bb19dfa": {
+      "component": "PMIRemovalWhyChooseUs",
+      "file": "src/components/sections/PMIRemovalWhyChooseUs.tsx",
+      "heading": "The Trusted Choice for PMI Removal in Dallas\u2013Fort Worth",
+      "pages": [
+        {
+          "page": "pmi-removal-appraisal",
+          "order": 3
+        },
+        {
+          "page": "pmi_removal_appraisal",
+          "order": 3
+        }
+      ]
+    },
+    "54357c79-0ce3-41cf-8733-f5fedf44c326": {
+      "component": "PreListingAppraisalHero",
+      "file": "src/components/sections/PreListingAppraisalHero.tsx",
+      "heading": "",
+      "pages": [
+        {
+          "page": "pre-listing-appraisal",
+          "order": 1
+        },
+        {
+          "page": "pre_listing_appraisal",
+          "order": 1
+        }
+      ]
+    },
+    "1821fb60-e182-42fb-bcd1-bc05868602e1": {
+      "component": "PreListingCTA",
+      "file": "src/components/sections/PreListingCTA.tsx",
+      "heading": "",
+      "pages": [
+        {
+          "page": "pre-listing-appraisal",
+          "order": 4
+        },
+        {
+          "page": "pre_listing_appraisal",
+          "order": 4
+        }
+      ]
+    },
+    "1c8fa2f6-be97-4908-a373-af2d95214f85": {
+      "component": "PreListingServiceDetail",
+      "file": "src/components/sections/PreListingServiceDetail.tsx",
+      "heading": "What Is a Pre-Listing Appraisal?",
+      "pages": [
+        {
+          "page": "pre-listing-appraisal",
+          "order": 2
+        },
+        {
+          "page": "pre_listing_appraisal",
+          "order": 2
+        }
+      ]
+    },
+    "71afad6a-622e-4da9-bd89-92b7193da772": {
+      "component": "PreListingWhyChooseUs",
+      "file": "src/components/sections/PreListingWhyChooseUs.tsx",
+      "heading": "Why Choose American Appraisal Alliance",
+      "pages": [
+        {
+          "page": "pre-listing-appraisal",
+          "order": 3
+        },
+        {
+          "page": "pre_listing_appraisal",
+          "order": 3
+        }
+      ]
+    },
+    "cde47a14-59ff-4f12-a318-d4d2b0f169bc": {
+      "component": "PrePurchaseAppraisalCTA",
+      "file": "src/components/sections/PrePurchaseAppraisalCTA.tsx",
+      "heading": "Protect Your Investment Before You Close",
+      "pages": [
+        {
+          "page": "pre-purchase-appraisal",
+          "order": 4
+        },
+        {
+          "page": "pre_purchase_appraisal",
+          "order": 4
+        }
+      ]
+    },
+    "aae3f83f-a304-4341-83c9-1da889621ba4": {
+      "component": "PrePurchaseAppraisalDetails",
+      "file": "src/components/sections/PrePurchaseAppraisalDetails.tsx",
+      "heading": "Protects Your Investment Before You Close",
+      "pages": [
+        {
+          "page": "pre-purchase-appraisal",
+          "order": 2
+        },
+        {
+          "page": "pre_purchase_appraisal",
+          "order": 2
+        }
+      ]
+    },
+    "d80c780d-65f9-4718-b6d9-b256518aaa85": {
+      "component": "PrePurchaseAppraisalHero",
+      "file": "src/components/sections/PrePurchaseAppraisalHero.tsx",
+      "heading": "",
+      "pages": [
+        {
+          "page": "pre-purchase-appraisal",
+          "order": 1
+        },
+        {
+          "page": "pre_purchase_appraisal",
+          "order": 1
+        }
+      ]
+    },
+    "90c6d8a7-8689-42e4-98b3-f770daadb6e3": {
+      "component": "PrePurchaseWhyChooseUs",
+      "file": "src/components/sections/PrePurchaseWhyChooseUs.tsx",
+      "heading": "Independent, Accurate, Defensible \u2014 Backed by Local Expertise",
+      "pages": [
+        {
+          "page": "pre-purchase-appraisal",
+          "order": 3
+        },
+        {
+          "page": "pre_purchase_appraisal",
+          "order": 3
+        }
+      ]
+    },
+    "262ce66e-e1c3-476a-b4cc-a333157b75a1": {
+      "component": "PropertyMeasurementAnsiCTA",
+      "file": "src/components/sections/PropertyMeasurementAnsiCTA.tsx",
+      "heading": "Request Your ANSI Z765 Measurement Report",
+      "pages": [
+        {
+          "page": "property-measurement-ansi-z765",
+          "order": 4
+        },
+        {
+          "page": "property_measurement__ansi_z765",
+          "order": 4
+        }
+      ]
+    },
+    "6ec005b8-1ba8-4422-a524-a2d05b294cff": {
+      "component": "PropertyMeasurementAnsiHero",
+      "file": "src/components/sections/PropertyMeasurementAnsiHero.tsx",
+      "heading": "",
+      "pages": [
+        {
+          "page": "property-measurement-ansi-z765",
+          "order": 1
+        },
+        {
+          "page": "property_measurement__ansi_z765",
+          "order": 1
+        }
+      ]
+    },
+    "56f64070-133c-4103-bf54-3885aae90937": {
+      "component": "PropertyMeasurementAnsiWhatItIs",
+      "file": "src/components/sections/PropertyMeasurementAnsiWhatItIs.tsx",
+      "heading": "Why the ANSI Z765 Standard Matters",
+      "pages": [
+        {
+          "page": "property-measurement-ansi-z765",
+          "order": 2
+        },
+        {
+          "page": "property_measurement__ansi_z765",
+          "order": 2
+        }
+      ]
+    },
+    "6e3b4db7-b62d-46e6-99d2-4028f2dfba0a": {
+      "component": "PropertyMeasurementAnsiWhyChooseUs",
+      "file": "src/components/sections/PropertyMeasurementAnsiWhyChooseUs.tsx",
+      "heading": "Why Choose American Appraisal Alliance?",
+      "pages": [
+        {
+          "page": "property-measurement-ansi-z765",
+          "order": 3
+        },
+        {
+          "page": "property_measurement__ansi_z765",
+          "order": 3
+        }
+      ]
+    },
+    "33545a4d-3ba9-495a-941e-23c2a8e9875a": {
+      "component": "RequestHero",
+      "file": "src/components/sections/RequestHero.tsx",
+      "heading": "",
+      "pages": [
+        {
+          "page": "request",
+          "order": 1
+        }
+      ]
+    },
+    "9a567bcf-3261-45d7-8f8e-9a51aa36fe53": {
+      "component": "RequestIntakeForm",
+      "file": "src/components/sections/RequestIntakeForm.tsx",
+      "heading": "Submit Your Appraisal Request",
+      "pages": [
+        {
+          "page": "request",
+          "order": 3
+        }
+      ]
+    },
+    "3cc9a845-c3fc-42dc-97ae-25771196221e": {
+      "component": "RequestReassurance",
+      "file": "src/components/sections/RequestReassurance.tsx",
+      "heading": "What to Expect After You Submit",
+      "pages": [
+        {
+          "page": "request",
+          "order": 4
+        }
+      ]
+    },
+    "e3ba9b6c-83fe-499c-8a8c-4c61b74b6862": {
+      "component": "RequestServiceArea",
+      "file": "src/components/sections/RequestServiceArea.tsx",
+      "heading": "Serving the Dallas\u2013Fort Worth Metroplex",
+      "pages": [
+        {
+          "page": "request",
+          "order": 2
+        }
+      ]
+    },
+    "9b906b8f-6e67-49d0-93b4-890ad3bf605b": {
+      "component": "ResidentialAppraisalCTA",
+      "file": "src/components/sections/ResidentialAppraisalCTA.tsx",
+      "heading": "",
+      "pages": [
+        {
+          "page": "residential-appraisal",
+          "order": 6
+        }
+      ]
+    },
+    "b12374a7-c29f-4f2e-b2fe-9e320840fc50": {
+      "component": "ResidentialAppraisalHero",
+      "file": "src/components/sections/ResidentialAppraisalHero.tsx",
+      "heading": "",
+      "pages": [
+        {
+          "page": "residential-appraisal",
+          "order": 1
+        }
+      ]
+    },
+    "5af90b2c-0704-47b0-880e-3165545aaf3d": {
+      "component": "ResidentialAppraisalTurnaround",
+      "file": "src/components/sections/ResidentialAppraisalTurnaround.tsx",
+      "heading": "Turnaround Time & Delivery",
+      "pages": [
+        {
+          "page": "residential-appraisal",
+          "order": 5
+        }
+      ]
+    },
+    "bd982cc5-127a-42a4-87ea-cfe0dd43e9dd": {
+      "component": "ResidentialAppraisalWhatItIs",
+      "file": "src/components/sections/ResidentialAppraisalWhatItIs.tsx",
+      "heading": "",
+      "pages": [
+        {
+          "page": "residential-appraisal",
+          "order": 2
+        }
+      ]
+    },
+    "9bae8bda-785b-485e-a00a-c463cb5ec904": {
+      "component": "ResidentialAppraisalWhatsIncluded",
+      "file": "src/components/sections/ResidentialAppraisalWhatsIncluded.tsx",
+      "heading": "What's Included in Your Appraisal Report",
+      "pages": [
+        {
+          "page": "residential-appraisal",
+          "order": 4
+        }
+      ]
+    },
+    "0323e295-5cc4-443a-a820-7ba048335b40": {
+      "component": "ResidentialAppraisalWhoNeedsIt",
+      "file": "src/components/sections/ResidentialAppraisalWhoNeedsIt.tsx",
+      "heading": "Who Needs a Full URAR Appraisal?",
+      "pages": [
+        {
+          "page": "residential-appraisal",
+          "order": 3
+        }
+      ]
+    },
+    "7b33efce-5700-4e7f-94c2-ac20fe793576": {
+      "component": "ServiceArea",
+      "file": "src/components/sections/ServiceArea.tsx",
+      "heading": "Serving the Entire DFW Metroplex",
+      "pages": [
+        {
+          "page": "home",
+          "order": 3
+        }
+      ]
+    },
+    "bf08551d-b543-44ab-9704-670ea78c66af": {
+      "component": "ServiceCardsGrid9ServicesResidentialUrar",
+      "file": "src/components/sections/ServiceCardsGrid9ServicesResidentialUrar.tsx",
+      "heading": "Core Appraisal Services",
+      "pages": [
+        {
+          "page": "core-appraisal-services",
+          "order": 1
+        }
+      ]
+    },
+    "d1385ce0-1d15-4115-a1cf-1aad59f083a1": {
+      "component": "TaxAssessmentAppealHero",
+      "file": "src/components/sections/TaxAssessmentAppealHero.tsx",
+      "heading": "",
+      "pages": [
+        {
+          "page": "tax-assessment-appeal",
+          "order": 1
+        }
+      ]
+    },
+    "6fa1ad81-edd6-4939-8f1f-d38f55196a58": {
+      "component": "TaxAssessmentCTA",
+      "file": "src/components/sections/TaxAssessmentCTA.tsx",
+      "heading": "Start Your Property Tax Appeal Today",
+      "pages": [
+        {
+          "page": "tax-assessment-appeal",
+          "order": 6
+        }
+      ]
+    },
+    "77af2b95-3eea-4792-883e-a591f7f24ac5": {
+      "component": "TaxAssessmentTurnaround",
+      "file": "src/components/sections/TaxAssessmentTurnaround.tsx",
+      "heading": "Standard Turnaround",
+      "pages": [
+        {
+          "page": "tax-assessment-appeal",
+          "order": 5
+        }
+      ]
+    },
+    "1af4a3e1-92c7-4c8b-b858-ba684a7cef03": {
+      "component": "TaxAssessmentWhatItIs",
+      "file": "src/components/sections/TaxAssessmentWhatItIs.tsx",
+      "heading": "What Is a Tax Assessment Appeal Appraisal?",
+      "pages": [
+        {
+          "page": "tax-assessment-appeal",
+          "order": 2
+        }
+      ]
+    },
+    "aa14ab7a-38e8-40bc-acda-71f855c33a13": {
+      "component": "TaxAssessmentWhatsIncluded",
+      "file": "src/components/sections/TaxAssessmentWhatsIncluded.tsx",
+      "heading": "What's Included in Your CAD Appeal Appraisal",
+      "pages": [
+        {
+          "page": "tax-assessment-appeal",
+          "order": 4
+        }
+      ]
+    },
+    "cacfb05f-7e8e-450f-9f78-6a76adfe0b53": {
+      "component": "TaxAssessmentWhoNeedsIt",
+      "file": "src/components/sections/TaxAssessmentWhoNeedsIt.tsx",
+      "heading": "Who Needs a Tax Assessment Appeal Appraisal?",
+      "pages": [
+        {
+          "page": "tax-assessment-appeal",
+          "order": 3
+        }
+      ]
+    },
+    "081a79b2-e733-4a94-8594-25f6cfcdc8d7": {
+      "component": "Testimonials",
+      "file": "src/components/sections/Testimonials.tsx",
+      "heading": "Trusted by DFW Homeowners, Attorneys & Lenders",
+      "pages": [
+        {
+          "page": "home",
+          "order": 6
+        }
+      ]
+    },
+    "f9e0de68-282b-4dbc-bfc9-9c69304c55d2": {
+      "component": "TrustBar",
+      "file": "src/components/sections/TrustBar.tsx",
+      "heading": "",
+      "pages": [
+        {
+          "page": "home",
+          "order": 4
+        }
+      ]
+    },
+    "2b7a4503-1bf7-4c86-992b-3efcc2f09c7d": {
+      "component": "ValuationUpdatesCTA",
+      "file": "src/components/sections/ValuationUpdatesCTA.tsx",
+      "heading": "",
+      "pages": [
+        {
+          "page": "valuation-updates-reports",
+          "order": 4
+        }
+      ]
+    },
+    "e8b7e291-a199-49ca-a94a-4fc3d46e37b2": {
+      "component": "ValuationUpdatesHero",
+      "file": "src/components/sections/ValuationUpdatesHero.tsx",
+      "heading": "",
+      "pages": [
+        {
+          "page": "valuation-updates-reports",
+          "order": 1
+        }
+      ]
+    },
+    "6d73ef23-407a-4c5c-af75-bad0955b1538": {
+      "component": "ValuationUpdatesServiceCards",
+      "file": "src/components/sections/ValuationUpdatesServiceCards.tsx",
+      "heading": "Certified Valuation Update Services",
+      "pages": [
+        {
+          "page": "valuation-updates-reports",
+          "order": 2
+        }
+      ]
+    },
+    "6538cd2b-d84d-4818-85bc-a0b985741a3c": {
+      "component": "ValuationUpdatesWhoNeeds",
+      "file": "src/components/sections/ValuationUpdatesWhoNeeds.tsx",
+      "heading": "Who Needs a Valuation Update?",
+      "pages": [
+        {
+          "page": "valuation-updates-reports",
+          "order": 3
+        }
+      ]
+    },
+    "48fa8807-9c51-4c8d-899f-3319b23f0134": {
+      "component": "WhyChooseUs",
+      "file": "src/components/sections/WhyChooseUs.tsx",
+      "heading": "Trusted Appraisers Serving the DFW Metroplex",
+      "pages": [
+        {
+          "page": "home",
+          "order": 5
+        }
+      ]
+    }
+  }
 }

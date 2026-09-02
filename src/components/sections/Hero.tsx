@@ -9,16 +9,16 @@ const trustIndicators = [
   { icon: ShieldCheck, label: "USPAP Compliant" },
   { icon: Award, label: "Licensed & Certified" },
   { icon: MapPin, label: "Full DFW Coverage" },
-  { icon: Clock, label: "Fast Turnaround" },
+  { icon: Clock, label: "Fast Turnaround Time" },
 ];
 
 const Hero = React.forwardRef<HTMLElement>((props, ref) => {
   return (
-    <section
+    <section data-section-id="d708a601-55d1-49cb-ba2e-1c07690631e3"
       ref={ref}
       id="hero"
       aria-label="Hero section"
-      className="relative isolate min-h-[85vh] md:min-h-screen flex items-center overflow-hidden"
+      className="relative isolate min-h-[85vh] md:min-h-screen flex items-center overflow-hidden max-w-full"
     >
       {/* Layer 1 — Background image */}
       <img
@@ -48,7 +48,7 @@ const Hero = React.forwardRef<HTMLElement>((props, ref) => {
         <div className="max-w-3xl">
           {/* Pre-header badge */}
           <motion.div
-            initial={{ opacity: 0, y: 16 }}
+            initial={{ opacity: 1, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
             className="mb-6"
@@ -63,7 +63,7 @@ const Hero = React.forwardRef<HTMLElement>((props, ref) => {
 
           {/* H1 — VERBATIM */}
           <motion.h1
-            initial={{ opacity: 0, y: 24 }}
+            initial={{ opacity: 1, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.65, delay: 0.1, ease: "easeOut" }}
             className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white max-w-3xl"
@@ -74,7 +74,7 @@ const Hero = React.forwardRef<HTMLElement>((props, ref) => {
 
           {/* Subheadline */}
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
             className="mt-6 text-lg md:text-xl text-white/90 max-w-2xl leading-relaxed"
@@ -86,7 +86,7 @@ const Hero = React.forwardRef<HTMLElement>((props, ref) => {
 
           {/* CTA Buttons */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
             className="mt-8 flex flex-wrap gap-4"
@@ -104,7 +104,7 @@ const Hero = React.forwardRef<HTMLElement>((props, ref) => {
                 boxShadow: "0 4px 20px -4px hsl(42 88% 48% / 0.50)",
               }}
             >
-              <Link to="/request">Request an Appraisal</Link>
+              <Link to="/request/">Request an Appraisal</Link>
             </Button>
 
             {/* Secondary CTA */}
@@ -114,13 +114,13 @@ const Hero = React.forwardRef<HTMLElement>((props, ref) => {
               variant="outline"
               className="text-base h-12 px-8 bg-transparent text-white border-white/60 hover:bg-white/10 hover:border-white font-medium"
             >
-              <Link to="/core-appraisal-services">Explore Services</Link>
+              <Link to="/core-appraisal-services/">Explore Services</Link>
             </Button>
           </motion.div>
 
           {/* Phone number + reassurance */}
           <motion.div
-            initial={{ opacity: 0 }}
+            initial={{ opacity: 1 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.45, ease: "easeOut" }}
             className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2"
@@ -145,15 +145,15 @@ const Hero = React.forwardRef<HTMLElement>((props, ref) => {
 
           {/* Trust indicator pills */}
           <motion.div
-            initial={{ opacity: 0, y: 16 }}
+            initial={{ opacity: 1, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.55, ease: "easeOut" }}
             className="mt-10 flex flex-wrap gap-3"
           >
-            {trustIndicators.map((item, index) => (
+            {trustIndicators.slice(0, 2).map((item, index) => (
               <motion.div
                 key={item.label}
-                initial={{ opacity: 0, scale: 0.92 }}
+                initial={{ opacity: 1, scale: 0.92 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{
                   duration: 0.4,
@@ -174,6 +174,34 @@ const Hero = React.forwardRef<HTMLElement>((props, ref) => {
                 </span>
               </motion.div>
             ))}
+
+            {/* Final two badges: stack vertically on mobile, inline on desktop */}
+            <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
+              {trustIndicators.slice(2, 4).map((item, index) => (
+                <motion.div
+                  key={item.label}
+                  initial={{ opacity: 1, scale: 0.92 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{
+                    duration: 0.4,
+                    delay: 0.6 + (index + 2) * 0.08,
+                    ease: "easeOut",
+                  }}
+                  className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 w-fit"
+                >
+                  <item.icon
+                    className="h-4 w-4"
+                    style={{ color: "hsl(42 92% 58%)" }}
+                  />
+                  <span
+                    className="text-xs font-medium text-white/90 whitespace-nowrap"
+                    style={{ fontFamily: "'Inter', sans-serif" }}
+                  >
+                    {item.label}
+                  </span>
+                </motion.div>
+              ))}
+            </div>
           </motion.div>
         </div>
       </div>

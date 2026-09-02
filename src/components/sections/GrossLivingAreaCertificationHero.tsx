@@ -26,7 +26,7 @@ const GrossLivingAreaCertificationHero = React.forwardRef<HTMLElement>((props, r
   ];
 
   return (
-    <section
+    <section data-section-id="1e82d31b-d1b1-4161-9f4a-4ace1f2cb710"
       ref={ref}
       id="gross-living-area-certification-hero"
       className="relative isolate min-h-[85vh] md:min-h-[80vh] flex items-center py-20 md:py-28"

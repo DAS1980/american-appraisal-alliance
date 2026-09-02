@@ -76,7 +76,7 @@ const itemVariants = {
 
 const EstateAppraisalWhatsIncluded = React.forwardRef<HTMLElement>((props, ref) => {
   return (
-    <section
+    <section data-section-id="926be3ac-a75e-4512-9a0e-3c30cb1db36f"
       ref={ref}
       id="estate-appraisal-whats-included"
       className="relative py-20 md:py-32 bg-background"

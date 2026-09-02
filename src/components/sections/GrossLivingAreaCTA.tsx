@@ -21,7 +21,7 @@ const GrossLivingAreaCTA = React.forwardRef<HTMLElement>((props, ref) => {
   ];
 
   return (
-    <section
+    <section data-section-id="b1f61631-f3ef-49fd-86ba-18eedf2705f8"
       ref={ref}
       id="gross-living-area-cta"
       className="relative isolate py-24 md:py-36 overflow-hidden"

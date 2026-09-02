@@ -25,7 +25,7 @@ const ContactAppraisalLink = React.forwardRef<HTMLElement>((props, ref) => {
   ];
 
   return (
-    <section
+    <section data-section-id="039d4dfd-ff6b-43c2-a34f-9142760b6382"
       ref={ref}
       id="contact-appraisal-link"
       className="relative py-20 md:py-28 overflow-hidden"

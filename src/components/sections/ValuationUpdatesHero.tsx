@@ -13,7 +13,7 @@ const ValuationUpdatesHero = React.forwardRef<HTMLElement>((props, ref) => {
       subtitle: "1004D / Recertification",
       description:
         "Updates a prior appraisal to reflect current market conditions. Fannie Mae Form 1004D compliant.",
-      link: "/market-value-update-1004d-recertification",
+      link: "/market-value-update-1004d-recertification/",
     },
     {
       icon: FileCheck,
@@ -21,15 +21,15 @@ const ValuationUpdatesHero = React.forwardRef<HTMLElement>((props, ref) => {
       subtitle: "Observation Report",
       description:
         "Identifies property conditions that may affect FHA loan eligibility. Supports FHA/HUD underwriting requirements.",
-      link: "/fhahud-compliance-observation-report",
+      link: "/fhahud-compliance-observation-report/",
     },
   ];
 
   return (
-    <section
+    <section data-section-id="e8b7e291-a199-49ca-a94a-4fc3d46e37b2"
       ref={ref}
       id="valuation-updates-hero"
-      className="relative isolate min-h-[85vh] md:min-h-[80vh] flex items-center py-20 md:py-32"
+      className="relative isolate min-h-[85vh] md:min-h-[80vh] flex items-center py-20 md:py-32 overflow-hidden"
       aria-label="Valuation Updates & Reports Hero"
     >
       {/* Background image — Layer 1 */}
@@ -60,7 +60,7 @@ const ValuationUpdatesHero = React.forwardRef<HTMLElement>((props, ref) => {
         <div className="max-w-3xl">
           {/* Eyebrow / category label */}
           <motion.div
-            initial={{ opacity: 0, y: 16 }}
+            initial={{ opacity: 1, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
             className="mb-5"
@@ -75,7 +75,7 @@ const ValuationUpdatesHero = React.forwardRef<HTMLElement>((props, ref) => {
 
           {/* Main heading — H1 for this page */}
           <motion.h1
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
             className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6"
@@ -86,7 +86,7 @@ const ValuationUpdatesHero = React.forwardRef<HTMLElement>((props, ref) => {
 
           {/* Subheadline */}
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
             className="text-lg md:text-xl text-white/85 leading-relaxed mb-4 max-w-2xl"
@@ -98,7 +98,7 @@ const ValuationUpdatesHero = React.forwardRef<HTMLElement>((props, ref) => {
 
           {/* Trust indicators */}
           <motion.div
-            initial={{ opacity: 0, y: 16 }}
+            initial={{ opacity: 1, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
             className="flex flex-wrap gap-4 mb-8"
@@ -119,7 +119,7 @@ const ValuationUpdatesHero = React.forwardRef<HTMLElement>((props, ref) => {
 
           {/* CTA */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
             className="flex flex-col sm:flex-row gap-4 items-start sm:items-center"
@@ -133,7 +133,7 @@ const ValuationUpdatesHero = React.forwardRef<HTMLElement>((props, ref) => {
                 color: "#1a1a1a",
               }}
             >
-              <Link to="/request">Request an Appraisal</Link>
+              <Link to="/request/">Request an Appraisal</Link>
             </Button>
             <Button
               asChild
@@ -141,7 +141,7 @@ const ValuationUpdatesHero = React.forwardRef<HTMLElement>((props, ref) => {
               variant="outline"
               className="text-base h-12 px-8 bg-transparent text-white border-white/50 hover:bg-white/10 hover:border-white"
             >
-              <Link to="/request">
+              <Link to="/request/">
                 View Our Services
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
@@ -150,7 +150,7 @@ const ValuationUpdatesHero = React.forwardRef<HTMLElement>((props, ref) => {
 
           {/* Reassurance copy */}
           <motion.p
-            initial={{ opacity: 0 }}
+            initial={{ opacity: 1 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.55, ease: "easeOut" }}
             className="mt-5 text-sm text-white/60 italic"
@@ -161,7 +161,7 @@ const ValuationUpdatesHero = React.forwardRef<HTMLElement>((props, ref) => {
 
         {/* Service preview cards */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 1, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.5, ease: "easeOut" }}
           className="mt-14 grid sm:grid-cols-2 gap-5 max-w-2xl"

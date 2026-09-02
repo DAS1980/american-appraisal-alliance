@@ -11,7 +11,7 @@ import Footer from "@/components/sections/Footer";
 const ExteriorOnlyDriveByAppraisal = React.forwardRef<HTMLDivElement>((props, ref) => {
   return (
     <PageLayout currentPage="exterior_only__drive_by__appraisal">
-      <div ref={ref}>
+      <div ref={ref} className="w-full max-w-[100vw] overflow-x-hidden">
         <Header />
         <SectionErrorBoundary sectionName="ExteriorOnlyDriveByAppraisalHero">
           <ExteriorOnlyDriveByAppraisalHero />

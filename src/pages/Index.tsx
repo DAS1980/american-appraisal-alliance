@@ -41,7 +41,7 @@ const Index = React.forwardRef<HTMLDivElement>((props, ref) => {
 
   return (
     <PageLayout currentPage="home">
-      <div ref={ref}>
+      <div ref={ref} className="w-full max-w-[100vw] overflow-x-hidden">
         <Header />
         <SectionErrorBoundary sectionName="Hero"><Hero /></SectionErrorBoundary>
         <SectionErrorBoundary sectionName="HomeServices"><HomeServices /></SectionErrorBoundary>

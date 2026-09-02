@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, X, Phone, Contact, Home, Navigation } from "lucide-react";
+import { Menu, X, Contact, Home, Navigation } from "lucide-react";
 import { NavDropdown, MobileNavItems } from "@/components/NavDropdown";
 import { navItems } from "@/config/nav";
 import { cn } from "@/lib/utils";
@@ -27,11 +27,11 @@ const Header = React.forwardRef<HTMLElement>((props, ref) => {
   }, []);
 
   return (
-    <header
+    <header data-section-id="f942fa6e-4c80-4f91-a2ec-0171a7fd9ede"
       ref={ref}
       id="header"
       className={cn(
-        "sticky top-0 z-50 w-full transition-all duration-300",
+        "sticky top-0 z-50 w-full max-w-[100vw] overflow-x-hidden transition-all duration-300",
         "bg-primary border-b border-white/10",
         scrolled
           ? "shadow-[0_4px_24px_hsl(218_65%_14%/0.35)]"
@@ -55,17 +55,12 @@ const Header = React.forwardRef<HTMLElement>((props, ref) => {
           className="flex items-center gap-2.5 shrink-0 group"
           aria-label="American Appraisal Alliance — Home"
         >
-          {/* Monogram badge */}
-          <div
-            className="flex items-center justify-center w-9 h-9 rounded-md font-bold text-sm select-none shrink-0 transition-transform duration-200 group-hover:scale-105"
-            style={{
-              background: "linear-gradient(135deg, hsl(42 92% 52%) 0%, hsl(36 88% 44%) 100%)",
-              color: "hsl(218 65% 14%)",
-            }}
-            aria-hidden="true"
-          >
-            AAA
-          </div>
+          {/* Logo image */}
+          <img
+            src="https://media.cdn.builder.searchatlas.com/user-uploads/a6ac23c0-0256-448f-93f8-413da0bdd061_AAA_Logo.webp"
+            alt="American Appraisal Alliance Logo"
+            className="w-9 h-9 rounded-md object-contain shrink-0 transition-transform duration-200 group-hover:scale-105"
+          />
 
           {/* Wordmark */}
           <div className="hidden sm:flex flex-col leading-none">
@@ -93,29 +88,19 @@ const Header = React.forwardRef<HTMLElement>((props, ref) => {
         </Link>
 
         {/* ── Desktop Navigation ── */}
-        <div className="hidden lg:flex flex-1 justify-center px-6">
+        <div className="hidden lg:flex flex-1 justify-center px-3">
           <NavDropdown
             items={navItems}
-            className="flex items-center gap-1"
-            linkClassName="text-sm font-medium text-white/85 hover:text-white px-3 py-1.5 rounded transition-colors duration-150 hover:bg-white/8"
+            className="flex items-center gap-0.5"
+            linkClassName="text-sm font-medium text-white/85 hover:text-white px-2.5 py-1.5 rounded transition-colors duration-150 hover:bg-white/8 whitespace-nowrap"
           />
         </div>
 
         {/* ── Desktop CTA + Mobile Toggle ── */}
-        <div className="flex items-center gap-3 shrink-0">
-          {/* Phone number — desktop only */}
-          <a
-            href="tel:+14699364240"
-            className="hidden lg:inline-flex items-center gap-1.5 text-sm font-medium text-white/75 hover:text-white transition-colors duration-150 px-2 py-1.5 rounded hover:bg-white/8 whitespace-nowrap"
-            aria-label="Call American Appraisal Alliance at (469) 936-4240"
-          >
-            <Phone className="h-4 w-4 flex-shrink-0" style={{ color: "hsl(42 92% 58%)" }} />
-            (469) 936-4240
-          </a>
-
+        <div className="flex items-center gap-2 shrink-0">
           {/* "Contact" link — desktop only, small text link */}
           <Link
-            to="/contact"
+            to="/contact/"
             className="hidden lg:inline-flex text-sm font-medium text-white/75 hover:text-white transition-colors duration-150 px-2 py-1.5 rounded hover:bg-white/8"
           >
             Contact
@@ -133,7 +118,7 @@ const Header = React.forwardRef<HTMLElement>((props, ref) => {
               fontFamily: "'Inter', sans-serif",
             }}
           >
-            <Link to="/request">Request an Appraisal</Link>
+            <Link to="/request/">Request an Appraisal</Link>
           </Button>
 
           {/* Mobile hamburger — only when navItems exist */}
@@ -195,7 +180,7 @@ const Header = React.forwardRef<HTMLElement>((props, ref) => {
 
                   {/* Contact link in mobile menu */}
                   <Link
-                    to="/contact"
+                    to="/contact/"
                     className="text-sm font-medium text-white/85 hover:text-white hover:bg-white/10 rounded-md px-3 py-2.5 transition-colors"
                     onClick={() => setIsOpen(false)}
                   >
@@ -218,7 +203,7 @@ const Header = React.forwardRef<HTMLElement>((props, ref) => {
                       border: "none",
                     }}
                   >
-                    <Link to="/request" onClick={() => setIsOpen(false)}>
+                    <Link to="/request/" onClick={() => setIsOpen(false)}>
                       Request an Appraisal
                     </Link>
                   </Button>
