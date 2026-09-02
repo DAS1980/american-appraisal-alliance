@@ -31,7 +31,7 @@ const Header = React.forwardRef<HTMLElement>((props, ref) => {
       ref={ref}
       id="header"
       className={cn(
-        "sticky top-0 z-50 w-full max-w-[100vw] overflow-x-hidden transition-all duration-300",
+        "sticky top-0 z-[100] w-full max-w-[100vw] transition-all duration-300",
         "bg-primary border-b border-white/10",
         scrolled
           ? "shadow-[0_4px_24px_hsl(218_65%_14%/0.35)]"
