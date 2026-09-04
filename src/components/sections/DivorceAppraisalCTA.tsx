@@ -34,7 +34,7 @@ const DivorceAppraisalCTA = React.forwardRef<HTMLElement>((props, ref) => {
     <section data-section-id="1e1aab61-f939-412a-8b72-6ed79c8f3739"
       ref={ref}
       id="divorce-appraisal-cta"
-      className="relative py-20 md:py-32 bg-background overflow-x-hidden"
+      className="relative py-20 md:py-32 bg-background"
     >
       <div className="container max-w-6xl mx-auto px-4">
         {/* Main CTA Card */}
@@ -114,7 +114,7 @@ const DivorceAppraisalCTA = React.forwardRef<HTMLElement>((props, ref) => {
                   color: "hsl(218, 65%, 14%)",
                 }}
               >
-                <Link to="/request/">Request an Appraisal</Link>
+                <Link to="/request">Request an Appraisal</Link>
               </Button>
 
               <Button
@@ -123,7 +123,7 @@ const DivorceAppraisalCTA = React.forwardRef<HTMLElement>((props, ref) => {
                 variant="outline"
                 className="text-base px-10 py-6 bg-transparent text-white border-white/40 hover:bg-white/10 hover:border-white/70 transition-all duration-300"
               >
-                <Link to="/contact/">Contact Us</Link>
+                <Link to="/contact">Contact Us</Link>
               </Button>
             </motion.div>
           </div>

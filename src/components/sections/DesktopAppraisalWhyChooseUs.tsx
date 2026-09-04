@@ -52,7 +52,7 @@ const DesktopAppraisalWhyChooseUs = React.forwardRef<HTMLElement>((props, ref) =
     <section data-section-id="83712761-9611-4da5-9b95-784426bf3f9e"
       ref={ref}
       id="desktop-appraisal-why-choose-us"
-      className="relative py-20 md:py-32 bg-background overflow-x-hidden w-full max-w-full"
+      className="relative py-20 md:py-32 bg-background"
     >
       <div className="container max-w-6xl mx-auto px-4">
         {/* Section Header */}

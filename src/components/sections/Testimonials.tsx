@@ -75,7 +75,7 @@ const Testimonials = React.forwardRef<HTMLElement>((props, ref) => {
       ref={ref}
       id="testimonials"
       aria-labelledby="testimonials-heading"
-      className="relative py-20 md:py-32 bg-muted/30 overflow-x-hidden"
+      className="relative py-20 md:py-32 bg-muted/30"
     >
       {/* Subtle background accent */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">

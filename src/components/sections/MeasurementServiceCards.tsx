@@ -20,7 +20,7 @@ const services: ServiceCard[] = [
     name: "Property Measurement (ANSI Z765)",
     description:
       "Precise home measurement following ANSI Z765-2021 standards for lenders, appraisers, and listing accuracy.",
-    link: "/property-measurement-ansi-z765/",
+    link: "/property-measurement-ansi-z765",
     icon: Ruler,
     bullets: [
       "ANSI Z765-2021 compliant methodology",
@@ -33,7 +33,7 @@ const services: ServiceCard[] = [
     name: "Gross Living Area (GLA) Certification",
     description:
       "Certified GLA calculation accepted by lenders, courts, and real estate professionals.",
-    link: "/gross-living-area-gla-certification/",
+    link: "/gross-living-area-gla-certification",
     icon: Home,
     bullets: [
       "Certifies the above-grade living area of a property",
@@ -46,7 +46,7 @@ const services: ServiceCard[] = [
     name: "Floor Plan / Sketch Report",
     description:
       "Detailed floor plan sketch with labeled rooms, dimensions, and calculated square footage.",
-    link: "/measurement-analysis-services/",
+    link: "/measurement-analysis-services",
     icon: FileText,
     bullets: [
       "Detailed floor plan sketch with room dimensions",
@@ -59,7 +59,7 @@ const services: ServiceCard[] = [
     name: "Square Footage Verification",
     description:
       "Independent verification of a property's square footage to resolve discrepancies and protect buyers and sellers.",
-    link: "/measurement-analysis-services/",
+    link: "/measurement-analysis-services",
     icon: CheckSquare,
     bullets: [
       "Verifies advertised square footage against actual measurements",
@@ -93,7 +93,7 @@ const MeasurementServiceCards = React.forwardRef<HTMLElement>((props, ref) => {
     <section data-section-id="2b93fbdc-f5b4-44fe-a2a1-875ef31ff659"
       ref={ref}
       id="measurement-service-cards"
-      className="relative py-20 md:py-32 bg-background overflow-x-hidden"
+      className="relative py-20 md:py-32 bg-background"
     >
       {/* Subtle background accent */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -241,7 +241,7 @@ const MeasurementServiceCards = React.forwardRef<HTMLElement>((props, ref) => {
               color: "hsl(218 65% 14%)",
             }}
           >
-            <Link to="/request/">Request an Appraisal</Link>
+            <Link to="/request">Request an Appraisal</Link>
           </Button>
         </motion.div>
       </div>

@@ -1574,19 +1574,39 @@ function mpaHtmlGeneratorPlugin(manifest: PagesManifest): Plugin {
   };
 }
 
-function lpsGlobalsPlugin(): Plugin {
+function lpsGlobalsPlugin(isDev: boolean): Plugin {
   return {
     name: 'lps-inject-globals',
-    transformIndexHtml() {
+    transformIndexHtml(html) {
       const projectId = process.env.PROJECT_ID || '';
       if (!projectId) return;
+      // Only self-hosted subpath builds carry VITE_BASE_PATH — gating on it
+      // keeps the real project id out of every other project's public HTML.
+      const basePath = process.env.VITE_BASE_PATH || '';
+      const isSelfHostedBuild = basePath !== '' && basePath !== '/';
+      const attrSafe = projectId.replace(/"/g, '&quot;');
+      // Matches any existing content= value and either self-closing form:
+      // tenant repos scaffolded at different times carry `content="1" />`,
+      // `content="1"/>`, or an already-stamped id, and an exact-string match
+      // would silently no-op on all but the first — leaving the generic
+      // fingerprint in place and verification permanently failing.
+      const stampedHtml = isSelfHostedBuild
+        ? html.replace(
+            /<meta\s+name="lps-build-fingerprint"\s+content="[^"]*"\s*\/?>/i,
+            `<meta name="lps-build-fingerprint" content="${attrSafe}" />`,
+          )
+        : html;
+      if (!isDev) return { html: stampedHtml, tags: [] };
       const safe = JSON.stringify(projectId).replace(/</g, '\\u003c');
-      return [{
-        tag: 'script',
-        attrs: { type: 'text/javascript' },
-        injectTo: 'head-prepend',
-        children: `window.__LPS_PROJECT_ID = ${safe};`,
-      }];
+      return {
+        html: stampedHtml,
+        tags: [{
+          tag: 'script',
+          attrs: { type: 'text/javascript' },
+          injectTo: 'head-prepend',
+          children: `window.__LPS_PROJECT_ID = ${safe};`,
+        }],
+      };
     },
   };
 }
@@ -1824,7 +1844,7 @@ export default defineConfig(({ mode }) => {
       // Development-only: suppress the Vite error overlay during
       // agent-initiated bulk edits (LPS-327 quiet-hmr spike)
       isDev && quietHmrPlugin(),
-      isDev && lpsGlobalsPlugin(),
+      lpsGlobalsPlugin(isDev),
       // Development-only: serve static HTML pages for upload projects
       isDev && staticHtmlServingPlugin(manifest),
       // Production-only: MPA HTML generator (creates per-page HTML entry points)

@@ -52,7 +52,7 @@ const DivorceAppraisalTurnaround = React.forwardRef<HTMLElement>((props, ref) =>
     <section data-section-id="19c2eeed-51e2-4fc4-9155-3bfa0281c1f1"
       ref={ref}
       id="divorce-appraisal-turnaround"
-      className="relative py-20 md:py-32 bg-background overflow-x-hidden"
+      className="relative py-20 md:py-32 bg-background"
     >
       <div className="container max-w-6xl mx-auto px-4">
         {/* Section Header */}

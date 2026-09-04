@@ -11,7 +11,7 @@ import Footer from "@/components/sections/Footer";
 const ValuationUpdatesReports = React.forwardRef<HTMLDivElement>((props, ref) => {
   return (
     <PageLayout currentPage="valuation-updates-reports">
-      <div ref={ref} className="overflow-x-hidden w-full max-w-[100vw]">
+      <div ref={ref}>
         <Header />
         <SectionErrorBoundary sectionName="ValuationUpdatesHero">
           <ValuationUpdatesHero />

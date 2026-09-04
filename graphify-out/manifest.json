@@ -110,473 +110,473 @@
     "semantic_hash": ""
   },
   "components/layout/PageLayout.tsx": {
-    "mtime": 1788347529.3821406,
-    "ast_hash": "432186f3f98583e70d3e0c497cb602eb",
+    "mtime": 1787872048.0,
+    "ast_hash": "a3344de34a98fc9a53a987d245c1a3aa",
     "semantic_hash": ""
   },
   "components/sections/AboutAppraiserCredentials.tsx": {
-    "mtime": 1788347670.7969432,
-    "ast_hash": "717e2d3add2be4d2702b6a0eb8babae6",
+    "mtime": 1788261488.11466,
+    "ast_hash": "49e3d43c27fe880db298a3b5492f1a1c",
     "semantic_hash": ""
   },
   "components/sections/AboutCTA.tsx": {
-    "mtime": 1788347701.011901,
-    "ast_hash": "530ac98ee224df75545c761e3733f8f1",
+    "mtime": 1788261488.11566,
+    "ast_hash": "1586223789a5eb1b58223135b175d6b9",
     "semantic_hash": ""
   },
   "components/sections/AboutCompanyOverview.tsx": {
-    "mtime": 1788347659.2569594,
-    "ast_hash": "86687f35eb2bfc0db3c594ec2080ebc8",
+    "mtime": 1788261488.11566,
+    "ast_hash": "f97422483c2d1d4db96352485d302ffb",
     "semantic_hash": ""
   },
   "components/sections/AboutHero.tsx": {
-    "mtime": 1788344758.6320062,
+    "mtime": 1788261488.11566,
     "ast_hash": "6bc29d395739eb6b8260d8e2f9a734cc",
     "semantic_hash": ""
   },
   "components/sections/AboutMissionStatement.tsx": {
-    "mtime": 1788347696.2019076,
-    "ast_hash": "7c794c3e7b37256f50db7a2573579008",
+    "mtime": 1788261488.11566,
+    "ast_hash": "58eb5e6f11e76cad3673ac00ecd35b38",
     "semantic_hash": ""
   },
   "components/sections/AboutUSPAPCompliance.tsx": {
-    "mtime": 1788347667.0499485,
-    "ast_hash": "22ec259d76759f8a60da7656c6bd115f",
+    "mtime": 1788261488.11566,
+    "ast_hash": "62a6abc032ade54d6e1047248058cd84",
     "semantic_hash": ""
   },
   "components/sections/BlogListingSection.tsx": {
-    "mtime": 1788344758.6330063,
+    "mtime": 1788261488.11566,
     "ast_hash": "dc3ded36f8db860da816ea9f558dd3ba",
     "semantic_hash": ""
   },
   "components/sections/ContactAppraisalLink.tsx": {
-    "mtime": 1788344758.6330063,
+    "mtime": 1788261488.11566,
     "ast_hash": "c178cb27f34ac28a0a4a114fba688d14",
     "semantic_hash": ""
   },
   "components/sections/ContactDetails.tsx": {
-    "mtime": 1788344758.6330063,
+    "mtime": 1788261488.11566,
     "ast_hash": "d0ff10315ed2e8557e319320e8b61ac6",
     "semantic_hash": ""
   },
   "components/sections/ContactHero.tsx": {
-    "mtime": 1788344758.6330063,
+    "mtime": 1788261488.11666,
     "ast_hash": "c24c212861dee8ece00a7e00d53c7e4e",
     "semantic_hash": ""
   },
   "components/sections/ContactServiceArea.tsx": {
-    "mtime": 1788347634.1609943,
-    "ast_hash": "8ca9f0b56e65b76875aec0999a1f2540",
+    "mtime": 1788261488.11666,
+    "ast_hash": "a4a605418fa09c6ea810b358f6e89d2f",
     "semantic_hash": ""
   },
   "components/sections/CoreAppraisalServiceCards.tsx": {
-    "mtime": 1788347552.796108,
-    "ast_hash": "d1cab1ba668d506433a659184153b38e",
+    "mtime": 1788261488.11666,
+    "ast_hash": "a3feb3d3874b7f4202ec126809c0c110",
     "semantic_hash": ""
   },
   "components/sections/CoreAppraisalWhyChooseUs.tsx": {
-    "mtime": 1788347560.099098,
-    "ast_hash": "a33c130840bbdccd41a47fd69ee8e8ee",
+    "mtime": 1788261488.11666,
+    "ast_hash": "a1c51cfcbc677d08aa7ce6025a2ca0b2",
     "semantic_hash": ""
   },
   "components/sections/DesktopAppraisalHero.tsx": {
-    "mtime": 1788347742.8938425,
-    "ast_hash": "f11d3ecfd377b4e684ee809a0d82c90e",
+    "mtime": 1788261488.11666,
+    "ast_hash": "774ca0355b2045daa5ea978c109899a3",
     "semantic_hash": ""
   },
   "components/sections/DesktopAppraisalOverview.tsx": {
-    "mtime": 1788347748.402835,
-    "ast_hash": "9f28402e1213a995b4c1bcf8cc5f08d6",
+    "mtime": 1788261488.11766,
+    "ast_hash": "1f5a9bf16da86d46dafe96f816631a4d",
     "semantic_hash": ""
   },
   "components/sections/DesktopAppraisalWhyChooseUs.tsx": {
-    "mtime": 1788347752.6938288,
-    "ast_hash": "71adffa7bd89bc27ee340efffcecf1e6",
+    "mtime": 1788261488.11766,
+    "ast_hash": "d751cfe391b8964f2ec165102db70a0c",
     "semantic_hash": ""
   },
   "components/sections/DivorceAppraisalCTA.tsx": {
-    "mtime": 1788347743.0178423,
-    "ast_hash": "33b428e8a9c3bcd151228cf620f94670",
+    "mtime": 1788261488.11766,
+    "ast_hash": "ec3da907be1790effd50d3afce67544c",
     "semantic_hash": ""
   },
   "components/sections/DivorceAppraisalHero.tsx": {
-    "mtime": 1788347767.8588078,
-    "ast_hash": "8344100340492b76f11cdff37c1c0ba8",
+    "mtime": 1788262004.958113,
+    "ast_hash": "6506932b92f5109bf19f428b5f90cc92",
     "semantic_hash": ""
   },
   "components/sections/DivorceAppraisalTurnaround.tsx": {
-    "mtime": 1788347783.6887856,
-    "ast_hash": "9c4e11c88614aa98def47b0bae9c3783",
+    "mtime": 1788261488.11766,
+    "ast_hash": "79f8f4feb80975230de3dbcc045818cf",
     "semantic_hash": ""
   },
   "components/sections/DivorceAppraisalWhatItIs.tsx": {
-    "mtime": 1788347776.1227963,
-    "ast_hash": "1e858d5c25adce1d54b1e65a38401992",
+    "mtime": 1788261488.11766,
+    "ast_hash": "81a57c97ac28ae0fd1e0de4dc92e3a5e",
     "semantic_hash": ""
   },
   "components/sections/DivorceAppraisalWhatsIncluded.tsx": {
-    "mtime": 1788347781.309789,
-    "ast_hash": "6104213a944de34e06223cf860262a00",
+    "mtime": 1788261488.11866,
+    "ast_hash": "8552959fb25d4dade1717fd186ce93d4",
     "semantic_hash": ""
   },
   "components/sections/DivorceAppraisalWhoNeedsIt.tsx": {
-    "mtime": 1788347778.5887928,
-    "ast_hash": "86d5e1300c42a0ec3a68eed41fe7e831",
+    "mtime": 1788261488.11866,
+    "ast_hash": "292cbac30fdaf9e3a5102bb93fb8e69d",
     "semantic_hash": ""
   },
   "components/sections/EstateAppraisalCTA.tsx": {
-    "mtime": 1788344758.6360064,
+    "mtime": 1788261488.11866,
     "ast_hash": "7383f5ebdc0ebe6945f3c4f4f8e7e655",
     "semantic_hash": ""
   },
   "components/sections/EstateAppraisalHero.tsx": {
-    "mtime": 1788344758.6360064,
+    "mtime": 1788261488.11866,
     "ast_hash": "4d3d6dd1d6160fc3f94fa22b8c70d6b2",
     "semantic_hash": ""
   },
   "components/sections/EstateAppraisalWhatItIs.tsx": {
-    "mtime": 1788344758.6360064,
+    "mtime": 1788261488.11866,
     "ast_hash": "e0745d9a487d1fe4d1a2367167b93ada",
     "semantic_hash": ""
   },
   "components/sections/EstateAppraisalWhatsIncluded.tsx": {
-    "mtime": 1788344758.6360064,
+    "mtime": 1788261488.11866,
     "ast_hash": "41433ad7f80e309f5da2d670cf8a7de4",
     "semantic_hash": ""
   },
   "components/sections/EstateAppraisalWhyChooseUs.tsx": {
-    "mtime": 1788344758.6360064,
+    "mtime": 1788261488.11866,
     "ast_hash": "69da2e686fb749960313b4fc101415cc",
     "semantic_hash": ""
   },
   "components/sections/ExteriorOnlyAppraisalCTA.tsx": {
-    "mtime": 1788347802.1197598,
-    "ast_hash": "ff896a09a10edcc6188840f1a7aa3387",
+    "mtime": 1788261488.11966,
+    "ast_hash": "49586328df3b4a49b1d86c52041843b4",
     "semantic_hash": ""
   },
   "components/sections/ExteriorOnlyDriveByAppraisalHero.tsx": {
-    "mtime": 1788347796.239768,
-    "ast_hash": "d9abd5b524f32d35bc09a49c861960f8",
+    "mtime": 1788261488.11966,
+    "ast_hash": "86388012e3b54a564a165347ba8cedba",
     "semantic_hash": ""
   },
   "components/sections/ExteriorOnlyServiceDetail.tsx": {
-    "mtime": 1788347767.0968087,
-    "ast_hash": "d76b1c35f6bc055fcf3540dfa4999066",
+    "mtime": 1788261488.11966,
+    "ast_hash": "5f4eefec3baa2765a190da08bef984e7",
     "semantic_hash": ""
   },
   "components/sections/ExteriorOnlyWhyChooseUs.tsx": {
-    "mtime": 1788347791.3397748,
-    "ast_hash": "8470d2774d6ebea31021154907569fe9",
+    "mtime": 1788261488.11966,
+    "ast_hash": "30013d29b05a268b1ae6480549196021",
     "semantic_hash": ""
   },
   "components/sections/FhaHudCTA.tsx": {
-    "mtime": 1788344758.6380062,
+    "mtime": 1788261488.11966,
     "ast_hash": "1fa198d9c0bc897864e1a470ebdcefca",
     "semantic_hash": ""
   },
   "components/sections/FhaHudComplianceHero.tsx": {
-    "mtime": 1788344758.6380062,
+    "mtime": 1788262005.1281128,
     "ast_hash": "8d87c6c63d1e0fcc051482a82576827d",
     "semantic_hash": ""
   },
   "components/sections/FhaHudWhatItIs.tsx": {
-    "mtime": 1788344758.6380062,
+    "mtime": 1788261488.12066,
     "ast_hash": "c577a8a924484550c3bc98c8a4327ffc",
     "semantic_hash": ""
   },
   "components/sections/FhaHudWhyChooseUs.tsx": {
-    "mtime": 1788344758.6380062,
+    "mtime": 1788261488.12066,
     "ast_hash": "b37bbfdf3dd0c434353753f332ef7376",
     "semantic_hash": ""
   },
   "components/sections/Footer.tsx": {
-    "mtime": 1788347521.8421512,
-    "ast_hash": "fee8e279d2779f6e1c734fb759589d18",
+    "mtime": 1788261488.12066,
+    "ast_hash": "bf75360d2c842af844b99d1972584588",
     "semantic_hash": ""
   },
   "components/sections/GrossLivingAreaCTA.tsx": {
-    "mtime": 1788344758.6390064,
+    "mtime": 1788261488.12066,
     "ast_hash": "8fbe577659f82c147121a2a4451e5855",
     "semantic_hash": ""
   },
   "components/sections/GrossLivingAreaCertificationHero.tsx": {
-    "mtime": 1788344758.6390064,
+    "mtime": 1788261488.12066,
     "ast_hash": "556f6cdbfbe3dc8081f958e001357803",
     "semantic_hash": ""
   },
   "components/sections/GrossLivingAreaWhatItIs.tsx": {
-    "mtime": 1788344758.6390064,
+    "mtime": 1788261488.12066,
     "ast_hash": "320a3a3b7b4224efdefe620fba8b0f54",
     "semantic_hash": ""
   },
   "components/sections/GrossLivingAreaWhyChooseUs.tsx": {
-    "mtime": 1788344758.6390064,
+    "mtime": 1788261488.12166,
     "ast_hash": "fcd81b5de892ff500d61c3a4d1226e29",
     "semantic_hash": ""
   },
   "components/sections/Header.tsx": {
-    "mtime": 1788351415.2507045,
-    "ast_hash": "6816278f51e06d91d75d30281b8c73a5",
+    "mtime": 1788262001.6231165,
+    "ast_hash": "8affcc48c507a0e8d54dc6a1a40230cf",
     "semantic_hash": ""
   },
   "components/sections/Hero.tsx": {
-    "mtime": 1788348083.7333667,
-    "ast_hash": "30bf4417d9513cefdd1deab88acdb2de",
+    "mtime": 1788261488.12166,
+    "ast_hash": "73879e2cc608b621686959411b56f61a",
     "semantic_hash": ""
   },
   "components/sections/HomeCTA.tsx": {
-    "mtime": 1788344758.6400063,
+    "mtime": 1788261488.12166,
     "ast_hash": "988d8a82642052aa1615d8733c8cfd82",
     "semantic_hash": ""
   },
   "components/sections/HomeServices.tsx": {
-    "mtime": 1788348897.52023,
-    "ast_hash": "decba251587d3f39654f6d6318d76d8e",
+    "mtime": 1788261488.12166,
+    "ast_hash": "6e61ff5e59f1514f1c96c0595beaa349",
     "semantic_hash": ""
   },
   "components/sections/MarketValueUpdateCTA.tsx": {
-    "mtime": 1788344758.6410062,
+    "mtime": 1788261488.12166,
     "ast_hash": "a96196d5440505ab50a65fc111b0d30b",
     "semantic_hash": ""
   },
   "components/sections/MarketValueUpdateDetails.tsx": {
-    "mtime": 1788344758.6420062,
+    "mtime": 1788261488.12266,
     "ast_hash": "c113f62a5f0eb2f8855414be09977ef1",
     "semantic_hash": ""
   },
   "components/sections/MarketValueUpdateHero.tsx": {
-    "mtime": 1788347832.5657175,
-    "ast_hash": "c4d2d16292811146075fcca3ef7b25e0",
+    "mtime": 1788261488.12266,
+    "ast_hash": "f42b4b5f95bc9ef7f991c2303747b112",
     "semantic_hash": ""
   },
   "components/sections/MarketValueUpdateWhyChooseUs.tsx": {
-    "mtime": 1788344758.6420062,
+    "mtime": 1788261488.12266,
     "ast_hash": "b8c9db6f2fba8d1960a366a5c5ca8095",
     "semantic_hash": ""
   },
   "components/sections/MeasurementAnalysisHero.tsx": {
-    "mtime": 1788348190.2242181,
-    "ast_hash": "578c90226cf31788d602d7985b714e47",
+    "mtime": 1788261488.12266,
+    "ast_hash": "3efa55519c12dec199c230b1f1c3dfa7",
     "semantic_hash": ""
   },
   "components/sections/MeasurementCTA.tsx": {
-    "mtime": 1788344758.6420062,
+    "mtime": 1788261488.12266,
     "ast_hash": "c2e165d949ba23d4cdd507267981fb83",
     "semantic_hash": ""
   },
   "components/sections/MeasurementServiceCards.tsx": {
-    "mtime": 1788347571.1940823,
-    "ast_hash": "49db256ec71f726446b24f2aec2b9b35",
+    "mtime": 1788261488.12266,
+    "ast_hash": "d87c32f03588554b46357fb4848ab91a",
     "semantic_hash": ""
   },
   "components/sections/MeasurementWhyItMatters.tsx": {
-    "mtime": 1788347575.6530762,
-    "ast_hash": "24348e60f22c2f9626846ad91e06abab",
+    "mtime": 1788261488.12266,
+    "ast_hash": "131113bc8785d00475f3255c40b0ca43",
     "semantic_hash": ""
   },
   "components/sections/PMIRemovalAppraisalHero.tsx": {
-    "mtime": 1788347832.4397175,
-    "ast_hash": "3c3cfd639c711416bd6fd5cf140e9916",
+    "mtime": 1788261488.12366,
+    "ast_hash": "33454783fc1e491a725a58b2988867fe",
     "semantic_hash": ""
   },
   "components/sections/PMIRemovalCTA.tsx": {
-    "mtime": 1788347853.2366886,
-    "ast_hash": "99fdfca8909a800f2a48895439298458",
+    "mtime": 1788262005.0491128,
+    "ast_hash": "0e72b49e33cb5cb0d3443620979322d0",
     "semantic_hash": ""
   },
   "components/sections/PMIRemovalWhatItIs.tsx": {
-    "mtime": 1788347841.5557048,
-    "ast_hash": "bbf567509c7556dfcbbb95432b39cca6",
+    "mtime": 1788261488.12366,
+    "ast_hash": "f505eef5b03b395879eef771c012a7e0",
     "semantic_hash": ""
   },
   "components/sections/PMIRemovalWhyChooseUs.tsx": {
-    "mtime": 1788347848.4486952,
-    "ast_hash": "aa40ff25abf57c10e353ec08fbc13ba6",
+    "mtime": 1788261488.12366,
+    "ast_hash": "c4ad74e0b2e39d7a3bc2e18e266470d3",
     "semantic_hash": ""
   },
   "components/sections/PreListingAppraisalHero.tsx": {
-    "mtime": 1788347806.5757537,
-    "ast_hash": "68120d340876e358c2c56bf57b252bfd",
+    "mtime": 1788261488.12366,
+    "ast_hash": "b7f3129faf3784a5e8b6a85e627db423",
     "semantic_hash": ""
   },
   "components/sections/PreListingCTA.tsx": {
-    "mtime": 1788344758.6440063,
+    "mtime": 1788261488.12366,
     "ast_hash": "f07d2f3acd944a750e8d7d58721dd5cf",
     "semantic_hash": ""
   },
   "components/sections/PreListingServiceDetail.tsx": {
-    "mtime": 1788347856.6096838,
-    "ast_hash": "d2627747d7ee8910478b404619ccc674",
+    "mtime": 1788261488.12466,
+    "ast_hash": "660799765f9f69c7cdd85cd45fcb8b2a",
     "semantic_hash": ""
   },
   "components/sections/PreListingWhyChooseUs.tsx": {
-    "mtime": 1788344758.6440063,
+    "mtime": 1788261488.12466,
     "ast_hash": "64db61d3877a6515f533ca2e4d8b1e04",
     "semantic_hash": ""
   },
   "components/sections/PrePurchaseAppraisalCTA.tsx": {
-    "mtime": 1788344758.6450062,
+    "mtime": 1788261488.12466,
     "ast_hash": "1bffbdc4f709d9d9526d7ed061f3ca58",
     "semantic_hash": ""
   },
   "components/sections/PrePurchaseAppraisalDetails.tsx": {
-    "mtime": 1788344758.6450062,
+    "mtime": 1788261488.12466,
     "ast_hash": "ef6e974373de341aec297acbb830bf54",
     "semantic_hash": ""
   },
   "components/sections/PrePurchaseAppraisalHero.tsx": {
-    "mtime": 1788344758.6450062,
+    "mtime": 1788261488.12466,
     "ast_hash": "cf955c0b13ad62278e4869a0b4a0deb7",
     "semantic_hash": ""
   },
   "components/sections/PrePurchaseWhyChooseUs.tsx": {
-    "mtime": 1788344758.6450062,
+    "mtime": 1788261488.12466,
     "ast_hash": "ca6018434f1a0a627b6c5668691eff47",
     "semantic_hash": ""
   },
   "components/sections/PropertyMeasurementAnsiCTA.tsx": {
-    "mtime": 1788344758.6450062,
+    "mtime": 1788261488.12466,
     "ast_hash": "2d1d3c964788ee69e133cd60822d1487",
     "semantic_hash": ""
   },
   "components/sections/PropertyMeasurementAnsiHero.tsx": {
-    "mtime": 1788348243.0951443,
-    "ast_hash": "2041a0dedf13668a443114d662d9faf3",
+    "mtime": 1788261488.12566,
+    "ast_hash": "4b0be564ed37d0fb5c54de907ca3399a",
     "semantic_hash": ""
   },
   "components/sections/PropertyMeasurementAnsiWhatItIs.tsx": {
-    "mtime": 1788344758.6460063,
+    "mtime": 1788261488.12566,
     "ast_hash": "60787310ed1485ca65f2a3766ddc63d8",
     "semantic_hash": ""
   },
   "components/sections/PropertyMeasurementAnsiWhyChooseUs.tsx": {
-    "mtime": 1788344758.6460063,
+    "mtime": 1788261488.12566,
     "ast_hash": "1b7a0af5e37e76bbafbb94e7d68c292e",
     "semantic_hash": ""
   },
   "components/sections/RequestHero.tsx": {
-    "mtime": 1788347571.6400816,
-    "ast_hash": "a3173f6ef611b1abcae1e4086738a493",
+    "mtime": 1788262004.878113,
+    "ast_hash": "1b051c4387d45484b7e37fa966c68ede",
     "semantic_hash": ""
   },
   "components/sections/RequestIntakeForm.tsx": {
-    "mtime": 1788347597.3080459,
-    "ast_hash": "f0b5374f0d3e1d988f027cb6643dde3f",
+    "mtime": 1788261488.12566,
+    "ast_hash": "51924dcacd2bc646dad3ab413a385772",
     "semantic_hash": ""
   },
   "components/sections/RequestReassurance.tsx": {
-    "mtime": 1788347606.0090337,
-    "ast_hash": "3f1c5171d16e0124d7c6b0cd674337fd",
+    "mtime": 1788261488.12566,
+    "ast_hash": "9b0bad7145d3c98f249d15e32f06ec0f",
     "semantic_hash": ""
   },
   "components/sections/RequestServiceArea.tsx": {
-    "mtime": 1788347589.4890568,
-    "ast_hash": "a84a46bd2757e3300c64ada9b61c720e",
+    "mtime": 1788261488.12666,
+    "ast_hash": "7b95d2594683fc733c4984cb5a06ada8",
     "semantic_hash": ""
   },
   "components/sections/ResidentialAppraisalCTA.tsx": {
-    "mtime": 1788344758.6460063,
+    "mtime": 1788261488.12666,
     "ast_hash": "c6da5cb31dbd45570336490fccad81f5",
     "semantic_hash": ""
   },
   "components/sections/ResidentialAppraisalHero.tsx": {
-    "mtime": 1788344758.6470063,
+    "mtime": 1788261488.12666,
     "ast_hash": "fe48a1b4e829abd6b5d38c9caaead7aa",
     "semantic_hash": ""
   },
   "components/sections/ResidentialAppraisalTurnaround.tsx": {
-    "mtime": 1788344758.6470063,
+    "mtime": 1788261488.12666,
     "ast_hash": "05f2b8f6b9a6c1f48e832c4e0965f577",
     "semantic_hash": ""
   },
   "components/sections/ResidentialAppraisalWhatItIs.tsx": {
-    "mtime": 1788347689.4229171,
-    "ast_hash": "6ff6e264ae58e7be7916c0a14cb6e178",
+    "mtime": 1788261488.12666,
+    "ast_hash": "26212e8ad3ef148cfb46554e85a1ce25",
     "semantic_hash": ""
   },
   "components/sections/ResidentialAppraisalWhatsIncluded.tsx": {
-    "mtime": 1788344758.6470063,
+    "mtime": 1788261488.12666,
     "ast_hash": "575115d7c9829d7c40f15e7d0e01bb77",
     "semantic_hash": ""
   },
   "components/sections/ResidentialAppraisalWhoNeedsIt.tsx": {
-    "mtime": 1788344758.6470063,
+    "mtime": 1788261488.12666,
     "ast_hash": "8b5241c48bf90e91cf9231ece8f16d61",
     "semantic_hash": ""
   },
   "components/sections/ServiceArea.tsx": {
-    "mtime": 1788347580.03007,
-    "ast_hash": "849f0062242fd77fda6547fa492adaf4",
+    "mtime": 1788261488.12666,
+    "ast_hash": "625b2e38154ac1086cb963befa5e1137",
     "semantic_hash": ""
   },
   "components/sections/ServiceCardsGrid9ServicesResidentialUrar.tsx": {
-    "mtime": 1788347534.905133,
-    "ast_hash": "bca7b2e86e7e9dc3e05c8308d6be2b55",
+    "mtime": 1788261488.12766,
+    "ast_hash": "b71ffa891715af535f39382643f4986c",
     "semantic_hash": ""
   },
   "components/sections/TaxAssessmentAppealHero.tsx": {
-    "mtime": 1788344758.6480062,
+    "mtime": 1788261488.12766,
     "ast_hash": "4c0fec75875538cb6e63e02b1f1e6a34",
     "semantic_hash": ""
   },
   "components/sections/TaxAssessmentCTA.tsx": {
-    "mtime": 1788344758.6480062,
+    "mtime": 1788261488.12766,
     "ast_hash": "1c68b45e1770566e21797e6886d77fe0",
     "semantic_hash": ""
   },
   "components/sections/TaxAssessmentTurnaround.tsx": {
-    "mtime": 1788347743.8518412,
-    "ast_hash": "e91daa050a9f2d58dcae8665ad5daf80",
+    "mtime": 1788261488.12766,
+    "ast_hash": "6a3490da87f556d112b71d432859e447",
     "semantic_hash": ""
   },
   "components/sections/TaxAssessmentWhatItIs.tsx": {
-    "mtime": 1788347733.5528555,
-    "ast_hash": "89e358bad5caaf1f9457c3a8266ebcdc",
+    "mtime": 1788261488.12766,
+    "ast_hash": "5c3b9b1f9b2aa2f9bae54582a6476bc4",
     "semantic_hash": ""
   },
   "components/sections/TaxAssessmentWhatsIncluded.tsx": {
-    "mtime": 1788347740.2068462,
-    "ast_hash": "f038e39066ca9cf0ff38db0151553e1a",
+    "mtime": 1788261488.12766,
+    "ast_hash": "847d76fc92d78283c0200e56cfe9fcae",
     "semantic_hash": ""
   },
   "components/sections/TaxAssessmentWhoNeedsIt.tsx": {
-    "mtime": 1788347736.154852,
-    "ast_hash": "6f9e806cde68961737c7546b33b55eb4",
+    "mtime": 1788261488.12766,
+    "ast_hash": "a84d4b20cd80a96e5017a31f1d2a9e36",
     "semantic_hash": ""
   },
   "components/sections/Testimonials.tsx": {
-    "mtime": 1788347585.9620616,
-    "ast_hash": "48c22b4183d5b0426f8b44cd46864450",
+    "mtime": 1788261488.12866,
+    "ast_hash": "430ed53670e35caec126bacf9b8e2152",
     "semantic_hash": ""
   },
   "components/sections/TrustBar.tsx": {
-    "mtime": 1788347562.9160938,
-    "ast_hash": "2567bf31e720602e50e06c1e992b1666",
+    "mtime": 1788261488.12866,
+    "ast_hash": "d881307009b69a7b53b36075e23698fd",
     "semantic_hash": ""
   },
   "components/sections/ValuationUpdatesCTA.tsx": {
-    "mtime": 1788344758.6490064,
+    "mtime": 1788261488.12866,
     "ast_hash": "a13349fb3397b44302eaaedd078a2895",
     "semantic_hash": ""
   },
   "components/sections/ValuationUpdatesHero.tsx": {
-    "mtime": 1788347622.2510111,
-    "ast_hash": "13f5e34354777872885531997d0b3f89",
+    "mtime": 1788261488.12866,
+    "ast_hash": "85ad952868cb3b0fadcc4ca9941dc3f9",
     "semantic_hash": ""
   },
   "components/sections/ValuationUpdatesServiceCards.tsx": {
-    "mtime": 1788347653.088968,
-    "ast_hash": "ab79b965522abeae5d5328a1a26e83f5",
+    "mtime": 1788261488.12866,
+    "ast_hash": "b015aeddd9fc44358c675577784b1fd9",
     "semantic_hash": ""
   },
   "components/sections/ValuationUpdatesWhoNeeds.tsx": {
-    "mtime": 1788347656.9399626,
-    "ast_hash": "26529bcf6deebddd7f4a041dfd5576fd",
+    "mtime": 1788261488.12866,
+    "ast_hash": "36a0b2dd592e50269832d2f337019f00",
     "semantic_hash": ""
   },
   "components/sections/WhyChooseUs.tsx": {
-    "mtime": 1788347556.5761027,
-    "ast_hash": "5b7e1bd228adb8584c3aaabd4fb542f0",
+    "mtime": 1788261488.12866,
+    "ast_hash": "52c7bac9947ce445d33b58cb9eb79707",
     "semantic_hash": ""
   },
   "components/ui/accordion.tsx": {
@@ -825,23 +825,23 @@
     "semantic_hash": ""
   },
   "config/nav.ts": {
-    "mtime": 1788345878.6074448,
-    "ast_hash": "09348085c31a77381410e9342e4af1bd",
+    "mtime": 1788261502.5276449,
+    "ast_hash": "43c825509d3f4fad595eea6e5105952c",
     "semantic_hash": ""
   },
   "config/site.ts": {
-    "mtime": 1788344758.6560063,
+    "mtime": 1788261488.13466,
     "ast_hash": "22500fbda56e5971c079d52f4baea3ed",
     "semantic_hash": ""
   },
   "data/blog.json": {
-    "mtime": 1788349217.1757836,
+    "mtime": 1788261502.4756448,
     "ast_hash": "9f66db3fe1ceff5c2452374c23633368",
     "semantic_hash": ""
   },
   "embeddings.json": {
-    "mtime": 1788349215.8887854,
-    "ast_hash": "552331d40be506d0f86154fcf5f53139",
+    "mtime": 1788261488.13466,
+    "ast_hash": "8845d6d432c44571105c29d2c17952fe",
     "semantic_hash": ""
   },
   "entry-server.tsx": {
@@ -970,8 +970,8 @@
     "semantic_hash": ""
   },
   "lib/virtualPageObserver.ts": {
-    "mtime": 1788344758.6680062,
-    "ast_hash": "d27c627c9c8cdb9747f13d3c13c6f782",
+    "mtime": 1787872048.0,
+    "ast_hash": "2ab205608d5cea197df145c8740c3183",
     "semantic_hash": ""
   },
   "main.tsx": {
@@ -980,68 +980,68 @@
     "semantic_hash": ""
   },
   "pages/About.tsx": {
-    "mtime": 1788347685.253923,
-    "ast_hash": "8cd2bc92ba19f80847b152aac899a5cd",
+    "mtime": 1788261488.13866,
+    "ast_hash": "0c264f246333702192838cd8c880888b",
     "semantic_hash": ""
   },
   "pages/Blog.tsx": {
-    "mtime": 1788344758.6680062,
+    "mtime": 1788261488.13866,
     "ast_hash": "f372f97a29087c94cc76bba800485190",
     "semantic_hash": ""
   },
   "pages/Contact.tsx": {
-    "mtime": 1788347622.6560104,
-    "ast_hash": "1efdef5dca0008148de6ed4da6d2ff69",
+    "mtime": 1788261488.13866,
+    "ast_hash": "3038f76c387c8a68c459f5d047ed4d8b",
     "semantic_hash": ""
   },
   "pages/CoreAppraisalServices.tsx": {
-    "mtime": 1788347486.9492,
-    "ast_hash": "cd6d698aa029a3b98b7c24a9fcdcbe4c",
+    "mtime": 1788261488.13866,
+    "ast_hash": "360b133112ebb6910a9a8e0f7ba0aa60",
     "semantic_hash": ""
   },
   "pages/DesktopAppraisal.tsx": {
-    "mtime": 1788347720.426874,
-    "ast_hash": "82ef8fca26f414a81d1e7d367dcfc646",
+    "mtime": 1788261488.13866,
+    "ast_hash": "f2464f1b3e9d3e5730a93f11dea9651d",
     "semantic_hash": ""
   },
   "pages/DivorceAppraisal.tsx": {
-    "mtime": 1788347694.9729095,
-    "ast_hash": "527b6a63e88abc38b0993056d4e998f0",
+    "mtime": 1788261488.13866,
+    "ast_hash": "857166c011bfea25192fa9abfffedb6c",
     "semantic_hash": ""
   },
   "pages/EstateDateOfDeathAppraisal.tsx": {
-    "mtime": 1788347852.9706888,
-    "ast_hash": "8b289dfd176fab8f57f7ade7ff95295f",
+    "mtime": 1788261488.13966,
+    "ast_hash": "cca4b18f07a5bac0ed76cb251c9ba1a1",
     "semantic_hash": ""
   },
   "pages/ExteriorOnlyDriveByAppraisal.tsx": {
-    "mtime": 1788347785.4107833,
-    "ast_hash": "0822050a2a6a46c39e9a648ffa4f9916",
+    "mtime": 1788261488.13966,
+    "ast_hash": "dab63437803238a19e865f4093ab1e6f",
     "semantic_hash": ""
   },
   "pages/FhahudComplianceObservationReport.tsx": {
-    "mtime": 1788344758.6690063,
+    "mtime": 1788261488.13966,
     "ast_hash": "a8a429de86809bc00bb36be8550c0ed8",
     "semantic_hash": ""
   },
   "pages/GrossLivingAreaGlaCertification.tsx": {
-    "mtime": 1788344758.6690063,
+    "mtime": 1788261488.13966,
     "ast_hash": "51cc1138c7b8aa9494ff6b596d249fed",
     "semantic_hash": ""
   },
   "pages/Index.tsx": {
-    "mtime": 1788347513.9111624,
-    "ast_hash": "049c0e01a66a96d06ba5a7240e7d4338",
+    "mtime": 1788261488.13966,
+    "ast_hash": "23625b6633832fa35c114941c97b881c",
     "semantic_hash": ""
   },
   "pages/MarketValueUpdate1004dRecertification.tsx": {
-    "mtime": 1788344758.6690063,
+    "mtime": 1788261488.13966,
     "ast_hash": "950c412027de07b68a1f149b3dd13636",
     "semantic_hash": ""
   },
   "pages/MeasurementAnalysisServices.tsx": {
-    "mtime": 1788347553.8591065,
-    "ast_hash": "39413b29ca1f8679605cd8837d8ec27e",
+    "mtime": 1788261488.13966,
+    "ast_hash": "b42f368c22597fee084fe30653dc50d2",
     "semantic_hash": ""
   },
   "pages/NotFound.tsx": {
@@ -1050,47 +1050,47 @@
     "semantic_hash": ""
   },
   "pages/PmiRemovalAppraisal.tsx": {
-    "mtime": 1788344758.6700063,
+    "mtime": 1788261488.13966,
     "ast_hash": "63fe7174612776e150e0a66ca14e34c5",
     "semantic_hash": ""
   },
   "pages/PreListingAppraisal.tsx": {
-    "mtime": 1788347763.2468143,
-    "ast_hash": "ce2a23910b1d5d9545b6efd1ee43701d",
+    "mtime": 1788261488.13966,
+    "ast_hash": "a269133c204d2a160490bf95cbd5784f",
     "semantic_hash": ""
   },
   "pages/PrePurchaseAppraisal.tsx": {
-    "mtime": 1788344758.6700063,
+    "mtime": 1788261488.13966,
     "ast_hash": "680eeddf35373cbcac9133e2e0010d5a",
     "semantic_hash": ""
   },
   "pages/PropertyMeasurementAnsiZ765.tsx": {
-    "mtime": 1788344758.6700063,
+    "mtime": 1788261488.14066,
     "ast_hash": "8242e5b1f3dd99d5cd3d3b763b986a63",
     "semantic_hash": ""
   },
   "pages/Request.tsx": {
-    "mtime": 1788347611.449026,
-    "ast_hash": "f0808a333528e941029628108135db37",
+    "mtime": 1788261488.14066,
+    "ast_hash": "0b12f09439eafca845d1bbcb4b262391",
     "semantic_hash": ""
   },
   "pages/ResidentialAppraisal.tsx": {
-    "mtime": 1788347656.033964,
-    "ast_hash": "dc6c7e73928723f1d228db684d18c507",
+    "mtime": 1788261488.14066,
+    "ast_hash": "e8fba0f62d00bbe97765ef3a1903a72c",
     "semantic_hash": ""
   },
   "pages/TaxAssessmentAppeal.tsx": {
-    "mtime": 1788347709.0738897,
-    "ast_hash": "c2dcd26229b573a38dfcd479a4f01d7a",
+    "mtime": 1788261488.14066,
+    "ast_hash": "eadc32b7fd367129cc9d26e4e4004733",
     "semantic_hash": ""
   },
   "pages/ValuationUpdatesReports.tsx": {
-    "mtime": 1788347530.6101391,
-    "ast_hash": "46c68f91816a4d8cfb383bb3b1b67f70",
+    "mtime": 1788261488.14066,
+    "ast_hash": "4f09231f8d87bd9cc4d59e0d0d7ce35a",
     "semantic_hash": ""
   },
   "tailwind.config.lov.json": {
-    "mtime": 1788348946.8721611,
+    "mtime": 1788261492.9586549,
     "ast_hash": "bba3e10d89dbee0a81da7e5106a5c2cd",
     "semantic_hash": ""
   },

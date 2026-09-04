@@ -10,9 +10,11 @@
  *
  * `body_html` is the processed HTML from blog_html_processor (image dims,
  * lazy loading, H2 anchor IDs, internal interlinks). It is sanitized
- * server-side by that pipeline's Step 0 (LPS-1053): <script>/<iframe>/<style>
- * subtrees dropped, on* event handlers stripped, javascript:/data: URLs
- * neutralized — so it is safe to inject via `dangerouslySetInnerHTML`.
+ * server-side by that pipeline's Step 0 (LPS-1053): <script>/<style>
+ * subtrees dropped (<iframe> only survives from the video-embed
+ * allowlist, attribute-filtered — LPS-2068), on* event handlers
+ * stripped, javascript:/data: URLs neutralized — so it is safe to
+ * inject via `dangerouslySetInnerHTML`.
  *
  * NOTE on internal links: LPS-319 may inject `<a href="/services/blog/...">`
  * into the body for related-post interlinking. The boilerplate's

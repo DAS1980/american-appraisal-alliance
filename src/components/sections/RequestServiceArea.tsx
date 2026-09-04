@@ -28,7 +28,7 @@ const RequestServiceArea = React.forwardRef<HTMLElement>((props, ref) => {
     <section data-section-id="e3ba9b6c-83fe-499c-8a8c-4c61b74b6862"
       ref={ref}
       id="request-service-area"
-      className="relative overflow-x-hidden py-20 md:py-32 bg-background"
+      className="relative py-20 md:py-32 bg-background"
     >
       <div className="container max-w-6xl mx-auto px-4">
         {/* Section header */}
@@ -211,7 +211,7 @@ const RequestServiceArea = React.forwardRef<HTMLElement>((props, ref) => {
                 color: "hsl(218 65% 14%)",
               }}
             >
-              <Link to="/request/">Request an Appraisal</Link>
+              <Link to="/request">Request an Appraisal</Link>
             </Button>
           </motion.div>
         </div>

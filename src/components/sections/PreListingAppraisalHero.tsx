@@ -27,7 +27,7 @@ const PreListingAppraisalHero = React.forwardRef<HTMLElement>((props, ref) => {
     <section data-section-id="54357c79-0ce3-41cf-8733-f5fedf44c326"
       ref={ref}
       id="pre-listing-appraisal-hero"
-      className="relative isolate overflow-x-hidden min-h-[85vh] md:min-h-[80vh] flex items-center py-20 md:py-28"
+      className="relative isolate min-h-[85vh] md:min-h-[80vh] flex items-center py-20 md:py-28"
     >
       {/* Background Image — Layer 1 */}
       <img
@@ -48,7 +48,7 @@ const PreListingAppraisalHero = React.forwardRef<HTMLElement>((props, ref) => {
         <div className="max-w-3xl">
           {/* Badge */}
           <motion.div
-            initial={{ opacity: 1, y: 16 }}
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
             className="mb-5"
@@ -63,7 +63,7 @@ const PreListingAppraisalHero = React.forwardRef<HTMLElement>((props, ref) => {
 
           {/* Service Name / Eyebrow */}
           <motion.p
-            initial={{ opacity: 1, y: 16 }}
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.05, ease: "easeOut" }}
             className="text-amber-400 text-sm md:text-base uppercase tracking-widest font-semibold mb-3"
@@ -74,7 +74,7 @@ const PreListingAppraisalHero = React.forwardRef<HTMLElement>((props, ref) => {
 
           {/* Main Heading */}
           <motion.h1
-            initial={{ opacity: 1, y: 20 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
             className="text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-tight max-w-3xl"
@@ -85,7 +85,7 @@ const PreListingAppraisalHero = React.forwardRef<HTMLElement>((props, ref) => {
 
           {/* Subheadline */}
           <motion.p
-            initial={{ opacity: 1, y: 20 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
             className="mt-5 text-lg md:text-xl text-white/90 max-w-2xl leading-relaxed"
@@ -96,7 +96,7 @@ const PreListingAppraisalHero = React.forwardRef<HTMLElement>((props, ref) => {
 
           {/* Key Points */}
           <motion.ul
-            initial={{ opacity: 1, y: 20 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
             className="mt-8 space-y-3"
@@ -113,7 +113,7 @@ const PreListingAppraisalHero = React.forwardRef<HTMLElement>((props, ref) => {
 
           {/* CTA Button */}
           <motion.div
-            initial={{ opacity: 1, y: 20 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
             className="mt-10 flex flex-col sm:flex-row gap-4 items-start"
@@ -127,7 +127,7 @@ const PreListingAppraisalHero = React.forwardRef<HTMLElement>((props, ref) => {
                 color: "hsl(218 65% 14%)",
               }}
             >
-              <Link to="/request/">Request an Appraisal</Link>
+              <Link to="/request">Request an Appraisal</Link>
             </Button>
 
             <Button
@@ -136,13 +136,13 @@ const PreListingAppraisalHero = React.forwardRef<HTMLElement>((props, ref) => {
               variant="outline"
               className="text-base h-12 px-8 bg-transparent text-white border-white/60 hover:bg-white/10 font-medium"
             >
-              <Link to="/core-appraisal-services/">View All Services</Link>
+              <Link to="/core-appraisal-services">View All Services</Link>
             </Button>
           </motion.div>
 
           {/* Reassurance copy */}
           <motion.p
-            initial={{ opacity: 1 }}
+            initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.55, ease: "easeOut" }}
             className="mt-5 text-white/70 text-sm"

@@ -15,7 +15,7 @@ import Footer from "@/components/sections/Footer";
 const Request = React.forwardRef<HTMLDivElement>((props, ref) => {
   return (
     <PageLayout currentPage="request">
-      <div ref={ref} className="overflow-x-hidden w-full max-w-[100vw]">
+      <div ref={ref}>
         <Header />
         <SectionErrorBoundary sectionName="RequestHero">
           <RequestHero />

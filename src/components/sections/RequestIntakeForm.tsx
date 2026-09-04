@@ -122,7 +122,7 @@ const RequestIntakeForm = React.forwardRef<HTMLElement>((props, ref) => {
     <section data-section-id="9a567bcf-3261-45d7-8f8e-9a51aa36fe53"
       ref={ref}
       id="request-intake-form"
-      className="relative overflow-x-hidden py-20 md:py-32 bg-background"
+      className="relative py-20 md:py-32 bg-background"
       aria-labelledby="intake-form-heading"
     >
       <div className="container max-w-6xl mx-auto px-4">

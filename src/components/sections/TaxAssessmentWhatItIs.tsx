@@ -39,7 +39,7 @@ const TaxAssessmentWhatItIs = React.forwardRef<HTMLElement>((props, ref) => {
     <section data-section-id="1af4a3e1-92c7-4c8b-b858-ba684a7cef03"
       ref={ref}
       id="tax-assessment-what-it-is"
-      className="relative py-20 md:py-32 bg-background overflow-x-hidden"
+      className="relative py-20 md:py-32 bg-background"
     >
       <div className="container max-w-6xl mx-auto px-4">
 

@@ -2,7 +2,7 @@
  * Virtual Page Observer (LPS-854)
  *
  * Some static-HTML uploads ship as a single `index.html` whose nav doesn't
- * change the URL — instead a JS function (e.g. `navigate('#')`) toggles
+ * change the URL — instead a JS function (e.g. `navigate('menu')`) toggles
  * an `.active` class on `<div class="page" id="page-X">` containers. The
  * editor's page-selector dropdown can't follow these "virtual" page changes
  * via URL signals because there are none.

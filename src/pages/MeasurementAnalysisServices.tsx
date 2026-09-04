@@ -29,7 +29,7 @@ const MeasurementAnalysisServices = React.forwardRef<HTMLDivElement>((props, ref
 
   return (
     <PageLayout currentPage="measurement-analysis-services">
-      <div ref={ref} className="overflow-x-hidden w-full max-w-full">
+      <div ref={ref}>
         <Header />
         <SectionErrorBoundary sectionName="MeasurementAnalysisHero">
           <MeasurementAnalysisHero />

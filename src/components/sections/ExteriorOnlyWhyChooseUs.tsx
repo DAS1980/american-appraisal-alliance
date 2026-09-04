@@ -66,9 +66,9 @@ const ExteriorOnlyWhyChooseUs = React.forwardRef<HTMLElement>((props, ref) => {
     <section data-section-id="dea79df5-c3cf-4249-91e8-e06b4892ad28"
       ref={ref}
       id="exterior-only-why-choose-us"
-      className="relative py-20 md:py-32 bg-background overflow-x-hidden"
+      className="relative py-20 md:py-32 bg-background"
     >
-      <div className="container max-w-6xl mx-auto px-4 w-full">
+      <div className="container max-w-6xl mx-auto px-4">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}

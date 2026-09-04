@@ -74,7 +74,7 @@ const ValuationUpdatesWhoNeeds = React.forwardRef<HTMLElement>((props, ref) => {
     <section data-section-id="6538cd2b-d84d-4818-85bc-a0b985741a3c"
       ref={ref}
       id="valuation-updates-who-needs"
-      className="relative py-20 md:py-32 bg-background overflow-x-hidden"
+      className="relative py-20 md:py-32 bg-background"
     >
       <div className="container max-w-6xl mx-auto px-4">
         {/* Section Header */}
@@ -116,7 +116,7 @@ const ValuationUpdatesWhoNeeds = React.forwardRef<HTMLElement>((props, ref) => {
               >
                 <Card className="h-full border border-border shadow-sm hover:shadow-md transition-all duration-300 bg-card hover:-translate-y-1">
                   <CardHeader className="pb-3">
-                    <div className="flex flex-wrap items-start justify-between gap-3 mb-3">
+                    <div className="flex items-start justify-between gap-3 mb-3">
                       <div
                         className="flex h-12 w-12 items-center justify-center rounded-lg flex-shrink-0"
                         style={{ background: "hsl(218 60% 20% / 0.08)" }}
@@ -125,7 +125,7 @@ const ValuationUpdatesWhoNeeds = React.forwardRef<HTMLElement>((props, ref) => {
                       </div>
                       <Badge
                         variant="secondary"
-                        className="text-xs whitespace-nowrap max-w-full"
+                        className="text-xs whitespace-nowrap"
                         style={{
                           background: "hsl(42 88% 48% / 0.12)",
                           color: "hsl(36 88% 32%)",
@@ -260,7 +260,7 @@ const ValuationUpdatesWhoNeeds = React.forwardRef<HTMLElement>((props, ref) => {
             className="text-sm font-medium gap-1"
             style={{ color: "hsl(218 60% 20%)" }}
           >
-            <Link to="/valuation-updates-reports/">
+            <Link to="/valuation-updates-reports">
               View our Valuation Update services
               <ArrowRight className="h-4 w-4" />
             </Link>

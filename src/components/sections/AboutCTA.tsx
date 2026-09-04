@@ -24,7 +24,7 @@ const AboutCTA = React.forwardRef<HTMLElement>((props, ref) => {
     >
       {/* Subtle decorative background element */}
       <div
-        className="absolute inset-0 opacity-5 pointer-events-none overflow-hidden"
+        className="absolute inset-0 opacity-5 pointer-events-none"
         aria-hidden="true"
         style={{
           backgroundImage:
@@ -96,7 +96,7 @@ const AboutCTA = React.forwardRef<HTMLElement>((props, ref) => {
                   color: "hsl(218 65% 14%)",
                 }}
               >
-                <Link to="/request/">Request an Appraisal</Link>
+                <Link to="/request">Request an Appraisal</Link>
               </Button>
             </motion.div>
           </motion.div>

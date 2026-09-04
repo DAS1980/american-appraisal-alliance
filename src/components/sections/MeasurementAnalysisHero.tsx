@@ -18,7 +18,7 @@ const MeasurementAnalysisHero = React.forwardRef<HTMLElement>((props, ref) => {
       ref={ref}
       id="measurement-analysis-hero"
       aria-label="Measurement & Analysis Services Hero"
-      className="relative isolate w-full max-w-full overflow-hidden min-h-[85vh] md:min-h-[80vh] flex items-center py-20 md:py-32"
+      className="relative isolate min-h-[85vh] md:min-h-[80vh] flex items-center py-20 md:py-32"
     >
       {/* Layer 1: Background image */}
       <img
@@ -39,7 +39,7 @@ const MeasurementAnalysisHero = React.forwardRef<HTMLElement>((props, ref) => {
         <div className="max-w-3xl">
           {/* Category label */}
           <motion.div
-            initial={{ opacity: 1, y: 16 }}
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
           >
@@ -50,7 +50,7 @@ const MeasurementAnalysisHero = React.forwardRef<HTMLElement>((props, ref) => {
 
           {/* Main heading */}
           <motion.h1
-            initial={{ opacity: 1, y: 20 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
             className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight max-w-3xl"
@@ -61,7 +61,7 @@ const MeasurementAnalysisHero = React.forwardRef<HTMLElement>((props, ref) => {
 
           {/* Subheadline */}
           <motion.p
-            initial={{ opacity: 1, y: 20 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
             className="mt-4 text-lg md:text-xl text-white/90 max-w-2xl leading-relaxed"
@@ -73,7 +73,7 @@ const MeasurementAnalysisHero = React.forwardRef<HTMLElement>((props, ref) => {
 
           {/* Trust badges */}
           <motion.div
-            initial={{ opacity: 1, y: 20 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
             className="flex flex-wrap gap-2 mt-6"
@@ -92,7 +92,7 @@ const MeasurementAnalysisHero = React.forwardRef<HTMLElement>((props, ref) => {
 
           {/* CTA buttons */}
           <motion.div
-            initial={{ opacity: 1, y: 20 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
             className="flex flex-wrap gap-4 mt-8"
@@ -106,22 +106,22 @@ const MeasurementAnalysisHero = React.forwardRef<HTMLElement>((props, ref) => {
                 color: "#1a1a2e",
               }}
             >
-              <Link to="/request/">Request an Appraisal</Link>
+              <Link to="/request">Request an Appraisal</Link>
             </Button>
 
             <Button
               asChild
               size="lg"
               variant="outline"
-              className="text-base h-auto min-h-12 px-6 md:px-8 py-3 whitespace-normal text-center leading-snug bg-transparent text-white border-white hover:bg-white/10 font-medium w-full sm:w-auto"
+              className="text-base h-12 px-8 bg-transparent text-white border-white hover:bg-white/10 font-medium"
             >
-              <Link to="/measurement-analysis-services/">Measurement &amp; Analysis Services</Link>
+              <Link to="/measurement-analysis-services">Explore Services</Link>
             </Button>
           </motion.div>
 
           {/* Service area note */}
           <motion.p
-            initial={{ opacity: 1 }}
+            initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.55 }}
             className="mt-6 text-sm text-white/70 flex items-center gap-1.5"

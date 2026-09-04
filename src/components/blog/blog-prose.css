@@ -308,3 +308,16 @@
 .blog-prose details > *:not(summary) {
   margin-top: 12px;
 }
+
+/* LPS-2068 — CG-authored video embeds. The sanitizer allowlists iframes from
+   trusted video hosts and strips their width/height, so sizing has to come from
+   here; without it a bare <iframe> falls back to the HTML default 300x150. */
+.blog-prose iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  border: 0;
+  border-radius: calc(var(--radius) - 8px);
+  margin: 40px 0;
+}

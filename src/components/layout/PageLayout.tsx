@@ -11,7 +11,11 @@
  * 3. Clean separation of concerns
  * 
  * Usage:
- * PageLayout wraps Header, page sections, and Footer as children.
+ * <PageLayout currentPage="about">
+ *   <Header />
+ *   <YourPageSections />
+ *   <Footer />
+ * </PageLayout>
  */
 
 import { ReactNode } from 'react';
@@ -39,7 +43,7 @@ export function PageLayout({
   // but are no longer used. The agent creates Header/Footer as section components.
   
   return (
-    <div className={cn('min-h-screen flex flex-col w-full max-w-[100vw] overflow-x-hidden', className)}>
+    <div className={cn('min-h-screen flex flex-col', className)}>
       {children}
     </div>
   );

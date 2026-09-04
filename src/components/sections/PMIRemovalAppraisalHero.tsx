@@ -27,7 +27,7 @@ const PMIRemovalAppraisalHero = React.forwardRef<HTMLElement>((props, ref) => {
       ref={ref}
       id="pmiremoval-appraisal-hero"
       aria-label="PMI Removal Appraisal Hero"
-      className="relative isolate overflow-x-hidden min-h-[85vh] md:min-h-[80vh] flex items-center py-16 sm:py-20 md:py-32"
+      className="relative isolate min-h-[85vh] md:min-h-[80vh] flex items-center py-20 md:py-32"
     >
       {/* Layer 1: Background image */}
       <img
@@ -44,11 +44,11 @@ const PMIRemovalAppraisalHero = React.forwardRef<HTMLElement>((props, ref) => {
       <div className="absolute inset-0 bg-black/60 pointer-events-none" />
 
       {/* Layer 3: Content */}
-      <div className="container max-w-6xl mx-auto px-4 relative z-10 w-full">
-        <div className="max-w-3xl w-full">
+      <div className="container max-w-6xl mx-auto px-4 relative z-10">
+        <div className="max-w-3xl">
           {/* Badge */}
           <motion.div
-            initial={{ opacity: 1, y: 16 }}
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
             className="mb-4"
@@ -68,7 +68,7 @@ const PMIRemovalAppraisalHero = React.forwardRef<HTMLElement>((props, ref) => {
 
           {/* Service label */}
           <motion.p
-            initial={{ opacity: 1, y: 16 }}
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.08, ease: "easeOut" }}
             className="text-sm md:text-base uppercase tracking-[0.18em] text-white/70 font-medium mb-3"
@@ -79,10 +79,10 @@ const PMIRemovalAppraisalHero = React.forwardRef<HTMLElement>((props, ref) => {
 
           {/* H1 */}
           <motion.h1
-            initial={{ opacity: 1, y: 20 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.15, ease: "easeOut" }}
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-5 max-w-3xl break-words"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-5 max-w-3xl"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
             Stop Paying PMI — Prove Your Home's Value
@@ -90,7 +90,7 @@ const PMIRemovalAppraisalHero = React.forwardRef<HTMLElement>((props, ref) => {
 
           {/* Subheadline */}
           <motion.p
-            initial={{ opacity: 1, y: 20 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.25, ease: "easeOut" }}
             className="text-lg md:text-xl text-white/90 leading-relaxed mb-8 max-w-2xl"
@@ -104,7 +104,7 @@ const PMIRemovalAppraisalHero = React.forwardRef<HTMLElement>((props, ref) => {
 
           {/* Key bullet points */}
           <motion.ul
-            initial={{ opacity: 1, y: 20 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.33, ease: "easeOut" }}
             className="space-y-3 mb-10"
@@ -132,21 +132,21 @@ const PMIRemovalAppraisalHero = React.forwardRef<HTMLElement>((props, ref) => {
 
           {/* CTA Button */}
           <motion.div
-            initial={{ opacity: 1, y: 20 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.42, ease: "easeOut" }}
-            className="flex flex-col sm:flex-row items-start sm:items-center gap-4 w-full"
+            className="flex flex-col sm:flex-row items-start sm:items-center gap-4"
           >
             <Button
               asChild
               size="lg"
-              className="w-full sm:w-auto text-base font-semibold px-8 py-4 h-auto shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+              className="text-base font-semibold px-8 py-4 h-auto shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
               style={{
                 backgroundColor: "hsl(42 88% 48%)",
                 color: "hsl(218 65% 14%)",
               }}
             >
-              <Link to="/request/">Request an Appraisal</Link>
+              <Link to="/request">Request an Appraisal</Link>
             </Button>
 
             <p

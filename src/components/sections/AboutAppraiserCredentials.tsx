@@ -91,7 +91,7 @@ const AboutAppraiserCredentials = React.forwardRef<HTMLElement>((props, ref) => 
     <section data-section-id="d2506e14-a528-4d96-b733-c5634bf84f8d"
       ref={ref}
       id="about-appraiser-credentials"
-      className="relative py-20 md:py-32 bg-background overflow-x-hidden"
+      className="relative py-20 md:py-32 bg-background"
     >
       <div className="container max-w-6xl mx-auto px-4">
         {/* Section Header */}

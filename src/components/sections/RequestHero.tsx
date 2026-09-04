@@ -10,7 +10,7 @@ const RequestHero = React.forwardRef<HTMLElement>((props, ref) => {
       ref={ref}
       id="request-hero"
       aria-label="Request an Appraisal Hero"
-      className="relative isolate overflow-x-hidden min-h-[60vh] md:min-h-[70vh] flex items-center py-20 md:py-32"
+      className="relative isolate min-h-[60vh] md:min-h-[70vh] flex items-center py-20 md:py-32"
     >
       {/* Background image */}
       <img
@@ -102,7 +102,7 @@ const RequestHero = React.forwardRef<HTMLElement>((props, ref) => {
                 boxShadow: "0 4px 20px -4px hsl(42 88% 48% / 0.45)",
               }}
             >
-              <a href="#request-intake-form">Request an Appraisal</a>
+              <a href="#intake-form">Request an Appraisal</a>
             </Button>
           </motion.div>
 

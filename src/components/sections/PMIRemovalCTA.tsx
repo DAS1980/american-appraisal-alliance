@@ -10,7 +10,7 @@ const PMIRemovalCTA = React.forwardRef<HTMLElement>((props, ref) => {
     <section data-section-id="f14b3326-bcfb-434f-8e95-b3c091300123"
       ref={ref}
       id="pmiremoval-cta"
-      className="py-16 sm:py-20 md:py-32 relative overflow-hidden"
+      className="py-20 md:py-32 relative overflow-hidden"
       style={{ background: "linear-gradient(135deg, hsl(42 92% 52%) 0%, hsl(36 88% 44%) 100%)" }}
     >
       {/* Subtle background texture overlay */}
@@ -44,7 +44,7 @@ const PMIRemovalCTA = React.forwardRef<HTMLElement>((props, ref) => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.08 }}
-            className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-5 leading-tight break-words"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold mb-5 leading-tight"
             style={{
               fontFamily: "'Playfair Display', Georgia, serif",
               color: "hsl(218 65% 14%)",

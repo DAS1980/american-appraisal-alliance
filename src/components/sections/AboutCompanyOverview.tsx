@@ -84,7 +84,7 @@ const AboutCompanyOverview = React.forwardRef<HTMLElement>((props, ref) => {
     <section data-section-id="9b437f85-43f5-41ee-aac1-a5f9ca50e9fb"
       ref={ref}
       id="about-company-overview"
-      className="relative py-20 md:py-32 bg-background overflow-x-hidden"
+      className="relative py-20 md:py-32 bg-background"
       aria-labelledby="about-overview-heading"
     >
       <div className="container max-w-6xl mx-auto px-4">

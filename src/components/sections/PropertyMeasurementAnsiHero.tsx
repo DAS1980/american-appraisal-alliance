@@ -47,7 +47,7 @@ const PropertyMeasurementAnsiHero = React.forwardRef<HTMLElement>((props, ref) =
         <div className="max-w-3xl">
           {/* Badge */}
           <motion.div
-            initial={{ opacity: 1, y: 16 }}
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
             className="mb-5"
@@ -66,7 +66,7 @@ const PropertyMeasurementAnsiHero = React.forwardRef<HTMLElement>((props, ref) =
 
           {/* Service category label */}
           <motion.p
-            initial={{ opacity: 1, y: 16 }}
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.08, ease: "easeOut" }}
             className="text-sm uppercase tracking-[0.2em] text-white/70 mb-3 font-medium"
@@ -76,7 +76,7 @@ const PropertyMeasurementAnsiHero = React.forwardRef<HTMLElement>((props, ref) =
 
           {/* H1 — service name */}
           <motion.h1
-            initial={{ opacity: 1, y: 20 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.15, ease: "easeOut" }}
             className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-5"
@@ -87,7 +87,7 @@ const PropertyMeasurementAnsiHero = React.forwardRef<HTMLElement>((props, ref) =
 
           {/* Subheadline */}
           <motion.p
-            initial={{ opacity: 1, y: 20 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.25, ease: "easeOut" }}
             className="text-lg md:text-xl text-white/90 leading-relaxed mb-8 max-w-2xl"
@@ -99,7 +99,7 @@ const PropertyMeasurementAnsiHero = React.forwardRef<HTMLElement>((props, ref) =
 
           {/* Highlight chips */}
           <motion.div
-            initial={{ opacity: 1, y: 20 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.32, ease: "easeOut" }}
             className="flex flex-wrap gap-3 mb-10"
@@ -117,7 +117,7 @@ const PropertyMeasurementAnsiHero = React.forwardRef<HTMLElement>((props, ref) =
 
           {/* CTA */}
           <motion.div
-            initial={{ opacity: 1, y: 20 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
             className="flex flex-col sm:flex-row gap-4"
@@ -132,22 +132,22 @@ const PropertyMeasurementAnsiHero = React.forwardRef<HTMLElement>((props, ref) =
                 boxShadow: "0 4px 20px -4px hsl(42 88% 48% / 0.5)",
               }}
             >
-              <Link to="/request/">Request an Appraisal</Link>
+              <Link to="/request">Request an Appraisal</Link>
             </Button>
 
             <Button
               asChild
               size="lg"
               variant="outline"
-              className="text-base font-medium h-12 px-6 sm:px-8 whitespace-nowrap bg-transparent text-white border-white/50 hover:bg-white/10 hover:border-white"
+              className="text-base font-medium h-12 px-8 bg-transparent text-white border-white/50 hover:bg-white/10 hover:border-white"
             >
-              <Link to="/measurement-analysis-services/">Measurement &amp; Analysis Services</Link>
+              <Link to="/measurement-analysis-services">View All Measurement Services</Link>
             </Button>
           </motion.div>
 
           {/* Reassurance line */}
           <motion.p
-            initial={{ opacity: 1 }}
+            initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.52, ease: "easeOut" }}
             className="mt-5 text-sm text-white/60 italic"

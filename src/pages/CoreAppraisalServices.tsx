@@ -12,7 +12,7 @@ import { SITE_CONFIG } from "@/config/site";
 const CoreAppraisalServices = React.forwardRef<HTMLDivElement>((props, ref) => {
   return (
     <PageLayout currentPage="core-appraisal-services">
-      <div ref={ref} className="overflow-x-hidden w-full max-w-[100vw]">
+      <div ref={ref}>
         <Header />
         <SectionErrorBoundary sectionName="ServiceCardsGrid9ServicesResidentialUrar">
           <ServiceCardsGrid9ServicesResidentialUrar />

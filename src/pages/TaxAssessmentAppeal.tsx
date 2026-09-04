@@ -13,7 +13,7 @@ import Footer from "@/components/sections/Footer";
 const TaxAssessmentAppeal = React.forwardRef<HTMLDivElement>((props, ref) => {
   return (
     <PageLayout currentPage="tax-assessment-appeal">
-      <div ref={ref} className="overflow-x-hidden max-w-[100vw]">
+      <div ref={ref}>
         <Header />
         <SectionErrorBoundary sectionName="TaxAssessmentAppealHero">
           <TaxAssessmentAppealHero />

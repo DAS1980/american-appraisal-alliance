@@ -65,7 +65,7 @@ const PMIRemovalWhyChooseUs = React.forwardRef<HTMLElement>((props, ref) => {
     <section data-section-id="62d7319d-d549-4683-a4a6-b4037bb19dfa"
       ref={ref}
       id="pmiremoval-why-choose-us"
-      className="relative py-16 sm:py-20 md:py-32 bg-primary overflow-hidden"
+      className="relative py-20 md:py-32 bg-primary overflow-hidden"
       aria-labelledby="pmi-why-choose-heading"
     >
       {/* Subtle background texture */}
@@ -93,7 +93,7 @@ const PMIRemovalWhyChooseUs = React.forwardRef<HTMLElement>((props, ref) => {
           </span>
           <h2
             id="pmi-why-choose-heading"
-            className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-5 max-w-3xl mx-auto break-words"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-5 max-w-3xl mx-auto"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
             The Trusted Choice for PMI Removal in Dallas–Fort Worth

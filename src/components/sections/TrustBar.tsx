@@ -40,7 +40,7 @@ const TrustBar = React.forwardRef<HTMLElement>((props, ref) => {
     <section data-section-id="f9e0de68-282b-4dbc-bfc9-9c69304c55d2"
       ref={ref}
       id="trust-bar"
-      className="relative py-6 md:py-8 bg-primary border-b border-primary/20 overflow-x-hidden"
+      className="relative py-6 md:py-8 bg-primary border-b border-primary/20"
       aria-label="Trust indicators and credentials"
     >
       <div className="container max-w-6xl mx-auto px-4">

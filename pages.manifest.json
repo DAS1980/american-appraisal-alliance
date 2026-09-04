@@ -291,7 +291,7 @@
     "generator": "lps-website-builder",
     "manifestSchemaVersion": 1,
     "lpsProjectId": "6ff7ae24-db0c-4586-8bdb-779ac4413c02",
-    "lpsSignature": "7150baa79c15d28242e47b0f2a8b3c6bb7fea18d2bb83678e5999afd3b342153"
+    "lpsSignature": "061a3f04b8ff80a39bfaa220f30b0205092809a56ecdfb16d87e885e343a261d"
   },
   "pages": [
     {
@@ -356,8 +356,7 @@
         "CoreAppraisalWhyChooseUs",
         "Footer"
       ],
-      "inNavigation": true,
-      "filePath": "src/pages/CoreAppraisalServices.tsx"
+      "inNavigation": true
     },
     {
       "id": "valuation-updates-reports",
@@ -388,8 +387,7 @@
         "ValuationUpdatesCTA",
         "Footer"
       ],
-      "inNavigation": true,
-      "filePath": "src/pages/ValuationUpdatesReports.tsx"
+      "inNavigation": true
     },
     {
       "id": "measurement-analysis-services",
@@ -420,8 +418,7 @@
         "MeasurementCTA",
         "Footer"
       ],
-      "inNavigation": true,
-      "filePath": "src/pages/MeasurementAnalysisServices.tsx"
+      "inNavigation": true
     },
     {
       "id": "request",
@@ -452,8 +449,7 @@
         "RequestReassurance",
         "Footer"
       ],
-      "inNavigation": true,
-      "filePath": "src/pages/Request.tsx"
+      "inNavigation": true
     },
     {
       "id": "about",
@@ -486,8 +482,7 @@
         "AboutCTA",
         "Footer"
       ],
-      "inNavigation": true,
-      "filePath": "src/pages/About.tsx"
+      "inNavigation": true
     },
     {
       "id": "contact",
@@ -518,8 +513,471 @@
         "ContactAppraisalLink",
         "Footer"
       ],
-      "inNavigation": true,
-      "filePath": "src/pages/Contact.tsx"
+      "inNavigation": true
+    },
+    {
+      "id": "service-areas",
+      "name": "Service Areas",
+      "slug": "service-areas",
+      "isHome": false,
+      "filePath": "src/pages/ServiceAreas.tsx",
+      "seo": {
+        "title": "Service Areas - American Appraisal Alliance",
+        "description": "American Appraisal Alliance service areas across Collin, Dallas, and Denton counties.",
+        "keywords": [
+          "DFW appraisal service areas",
+          "American Appraisal Alliance"
+        ],
+        "ogImage": "",
+        "canonicalUrl": "",
+        "noindex": false,
+        "structuredDataType": "WebPage",
+        "structuredData": null
+      },
+      "sections": [
+        "Header",
+        "Footer"
+      ],
+      "inNavigation": false
+    },
+    {
+      "id": "service-areas-collin-county",
+      "name": "Collin County",
+      "slug": "service-areas/collin-county",
+      "isHome": false,
+      "filePath": "src/pages/CollinCounty.tsx",
+      "seo": {
+        "title": "Collin County Service Areas - American Appraisal Alliance",
+        "description": "American Appraisal Alliance appraisal service areas in Collin County, Texas.",
+        "keywords": [
+          "Collin County appraisal",
+          "American Appraisal Alliance"
+        ],
+        "ogImage": "",
+        "canonicalUrl": "",
+        "noindex": false,
+        "structuredDataType": "WebPage",
+        "structuredData": null
+      },
+      "sections": [
+        "Header",
+        "Footer"
+      ],
+      "inNavigation": false
+    },
+    {
+      "id": "service-areas-collin-county-allen",
+      "name": "Allen, TX",
+      "slug": "service-areas/collin-county/allen",
+      "isHome": false,
+      "filePath": "src/pages/AllenTx.tsx",
+      "seo": {
+        "title": "Allen, TX Real Estate Appraisals - American Appraisal Alliance",
+        "description": "USPAP-compliant real estate appraisal services in Allen, Texas from American Appraisal Alliance.",
+        "keywords": [
+          "Allen TX real estate appraisal",
+          "Allen Texas appraiser",
+          "American Appraisal Alliance"
+        ],
+        "ogImage": "",
+        "canonicalUrl": "",
+        "noindex": false,
+        "structuredDataType": "Service",
+        "structuredData": null
+      },
+      "sections": [
+        "Header",
+        "Footer"
+      ],
+      "inNavigation": false
+    },
+    {
+      "id": "service-areas-collin-county-celina",
+      "name": "Celina, TX",
+      "slug": "service-areas/collin-county/celina",
+      "isHome": false,
+      "filePath": "src/pages/CelinaTx.tsx",
+      "seo": {
+        "title": "Celina, TX Real Estate Appraisals - American Appraisal Alliance",
+        "description": "USPAP-compliant real estate appraisal services in Celina, Texas from American Appraisal Alliance.",
+        "keywords": [
+          "Celina TX real estate appraisal",
+          "Celina Texas appraiser",
+          "American Appraisal Alliance"
+        ],
+        "ogImage": "",
+        "canonicalUrl": "",
+        "noindex": false,
+        "structuredDataType": "Service",
+        "structuredData": null
+      },
+      "sections": [
+        "Header",
+        "Footer"
+      ],
+      "inNavigation": false
+    },
+    {
+      "id": "service-areas-collin-county-frisco",
+      "name": "Frisco, TX",
+      "slug": "service-areas/collin-county/frisco",
+      "isHome": false,
+      "filePath": "src/pages/FriscoTx.tsx",
+      "seo": {
+        "title": "Frisco, TX Real Estate Appraisals - American Appraisal Alliance",
+        "description": "USPAP-compliant real estate appraisal services in Frisco, Texas from American Appraisal Alliance.",
+        "keywords": [
+          "Frisco TX real estate appraisal",
+          "Frisco Texas appraiser",
+          "American Appraisal Alliance"
+        ],
+        "ogImage": "",
+        "canonicalUrl": "",
+        "noindex": false,
+        "structuredDataType": "Service",
+        "structuredData": null
+      },
+      "sections": [
+        "Header",
+        "Footer"
+      ],
+      "inNavigation": false
+    },
+    {
+      "id": "service-areas-collin-county-mckinney",
+      "name": "McKinney, TX",
+      "slug": "service-areas/collin-county/mckinney",
+      "isHome": false,
+      "filePath": "src/pages/MckinneyTx.tsx",
+      "seo": {
+        "title": "McKinney, TX Real Estate Appraisals - American Appraisal Alliance",
+        "description": "USPAP-compliant real estate appraisal services in McKinney, Texas from American Appraisal Alliance.",
+        "keywords": [
+          "McKinney TX real estate appraisal",
+          "McKinney Texas appraiser",
+          "American Appraisal Alliance"
+        ],
+        "ogImage": "",
+        "canonicalUrl": "",
+        "noindex": false,
+        "structuredDataType": "Service",
+        "structuredData": null
+      },
+      "sections": [
+        "Header",
+        "Footer"
+      ],
+      "inNavigation": false
+    },
+    {
+      "id": "service-areas-collin-county-plano",
+      "name": "Plano, TX",
+      "slug": "service-areas/collin-county/plano",
+      "isHome": false,
+      "filePath": "src/pages/PlanoTx.tsx",
+      "seo": {
+        "title": "Plano, TX Real Estate Appraisals - American Appraisal Alliance",
+        "description": "USPAP-compliant real estate appraisal services in Plano, Texas from American Appraisal Alliance.",
+        "keywords": [
+          "Plano TX real estate appraisal",
+          "Plano Texas appraiser",
+          "American Appraisal Alliance"
+        ],
+        "ogImage": "",
+        "canonicalUrl": "",
+        "noindex": false,
+        "structuredDataType": "Service",
+        "structuredData": null
+      },
+      "sections": [
+        "Header",
+        "Footer"
+      ],
+      "inNavigation": false
+    },
+    {
+      "id": "service-areas-collin-county-prosper",
+      "name": "Prosper, TX",
+      "slug": "service-areas/collin-county/prosper",
+      "isHome": false,
+      "filePath": "src/pages/ProsperTx.tsx",
+      "seo": {
+        "title": "Prosper, TX Real Estate Appraisals - American Appraisal Alliance",
+        "description": "USPAP-compliant real estate appraisal services in Prosper, Texas from American Appraisal Alliance.",
+        "keywords": [
+          "Prosper TX real estate appraisal",
+          "Prosper Texas appraiser",
+          "American Appraisal Alliance"
+        ],
+        "ogImage": "",
+        "canonicalUrl": "",
+        "noindex": false,
+        "structuredDataType": "Service",
+        "structuredData": null
+      },
+      "sections": [
+        "Header",
+        "Footer"
+      ],
+      "inNavigation": false
+    },
+    {
+      "id": "service-areas-dallas-county",
+      "name": "Dallas County",
+      "slug": "service-areas/dallas-county",
+      "isHome": false,
+      "filePath": "src/pages/DallasCounty.tsx",
+      "seo": {
+        "title": "Dallas County Service Areas - American Appraisal Alliance",
+        "description": "American Appraisal Alliance appraisal service areas in Dallas County, Texas.",
+        "keywords": [
+          "Dallas County appraisal",
+          "American Appraisal Alliance"
+        ],
+        "ogImage": "",
+        "canonicalUrl": "",
+        "noindex": false,
+        "structuredDataType": "WebPage",
+        "structuredData": null
+      },
+      "sections": [
+        "Header",
+        "Footer"
+      ],
+      "inNavigation": false
+    },
+    {
+      "id": "service-areas-dallas-county-addison",
+      "name": "Addison, TX",
+      "slug": "service-areas/dallas-county/addison",
+      "isHome": false,
+      "filePath": "src/pages/Addison.tsx",
+      "seo": {
+        "title": "Addison, TX Real Estate Appraisals - American Appraisal Alliance",
+        "description": "USPAP-compliant real estate appraisal services in Addison, Texas from American Appraisal Alliance.",
+        "keywords": [
+          "Addison TX real estate appraisal",
+          "Addison Texas appraiser",
+          "American Appraisal Alliance"
+        ],
+        "ogImage": "",
+        "canonicalUrl": "",
+        "noindex": false,
+        "structuredDataType": "Service",
+        "structuredData": null
+      },
+      "sections": [
+        "Header",
+        "Footer"
+      ],
+      "inNavigation": false
+    },
+    {
+      "id": "service-areas-dallas-county-north-dallas",
+      "name": "North Dallas, TX",
+      "slug": "service-areas/dallas-county/north-dallas",
+      "isHome": false,
+      "filePath": "src/pages/NorthDallas.tsx",
+      "seo": {
+        "title": "North Dallas, TX Real Estate Appraisals - American Appraisal Alliance",
+        "description": "USPAP-compliant real estate appraisal services in North Dallas, Texas from American Appraisal Alliance.",
+        "keywords": [
+          "North Dallas TX real estate appraisal",
+          "North Dallas Texas appraiser",
+          "American Appraisal Alliance"
+        ],
+        "ogImage": "",
+        "canonicalUrl": "",
+        "noindex": false,
+        "structuredDataType": "Service",
+        "structuredData": null
+      },
+      "sections": [
+        "Header",
+        "Footer"
+      ],
+      "inNavigation": false
+    },
+    {
+      "id": "service-areas-dallas-county-richardson",
+      "name": "Richardson, TX",
+      "slug": "service-areas/dallas-county/richardson",
+      "isHome": false,
+      "filePath": "src/pages/Richardson.tsx",
+      "seo": {
+        "title": "Richardson, TX Real Estate Appraisals - American Appraisal Alliance",
+        "description": "USPAP-compliant real estate appraisal services in Richardson, Texas from American Appraisal Alliance.",
+        "keywords": [
+          "Richardson TX real estate appraisal",
+          "Richardson Texas appraiser",
+          "American Appraisal Alliance"
+        ],
+        "ogImage": "",
+        "canonicalUrl": "",
+        "noindex": false,
+        "structuredDataType": "Service",
+        "structuredData": null
+      },
+      "sections": [
+        "Header",
+        "Footer"
+      ],
+      "inNavigation": false
+    },
+    {
+      "id": "service-areas-denton-county",
+      "name": "Denton County",
+      "slug": "service-areas/denton-county",
+      "isHome": false,
+      "filePath": "src/pages/DentonCounty.tsx",
+      "seo": {
+        "title": "Denton County Service Areas - American Appraisal Alliance",
+        "description": "American Appraisal Alliance appraisal service areas in Denton County, Texas.",
+        "keywords": [
+          "Denton County appraisal",
+          "American Appraisal Alliance"
+        ],
+        "ogImage": "",
+        "canonicalUrl": "",
+        "noindex": false,
+        "structuredDataType": "WebPage",
+        "structuredData": null
+      },
+      "sections": [
+        "Header",
+        "Footer"
+      ],
+      "inNavigation": false
+    },
+    {
+      "id": "service-areas-denton-county-aubrey",
+      "name": "Aubrey, TX",
+      "slug": "service-areas/denton-county/aubrey",
+      "isHome": false,
+      "filePath": "src/pages/Aubrey.tsx",
+      "seo": {
+        "title": "Aubrey, TX Real Estate Appraisals - American Appraisal Alliance",
+        "description": "USPAP-compliant real estate appraisal services in Aubrey, Texas from American Appraisal Alliance.",
+        "keywords": [
+          "Aubrey TX real estate appraisal",
+          "Aubrey Texas appraiser",
+          "American Appraisal Alliance"
+        ],
+        "ogImage": "",
+        "canonicalUrl": "",
+        "noindex": false,
+        "structuredDataType": "Service",
+        "structuredData": null
+      },
+      "sections": [
+        "Header",
+        "Footer"
+      ],
+      "inNavigation": false
+    },
+    {
+      "id": "service-areas-denton-county-carrollton",
+      "name": "Carrollton, TX",
+      "slug": "service-areas/denton-county/carrollton",
+      "isHome": false,
+      "filePath": "src/pages/Carrollton.tsx",
+      "seo": {
+        "title": "Carrollton, TX Real Estate Appraisals - American Appraisal Alliance",
+        "description": "USPAP-compliant real estate appraisal services in Carrollton, Texas from American Appraisal Alliance.",
+        "keywords": [
+          "Carrollton TX real estate appraisal",
+          "Carrollton Texas appraiser",
+          "American Appraisal Alliance"
+        ],
+        "ogImage": "",
+        "canonicalUrl": "",
+        "noindex": false,
+        "structuredDataType": "Service",
+        "structuredData": null
+      },
+      "sections": [
+        "Header",
+        "Footer"
+      ],
+      "inNavigation": false
+    },
+    {
+      "id": "service-areas-denton-county-lewisville",
+      "name": "Lewisville, TX",
+      "slug": "service-areas/denton-county/lewisville",
+      "isHome": false,
+      "filePath": "src/pages/Lewisville.tsx",
+      "seo": {
+        "title": "Lewisville, TX Real Estate Appraisals - American Appraisal Alliance",
+        "description": "USPAP-compliant real estate appraisal services in Lewisville, Texas from American Appraisal Alliance.",
+        "keywords": [
+          "Lewisville TX real estate appraisal",
+          "Lewisville Texas appraiser",
+          "American Appraisal Alliance"
+        ],
+        "ogImage": "",
+        "canonicalUrl": "",
+        "noindex": false,
+        "structuredDataType": "Service",
+        "structuredData": null
+      },
+      "sections": [
+        "Header",
+        "Footer"
+      ],
+      "inNavigation": false
+    },
+    {
+      "id": "service-areas-denton-county-little-elm",
+      "name": "Little Elm, TX",
+      "slug": "service-areas/denton-county/little-elm",
+      "isHome": false,
+      "filePath": "src/pages/LittleElm.tsx",
+      "seo": {
+        "title": "Little Elm, TX Real Estate Appraisals - American Appraisal Alliance",
+        "description": "USPAP-compliant real estate appraisal services in Little Elm, Texas from American Appraisal Alliance.",
+        "keywords": [
+          "Little Elm TX real estate appraisal",
+          "Little Elm Texas appraiser",
+          "American Appraisal Alliance"
+        ],
+        "ogImage": "",
+        "canonicalUrl": "",
+        "noindex": false,
+        "structuredDataType": "Service",
+        "structuredData": null
+      },
+      "sections": [
+        "Header",
+        "Footer"
+      ],
+      "inNavigation": false
+    },
+    {
+      "id": "service-areas-denton-county-the-colony",
+      "name": "The Colony, TX",
+      "slug": "service-areas/denton-county/the-colony",
+      "isHome": false,
+      "filePath": "src/pages/TheColony.tsx",
+      "seo": {
+        "title": "The Colony, TX Real Estate Appraisals - American Appraisal Alliance",
+        "description": "USPAP-compliant real estate appraisal services in The Colony, Texas from American Appraisal Alliance.",
+        "keywords": [
+          "The Colony TX real estate appraisal",
+          "The Colony Texas appraiser",
+          "American Appraisal Alliance"
+        ],
+        "ogImage": "",
+        "canonicalUrl": "",
+        "noindex": false,
+        "structuredDataType": "Service",
+        "structuredData": null
+      },
+      "sections": [
+        "Header",
+        "Footer"
+      ],
+      "inNavigation": false
     },
     {
       "id": "residential-appraisal",
@@ -552,8 +1010,7 @@
         "ResidentialAppraisalCTA",
         "Footer"
       ],
-      "inNavigation": false,
-      "filePath": "src/pages/ResidentialAppraisal.tsx"
+      "inNavigation": false
     },
     {
       "id": "divorce-appraisal",
@@ -586,8 +1043,7 @@
         "DivorceAppraisalCTA",
         "Footer"
       ],
-      "inNavigation": false,
-      "filePath": "src/pages/DivorceAppraisal.tsx"
+      "inNavigation": false
     },
     {
       "id": "tax-assessment-appeal",
@@ -620,8 +1076,7 @@
         "TaxAssessmentCTA",
         "Footer"
       ],
-      "inNavigation": false,
-      "filePath": "src/pages/TaxAssessmentAppeal.tsx"
+      "inNavigation": false
     },
     {
       "id": "desktop-appraisal",
@@ -651,8 +1106,7 @@
         "DesktopAppraisalWhyChooseUs",
         "Footer"
       ],
-      "inNavigation": true,
-      "filePath": "src/pages/DesktopAppraisal.tsx"
+      "inNavigation": true
     },
     {
       "id": "exterior-only-drive-by-appraisal",
@@ -683,8 +1137,7 @@
         "ExteriorOnlyAppraisalCTA",
         "Footer"
       ],
-      "inNavigation": true,
-      "filePath": "src/pages/ExteriorOnlyDriveByAppraisal.tsx"
+      "inNavigation": true
     },
     {
       "id": "pre-listing-appraisal",
@@ -715,8 +1168,7 @@
         "PreListingCTA",
         "Footer"
       ],
-      "inNavigation": true,
-      "filePath": "src/pages/PreListingAppraisal.tsx"
+      "inNavigation": true
     },
     {
       "id": "pre-purchase-appraisal",
@@ -747,8 +1199,7 @@
         "PrePurchaseAppraisalCTA",
         "Footer"
       ],
-      "inNavigation": true,
-      "filePath": "src/pages/PrePurchaseAppraisal.tsx"
+      "inNavigation": true
     },
     {
       "id": "estate-date-of-death-appraisal",
@@ -780,8 +1231,7 @@
         "EstateAppraisalCTA",
         "Footer"
       ],
-      "inNavigation": true,
-      "filePath": "src/pages/EstateDateOfDeathAppraisal.tsx"
+      "inNavigation": true
     },
     {
       "id": "pmi-removal-appraisal",
@@ -812,8 +1262,7 @@
         "PMIRemovalCTA",
         "Footer"
       ],
-      "inNavigation": true,
-      "filePath": "src/pages/PmiRemovalAppraisal.tsx"
+      "inNavigation": true
     },
     {
       "id": "market-value-update-1004d-recertification",
@@ -844,8 +1293,7 @@
         "MarketValueUpdateCTA",
         "Footer"
       ],
-      "inNavigation": true,
-      "filePath": "src/pages/MarketValueUpdate1004dRecertification.tsx"
+      "inNavigation": true
     },
     {
       "id": "fhahud-compliance-observation-report",
@@ -876,8 +1324,7 @@
         "FhaHudCTA",
         "Footer"
       ],
-      "inNavigation": true,
-      "filePath": "src/pages/FhahudComplianceObservationReport.tsx"
+      "inNavigation": true
     },
     {
       "id": "property-measurement-ansi-z765",
@@ -908,8 +1355,7 @@
         "PropertyMeasurementAnsiCTA",
         "Footer"
       ],
-      "inNavigation": true,
-      "filePath": "src/pages/PropertyMeasurementAnsiZ765.tsx"
+      "inNavigation": true
     },
     {
       "id": "gross-living-area-gla-certification",
@@ -940,8 +1386,7 @@
         "GrossLivingAreaCTA",
         "Footer"
       ],
-      "inNavigation": true,
-      "filePath": "src/pages/GrossLivingAreaGlaCertification.tsx"
+      "inNavigation": true
     },
     {
       "id": "desktop_appraisal",
@@ -1279,11 +1724,13 @@
   ],
   "navigation": {
     "header": [
+      "home",
       "core-appraisal-services",
       "valuation-updates-reports",
       "measurement-analysis-services",
+      "request",
       "about",
-      "blog",
+      "contact",
       "desktop-appraisal",
       "exterior-only-drive-by-appraisal",
       "pre-listing-appraisal",
@@ -1294,8 +1741,17 @@
       "fhahud-compliance-observation-report",
       "property-measurement-ansi-z765",
       "gross-living-area-gla-certification",
-      "contact",
-      "request"
+      "desktop_appraisal",
+      "exterior_only__drive_by__appraisal",
+      "pre_listing_appraisal",
+      "pre_purchase_appraisal",
+      "estate___date_of_death_appraisal",
+      "pmi_removal_appraisal",
+      "market_value_update__1004d___recertification",
+      "fha_hud_compliance_observation_report",
+      "property_measurement__ansi_z765",
+      "gross_living_area__gla__certification",
+      "blog"
     ],
     "footer": [
       "home",
@@ -1325,68 +1781,6 @@
       "fha_hud_compliance_observation_report",
       "property_measurement__ansi_z765",
       "gross_living_area__gla__certification"
-    ],
-    "header_tree": [
-      {
-        "page_id": "core-appraisal-services",
-        "label": "Appraisal Services"
-      },
-      {
-        "page_id": "valuation-updates-reports",
-        "label": "Valuation Reports"
-      },
-      {
-        "page_id": "measurement-analysis-services",
-        "label": "Property Measurement"
-      },
-      {
-        "page_id": "about"
-      },
-      {
-        "page_id": "blog",
-        "label": "Appraisal Insights"
-      },
-      {
-        "group": "More",
-        "children": [
-          {
-            "page_id": "desktop-appraisal"
-          },
-          {
-            "page_id": "exterior-only-drive-by-appraisal"
-          },
-          {
-            "page_id": "pre-listing-appraisal"
-          },
-          {
-            "page_id": "pre-purchase-appraisal"
-          },
-          {
-            "page_id": "estate-date-of-death-appraisal"
-          },
-          {
-            "page_id": "pmi-removal-appraisal"
-          },
-          {
-            "page_id": "market-value-update-1004d-recertification"
-          },
-          {
-            "page_id": "fhahud-compliance-observation-report"
-          },
-          {
-            "page_id": "property-measurement-ansi-z765"
-          },
-          {
-            "page_id": "gross-living-area-gla-certification"
-          }
-        ]
-      },
-      {
-        "page_id": "contact"
-      },
-      {
-        "page_id": "request"
-      }
     ]
   },
   "sections": {},

@@ -32,7 +32,7 @@ const DivorceAppraisalHero = React.forwardRef<HTMLElement>((props, ref) => {
       ref={ref}
       id="divorce-appraisal-hero"
       aria-label="Divorce Appraisal Hero"
-      className="relative isolate min-h-[85vh] md:min-h-screen flex items-center overflow-hidden max-w-[100vw]"
+      className="relative isolate min-h-[85vh] md:min-h-screen flex items-center overflow-hidden"
     >
       {/* Layer 1 — Background Image */}
       <img

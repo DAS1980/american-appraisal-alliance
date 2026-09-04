@@ -58,7 +58,7 @@ const PMIRemovalWhatItIs = React.forwardRef<HTMLElement>((props, ref) => {
     <section data-section-id="fbe38064-30c3-4351-8b39-3610f68c8a9c"
       ref={ref}
       id="pmiremoval-what-it-is"
-      className="relative py-16 sm:py-20 md:py-32 bg-background overflow-x-hidden"
+      className="relative py-20 md:py-32 bg-background"
       aria-labelledby="pmi-what-it-is-heading"
     >
       <div className="container max-w-6xl mx-auto px-4">
@@ -80,7 +80,7 @@ const PMIRemovalWhatItIs = React.forwardRef<HTMLElement>((props, ref) => {
           </Badge>
           <h2
             id="pmi-what-it-is-heading"
-            className="font-['Playfair_Display',serif] text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[hsl(218_60%_20%)] leading-tight mb-5 break-words"
+            className="font-['Playfair_Display',serif] text-3xl md:text-4xl lg:text-5xl font-bold text-[hsl(218_60%_20%)] leading-tight mb-5"
           >
             What Is a PMI Removal Appraisal?
           </h2>
@@ -94,7 +94,7 @@ const PMIRemovalWhatItIs = React.forwardRef<HTMLElement>((props, ref) => {
         </motion.div>
 
         {/* Two-column layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-start">
+        <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-start">
 
           {/* LEFT — Explanatory copy */}
           <div className="space-y-10">

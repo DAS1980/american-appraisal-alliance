@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, X, Contact, Home, Navigation } from "lucide-react";
+import { Menu, X, Phone, Contact, Home, Navigation } from "lucide-react";
 import { NavDropdown, MobileNavItems } from "@/components/NavDropdown";
 import { navItems } from "@/config/nav";
 import { cn } from "@/lib/utils";
@@ -31,7 +31,7 @@ const Header = React.forwardRef<HTMLElement>((props, ref) => {
       ref={ref}
       id="header"
       className={cn(
-        "sticky top-0 z-[100] w-full max-w-[100vw] transition-all duration-300",
+        "sticky top-0 z-50 w-full transition-all duration-300",
         "bg-primary border-b border-white/10",
         scrolled
           ? "shadow-[0_4px_24px_hsl(218_65%_14%/0.35)]"
@@ -46,7 +46,7 @@ const Header = React.forwardRef<HTMLElement>((props, ref) => {
       />
 
       <nav
-        className="container max-w-7xl mx-auto flex items-center justify-between px-4 md:px-6 h-16 md:h-18"
+        className="container max-w-[1600px] mx-auto flex items-center justify-between gap-2 px-4 md:px-6 h-16 md:h-18"
         aria-label="Main navigation"
       >
         {/* ── Logo ── */}
@@ -88,20 +88,30 @@ const Header = React.forwardRef<HTMLElement>((props, ref) => {
         </Link>
 
         {/* ── Desktop Navigation ── */}
-        <div className="hidden lg:flex flex-1 justify-center px-3">
+        <div className="hidden 2xl:flex flex-1 min-w-0 justify-center px-2">
           <NavDropdown
             items={navItems}
-            className="flex items-center gap-0.5"
-            linkClassName="text-sm font-medium text-white/85 hover:text-white px-2.5 py-1.5 rounded transition-colors duration-150 hover:bg-white/8 whitespace-nowrap"
+            className="flex items-center gap-0.5 xl:gap-1"
+            linkClassName="text-sm font-medium text-white/85 hover:text-white px-2 xl:px-2.5 py-1.5 rounded transition-colors duration-150 hover:bg-white/8 whitespace-nowrap"
           />
         </div>
 
         {/* ── Desktop CTA + Mobile Toggle ── */}
-        <div className="flex items-center gap-2 shrink-0">
+        <div className="flex items-center gap-3 shrink-0">
+          {/* Phone number — desktop only */}
+          <a
+            href="tel:+14699364240"
+            className="hidden 2xl:inline-flex items-center gap-1.5 text-sm font-medium text-white/75 hover:text-white transition-colors duration-150 px-2 py-1.5 rounded hover:bg-white/8 whitespace-nowrap"
+            aria-label="Call American Appraisal Alliance at (469) 936-4240"
+          >
+            <Phone className="h-4 w-4 flex-shrink-0" style={{ color: "hsl(42 92% 58%)" }} />
+            (469) 936-4240
+          </a>
+
           {/* "Contact" link — desktop only, small text link */}
           <Link
             to="/contact/"
-            className="hidden lg:inline-flex text-sm font-medium text-white/75 hover:text-white transition-colors duration-150 px-2 py-1.5 rounded hover:bg-white/8"
+            className="hidden 2xl:inline-flex text-sm font-medium text-white/75 hover:text-white transition-colors duration-150 px-2 py-1.5 rounded hover:bg-white/8"
           >
             Contact
           </Link>
@@ -125,7 +135,7 @@ const Header = React.forwardRef<HTMLElement>((props, ref) => {
           {navItems.length > 0 && (
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger
-                className="lg:hidden inline-flex items-center justify-center w-9 h-9 rounded-md text-white/85 hover:text-white hover:bg-white/10 transition-colors"
+                className="2xl:hidden inline-flex items-center justify-center w-9 h-9 rounded-md text-white/85 hover:text-white hover:bg-white/10 transition-colors"
                 aria-label="Open navigation menu"
               >
                 {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
