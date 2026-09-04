@@ -6,249 +6,148 @@
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/core-appraisal-services/</loc>
+    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/core-appraisal-services</loc>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/valuation-updates-reports/</loc>
+    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/valuation-updates-reports</loc>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/measurement-analysis-services/</loc>
+    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/measurement-analysis-services</loc>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/request/</loc>
+    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/request</loc>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/about/</loc>
+    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/about</loc>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/contact/</loc>
+    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/contact</loc>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/service-areas/</loc>
+    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/residential-appraisal</loc>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/service-areas/collin-county/</loc>
+    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/divorce-appraisal</loc>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/service-areas/collin-county/allen/</loc>
+    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/tax-assessment-appeal</loc>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/service-areas/collin-county/celina/</loc>
+    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/desktop-appraisal</loc>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/service-areas/collin-county/frisco/</loc>
+    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/exterior-only-drive-by-appraisal</loc>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/service-areas/collin-county/mckinney/</loc>
+    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/pre-listing-appraisal</loc>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/service-areas/collin-county/plano/</loc>
+    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/pre-purchase-appraisal</loc>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/service-areas/collin-county/prosper/</loc>
+    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/estate-date-of-death-appraisal</loc>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/service-areas/dallas-county/</loc>
+    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/pmi-removal-appraisal</loc>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/service-areas/dallas-county/addison/</loc>
+    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/market-value-update-1004d-recertification</loc>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/service-areas/dallas-county/north-dallas/</loc>
+    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/fhahud-compliance-observation-report</loc>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/service-areas/dallas-county/richardson/</loc>
+    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/property-measurement-ansi-z765</loc>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/service-areas/denton-county/</loc>
+    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/gross-living-area-gla-certification</loc>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/service-areas/denton-county/aubrey/</loc>
+    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/desktop-appraisal</loc>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/service-areas/denton-county/carrollton/</loc>
+    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/exterior-only-drive-by-appraisal</loc>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/service-areas/denton-county/lewisville/</loc>
+    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/pre-listing-appraisal</loc>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/service-areas/denton-county/little-elm/</loc>
+    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/pre-purchase-appraisal</loc>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/service-areas/denton-county/the-colony/</loc>
+    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/estate-date-of-death-appraisal</loc>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/residential-appraisal/</loc>
+    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/pmi-removal-appraisal</loc>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/divorce-appraisal/</loc>
+    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/market-value-update-1004d-recertification</loc>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/tax-assessment-appeal/</loc>
+    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/fhahud-compliance-observation-report</loc>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/desktop-appraisal/</loc>
+    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/property-measurement-ansi-z765</loc>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/exterior-only-drive-by-appraisal/</loc>
+    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/gross-living-area-gla-certification</loc>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/pre-listing-appraisal/</loc>
-    <priority>0.8</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/pre-purchase-appraisal/</loc>
-    <priority>0.8</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/estate-date-of-death-appraisal/</loc>
-    <priority>0.8</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/pmi-removal-appraisal/</loc>
-    <priority>0.8</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/market-value-update-1004d-recertification/</loc>
-    <priority>0.8</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/fhahud-compliance-observation-report/</loc>
-    <priority>0.8</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/property-measurement-ansi-z765/</loc>
-    <priority>0.8</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/gross-living-area-gla-certification/</loc>
-    <priority>0.8</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/desktop-appraisal/</loc>
-    <priority>0.8</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/exterior-only-drive-by-appraisal/</loc>
-    <priority>0.8</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/pre-listing-appraisal/</loc>
-    <priority>0.8</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/pre-purchase-appraisal/</loc>
-    <priority>0.8</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/estate-date-of-death-appraisal/</loc>
-    <priority>0.8</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/pmi-removal-appraisal/</loc>
-    <priority>0.8</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/market-value-update-1004d-recertification/</loc>
-    <priority>0.8</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/fhahud-compliance-observation-report/</loc>
-    <priority>0.8</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/property-measurement-ansi-z765/</loc>
-    <priority>0.8</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/gross-living-area-gla-certification/</loc>
-    <priority>0.8</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/blog/</loc>
-    <priority>0.8</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/blog/divorce-appraisal-property-value-factors/</loc>
-    <lastmod>2026-08-30T20:31:58.324323+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
   </url>
 </urlset>

@@ -1,5 +1,2 @@
 User-agent: *
-Allow: /
-
-Sitemap: https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/sitemap.xml
-LLMs-txt: https://6ff7ae24-db0c-4586-8bdb-779ac4413c02.preview.builder.searchatlas.com/llms.txt
+Disallow: /
