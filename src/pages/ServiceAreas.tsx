@@ -6,69 +6,41 @@ import Footer from "@/components/sections/Footer";
 import { CityHero, CitySection, CityClosingCta } from "@/components/service-areas/CityPageKit";
 import { siteConfig } from "@/config/site";
 
-/** City guides with substantive, research-backed local content (11/24/2026). */
-const cityGuides = [
-  {
-    to: "/service-areas/collin-county/allen/",
-    city: "Allen",
-    summary: "Neighborhood plat eras and housing types from the city’s own map, subdivision-first comparables, and the new Downtown District.",
-  },
-  {
-    to: "/service-areas/collin-county/plano/",
-    city: "Plano",
-    summary: "Nature preserves and greenbelts, the heritage program around Historic Downtown Plano, and rental-property registration.",
-  },
-  {
-    to: "/service-areas/collin-county/frisco/",
-    city: "Frisco",
-    summary: "A city split between Collin and Denton counties, more than 200 HOAs, and reinvestment in the Rail District.",
-  },
-  {
-    to: "/service-areas/collin-county/mckinney/",
-    city: "McKinney",
-    summary: "Several distinct historic designations, city limits drawn from annexation ordinances, and downtown redevelopment timelines.",
-  },
-  {
-    to: "/service-areas/dallas-county/richardson/",
-    city: "Richardson",
-    summary: "Silver Line stations, the Envision Richardson plan, CityLine’s three zoning districts and the Innovation Quarter.",
-  },
-];
-
+/** Every service-area guide, grouped by the county page it is filed under (11/24/2026). */
 const counties = [
   {
     to: "/service-areas/collin-county/",
     name: "Collin County",
     cities: [
-      ["Allen", "/service-areas/collin-county/allen/"],
-      ["Celina", "/service-areas/collin-county/celina/"],
-      ["Frisco", "/service-areas/collin-county/frisco/"],
-      ["McKinney", "/service-areas/collin-county/mckinney/"],
-      ["Plano", "/service-areas/collin-county/plano/"],
-      ["Prosper", "/service-areas/collin-county/prosper/"],
+      { city: "Allen", to: "/service-areas/collin-county/allen/", summary: "Neighborhood plat eras and housing types from the city’s own map; the new Downtown District." },
+      { city: "Celina", to: "/service-areas/collin-county/celina/", summary: "A mostly new housing market; city vs. ETJ; a historic Main Street square." },
+      { city: "Frisco", to: "/service-areas/collin-county/frisco/", summary: "Collin and Denton counties, more than 200 HOAs, and Rail District reinvestment." },
+      { city: "McKinney", to: "/service-areas/collin-county/mckinney/", summary: "Distinct historic designations, annexation-based city limits, downtown timelines." },
+      { city: "Plano", to: "/service-areas/collin-county/plano/", summary: "Preserves and greenbelts, the heritage program, rental-property registration." },
+      { city: "Prosper", to: "/service-areas/collin-county/prosper/", summary: "A two-county town built mostly since 2010; tollway design guidelines." },
     ],
   },
   {
     to: "/service-areas/dallas-county/",
     name: "Dallas County",
     cities: [
-      ["Addison", "/service-areas/dallas-county/addison/"],
-      ["North Dallas", "/service-areas/dallas-county/north-dallas/"],
-      ["Richardson", "/service-areas/dallas-county/richardson/"],
+      { city: "Addison", to: "/service-areas/dallas-county/addison/", summary: "A mostly multifamily housing mix; condominium and townhome comparables." },
+      { city: "North Dallas", to: "/service-areas/dallas-county/north-dallas/", summary: "A description, not a city: confirming jurisdiction, county and zoning." },
+      { city: "Richardson", to: "/service-areas/dallas-county/richardson/", summary: "Silver Line stations, Envision Richardson, CityLine and the Innovation Quarter." },
     ],
   },
   {
     to: "/service-areas/denton-county/",
     name: "Denton County",
     cities: [
-      ["Aubrey", "/service-areas/denton-county/aubrey/"],
-      ["Carrollton", "/service-areas/denton-county/carrollton/"],
-      ["Lewisville", "/service-areas/denton-county/lewisville/"],
-      ["Little Elm", "/service-areas/denton-county/little-elm/"],
-      ["The Colony", "/service-areas/denton-county/the-colony/"],
+      { city: "Aubrey", to: "/service-areas/denton-county/aubrey/", summary: "Acreage and new subdivisions, a one-mile ETJ, Ray Roberts Lake." },
+      { city: "Carrollton", to: "/service-areas/denton-county/carrollton/", summary: "Three counties, a 1970s building boom and the renovation spectrum it left." },
+      { city: "Lewisville", to: "/service-areas/denton-county/lewisville/", summary: "Lake history, flowage easements and a planned single- and multifamily mix." },
+      { city: "Little Elm", to: "/service-areas/denton-county/little-elm/", summary: "Lakefront homes, the 2011 flood-map revision and rental registration." },
+      { city: "The Colony", to: "/service-areas/denton-county/the-colony/", summary: "A 1970s planned community on the east shore of Lewisville Lake." },
     ],
   },
-] as const;
+];
 
 const ServiceAreas = React.forwardRef<HTMLDivElement>((props, ref) => {
   return (
@@ -90,47 +62,41 @@ const ServiceAreas = React.forwardRef<HTMLDivElement>((props, ref) => {
             </p>
           </CityHero>
 
-          <CitySection id="service-areas-guides" heading="Local appraisal guides">
+          <CitySection id="service-areas-guides" heading="Local appraisal guides by county">
             <p>
-              These guides explain the local features an appraiser considers when defining a market area and
-              selecting comparable sales — drawn from municipal sources, not generic city descriptions.
+              Each guide explains the local features an appraiser considers when defining a market area and selecting
+              comparable sales — drawn from municipal, Census and other authoritative sources, not generic city
+              descriptions.
             </p>
-            <ul className="!list-none !pl-0 grid gap-4 sm:grid-cols-2">
-              {cityGuides.map((g) => (
-                <li key={g.to} className="rounded-lg border border-slate-200 p-5 hover:border-[hsl(42_88%_48%)] transition-colors">
-                  <Link to={g.to} className="text-lg font-semibold !no-underline">
-                    {g.city} appraisal guide
-                  </Link>
-                  <p className="mt-2 text-sm text-slate-600">{g.summary}</p>
-                </li>
-              ))}
-            </ul>
-          </CitySection>
-
-          <CitySection id="service-areas-counties" heading="Communities by county" tone="muted">
             <p>
-              Counties are used here to organize the list. A property’s actual county, city limits and appraisal
-              district are confirmed from parcel records during each assignment — several DFW cities extend into
-              more than one county.
+              Counties organize this list for navigation only. Several of these cities extend into more than one
+              county, and a property’s actual county, city limits and appraisal district are confirmed from parcel
+              records during each assignment.
             </p>
-            <div className="grid gap-6 md:grid-cols-3">
+            <div className="space-y-10 mt-6">
               {counties.map((c) => (
-                <div key={c.to} className="rounded-lg border border-slate-200 bg-white p-5">
+                <div key={c.to}>
                   <h3 className="!mt-0">
                     <Link to={c.to} className="!no-underline">{c.name}</Link>
                   </h3>
-                  <ul className="!list-none !pl-0 !space-y-1">
-                    {c.cities.map(([label, to]) => (
-                      <li key={to}>
-                        <Link to={to}>{label}</Link>
+                  <ul className="!list-none !pl-0 grid gap-4 sm:grid-cols-2">
+                    {c.cities.map((g) => (
+                      <li key={g.to} className="rounded-lg border border-slate-200 p-5 hover:border-[hsl(42_88%_48%)] transition-colors">
+                        <Link to={g.to} className="text-lg font-semibold !no-underline">
+                          {g.city}
+                        </Link>
+                        <p className="mt-2 text-sm text-slate-600">{g.summary}</p>
                       </li>
                     ))}
                   </ul>
                 </div>
               ))}
             </div>
+          </CitySection>
+
+          <CitySection id="service-areas-other" heading="Don’t see your community?" tone="muted">
             <p>
-              Don’t see your community? Call <a href={siteConfig.phoneHref}>{siteConfig.phone}</a> or email{" "}
+              Call <a href={siteConfig.phoneHref}>{siteConfig.phone}</a> or email{" "}
               <a href={`mailto:${siteConfig.ordersEmail}`}>{siteConfig.ordersEmail}</a> to ask whether a property is
               within our coverage area.
             </p>
