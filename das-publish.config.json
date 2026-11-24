@@ -1,0 +1,36 @@
+{
+  "$comment": "Client-specific settings for the DAS Automated Content Publishing Pipeline (scripts/das-publish). Everything AAA-specific lives here; the scripts are reusable.",
+  "client": "American Appraisal Alliance",
+  "siteUrl": "https://americanappraisalalliance.com",
+  "timezone": "America/Chicago",
+  "contentDir": "content/blog",
+  "imageDir": "public/images/blog",
+  "imageUrlBase": "/images/blog",
+  "blog": {
+    "pageId": "blog",
+    "pageSlug": "blog",
+    "pageName": "Blog",
+    "pathPrefix": "/blog/"
+  },
+  "output": {
+    "blogJson": "src/data/blog.json",
+    "publicJson": null
+  },
+  "defaults": {
+    "author": "John Sexton"
+  },
+  "wordsPerMinute": 225,
+  "allowedEmails": [
+    "orders@aaarea.net",
+    "support@aaarea.net"
+  ],
+  "forbiddenStrings": [
+    "(URL)",
+    "555-01",
+    "Spring Valley",
+    "court-accepted",
+    "lender-approved",
+    "network of appraisers",
+    "network of experienced appraisers"
+  ]
+}
