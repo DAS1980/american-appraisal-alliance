@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Shield, Clock, MapPin, Award, Icon } from "lucide-react";
+import { businessStatements } from "@/config/site";
 
 const RequestHero = React.forwardRef<HTMLElement>((props, ref) => {
   return (
@@ -70,9 +71,8 @@ const RequestHero = React.forwardRef<HTMLElement>((props, ref) => {
             transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
             className="text-lg md:text-xl text-white/90 leading-relaxed mb-6 max-w-2xl"
           >
-            Accurate, unbiased, defensible valuations for the Dallas–Fort Worth
-            Metroplex. Submit your request below and we'll respond within 1
-            business day.
+            {businessStatements.professionalServices} Start with a short inquiry
+            below — we'll follow up to discuss your assignment.
           </motion.p>
 
           {/* Verbatim reassurance copy */}
@@ -82,7 +82,7 @@ const RequestHero = React.forwardRef<HTMLElement>((props, ref) => {
             transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
             className="text-sm md:text-base text-amber-300 font-medium mb-8"
           >
-            All inquiries are confidential. We respond within 1 business day.
+            All inquiries are confidential. {businessStatements.response}
           </motion.p>
 
           {/* CTA button scrolls to the intake form */}
@@ -102,7 +102,7 @@ const RequestHero = React.forwardRef<HTMLElement>((props, ref) => {
                 boxShadow: "0 4px 20px -4px hsl(42 88% 48% / 0.45)",
               }}
             >
-              <a href="#intake-form">Request an Appraisal</a>
+              <a href="#request-intake-form">Request an Appraisal</a>
             </Button>
           </motion.div>
 
@@ -115,8 +115,8 @@ const RequestHero = React.forwardRef<HTMLElement>((props, ref) => {
           >
             {[
               { icon: Shield, label: "USPAP-Compliant Reports" },
-              { icon: Award, label: "Licensed & Certified Appraisers" },
-              { icon: Clock, label: "Fast Turnaround" },
+              { icon: Award, label: "Texas Certified Residential Appraiser" },
+              { icon: Clock, label: businessStatements.experienceShort },
               { icon: MapPin, label: "Full DFW Metroplex Coverage" },
             ].map(({ icon: Icon, label }) => (
               <div

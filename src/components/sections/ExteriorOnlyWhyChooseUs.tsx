@@ -19,9 +19,9 @@ const differentiators = [
   },
   {
     icon: CheckCircle,
-    title: "Lender-Approved & Court-Accepted",
+    title: "Independent & Professional",
     description:
-      "Our drive-by appraisal reports meet lender requirements for HELOCs, refinances, and certain loan types, and are accepted by financial institutions across the DFW metroplex.",
+      "Independent, professional real estate appraisals for lenders, attorneys, homeowners, and real estate professionals.",
   },
   {
     icon: MapPin,

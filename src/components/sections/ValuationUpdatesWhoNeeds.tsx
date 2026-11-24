@@ -11,7 +11,7 @@ const audiences = [
     icon: Building2,
     title: "Lenders & Mortgage Brokers",
     description:
-      "When an original appraisal expires before closing, lenders require a certified Fannie Mae Form 1004D recertification to confirm the property's current market value. American Appraisal Alliance delivers lender-accepted, USPAP-compliant updates that keep your loan files moving.",
+      "When an original appraisal expires before closing, lenders require a certified Fannie Mae Form 1004D recertification to confirm the property's current market value. American Appraisal Alliance delivers independent, USPAP-compliant updates that keep your loan files moving.",
     badge: "Market Value Update",
   },
   {
@@ -32,7 +32,7 @@ const audiences = [
     icon: Scale,
     title: "Real Estate Attorneys Managing Loan File Compliance",
     description:
-      "Attorneys overseeing estate settlements, divorce proceedings, or complex closings often need updated valuations that are defensible and court-accepted. Our USPAP-compliant valuation updates provide the documentation required for legal proceedings across the Dallas–Fort Worth metroplex.",
+      "Attorneys overseeing estate settlements, divorce proceedings, or complex closings often need updated valuations that are independent and well-supported. Our USPAP-compliant valuation updates provide the documentation required for legal proceedings across the Dallas–Fort Worth metroplex.",
     badge: "Legal Compliance",
   },
   {
@@ -46,7 +46,7 @@ const audiences = [
     icon: Users,
     title: "Real Estate Professionals Across the DFW Metroplex",
     description:
-      "Agents, brokers, and title companies in Dallas, Fort Worth, Plano, Frisco, McKinney, Arlington, and surrounding communities rely on American Appraisal Alliance for fast, accurate, and lender-approved valuation updates to keep deals on track.",
+      "Agents, brokers, and title companies in Dallas, Fort Worth, Plano, Frisco, McKinney, Arlington, and surrounding communities rely on American Appraisal Alliance for accurate, independent valuation updates to keep deals on track.",
     badge: "DFW Coverage",
   },
 ];
@@ -237,12 +237,12 @@ const ValuationUpdatesWhoNeeds = React.forwardRef<HTMLElement>((props, ref) => {
           </div>
           <p className="text-sm md:text-base text-muted-foreground">
             <strong className="text-foreground font-medium">
-              All reports are USPAP-compliant and lender-accepted.
+              All reports are USPAP-compliant and independently prepared.
             </strong>{" "}
             American Appraisal Alliance's licensed and certified appraisers serve the
             entire Dallas–Fort Worth metroplex — including Dallas, Fort Worth, Arlington,
             Plano, Irving, Garland, Frisco, McKinney, Denton, and surrounding DFW
-            communities — with defensible, court-accepted valuation reports.
+            communities — with independent, professional valuation reports.
           </p>
         </motion.div>
 

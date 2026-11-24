@@ -12,7 +12,7 @@ const ResidentialAppraisalCTA = React.forwardRef<HTMLElement>((props, ref) => {
     },
     {
       icon: CheckCircle,
-      text: "Lender & Court Accepted",
+      text: "Independent & Professional",
     },
     {
       icon: Clock,
@@ -88,7 +88,7 @@ const ResidentialAppraisalCTA = React.forwardRef<HTMLElement>((props, ref) => {
             className="text-sm md:text-base text-white/70 mb-10"
             style={{ fontFamily: "'Inter', sans-serif" }}
           >
-            All inquiries are confidential. We respond within 1 business day.
+            All inquiries are confidential. We respond to appraisal requests within one business day.
           </motion.p>
 
           {/* Trust points grid */}

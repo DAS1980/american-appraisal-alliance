@@ -61,7 +61,7 @@ const PropertyMeasurementAnsiCTA = React.forwardRef<HTMLElement>((props, ref) =>
             Request Your ANSI Z765 Measurement Report
           </h2>
           <p className="mt-4 text-lg md:text-xl text-white/80 max-w-2xl mx-auto">
-            All inquiries are confidential. We respond within 1 business day.
+            All inquiries are confidential. We respond to appraisal requests within one business day.
           </p>
         </motion.div>
 
@@ -111,7 +111,7 @@ const PropertyMeasurementAnsiCTA = React.forwardRef<HTMLElement>((props, ref) =>
           <div className="flex items-center gap-2 mb-6 px-4 py-2 rounded-full border border-amber-400/30 bg-amber-400/8">
             <Lock className="h-4 w-4 text-amber-400 flex-shrink-0" />
             <span className="text-amber-300 text-sm font-medium">
-              All inquiries are confidential. We respond within 1 business day.
+              All inquiries are confidential. We respond to appraisal requests within one business day.
             </span>
           </div>
 

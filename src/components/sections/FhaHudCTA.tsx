@@ -75,7 +75,7 @@ const FhaHudCTA = React.forwardRef<HTMLElement>((props, ref) => {
             className="text-lg md:text-xl max-w-2xl"
             style={{ color: "hsl(210 40% 82%)" }}
           >
-            All inquiries are confidential. We respond within 1 business day.
+            All inquiries are confidential. We respond to appraisal requests within one business day.
           </motion.p>
 
           {/* Service area note */}

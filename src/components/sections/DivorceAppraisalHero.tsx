@@ -11,7 +11,7 @@ const DivorceAppraisalHero = React.forwardRef<HTMLElement>((props, ref) => {
   const keyPoints = [
     {
       icon: ShieldCheck,
-      label: "Court-Accepted Reports",
+      label: "Independent & Professional",
     },
     {
       icon: Scale,
@@ -94,7 +94,7 @@ const DivorceAppraisalHero = React.forwardRef<HTMLElement>((props, ref) => {
             transition={{ duration: 0.6, delay: 0.25, ease: "easeOut" }}
             className="text-white/90 text-lg md:text-xl leading-relaxed mb-8 max-w-2xl"
           >
-            Court-accepted, USPAP-compliant property valuations for equitable asset division — including retroactive date-of-separation appraisals.
+            Independent, USPAP-compliant property valuations for equitable asset division — including retroactive date-of-separation appraisals.
           </motion.p>
 
           {/* Key bullet points */}
@@ -107,7 +107,7 @@ const DivorceAppraisalHero = React.forwardRef<HTMLElement>((props, ref) => {
           >
             <li className="flex items-center gap-2 text-white/90 text-sm md:text-base">
               <CheckCircle className="h-5 w-5 text-[hsl(42_88%_48%)] flex-shrink-0" />
-              <span>Court-accepted, USPAP-compliant appraisal for divorce proceedings</span>
+              <span>Independent, USPAP-compliant appraisal for divorce proceedings</span>
             </li>
             <li className="flex items-center gap-2 text-white/90 text-sm md:text-base">
               <CheckCircle className="h-5 w-5 text-[hsl(42_88%_48%)] flex-shrink-0" />
@@ -135,7 +135,7 @@ const DivorceAppraisalHero = React.forwardRef<HTMLElement>((props, ref) => {
             </Button>
 
             <p className="text-white/75 text-sm leading-snug">
-              All inquiries are confidential. We respond within 1 business day.
+              All inquiries are confidential. We respond to appraisal requests within one business day.
             </p>
           </motion.div>
 

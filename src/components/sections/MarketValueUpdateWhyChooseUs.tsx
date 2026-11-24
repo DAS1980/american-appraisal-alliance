@@ -24,7 +24,7 @@ const differentiators = [
   },
   {
     icon: FileText,
-    title: "Court-Accepted & Lender-Approved",
+    title: "Independent & Professional",
     description:
       "Our 1004D reports are prepared to meet the documentation requirements of lenders, mortgage brokers, and legal proceedings — defensible and professionally presented.",
   },
@@ -185,7 +185,7 @@ const MarketValueUpdateWhyChooseUs = React.forwardRef<HTMLElement>((props, ref) 
             >
               Confidential &amp; Prompt:
             </span>{" "}
-            All inquiries are confidential. We respond within 1 business day.
+            All inquiries are confidential. We respond to appraisal requests within one business day.
           </p>
         </motion.div>
       </div>

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { MapPin, Phone, Mail, Shield, Award, Contact, Home } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
+import { siteConfig, businessStatements } from "@/config/site";
 
 const Footer = React.forwardRef<HTMLElement>((props, ref) => {
   const currentYear = new Date().getFullYear();
@@ -77,11 +78,12 @@ const Footer = React.forwardRef<HTMLElement>((props, ref) => {
               </p>
             </div>
 
-            {/* License placeholder */}
+            {/* License (owner-approved) */}
             <div className="flex items-start gap-2">
               <Award className="h-4 w-4 text-accent flex-shrink-0 mt-0.5" />
               <p className="text-xs text-white/70">
-                License #: <span className="text-white/90 font-medium">[LICENSE NUMBER]</span>
+                {businessStatements.licenseTitle} — License No.{" "}
+                <span className="text-white/90 font-medium">{businessStatements.licenseNumber}</span>
               </p>
             </div>
           </motion.div>
@@ -141,20 +143,35 @@ const Footer = React.forwardRef<HTMLElement>((props, ref) => {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="tel:+14699364240"
+                  href={siteConfig.phoneHref}
                   className="flex items-center gap-2 text-sm text-white/75 hover:text-white transition-colors duration-200"
                 >
                   <Phone className="h-4 w-4 text-accent flex-shrink-0" />
-                  <span>(469) 936-4240</span>
+                  <span>{siteConfig.phone}</span>
                 </a>
               </li>
               <li>
                 <a
-                  href="mailto:info@americanappraisalalliance.com"
+                  href={`mailto:${siteConfig.ordersEmail}`}
                   className="flex items-start gap-2 text-sm text-white/75 hover:text-white transition-colors duration-200"
                 >
                   <Mail className="h-4 w-4 text-accent flex-shrink-0 mt-0.5" />
-                  <span className="break-all">info@americanappraisalalliance.com</span>
+                  <span className="break-all">
+                    <span className="block text-xs text-white/55">Appraisal requests</span>
+                    {siteConfig.ordersEmail}
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href={`mailto:${siteConfig.supportEmail}`}
+                  className="flex items-start gap-2 text-sm text-white/75 hover:text-white transition-colors duration-200"
+                >
+                  <Mail className="h-4 w-4 text-accent flex-shrink-0 mt-0.5" />
+                  <span className="break-all">
+                    <span className="block text-xs text-white/55">General inquiries &amp; support</span>
+                    {siteConfig.supportEmail}
+                  </span>
                 </a>
               </li>
               <li>
@@ -162,7 +179,7 @@ const Footer = React.forwardRef<HTMLElement>((props, ref) => {
                   <MapPin className="h-4 w-4 text-accent flex-shrink-0 mt-0.5" />
                   <div>
                     <p className="text-sm text-white/75 leading-snug">
-                      Serving the Dallas–Fort Worth Metroplex
+                      {siteConfig.serviceAreaStatement}
                     </p>
                     <p className="text-xs text-white/55 mt-1 leading-relaxed">
                       Dallas · Fort Worth · Arlington · Plano · Irving · Garland · Frisco · McKinney · Denton &amp; surrounding DFW communities
@@ -184,11 +201,27 @@ const Footer = React.forwardRef<HTMLElement>((props, ref) => {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
         >
-          <p>
-            &copy; {currentYear} American Appraisal Alliance. All rights reserved.
-          </p>
+          <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-center sm:text-left">
+            <p>
+              &copy; {currentYear} {siteConfig.legalName}, d/b/a American Appraisal Alliance. All rights reserved.
+            </p>
+            <div className="flex items-center gap-4">
+              <Link
+                to="/privacy-policy/"
+                className="text-white/65 hover:text-white transition-colors underline-offset-4 hover:underline"
+              >
+                Privacy Policy
+              </Link>
+              <Link
+                to="/terms-of-service/"
+                className="text-white/65 hover:text-white transition-colors underline-offset-4 hover:underline"
+              >
+                Terms of Service
+              </Link>
+            </div>
+          </div>
           <p className="text-center md:text-right">
-            USPAP Compliant &nbsp;&bull;&nbsp; Licensed &amp; Certified Appraisers &nbsp;&bull;&nbsp; Dallas–Fort Worth, TX
+            USPAP Compliant &nbsp;&bull;&nbsp; {businessStatements.experienceShort} &nbsp;&bull;&nbsp; Dallas–Fort Worth, TX
           </p>
         </motion.div>
       </div>

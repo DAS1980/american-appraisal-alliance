@@ -145,7 +145,7 @@ const TaxAssessmentCTA = React.forwardRef<HTMLElement>((props, ref) => {
               <div className="flex items-start gap-2 mb-6">
                 <Clock className="h-4 w-4 flex-shrink-0 mt-0.5" style={{ color: "hsl(42 92% 58%)" }} />
                 <p className="text-xs md:text-sm" style={{ color: "hsl(218 20% 72%)" }}>
-                  All inquiries are confidential. We respond within 1 business day.
+                  All inquiries are confidential. We respond to appraisal requests within one business day.
                 </p>
               </div>
 

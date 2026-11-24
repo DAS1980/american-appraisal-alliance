@@ -6,6 +6,7 @@ import { Menu, X, Phone, Contact, Home, Navigation } from "lucide-react";
 import { NavDropdown, MobileNavItems } from "@/components/NavDropdown";
 import { navItems } from "@/config/nav";
 import { cn } from "@/lib/utils";
+import { siteConfig } from "@/config/site";
 
 const Header = React.forwardRef<HTMLElement>((props, ref) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -100,12 +101,21 @@ const Header = React.forwardRef<HTMLElement>((props, ref) => {
         <div className="flex items-center gap-3 shrink-0">
           {/* Phone number — desktop only */}
           <a
-            href="tel:+14699364240"
+            href={siteConfig.phoneHref}
             className="hidden 2xl:inline-flex items-center gap-1.5 text-sm font-medium text-white/75 hover:text-white transition-colors duration-150 px-2 py-1.5 rounded hover:bg-white/8 whitespace-nowrap"
-            aria-label="Call American Appraisal Alliance at (469) 936-4240"
+            aria-label={`Call American Appraisal Alliance at ${siteConfig.phone}`}
           >
             <Phone className="h-4 w-4 flex-shrink-0" style={{ color: "hsl(42 92% 58%)" }} />
-            (469) 936-4240
+            {siteConfig.phone}
+          </a>
+
+          {/* Click-to-call — mobile & tablet (below the 2xl desktop layout) */}
+          <a
+            href={siteConfig.phoneHref}
+            className="2xl:hidden inline-flex items-center justify-center w-9 h-9 rounded-md text-white/85 hover:text-white hover:bg-white/10 transition-colors"
+            aria-label={`Call American Appraisal Alliance at ${siteConfig.phone}`}
+          >
+            <Phone className="h-5 w-5" style={{ color: "hsl(42 92% 58%)" }} />
           </a>
 
           {/* "Contact" link — desktop only, small text link */}
@@ -217,6 +227,15 @@ const Header = React.forwardRef<HTMLElement>((props, ref) => {
                       Request an Appraisal
                     </Link>
                   </Button>
+
+                  <a
+                    href={siteConfig.phoneHref}
+                    className="mt-2.5 w-full inline-flex items-center justify-center gap-2 text-sm font-semibold text-white border border-white/20 rounded-md py-2.5 hover:bg-white/10 transition-colors"
+                    aria-label={`Call American Appraisal Alliance at ${siteConfig.phone}`}
+                  >
+                    <Phone className="h-4 w-4" style={{ color: "hsl(42 92% 58%)" }} />
+                    Call {siteConfig.phone}
+                  </a>
 
                   <p
                     className="text-center text-white/40 mt-2.5"

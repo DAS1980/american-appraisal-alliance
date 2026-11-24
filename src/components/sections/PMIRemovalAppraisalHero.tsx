@@ -98,7 +98,7 @@ const PMIRemovalAppraisalHero = React.forwardRef<HTMLElement>((props, ref) => {
           >
             Demonstrate your home's current value and eliminate Private Mortgage
             Insurance — saving hundreds each year.{" "}
-            {siteConfig.name} delivers independent, lender-accepted appraisals
+            {siteConfig.name} delivers independent, professional appraisals
             across the {siteConfig.serviceArea}.
           </motion.p>
 
@@ -153,7 +153,7 @@ const PMIRemovalAppraisalHero = React.forwardRef<HTMLElement>((props, ref) => {
               className="text-white/65 text-sm"
               style={{ fontFamily: "'Inter', sans-serif" }}
             >
-              All inquiries are confidential. We respond within 1 business day.
+              All inquiries are confidential. We respond to appraisal requests within one business day.
             </p>
           </motion.div>
         </div>

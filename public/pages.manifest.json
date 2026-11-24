@@ -301,7 +301,7 @@
       "isHome": true,
       "seo": {
         "title": "American Appraisal Alliance | DFW Certified Appraisals",
-        "description": "USPAP-compliant, court-accepted real estate appraisals for the Dallas\u2013Fort Worth metroplex. Licensed appraisers. Request yours today.",
+        "description": "Independent, USPAP-compliant real estate appraisals for the Dallas\u2013Fort Worth metroplex. Licensed appraisers. Request yours today.",
         "keywords": [
           "real estate appraisal Dallas Fort Worth",
           "USPAP compliant appraisal DFW",
@@ -322,7 +322,6 @@
         "ServiceArea",
         "TrustBar",
         "WhyChooseUs",
-        "Testimonials",
         "HomeCTA",
         "Footer"
       ],
@@ -491,7 +490,7 @@
       "isHome": false,
       "seo": {
         "title": "Contact Us - American Appraisal Alliance | DFW",
-        "description": "Reach American Appraisal Alliance by phone, email, or office visit. USPAP-compliant appraisals across Dallas\u2013Fort Worth. We respond within 1 business day.",
+        "description": "Reach American Appraisal Alliance by phone or email. USPAP-compliant appraisals across Dallas\u2013Fort Worth. We respond to appraisal requests within one business day.",
         "keywords": [
           "contact real estate appraiser DFW",
           "Dallas Fort Worth appraisal contact",
@@ -1019,10 +1018,10 @@
       "isHome": false,
       "seo": {
         "title": "Divorce Appraisal Dallas\u2013Fort Worth | American Appraisal Alliance",
-        "description": "Court-accepted, USPAP-compliant divorce appraisals in DFW. Neutral property valuations and retroactive date-of-separation reports for attorneys and courts.",
+        "description": "Independent, USPAP-compliant divorce appraisals in DFW. Neutral property valuations and retroactive date-of-separation reports for attorneys and courts.",
         "keywords": [
           "divorce appraisal Dallas Fort Worth",
-          "court-accepted property appraisal divorce",
+          "independent property appraisal divorce",
           "date of separation appraisal DFW",
           "USPAP divorce appraisal Texas",
           "real estate appraisal divorce proceedings"
@@ -1271,7 +1270,7 @@
       "isHome": false,
       "seo": {
         "title": "Market Value Update 1004D | American Appraisal Alliance",
-        "description": "Get a Fannie Mae Form 1004D Market Value Update or Recertification from licensed DFW appraisers. USPAP-compliant, lender-approved, fast turnaround.",
+        "description": "Get a Fannie Mae Form 1004D Market Value Update or Recertification from licensed DFW appraisers. Independent, USPAP-compliant reports.",
         "keywords": [
           "1004D appraisal update",
           "market value recertification DFW",
@@ -1581,7 +1580,7 @@
       "isHome": false,
       "seo": {
         "title": "Market Value Update 1004D | American Appraisal Alliance",
-        "description": "Get a Fannie Mae Form 1004D Market Value Update or Recertification from licensed DFW appraisers. USPAP-compliant, lender-approved, fast turnaround.",
+        "description": "Get a Fannie Mae Form 1004D Market Value Update or Recertification from licensed DFW appraisers. Independent, USPAP-compliant reports.",
         "keywords": [
           "1004D appraisal update",
           "market value recertification DFW",
@@ -1719,6 +1718,52 @@
       },
       "sections": [
         "BlogListingSection"
+      ]
+    },
+    {
+      "id": "privacy-policy",
+      "name": "Privacy Policy",
+      "slug": "privacy-policy",
+      "isHome": false,
+      "inNavigation": false,
+      "seo": {
+        "title": "Privacy Policy | American Appraisal Alliance",
+        "description": "How American Appraisal Alliance collects, uses, and protects information submitted through its website, including appraisal inquiries and SMS communications.",
+        "keywords": [
+          "American Appraisal Alliance privacy policy"
+        ],
+        "ogImage": "",
+        "canonicalUrl": "",
+        "noindex": false,
+        "structuredDataType": "WebPage",
+        "structuredData": null
+      },
+      "sections": [
+        "Header",
+        "Footer"
+      ]
+    },
+    {
+      "id": "terms-of-service",
+      "name": "Terms of Service",
+      "slug": "terms-of-service",
+      "isHome": false,
+      "inNavigation": false,
+      "seo": {
+        "title": "Terms of Service | American Appraisal Alliance",
+        "description": "Terms governing use of the American Appraisal Alliance website, appraisal inquiries, and informational and marketing SMS communications.",
+        "keywords": [
+          "American Appraisal Alliance terms of service"
+        ],
+        "ogImage": "",
+        "canonicalUrl": "",
+        "noindex": false,
+        "structuredDataType": "WebPage",
+        "structuredData": null
+      },
+      "sections": [
+        "Header",
+        "Footer"
       ]
     }
   ],
@@ -3117,17 +3162,6 @@
         {
           "page": "tax-assessment-appeal",
           "order": 3
-        }
-      ]
-    },
-    "081a79b2-e733-4a94-8594-25f6cfcdc8d7": {
-      "component": "Testimonials",
-      "file": "src/components/sections/Testimonials.tsx",
-      "heading": "Trusted by DFW Homeowners, Attorneys & Lenders",
-      "pages": [
-        {
-          "page": "home",
-          "order": 6
         }
       ]
     },

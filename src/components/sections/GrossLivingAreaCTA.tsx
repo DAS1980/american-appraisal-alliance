@@ -67,7 +67,7 @@ const GrossLivingAreaCTA = React.forwardRef<HTMLElement>((props, ref) => {
 
           {/* Subheadline / reassurance */}
           <p className="text-white/85 text-lg md:text-xl mb-8 font-body leading-relaxed">
-            All inquiries are confidential. We respond within 1 business day.
+            All inquiries are confidential. We respond to appraisal requests within one business day.
           </p>
 
           {/* Trust points */}

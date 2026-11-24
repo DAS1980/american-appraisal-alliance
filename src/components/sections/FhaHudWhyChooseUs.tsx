@@ -38,7 +38,7 @@ const differentiators = [
     icon: Lock,
     title: "Confidential &amp; Responsive",
     description:
-      "All inquiries are handled with strict confidentiality. We respond within 1 business day — because your time and privacy matter.",
+      "All inquiries are handled with strict confidentiality. We respond to appraisal requests within one business day.",
   },
 ];
 
@@ -89,7 +89,7 @@ const FhaHudWhyChooseUs = React.forwardRef<HTMLElement>((props, ref) => {
           </h2>
 
           <p className="mt-4 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            When your transaction depends on a defensible, lender-accepted
+            When your transaction depends on a defensible, independent
             FHA/HUD Compliance Observation Report, you need appraisers who
             combine certified credentials with deep local market expertise.
             American Appraisal Alliance delivers{" "}
@@ -202,7 +202,7 @@ const FhaHudWhyChooseUs = React.forwardRef<HTMLElement>((props, ref) => {
           className="text-center text-sm text-muted-foreground mt-8"
         >
           <span className="font-medium text-foreground">
-            All inquiries are confidential. We respond within 1 business day.
+            All inquiries are confidential. We respond to appraisal requests within one business day.
           </span>{" "}
           American Appraisal Alliance serves the full Dallas–Fort Worth
           metroplex, including Dallas, Fort Worth, Plano, Frisco, Arlington,

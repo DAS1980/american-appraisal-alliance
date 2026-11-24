@@ -8,7 +8,7 @@ const CANONICAL_BASE = "https://americanappraisalalliance.com";
 const keyPoints = [
   {
     icon: Shield,
-    text: "USPAP-compliant, court-accepted format",
+    text: "USPAP-compliant, independent report",
   },
   {
     icon: Scale,
@@ -82,7 +82,7 @@ const DivorceAppraisalWhatItIs = React.forwardRef<HTMLElement>((props, ref) => {
               When divorcing parties need to divide real estate assets equitably, an
               independent appraisal provides a credible, objective foundation that both sides
               — and the court — can rely upon. American Appraisal Alliance delivers
-              court-accepted valuations throughout the{" "}
+              independent, professional valuations throughout the{" "}
               <strong className="text-foreground font-semibold">
                 Dallas&ndash;Fort Worth metroplex
               </strong>

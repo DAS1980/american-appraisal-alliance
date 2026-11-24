@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Clock, Contact, Heading } from "lucide-react";
+import { siteConfig, businessStatements } from "@/config/site";
 
 const ContactHero = React.forwardRef<HTMLElement>((props, ref) => {
   return (
@@ -50,9 +51,9 @@ const ContactHero = React.forwardRef<HTMLElement>((props, ref) => {
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
             className="text-lg md:text-xl text-muted-foreground mb-6 max-w-2xl leading-relaxed"
           >
-            Serving the Dallas–Fort Worth Metroplex with USPAP-compliant appraisals.{" "}
+            {businessStatements.professionalServices}{" "}
             <span className="font-medium text-foreground">
-              All inquiries are confidential. We respond within 1 business day.
+              {siteConfig.serviceAreaStatement}
             </span>
           </motion.p>
 
@@ -69,7 +70,7 @@ const ContactHero = React.forwardRef<HTMLElement>((props, ref) => {
               style={{ color: "hsl(var(--accent))" }}
             />
             <p className="text-sm font-medium text-foreground">
-              All inquiries are confidential. We respond within 1 business day.
+              All inquiries are confidential. {businessStatements.response}
             </p>
           </motion.div>
 
@@ -114,10 +115,10 @@ const ContactHero = React.forwardRef<HTMLElement>((props, ref) => {
                 Phone
               </p>
               <a
-                href="tel:+14699364240"
+                href={siteConfig.phoneHref}
                 className="text-sm font-medium text-foreground hover:underline"
               >
-                (469) 936-4240
+                {siteConfig.phone}
               </a>
             </div>
           </div>
@@ -135,10 +136,10 @@ const ContactHero = React.forwardRef<HTMLElement>((props, ref) => {
                 Email
               </p>
               <a
-                href="mailto:info@americanappraisalalliance.com"
+                href={`mailto:${siteConfig.supportEmail}`}
                 className="text-sm font-medium text-foreground hover:underline break-all"
               >
-                info@americanappraisalalliance.com
+                {siteConfig.supportEmail}
               </a>
             </div>
           </div>
@@ -156,7 +157,7 @@ const ContactHero = React.forwardRef<HTMLElement>((props, ref) => {
                 Service Area
               </p>
               <p className="text-sm font-medium text-foreground">
-                Dallas–Fort Worth Metroplex
+                Dallas–Fort Worth Metropolitan Area
               </p>
             </div>
           </div>

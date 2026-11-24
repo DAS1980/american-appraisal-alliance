@@ -1,2 +1,5 @@
 node_modules
 .lov.tailwind.config.js
+
+# Build output (Cloudflare Pages builds from source)
+dist/

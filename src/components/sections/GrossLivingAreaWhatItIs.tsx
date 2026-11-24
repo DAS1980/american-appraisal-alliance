@@ -143,14 +143,7 @@ const GrossLivingAreaWhatItIs = React.forwardRef<HTMLElement>((props, ref) => {
                   className="text-xs font-medium px-3 py-1 border"
                   style={{ borderColor: "hsl(42 88% 48% / 0.4)", color: "hsl(218 60% 20%)" }}
                 >
-                  Lender-Approved
-                </Badge>
-                <Badge
-                  variant="secondary"
-                  className="text-xs font-medium px-3 py-1 border"
-                  style={{ borderColor: "hsl(42 88% 48% / 0.4)", color: "hsl(218 60% 20%)" }}
-                >
-                  Court-Accepted
+                  Independent &amp; Professional
                 </Badge>
               </motion.div>
             </div>

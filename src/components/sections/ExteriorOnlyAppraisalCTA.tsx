@@ -164,7 +164,7 @@ const ExteriorOnlyAppraisalCTA = React.forwardRef<HTMLElement>((props, ref) => {
               className="text-sm text-white/75"
               style={{ fontFamily: "'Inter', sans-serif" }}
             >
-              All inquiries are confidential. We respond within 1 business day.
+              All inquiries are confidential. We respond to appraisal requests within one business day.
             </p>
           </motion.div>
         </div>

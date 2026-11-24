@@ -51,7 +51,7 @@ const ContactServiceArea = React.forwardRef<HTMLElement>((props, ref) => {
           <p className="text-muted-foreground text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
             We cover all major cities and surrounding communities across the
             Dallas–Fort Worth area. Whether you require a USPAP-compliant
-            residential appraisal, a court-accepted valuation, or a specialized
+            residential appraisal, a valuation for legal proceedings, or a specialized
             measurement report, our licensed appraisers are available throughout
             the DFW metroplex.
           </p>
@@ -98,10 +98,10 @@ const ContactServiceArea = React.forwardRef<HTMLElement>((props, ref) => {
             <p className="text-sm text-amber-900 font-medium">
               Not sure if we cover your area?{" "}
               <a
-                href="/contact"
+                href="tel:+14699364240"
                 className="underline underline-offset-2 hover:text-amber-700 transition-colors font-semibold"
               >
-                Contact us
+                Call us at (469) 936-4240
               </a>{" "}
               — we serve all communities across the Dallas–Fort Worth metroplex
               and surrounding counties.

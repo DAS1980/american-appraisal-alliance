@@ -7,7 +7,6 @@ import HomeServices from "@/components/sections/HomeServices";
 import ServiceArea from "@/components/sections/ServiceArea";
 import TrustBar from "@/components/sections/TrustBar";
 import WhyChooseUs from "@/components/sections/WhyChooseUs";
-import Testimonials from "@/components/sections/Testimonials";
 import HomeCTA from "@/components/sections/HomeCTA";
 import Footer from "@/components/sections/Footer";
 
@@ -48,7 +47,6 @@ const Index = React.forwardRef<HTMLDivElement>((props, ref) => {
         <SectionErrorBoundary sectionName="ServiceArea"><ServiceArea /></SectionErrorBoundary>
         <SectionErrorBoundary sectionName="TrustBar"><TrustBar /></SectionErrorBoundary>
         <SectionErrorBoundary sectionName="WhyChooseUs"><WhyChooseUs /></SectionErrorBoundary>
-        <SectionErrorBoundary sectionName="Testimonials"><Testimonials /></SectionErrorBoundary>
         <SectionErrorBoundary sectionName="HomeCTA"><HomeCTA /></SectionErrorBoundary>
         <Footer />
       </div>

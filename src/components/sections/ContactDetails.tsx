@@ -3,38 +3,39 @@ import { motion } from "framer-motion";
 import { Phone, Mail, MapPin, Clock, Shield, CheckCircle, Contact, Grid, Icon, Section, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { siteConfig, businessStatements } from "@/config/site";
 
 const ContactDetails = React.forwardRef<HTMLElement>((props, ref) => {
   const contactItems = [
     {
       icon: Phone,
       label: "Phone",
-      primary: "(469) 936-4240",
-      secondary: "Monday – Friday, 8:00 AM – 5:00 PM CST",
-      href: "tel:+14699364240",
+      primary: siteConfig.phone,
+      secondary: siteConfig.hours,
+      href: siteConfig.phoneHref,
       hrefLabel: "Call Now",
     },
     {
-      icon: Mail,
-      label: "Email",
-      primary: "info@americanappraisalalliance.com",
-      secondary: "We respond within 1 business day.",
-      href: "mailto:info@americanappraisalalliance.com",
-      hrefLabel: "Send Email",
+      icon: Send,
+      label: "Appraisal Requests & Orders",
+      primary: siteConfig.ordersEmail,
+      secondary: businessStatements.response,
+      href: `mailto:${siteConfig.ordersEmail}`,
+      hrefLabel: "Email Orders",
     },
     {
-      icon: MapPin,
-      label: "Office Address",
-      primary: "5001 Spring Valley Road, Suite 400",
-      secondary: "Dallas, TX 75244",
-      href: "https://maps.google.com/?q=5001+Spring+Valley+Road+Suite+400+Dallas+TX+75244",
-      hrefLabel: "Get Directions",
+      icon: Mail,
+      label: "General Inquiries & Support",
+      primary: siteConfig.supportEmail,
+      secondary: "Questions about our services or this website.",
+      href: `mailto:${siteConfig.supportEmail}`,
+      hrefLabel: "Email Support",
     },
     {
       icon: Clock,
-      label: "Office Hours",
-      primary: "Mon – Fri: 8:00 AM – 5:00 PM CST",
-      secondary: "Closed weekends and federal holidays",
+      label: "Business Hours",
+      primary: siteConfig.hoursShort,
+      secondary: siteConfig.serviceAreaStatement,
       href: null,
       hrefLabel: null,
     },
@@ -144,9 +145,9 @@ const ContactDetails = React.forwardRef<HTMLElement>((props, ref) => {
             <Shield className="h-5 w-5 text-primary flex-shrink-0" />
             <p className="text-sm text-foreground font-sans">
               <span className="font-semibold">All inquiries are confidential.</span>{" "}
-              We respond within 1 business day. Your personal information and
-              property details are handled with complete discretion in accordance
-              with professional appraisal standards.
+              {businessStatements.response} {businessStatements.scheduling} Your
+              personal information and property details are handled with
+              discretion in accordance with professional appraisal standards.
             </p>
           </div>
           <div className="flex items-center gap-2 flex-shrink-0">
@@ -186,7 +187,7 @@ const ContactDetails = React.forwardRef<HTMLElement>((props, ref) => {
           className="text-center"
         >
           <p className="text-sm text-muted-foreground font-sans mb-4">
-            Prefer to submit your details online?
+            Ready to request an appraisal? Submit a short online inquiry.
           </p>
           <Button
             asChild

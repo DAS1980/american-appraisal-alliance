@@ -3,12 +3,12 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { CheckCircle, Phone, Mail, MapPin } from "lucide-react";
-import { siteConfig } from "@/config/site";
+import { siteConfig, businessStatements } from "@/config/site";
 
 const AboutCTA = React.forwardRef<HTMLElement>((props, ref) => {
   const trustPoints = [
-    "USPAP-compliant reports accepted by lenders, courts, and attorneys",
-    "Licensed and certified appraisers with deep DFW market expertise",
+    businessStatements.professionalServices,
+    `${businessStatements.license} — ${businessStatements.experience}`,
     "Serving Dallas, Fort Worth, Plano, Arlington, Frisco, and the full DFW metroplex",
   ];
 
@@ -56,7 +56,7 @@ const AboutCTA = React.forwardRef<HTMLElement>((props, ref) => {
 
             {/* Subheadline / Reassurance */}
             <p className="text-white/80 text-lg mb-8 leading-relaxed">
-              All inquiries are confidential. We respond within 1 business day.
+              All inquiries are confidential. {businessStatements.response}
             </p>
 
             {/* Trust Points */}
@@ -143,7 +143,7 @@ const AboutCTA = React.forwardRef<HTMLElement>((props, ref) => {
                       Phone
                     </p>
                     <a
-                      href="tel:+12145550100"
+                      href={siteConfig.phoneHref}
                       className="text-white text-sm font-medium hover:underline transition-colors"
                       style={{ color: "white" }}
                     >
@@ -167,10 +167,10 @@ const AboutCTA = React.forwardRef<HTMLElement>((props, ref) => {
                       Email
                     </p>
                     <a
-                      href={`mailto:${siteConfig.email}`}
+                      href={`mailto:${siteConfig.supportEmail}`}
                       className="text-white text-sm font-medium hover:underline transition-colors"
                     >
-                      {siteConfig.email}
+                      {siteConfig.supportEmail}
                     </a>
                   </div>
                 </div>
@@ -190,7 +190,7 @@ const AboutCTA = React.forwardRef<HTMLElement>((props, ref) => {
                       Service Area
                     </p>
                     <p className="text-white text-sm font-medium">
-                      Dallas–Fort Worth Metroplex
+                      Dallas–Fort Worth Metropolitan Area
                     </p>
                     <p className="text-white/60 text-xs mt-0.5">
                       Dallas · Fort Worth · Arlington · Plano · Irving ·
@@ -212,8 +212,7 @@ const AboutCTA = React.forwardRef<HTMLElement>((props, ref) => {
                 className="text-xs text-center leading-relaxed"
                 style={{ color: "hsl(42 92% 68%)" }}
               >
-                All inquiries are confidential. We respond within 1 business
-                day.
+                All inquiries are confidential. {businessStatements.response}
               </p>
             </div>
           </motion.div>

@@ -152,7 +152,7 @@ const PropertyMeasurementAnsiHero = React.forwardRef<HTMLElement>((props, ref) =
             transition={{ duration: 0.6, delay: 0.52, ease: "easeOut" }}
             className="mt-5 text-sm text-white/60 italic"
           >
-            All inquiries are confidential. We respond within 1 business day.
+            All inquiries are confidential. We respond to appraisal requests within one business day.
           </motion.p>
         </div>
       </div>

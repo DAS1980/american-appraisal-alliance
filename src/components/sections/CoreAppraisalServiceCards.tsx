@@ -64,7 +64,7 @@ const services: ServiceCard[] = [
     name: "Divorce Appraisal",
     slug: "/divorce-appraisal",
     description:
-      "Court-accepted, USPAP-compliant appraisal for divorce proceedings. Neutral, unbiased valuation with retroactive date-of-separation valuations available.",
+      "Independent, USPAP-compliant appraisal for divorce proceedings. Neutral, unbiased valuation with retroactive date-of-separation valuations available.",
     useCases: "Divorce attorneys, family law courts",
     icon: Gavel,
   },

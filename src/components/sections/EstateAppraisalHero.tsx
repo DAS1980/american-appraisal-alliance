@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { CheckCircle, FileText, Scale, Key } from "lucide-react";
+import { siteConfig } from "@/config/site";
 
 /** Primary production domain registered for this site. */
 const SITE_BASE_URL = "https://americanappraisalalliance.com";
@@ -35,6 +36,9 @@ const EstateAppraisalHero = React.forwardRef<HTMLElement>((props, ref) => {
     provider: {
       "@type": "LocalBusiness",
       name: "American Appraisal Alliance",
+      legalName: siteConfig.legalName,
+      telephone: "+1-469-936-4240",
+      email: siteConfig.ordersEmail,
       url: SITE_BASE_URL,
       areaServed: "Dallas–Fort Worth Metroplex, TX",
     },
@@ -167,7 +171,7 @@ const EstateAppraisalHero = React.forwardRef<HTMLElement>((props, ref) => {
             transition={{ duration: 0.6, delay: 0.55, ease: "easeOut" }}
             className="mt-5 text-white/60 text-sm"
           >
-            All inquiries are confidential. We respond within 1 business day.
+            All inquiries are confidential. We respond to appraisal requests within one business day.
           </motion.p>
         </div>
 
@@ -181,7 +185,7 @@ const EstateAppraisalHero = React.forwardRef<HTMLElement>((props, ref) => {
           {[
             { label: "USPAP Compliant", sub: "All reports" },
             { label: "IRS Form 706", sub: "Ready documentation" },
-            { label: "Court Accepted", sub: "Probate & legal" },
+            { label: "Independent", sub: "Probate & legal" },
             { label: "DFW Metroplex", sub: "Local expertise" },
           ].map((item, i) => (
             <div key={i} className="text-center md:text-left">

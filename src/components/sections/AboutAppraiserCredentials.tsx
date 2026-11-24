@@ -1,52 +1,44 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { BadgeCheck, Award, ShieldCheck, GraduationCap, ClipboardCheck, Star } from "lucide-react";
-import { siteConfig } from "@/config/site";
+import { businessStatements } from "@/config/site";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
-const credentials = [
+type Credential = {
+  title: string;
+  license?: { label: string; value: string };
+  icon: typeof BadgeCheck;
+  description: string;
+  certifications: string[];
+  highlight: string;
+};
+
+// Owner-approved credentials and statements only (11/24/2026). The license
+// belongs to the business owner — do not attribute it to anyone else.
+const credentials: Credential[] = [
   {
-    title: "State Certified Residential Appraiser",
-    licenseLabel: "Texas State License",
-    licensePlaceholder: "[State License # Placeholder]",
+    title: businessStatements.licenseTitle,
+    license: { label: "License No.", value: businessStatements.licenseNumber },
     icon: BadgeCheck,
     description:
-      "Authorized to appraise all residential properties of one-to-four units, including complex assignments, for federally related transactions and private clients throughout the Dallas–Fort Worth metroplex.",
-    certifications: [
-      "USPAP Compliant",
-      "FHA/HUD Approved",
-      "Lender-Grade Reports",
-    ],
-    highlight: "Residential Specialist",
+      "The owner of American Appraisal Alliance holds a Texas Certified Residential Real Estate Appraiser credential issued by the Texas Appraiser Licensing & Certification Board (TALCB).",
+    certifications: ["Licensed by TALCB", "USPAP-Compliant Reports"],
+    highlight: "Texas Certified",
   },
   {
-    title: "State Certified General Appraiser",
-    licenseLabel: "Texas State License",
-    licensePlaceholder: "[State License # Placeholder]",
+    title: businessStatements.experienceShort,
     icon: Award,
-    description:
-      "Holds the highest level of Texas appraisal licensure, qualified to appraise all types of real property — residential, commercial, and complex assignments — for lenders, attorneys, courts, and private parties across DFW.",
-    certifications: [
-      "All Property Types",
-      "Court-Accepted Reports",
-      "IRS Form 706 Qualified",
-    ],
-    highlight: "Highest State Credential",
+    description: businessStatements.experience,
+    certifications: ["Dallas–Fort Worth Metropolitan Area", "Residential Real Estate Appraisal"],
+    highlight: "Since 1986",
   },
   {
-    title: "Certified Professional Appraiser — USPAP Compliant",
-    licenseLabel: "Professional Membership",
-    licensePlaceholder: "[State License # Placeholder]",
+    title: businessStatements.professionalServicesShort,
     icon: ShieldCheck,
-    description:
-      "Maintains current USPAP certification and ongoing professional education, ensuring every appraisal delivered by American Appraisal Alliance meets the Uniform Standards of Professional Appraisal Practice recognized by lenders, courts, and federal agencies.",
-    certifications: [
-      "Current USPAP Certification",
-      "Continuing Education",
-      "Fannie Mae Compliant",
-    ],
-    highlight: "USPAP Certified",
+    description: businessStatements.professionalServices,
+    certifications: ["Lenders", "Attorneys", "Homeowners", "Real Estate Professionals"],
+    highlight: "Independent",
   },
 ];
 
@@ -63,8 +55,8 @@ const trustIndicators = [
   },
   {
     icon: Star,
-    label: "Court & Lender Accepted",
-    description: "Reports accepted by DFW courts, lenders, and federal agencies",
+    label: businessStatements.experienceShort,
+    description: businessStatements.experience,
   },
 ];
 
@@ -106,12 +98,10 @@ const AboutAppraiserCredentials = React.forwardRef<HTMLElement>((props, ref) => 
             Our Credentials
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-5 max-w-3xl mx-auto" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Licensed &amp; Certified Appraisers
+            Professional Credentials
           </h2>
           <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            American Appraisal Alliance employs only licensed, state-certified real estate
-            appraisers holding credentials recognized by lenders, attorneys, courts, and federal
-            agencies throughout the Dallas–Fort Worth metroplex.
+            {businessStatements.professionalServices}
           </p>
         </motion.div>
 
@@ -148,15 +138,17 @@ const AboutAppraiserCredentials = React.forwardRef<HTMLElement>((props, ref) => 
                       {cred.title}
                     </CardTitle>
 
-                    {/* License Placeholder */}
-                    <div className="flex items-center gap-2 mt-1">
-                      <span className="text-xs text-muted-foreground font-medium uppercase tracking-wide">
-                        {cred.licenseLabel}:
-                      </span>
-                      <span className="text-xs font-semibold text-[hsl(218_60%_20%)] bg-muted px-2 py-0.5 rounded">
-                        {cred.licensePlaceholder}
-                      </span>
-                    </div>
+                    {/* License number (owner-approved) */}
+                    {cred.license && (
+                      <div className="flex items-center gap-2 mt-1">
+                        <span className="text-xs text-muted-foreground font-medium uppercase tracking-wide">
+                          {cred.license.label}
+                        </span>
+                        <span className="text-xs font-semibold text-[hsl(218_60%_20%)] bg-muted px-2 py-0.5 rounded">
+                          {cred.license.value}
+                        </span>
+                      </div>
+                    )}
                   </CardHeader>
 
                   <CardContent className="pt-0 space-y-4">
@@ -215,10 +207,9 @@ const AboutAppraiserCredentials = React.forwardRef<HTMLElement>((props, ref) => 
           {/* TALCB Disclosure */}
           <div className="mt-6 pt-6 border-t border-white/10 text-center">
             <p className="text-xs text-white/50 leading-relaxed max-w-3xl mx-auto">
-              All appraisers at American Appraisal Alliance are licensed and regulated by the
-              Texas Appraiser Licensing &amp; Certification Board (TALCB). License numbers are
-              available upon request. All appraisals are performed in compliance with the Uniform
-              Standards of Professional Appraisal Practice (USPAP).
+              {businessStatements.license}, issued by the Texas Appraiser Licensing &amp;
+              Certification Board (TALCB). All appraisals are performed in compliance with the
+              Uniform Standards of Professional Appraisal Practice (USPAP).
             </p>
           </div>
         </motion.div>

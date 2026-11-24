@@ -218,7 +218,7 @@ const TaxAssessmentTurnaround = React.forwardRef<HTMLElement>((props, ref) => {
                 step: "1",
                 icon: PhoneCall,
                 label: "Contact Us",
-                detail: "Submit your request online or call. We respond within 1 business day.",
+                detail: "Submit your request online or call. We respond to appraisal requests within one business day.",
               },
               {
                 step: "2",
@@ -271,7 +271,7 @@ const TaxAssessmentTurnaround = React.forwardRef<HTMLElement>((props, ref) => {
           </div>
           <div className="flex-1">
             <p className="text-sm font-semibold text-foreground mb-0.5">
-              We respond to all inquiries within 1 business day.
+              We respond to appraisal requests within one business day.
             </p>
             <p className="text-xs text-muted-foreground">
               Don't wait until the last minute. Contact American Appraisal Alliance today

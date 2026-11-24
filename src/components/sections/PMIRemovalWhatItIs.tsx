@@ -260,7 +260,7 @@ const PMIRemovalWhatItIs = React.forwardRef<HTMLElement>((props, ref) => {
                 Eliminating PMI can save Dallas–Fort Worth homeowners{" "}
                 <span className="font-semibold text-white">hundreds of dollars per year</span>.
                 An independent, USPAP-compliant appraisal from {siteConfig.name} is
-                the credible, lender-accepted documentation you need to make that happen.
+                the credible, independent documentation you need to make that happen.
               </p>
             </motion.div>
           </div>

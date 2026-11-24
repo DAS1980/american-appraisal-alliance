@@ -12,11 +12,11 @@ const ContactAppraisalLink = React.forwardRef<HTMLElement>((props, ref) => {
     },
     {
       icon: Shield,
-      text: "USPAP-compliant reports, court-accepted",
+      text: "Independent, USPAP-compliant reports",
     },
     {
       icon: CheckCircle,
-      text: "All inquiries are confidential. We respond within 1 business day.",
+      text: "All inquiries are confidential. We respond to appraisal requests within one business day.",
     },
     {
       icon: MapPin,
@@ -134,7 +134,7 @@ const ContactAppraisalLink = React.forwardRef<HTMLElement>((props, ref) => {
             </Button>
 
             <p className="text-sm text-white/65 italic">
-              All inquiries are confidential. We respond within 1 business day.
+              All inquiries are confidential. We respond to appraisal requests within one business day.
             </p>
           </motion.div>
         </div>

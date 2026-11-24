@@ -10,23 +10,23 @@ const trustItems = [
   },
   {
     icon: BadgeCheck,
-    label: "Licensed & Certified",
-    sublabel: "Appraisers",
+    label: "Texas Certified",
+    sublabel: "Residential Appraiser",
   },
   {
     icon: Scale,
-    label: "Court-Accepted Reports",
-    sublabel: "Lender-Approved",
+    label: "Independent & Professional",
+    sublabel: "Appraisals",
   },
   {
     icon: Award,
-    label: "35+ Years Experience",
+    label: "Serving Clients Since 1986",
     sublabel: "DFW Appraisal Expertise",
   },
   {
     icon: Clock,
-    label: "3 Business Days",
-    sublabel: "Call for Faster Turnaround",
+    label: "1 Business Day",
+    sublabel: "Response to Requests",
   },
   {
     icon: MapPin,
@@ -124,7 +124,7 @@ const TrustBar = React.forwardRef<HTMLElement>((props, ref) => {
           <span className="hidden sm:block text-white/20">|</span>
           <span className="inline-flex items-center gap-1.5 text-xs text-white/55 font-sans">
             <Award className="h-3.5 w-3.5 flex-shrink-0" style={{ color: "hsl(42 92% 58%)" }} />
-            Lender-Approved &amp; Court-Accepted
+            Independent &amp; Professional Appraisals
           </span>
         </motion.div>
       </div>

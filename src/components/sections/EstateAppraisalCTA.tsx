@@ -21,13 +21,13 @@ const reassuranceItems = [
   },
   {
     icon: CheckCircle,
-    label: "Court-Accepted Reports",
+    label: "Independent & Professional",
     description: "Trusted by probate attorneys and CPAs throughout the DFW metroplex",
   },
   {
     icon: Clock,
     label: "Prompt Response",
-    description: "We respond within 1 business day and deliver reports on schedule",
+    description: "We respond to appraisal requests within one business day.",
   },
 ];
 
@@ -83,7 +83,7 @@ const EstateAppraisalCTA = React.forwardRef<HTMLElement>((props, ref) => {
             className="mt-5 text-base md:text-lg max-w-2xl mx-auto leading-relaxed"
             style={{ color: "hsl(218 30% 80%)" }}
           >
-            Our licensed appraisers are ready to help. All inquiries are confidential. We respond within 1 business day.
+            Our licensed appraisers are ready to help. All inquiries are confidential. We respond to appraisal requests within one business day.
           </motion.p>
 
           {/* Reassurance badges */}
@@ -176,7 +176,7 @@ const EstateAppraisalCTA = React.forwardRef<HTMLElement>((props, ref) => {
               Ready to get started?
             </h3>
             <p className="text-sm md:text-base mb-6 max-w-md mx-auto" style={{ color: "hsl(218 25% 72%)" }}>
-              Submit your request online and a licensed DFW appraiser will be in touch within one business day. All communications are strictly confidential.
+              Submit your request online. We respond to appraisal requests within one business day. All communications are strictly confidential.
             </p>
 
             <Button
@@ -193,7 +193,7 @@ const EstateAppraisalCTA = React.forwardRef<HTMLElement>((props, ref) => {
             </Button>
 
             <p className="mt-4 text-xs" style={{ color: "hsl(218 25% 58%)" }}>
-              All inquiries are confidential. We respond within 1 business day.
+              All inquiries are confidential. We respond to appraisal requests within one business day.
             </p>
           </div>
         </motion.div>

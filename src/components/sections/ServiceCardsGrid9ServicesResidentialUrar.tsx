@@ -89,12 +89,12 @@ const services: ServiceCard[] = [
     name: "Divorce Appraisal",
     slug: "/divorce-appraisal",
     description:
-      "Court-accepted, USPAP-compliant appraisal for divorce proceedings. Neutral, unbiased valuations for equitable asset division, including retroactive date-of-separation valuations.",
+      "Independent, USPAP-compliant appraisal for divorce proceedings. Neutral, unbiased valuations for equitable asset division, including retroactive date-of-separation valuations.",
     useCases: "Divorce attorneys, family law courts",
     icon: Gavel,
-    badge: "Court-Accepted",
+    badge: "Independent",
     exactBullets: [
-      "USPAP-compliant, court-accepted reports",
+      "USPAP-compliant, independent reports",
       "Retroactive/date-of-separation valuations available",
       "Neutral and unbiased for equitable division",
     ],
@@ -359,7 +359,7 @@ const ServiceCardsGrid9ServicesResidentialUrar = React.forwardRef<HTMLElement>(
                   }}
                   aria-hidden="true"
                 />
-                All inquiries are confidential. We respond within 1 business day.
+                All inquiries are confidential. We respond to appraisal requests within one business day.
               </p>
             </div>
           </motion.div>

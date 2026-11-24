@@ -76,7 +76,7 @@ const PMIRemovalCTA = React.forwardRef<HTMLElement>((props, ref) => {
           >
             {[
               { icon: ShieldCheck, label: "USPAP-Compliant Reports" },
-              { icon: CheckCircle, label: "Lender-Accepted Valuations" },
+              { icon: CheckCircle, label: "Independent Valuations" },
               { icon: Clock, label: "3–5 Business Day Turnaround" },
             ].map(({ icon: Icon, label }) => (
               <div
@@ -137,7 +137,7 @@ const PMIRemovalCTA = React.forwardRef<HTMLElement>((props, ref) => {
             className="text-sm"
             style={{ color: "hsl(218 65% 14% / 0.70)" }}
           >
-            All inquiries are confidential. We respond within 1 business day.
+            All inquiries are confidential. We respond to appraisal requests within one business day.
           </motion.p>
         </div>
       </div>

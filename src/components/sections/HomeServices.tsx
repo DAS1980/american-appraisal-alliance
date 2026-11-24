@@ -13,7 +13,7 @@ const services = [
     link: "/core-appraisal-services",
     icon: FileText,
     detail:
-      "Our licensed appraisers deliver certified, court-accepted, and lender-approved reports for residential properties across the Dallas–Fort Worth metroplex. Every engagement meets USPAP standards.",
+      "Independent, professional real estate appraisals for lenders, attorneys, homeowners, and real estate professionals across the Dallas–Fort Worth metroplex. Every engagement meets USPAP standards.",
     highlights: [
       "Residential Appraisal (Full URAR)",
       "Divorce & Estate Appraisals",

@@ -15,8 +15,8 @@ const DivorceAppraisalCTA = React.forwardRef<HTMLElement>((props, ref) => {
     },
     {
       icon: FileCheck,
-      label: "Court-Accepted",
-      description: "Defensible valuations accepted by family law attorneys and courts",
+      label: "Independent & Professional",
+      description: "Independent, professional real estate appraisals for lenders, attorneys, homeowners, and real estate professionals.",
     },
     {
       icon: Lock,
@@ -26,7 +26,7 @@ const DivorceAppraisalCTA = React.forwardRef<HTMLElement>((props, ref) => {
     {
       icon: Clock,
       label: "Prompt Response",
-      description: "We respond within 1 business day — every inquiry, without exception",
+      description: "We respond to appraisal requests within one business day.",
     },
   ];
 
@@ -82,7 +82,7 @@ const DivorceAppraisalCTA = React.forwardRef<HTMLElement>((props, ref) => {
               transition={{ duration: 0.6, ease: "easeOut", delay: 0.22 }}
               className="mt-5 text-lg md:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed"
             >
-              Neutral, court-accepted valuations delivered with discretion. All inquiries are confidential.
+              Neutral, independent valuations delivered with discretion. All inquiries are confidential.
             </motion.p>
 
             {/* Reassurance */}
@@ -93,7 +93,7 @@ const DivorceAppraisalCTA = React.forwardRef<HTMLElement>((props, ref) => {
               transition={{ duration: 0.5, ease: "easeOut", delay: 0.3 }}
               className="mt-3 text-sm text-white/60 italic"
             >
-              All inquiries are confidential. We respond within 1 business day.
+              All inquiries are confidential. We respond to appraisal requests within one business day.
             </motion.p>
 
             {/* CTA Button */}

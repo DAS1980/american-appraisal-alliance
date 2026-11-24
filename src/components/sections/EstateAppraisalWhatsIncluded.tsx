@@ -194,9 +194,9 @@ const EstateAppraisalWhatsIncluded = React.forwardRef<HTMLElement>((props, ref) 
                 >
                   <CheckCircle className="w-4 h-4 flex-shrink-0 mt-0.5" style={{ color: "hsl(42 92% 58%)" }} />
                   <p className="text-white/90 text-xs leading-relaxed">
-                    We acknowledge all inquiries within{" "}
-                    <span className="font-semibold text-white">1 business day</span>{" "}
-                    and coordinate inspection scheduling promptly to meet your estate timeline.
+                    We respond to appraisal requests within{" "}
+                    <span className="font-semibold text-white">one business day</span>.{" "}
+                    Scheduling is subject to availability, property location, and assignment requirements.
                   </p>
                 </div>
               </div>

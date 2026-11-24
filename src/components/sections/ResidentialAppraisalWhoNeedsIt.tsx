@@ -29,8 +29,8 @@ const audiences = [
     icon: Scale,
     title: "Attorneys & Legal Professionals",
     description:
-      "Family law attorneys, estate planners, and litigation counsel rely on USPAP-compliant Full URAR appraisals as court-accepted evidence of fair market value. Common in divorce proceedings, equitable distribution cases, and property-related legal disputes.",
-    tags: ["Divorce Proceedings", "Litigation Support", "Court-Accepted Reports"],
+      "Family law attorneys, estate planners, and litigation counsel rely on USPAP-compliant Full URAR appraisals as credible, independent evidence of fair market value. Common in divorce proceedings, equitable distribution cases, and property-related legal disputes.",
+    tags: ["Divorce Proceedings", "Litigation Support", "Independent Valuations"],
   },
   {
     icon: Briefcase,

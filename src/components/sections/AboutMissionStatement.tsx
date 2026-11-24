@@ -27,7 +27,7 @@ const pillars = [
 const commitments = [
   "USPAP-compliant appraisal methodology on every assignment",
   "Licensed and certified appraisers serving the entire DFW metroplex",
-  "Objective, court-accepted valuations free from third-party influence",
+  "Objective, independent valuations free from third-party influence",
   "Deep familiarity with Dallas, Fort Worth, Plano, Frisco, and surrounding DFW communities",
   "Transparent reporting with clear, well-supported conclusions",
   "Responsive service with timely communication and professional delivery",

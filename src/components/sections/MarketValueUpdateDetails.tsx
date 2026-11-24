@@ -38,7 +38,7 @@ const whoNeedsIt = [
 const complianceBadges = [
   "Fannie Mae Form 1004D Compliant",
   "USPAP-Compliant",
-  "Lender-Accepted",
+  "Independent & Professional",
 ];
 
 const fadeUp = {

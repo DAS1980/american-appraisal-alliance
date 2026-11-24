@@ -17,14 +17,14 @@ const differentiators = [
     icon: Shield,
     title: "USPAP-Compliant Reports",
     description:
-      "Every desktop appraisal delivered by American Appraisal Alliance is prepared in strict accordance with the Uniform Standards of Professional Appraisal Practice (USPAP). Our reports are accepted by lenders, attorneys, and courts — providing accurate, unbiased, defensible valuations you can rely on.",
-    highlight: "Lender & Court Accepted",
+      "Every desktop appraisal delivered by American Appraisal Alliance is prepared in strict accordance with the Uniform Standards of Professional Appraisal Practice (USPAP). Independent, professional real estate appraisals for lenders, attorneys, homeowners, and real estate professionals.",
+    highlight: "Independent & Professional",
   },
   {
     icon: Clock,
-    title: "Fast Turnaround & Confidential Intake",
+    title: "Prompt Response & Confidential Intake",
     description:
-      "We understand that your transaction timeline matters. Desktop appraisals are completed efficiently, with a response to all inquiries within 1 business day. All inquiries are confidential. We respond within 1 business day.",
+      "We understand that your transaction timeline matters. All inquiries are confidential. We respond to appraisal requests within one business day. Scheduling is subject to availability, property location, and assignment requirements.",
     highlight: "1 Business Day Response",
   },
 ];
@@ -176,7 +176,7 @@ const DesktopAppraisalWhyChooseUs = React.forwardRef<HTMLElement>((props, ref) =
                 Client Commitment
               </span>
               <p className="text-white/90 font-sans text-base md:text-lg leading-relaxed max-w-sm">
-                All inquiries are confidential. We respond within 1 business day.
+                All inquiries are confidential. We respond to appraisal requests within one business day.
               </p>
               <p className="mt-2 text-white/60 font-sans text-sm">
                 Serving Dallas, Fort Worth, Plano, Arlington, Irving, Frisco,

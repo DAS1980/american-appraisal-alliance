@@ -11,7 +11,7 @@ const complianceStandards = [
     title: "USPAP",
     label: "Uniform Standards of Professional Appraisal Practice",
     description:
-      "Every appraisal report produced by American Appraisal Alliance adheres to the Uniform Standards of Professional Appraisal Practice — the ethical and performance standards governing all professional appraisers in the United States. USPAP compliance ensures your report is credible, defensible, and accepted by lenders, courts, and government agencies.",
+      "Every appraisal report produced by American Appraisal Alliance adheres to the Uniform Standards of Professional Appraisal Practice — the ethical and performance standards governing all professional appraisers in the United States. USPAP compliance ensures your report is credible, well-supported, and prepared to professional standards.",
   },
   {
     icon: FileCheck,
@@ -25,7 +25,7 @@ const complianceStandards = [
     title: "IRS Form 706",
     label: "Estate Tax & Probate Compliance",
     description:
-      "Estate and date-of-death appraisals from American Appraisal Alliance are prepared to satisfy IRS Form 706 requirements for federal estate tax filings. Our retrospective valuations establish fair market value as of a specific historical date and are accepted by attorneys, CPAs, and probate courts throughout the Dallas–Fort Worth metroplex.",
+      "Estate and date-of-death appraisals from American Appraisal Alliance are prepared to satisfy IRS Form 706 requirements for federal estate tax filings. Our retrospective valuations establish fair market value as of a specific historical date for attorneys, CPAs, and executors throughout the Dallas–Fort Worth metroplex.",
   },
   {
     icon: Building2,
@@ -39,33 +39,33 @@ const complianceStandards = [
 const whyItMatters = [
   {
     icon: CheckCircle,
-    title: "Accepted by Lenders & Mortgage Brokers",
-    body: "USPAP-compliant reports meet the rigorous standards required by national lenders, mortgage servicers, and GSEs including Fannie Mae and Freddie Mac.",
+    title: "Prepared for Lenders & Mortgage Brokers",
+    body: "USPAP-compliant reports prepared to the standards lenders, mortgage servicers, and GSEs including Fannie Mae and Freddie Mac expect.",
   },
   {
     icon: Scale,
-    title: "Admissible in Court & Legal Proceedings",
-    body: "Courts, divorce attorneys, and probate judges require appraisals prepared under USPAP. Our reports are structured to withstand legal scrutiny and cross-examination.",
+    title: "Prepared for Legal Proceedings",
+    body: "Courts, divorce attorneys, and probate judges rely on appraisals prepared under USPAP. Our reports are independent, well-supported, and carefully documented.",
   },
   {
     icon: Gavel,
-    title: "Recognized by the IRS & CPAs",
-    body: "Estate appraisals and date-of-death valuations must meet USPAP and IRS standards. American Appraisal Alliance prepares retrospective appraisals trusted by tax professionals.",
+    title: "Prepared for Estate & Tax Matters",
+    body: "Estate appraisals and date-of-death valuations must meet USPAP and IRS standards. American Appraisal Alliance prepares retrospective appraisals for executors, attorneys, and tax professionals.",
   },
   {
     icon: Award,
-    title: "Trusted by Real Estate Attorneys",
+    title: "Independent Evidence for Attorneys",
     body: "From divorce proceedings to estate settlements and tax assessment appeals, our USPAP-compliant reports provide the objective, unbiased evidence attorneys need to advocate for their clients.",
   },
   {
     icon: Users,
-    title: "Relied Upon by Homeowners",
+    title: "Clear Answers for Homeowners",
     body: "Whether you are challenging a tax assessment, removing PMI, or making an informed purchase decision, our independent appraisals give you accurate, defensible data you can act on.",
   },
   {
     icon: BookOpen,
     title: "Rigorous Professional Standards",
-    body: "All appraisers at American Appraisal Alliance hold active state licenses and certifications, complete mandatory USPAP continuing education, and adhere to the highest ethical standards in the profession.",
+    body: "Texas Certified Residential Real Estate Appraiser — License No. 1324410-CR. Appraisals are prepared in accordance with USPAP and the ethical standards of the profession.",
   },
 ];
 

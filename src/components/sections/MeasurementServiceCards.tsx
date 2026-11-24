@@ -40,7 +40,7 @@ const services: ServiceCard[] = [
       "Resolves discrepancies between tax records and actual GLA",
       "Used by lenders, agents, and homeowners",
     ],
-    badge: "Lender-Accepted",
+    badge: "Independent",
   },
   {
     name: "Floor Plan / Sketch Report",

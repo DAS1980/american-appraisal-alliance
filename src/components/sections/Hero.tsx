@@ -80,8 +80,7 @@ const Hero = React.forwardRef<HTMLElement>((props, ref) => {
             className="mt-6 text-lg md:text-xl text-white/90 max-w-2xl leading-relaxed"
             style={{ fontFamily: "'Inter', sans-serif" }}
           >
-            USPAP-compliant, court-accepted, lender-approved appraisals from
-            licensed DFW experts.
+            Independent, professional real estate appraisals for lenders, attorneys, homeowners, and real estate professionals.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -139,7 +138,7 @@ const Hero = React.forwardRef<HTMLElement>((props, ref) => {
               className="text-sm text-white/70"
               style={{ fontFamily: "'Inter', sans-serif" }}
             >
-              All inquiries are confidential. We respond within 1 business day.
+              All inquiries are confidential. We respond to appraisal requests within one business day.
             </p>
           </motion.div>
 

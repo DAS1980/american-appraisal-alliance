@@ -10,7 +10,7 @@ const audienceSegments = [
     icon: Users,
     title: "Divorcing Spouses Who Jointly Own Real Property",
     description:
-      "When a marital home or investment property must be divided equitably, both parties benefit from a single, neutral appraisal conducted by a licensed professional. An independent valuation removes the potential for disagreement over estimated value and provides a credible, court-accepted basis for settlement discussions in the Dallas–Fort Worth area.",
+      "When a marital home or investment property must be divided equitably, both parties benefit from a single, neutral appraisal conducted by a licensed professional. An independent valuation removes the potential for disagreement over estimated value and provides a credible, independent basis for settlement discussions in the Dallas–Fort Worth area.",
   },
   {
     icon: Scale,
@@ -28,7 +28,7 @@ const audienceSegments = [
     icon: Building2,
     title: "Courts Requiring Defensible Fair Market Value Evidence",
     description:
-      "When a judge requires credible, defensible evidence of a property's fair market value, our court-accepted appraisal reports meet the evidentiary standard. Prepared in strict accordance with USPAP guidelines, each report withstands scrutiny from opposing counsel and judicial review across the Dallas–Fort Worth metropolitan area.",
+      "When a judge requires credible, defensible evidence of a property's fair market value, our independent appraisal reports are prepared in strict accordance with USPAP guidelines to provide a credible, well-supported opinion of value across the Dallas–Fort Worth metropolitan area.",
   },
   {
     icon: Clock,

@@ -79,7 +79,7 @@ const DesktopAppraisalOverview = React.forwardRef<HTMLElement>((props, ref) => {
       step: "01",
       title: "Order Submitted",
       description:
-        "Complete the Request an Appraisal form. We confirm receipt and review your order within 1 business day.",
+        "Complete the Request an Appraisal form. We respond to appraisal requests within one business day.",
     },
     {
       step: "02",

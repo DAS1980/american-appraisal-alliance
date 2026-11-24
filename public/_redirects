@@ -1,0 +1,6 @@
+# Cloudflare Pages redirects — copied to the build output root by Vite.
+# Invalid legacy URL reported by Search Atlas NEXT (11/2026) → real contact page.
+# Destination is the canonical trailing-slash URL served by dist/contact/index.html,
+# so there is no second hop and no loop.
+/real-estate-appraisal-services/contact-us   /contact/   301
+/real-estate-appraisal-services/contact-us/  /contact/   301

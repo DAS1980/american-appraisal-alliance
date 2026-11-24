@@ -109,7 +109,7 @@ const ValuationUpdatesHero = React.forwardRef<HTMLElement>((props, ref) => {
             </div>
             <div className="flex items-center gap-2 text-white/80 text-sm">
               <ShieldCheck className="h-4 w-4 text-amber-400 flex-shrink-0" />
-              <span>Lender &amp; Court Accepted</span>
+              <span>Independent &amp; Professional</span>
             </div>
             <div className="flex items-center gap-2 text-white/80 text-sm">
               <ShieldCheck className="h-4 w-4 text-amber-400 flex-shrink-0" />
@@ -155,7 +155,7 @@ const ValuationUpdatesHero = React.forwardRef<HTMLElement>((props, ref) => {
             transition={{ duration: 0.6, delay: 0.55, ease: "easeOut" }}
             className="mt-5 text-sm text-white/60 italic"
           >
-            All inquiries are confidential. We respond within 1 business day.
+            All inquiries are confidential. We respond to appraisal requests within one business day.
           </motion.p>
         </div>
 

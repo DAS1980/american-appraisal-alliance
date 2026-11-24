@@ -61,7 +61,7 @@ const MarketValueUpdateCTA = React.forwardRef<HTMLElement>((props, ref) => {
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
             className="text-base md:text-lg text-white/80 mb-10 max-w-xl mx-auto"
           >
-            All inquiries are confidential. We respond within 1 business day.
+            All inquiries are confidential. We respond to appraisal requests within one business day.
           </motion.p>
 
           {/* CTA Button */}

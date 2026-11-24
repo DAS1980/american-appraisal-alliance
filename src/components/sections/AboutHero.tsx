@@ -11,7 +11,7 @@ const AboutHero = React.forwardRef<HTMLElement>((props, ref) => {
     { icon: Shield, label: "USPAP-Compliant" },
     { icon: Award, label: "Licensed & Certified" },
     { icon: MapPin, label: "Dallas–Fort Worth" },
-    { icon: CheckCircle, label: "Court-Accepted Reports" },
+    { icon: CheckCircle, label: "Independent & Professional" },
   ];
 
   return (

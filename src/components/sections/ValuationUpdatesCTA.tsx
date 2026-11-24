@@ -12,7 +12,7 @@ const ValuationUpdatesCTA = React.forwardRef<HTMLElement>((props, ref) => {
     },
     {
       icon: CheckCircle,
-      text: "Lender & Court Accepted",
+      text: "Independent & Professional",
     },
     {
       icon: Clock,
@@ -75,7 +75,7 @@ const ValuationUpdatesCTA = React.forwardRef<HTMLElement>((props, ref) => {
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
             className="mt-4 text-lg md:text-xl text-white/85 max-w-2xl leading-relaxed"
           >
-            Accurate, unbiased, defensible valuations. All inquiries are confidential. We respond within 1 business day.
+            Accurate, unbiased, defensible valuations. All inquiries are confidential. We respond to appraisal requests within one business day.
           </motion.p>
 
           {/* Trust indicators */}
@@ -145,7 +145,7 @@ const ValuationUpdatesCTA = React.forwardRef<HTMLElement>((props, ref) => {
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.5 }}
             className="mt-5 text-sm text-white/60"
           >
-            All inquiries are confidential. We respond within 1 business day.
+            All inquiries are confidential. We respond to appraisal requests within one business day.
           </motion.p>
 
           {/* Service area note */}

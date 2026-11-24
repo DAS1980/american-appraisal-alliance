@@ -192,7 +192,7 @@ const ValuationUpdatesServiceCards = React.forwardRef<HTMLElement>(
           >
             <p className="text-sm text-muted-foreground font-sans">
               <span className="font-semibold text-foreground">
-                All reports are USPAP-compliant and lender-accepted.
+                All reports are USPAP-compliant and independently prepared.
               </span>{" "}
               Serving Dallas, Fort Worth, Arlington, Plano, Irving, Garland,
               Frisco, McKinney, Denton, and the greater DFW metroplex.

@@ -159,7 +159,7 @@ const TaxAssessmentAppealHero = React.forwardRef<HTMLElement>((props, ref) => {
                 className="text-white/75 text-sm"
                 style={{ fontFamily: "'Inter', sans-serif" }}
               >
-                All inquiries are confidential. We respond within 1 business day.
+                All inquiries are confidential. We respond to appraisal requests within one business day.
               </p>
             </div>
             <div className="hidden sm:block w-px h-4 bg-white/20" />

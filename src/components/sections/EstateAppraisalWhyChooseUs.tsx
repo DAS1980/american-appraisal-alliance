@@ -21,9 +21,9 @@ const differentiators = [
   },
   {
     icon: Gavel,
-    title: "Court-Accepted & Attorney-Approved",
+    title: "Independent & Professional",
     description:
-      "Trusted by probate attorneys and CPAs across the DFW metroplex for legally binding estate proceedings.",
+      "Independent, professional real estate appraisals for lenders, attorneys, homeowners, and real estate professionals.",
   },
   {
     icon: MapPin,
@@ -39,9 +39,9 @@ const differentiators = [
   },
   {
     icon: Clock,
-    title: "Fast Turnaround",
+    title: "Prompt Response",
     description:
-      "We understand estate timelines are time-sensitive. We respond within 1 business day and deliver reports promptly.",
+      "We understand estate timelines are time-sensitive. We respond to appraisal requests within one business day. Scheduling is subject to availability, property location, and assignment requirements.",
   },
 ];
 
@@ -235,7 +235,7 @@ const EstateAppraisalWhyChooseUs = React.forwardRef<HTMLElement>((props, ref) =>
                 style={{ background: "hsl(42 88% 48%)" }}
                 aria-hidden="true"
               />
-              Court-Accepted Reports
+              Independent & Professional
             </span>
             <span className="flex items-center gap-1.5">
               <span

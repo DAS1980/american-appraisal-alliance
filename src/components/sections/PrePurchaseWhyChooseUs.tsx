@@ -41,7 +41,7 @@ const differentiators = [
     icon: Lock,
     title: "Confidential Intake & Prompt Response",
     description:
-      "Confidential intake — we respond within 1 business day. All inquiries are handled with the utmost discretion, and you will hear from a licensed DFW appraiser promptly.",
+      "Confidential intake — we respond to appraisal requests within one business day. All inquiries are handled with the utmost discretion. Scheduling is subject to availability, property location, and assignment requirements.",
   },
 ];
 
@@ -157,7 +157,7 @@ const PrePurchaseWhyChooseUs = React.forwardRef<HTMLElement>((props, ref) => {
           <ul className="flex-shrink-0 space-y-2 text-sm text-white/90 font-sans min-w-[220px]">
             {[
               "USPAP-Compliant Reports",
-              "Court & Lender Accepted",
+              "Independent & Professional",
               "Licensed & Certified Appraisers",
               "Results in 3–5 Business Days",
             ].map((point) => (

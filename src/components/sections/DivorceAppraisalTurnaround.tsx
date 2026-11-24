@@ -175,7 +175,7 @@ const DivorceAppraisalTurnaround = React.forwardRef<HTMLElement>((props, ref) =>
                 Your Privacy Is Protected
               </p>
               <p className="text-white/80 text-sm md:text-base">
-                All inquiries are confidential. We respond within 1 business day.
+                All inquiries are confidential. We respond to appraisal requests within one business day.
               </p>
             </div>
           </div>

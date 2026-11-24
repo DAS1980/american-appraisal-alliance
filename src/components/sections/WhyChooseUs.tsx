@@ -17,13 +17,13 @@ const differentiators = [
   },
   {
     icon: Gavel,
-    title: "Court-Accepted Reports",
+    title: "Independent & Professional",
     description:
-      "Our USPAP-compliant appraisals are routinely accepted by courts, attorneys, and legal professionals for divorce proceedings, estate settlements, tax appeals, and litigation support.",
+      "Independent, professional real estate appraisals for lenders, attorneys, homeowners, and real estate professionals.",
   },
   {
     icon: FileCheck,
-    title: "Lender-Approved",
+    title: "Prepared to Lender Standards",
     description:
       "Reports are prepared to meet Fannie Mae, FHA/HUD, and conventional lender standards — giving mortgage professionals the documentation they need for underwriting and loan approval.",
   },

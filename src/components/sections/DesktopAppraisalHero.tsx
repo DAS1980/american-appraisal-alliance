@@ -13,7 +13,7 @@ const DesktopAppraisalHero = React.forwardRef<HTMLElement>((props, ref) => {
     { icon: Monitor, label: "No Interior Inspection Required" },
     { icon: Clock, label: "Faster Turnaround" },
     { icon: FileText, label: "USPAP-Compliant Reports" },
-    { icon: CheckCircle, label: "Lender & Court Accepted" },
+    { icon: CheckCircle, label: "Independent & Professional" },
   ];
 
   return (

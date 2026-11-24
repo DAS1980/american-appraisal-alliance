@@ -138,7 +138,7 @@ const HomeCTA = React.forwardRef<HTMLElement>((props, ref) => {
           >
             <Lock className="h-3.5 w-3.5 flex-shrink-0" style={{ color: "hsl(42 92% 58%)" }} />
             <p className="text-sm" style={{ color: "rgba(255,255,255,0.7)" }}>
-              All inquiries are confidential. We respond within 1 business day.
+              All inquiries are confidential. We respond to appraisal requests within one business day.
             </p>
           </motion.div>
 

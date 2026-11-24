@@ -56,7 +56,7 @@ const ExteriorOnlyServiceDetail = React.forwardRef<HTMLElement>((props, ref) => 
     "Faster turnaround, lower cost",
     "Common for HELOCs and certain loan types",
     "USPAP-compliant reports by licensed, certified appraisers",
-    "Lender-approved report format accepted across the DFW metroplex",
+    "Independent, USPAP-compliant report format",
   ];
 
   return (

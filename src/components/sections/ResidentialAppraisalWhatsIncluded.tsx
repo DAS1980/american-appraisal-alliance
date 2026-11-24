@@ -162,7 +162,7 @@ const ResidentialAppraisalWhatsIncluded = React.forwardRef<HTMLElement>((props, 
             </div>
             <div>
               <h3 className="font-serif text-lg md:text-xl font-bold text-foreground mb-1">
-                USPAP-Compliant · Fannie Mae Form 1004 · Court-Accepted
+                USPAP-Compliant · Fannie Mae Form 1004 · Independent
               </h3>
               <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
                 All Full URAR appraisals are prepared by licensed and certified

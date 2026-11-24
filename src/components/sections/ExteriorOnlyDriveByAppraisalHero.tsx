@@ -129,7 +129,7 @@ const ExteriorOnlyDriveByAppraisalHero = React.forwardRef<HTMLElement>((props, r
             className="mt-5 text-sm text-white/65 flex items-center gap-2"
           >
             <span className="inline-block w-4 h-px bg-amber-400/60" aria-hidden="true" />
-            All inquiries are confidential. We respond within 1 business day.
+            All inquiries are confidential. We respond to appraisal requests within one business day.
           </motion.p>
         </div>
 

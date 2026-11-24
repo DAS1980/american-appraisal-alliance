@@ -98,7 +98,7 @@ const PrePurchaseAppraisalCTA = React.forwardRef<HTMLElement>((props, ref) => {
             {/* Reassurance copy */}
             <p className="mt-5 text-sm text-white/65 flex items-center gap-2" style={{ fontFamily: "'Inter', sans-serif" }}>
               <ShieldCheck className="h-4 w-4 flex-shrink-0" style={{ color: "hsl(42 88% 58%)" }} />
-              All inquiries are confidential. We respond within 1 business day.
+              All inquiries are confidential. We respond to appraisal requests within one business day.
             </p>
           </motion.div>
 

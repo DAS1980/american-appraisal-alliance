@@ -19,9 +19,9 @@ const highlights = [
   },
   {
     icon: FileText,
-    title: "Court-Accepted & Lender-Approved",
+    title: "Independent & Professional",
     description:
-      "Our reports are drafted to satisfy the requirements of lenders, attorneys, courts, and government agencies — defensible and compliant at every level.",
+      "Independent, professional real estate appraisals for lenders, attorneys, homeowners, and real estate professionals.",
   },
   {
     icon: CheckCircle,
@@ -158,7 +158,7 @@ const AboutCompanyOverview = React.forwardRef<HTMLElement>((props, ref) => {
             </p>
             <p className="text-muted-foreground leading-relaxed">
               We serve a broad range of clients — homeowners seeking clarity on market value,
-              lenders requiring reliable collateral assessments, attorneys needing court-accepted
+              lenders requiring reliable collateral assessments, attorneys needing credible, independent
               valuations, and estate administrators working through probate and IRS requirements.
               In every case, our commitment remains the same: accurate, unbiased, defensible
               valuations delivered with professionalism and discretion.
@@ -168,13 +168,13 @@ const AboutCompanyOverview = React.forwardRef<HTMLElement>((props, ref) => {
               <strong className="text-foreground font-semibold">
                 Uniform Standards of Professional Appraisal Practice (USPAP)
               </strong>
-              , and our reports are accepted by lenders, courts, the IRS, and government agencies
-              throughout Texas and nationwide.
+              , providing independent, professional real estate appraisals for lenders, attorneys,
+              homeowners, and real estate professionals.
             </p>
 
             {/* Inline trust badges */}
             <div className="flex flex-wrap gap-2 pt-2">
-              {["USPAP Compliant", "Licensed Appraisers", "DFW Coverage", "Lender-Approved"].map(
+              {["USPAP Compliant", "Licensed Appraisers", "DFW Coverage", "Serving Clients Since 1986"].map(
                 (badge) => (
                   <Badge
                     key={badge}

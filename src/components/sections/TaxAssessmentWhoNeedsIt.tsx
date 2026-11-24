@@ -30,7 +30,7 @@ const audienceSegments = [
     icon: Scale,
     title: "Attorneys & CPAs",
     description:
-      "Legal and financial professionals assisting clients through formal tax protest proceedings require an independent, court-accepted appraisal that will withstand scrutiny before an Appraisal Review Board. Our reports are prepared to meet exactly those standards.",
+      "Legal and financial professionals assisting clients through formal tax protest proceedings require an independent, well-supported appraisal for presentation before an Appraisal Review Board. Our reports are prepared in accordance with USPAP.",
     badge: null,
   },
   {

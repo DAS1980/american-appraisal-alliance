@@ -35,7 +35,7 @@ const ResidentialAppraisalTurnaround = React.forwardRef<HTMLElement>((props, ref
       title: "Inquiry Response",
       value: "Within 1 Business Day",
       description:
-        "All inquiries submitted to American Appraisal Alliance receive a response within 1 business day. We confirm order details, scheduling, and access requirements promptly.",
+        "We respond to appraisal requests within one business day. Scheduling is subject to availability, property location, and assignment requirements.",
       highlight: false,
     },
   ];
@@ -214,7 +214,7 @@ const ResidentialAppraisalTurnaround = React.forwardRef<HTMLElement>((props, ref
             </div>
             <div className="flex-1 text-center md:text-left">
               <p className="font-['Playfair_Display',serif] text-xl font-semibold text-white mb-1">
-                We Respond to All Inquiries Within 1 Business Day
+                We Respond to Appraisal Requests Within One Business Day
               </p>
               <p className="text-white/80 text-sm leading-relaxed">
                 Once you submit your appraisal request, our team will confirm receipt, review your

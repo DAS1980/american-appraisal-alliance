@@ -30,7 +30,7 @@ const highlights = [
   },
   {
     icon: Scale,
-    title: "Court and Lender Accepted",
+    title: "Widely Recognized Report Format",
     body: "The Full URAR is accepted by all major lenders, Fannie Mae, Freddie Mac, FHA, VA, courts, and attorneys — making it the most universally recognized appraisal format.",
   },
 ];
@@ -154,7 +154,7 @@ const ResidentialAppraisalWhatItIs = React.forwardRef<HTMLElement>(
                 comprehensive documentation, it is the preferred &mdash; and often
                 required &mdash; appraisal type for mortgage origination,
                 refinancing, legal proceedings, estate planning, and any situation
-                where a highly credible, court-accepted valuation is needed.
+                where a highly credible, independent valuation is needed.
               </p>
             </motion.div>
 

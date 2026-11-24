@@ -4,6 +4,7 @@ import { MapPin, CheckCircle, Phone } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { siteConfig } from "@/config/site";
 
 const cities = [
   "Dallas",
@@ -192,12 +193,12 @@ const RequestServiceArea = React.forwardRef<HTMLElement>((props, ref) => {
                 communities.
               </p>
               <a
-                href="tel:+12145550100"
+                href={siteConfig.phoneHref}
                 className="inline-flex items-center gap-1.5 mt-2 text-sm font-semibold hover:underline"
                 style={{ color: "hsl(var(--accent))" }}
               >
                 <Phone className="h-3.5 w-3.5" />
-                (214) 555-0100
+                {siteConfig.phone}
               </a>
             </div>
 

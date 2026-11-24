@@ -17,9 +17,9 @@ const differentiators = [
   },
   {
     icon: Gavel,
-    title: "Court-Accepted & Lender-Approved",
+    title: "Independent & Professional",
     detail:
-      "Reports are prepared to withstand legal scrutiny and satisfy major lender underwriting requirements.",
+      "Independent, professional real estate appraisals for lenders, attorneys, homeowners, and real estate professionals.",
   },
   {
     icon: MapPin,
@@ -95,7 +95,7 @@ const CoreAppraisalWhyChooseUs = React.forwardRef<HTMLElement>((props, ref) => {
           </h2>
 
           <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Licensed, certified, and court-accepted appraisers serving the full DFW metroplex.
+            Independent, professional real estate appraisals for lenders, attorneys, homeowners, and real estate professionals.
           </p>
         </motion.div>
 

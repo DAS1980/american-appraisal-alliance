@@ -39,7 +39,7 @@ const differentiators = [
     icon: Lock,
     title: "Confidential & Professional",
     description:
-      "All inquiries and reports are handled with strict confidentiality. We respond within 1 business day.",
+      "All inquiries and reports are handled with strict confidentiality. We respond to appraisal requests within one business day.",
   },
 ];
 
@@ -170,7 +170,7 @@ const PreListingWhyChooseUs = React.forwardRef<HTMLElement>((props, ref) => {
             "USPAP-Compliant",
             "Texas State Licensed",
             "Serving All of DFW",
-            "Court & Lender Accepted",
+            "Independent & Professional",
           ].map((badge) => (
             <div key={badge} className="flex items-center gap-2">
               <span

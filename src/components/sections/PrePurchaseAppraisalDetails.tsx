@@ -452,8 +452,7 @@ const PrePurchaseAppraisalDetails = React.forwardRef<HTMLElement>(
                         Confidential Inquiry
                       </p>
                       <p className="text-xs text-muted-foreground">
-                        All inquiries are confidential. We respond within 1
-                        business day.
+                        All inquiries are confidential. We respond to appraisal requests within one business day.
                       </p>
                     </div>
                   </div>
@@ -501,7 +500,7 @@ const PrePurchaseAppraisalDetails = React.forwardRef<HTMLElement>(
                   {[
                     "USPAP-Compliant",
                     "Licensed & Certified Appraisers",
-                    "Court-Accepted Reports",
+                    "Independent & Professional",
                     "Lender-Grade Documentation",
                     "DFW Local Market Expertise",
                   ].map((tag) => (

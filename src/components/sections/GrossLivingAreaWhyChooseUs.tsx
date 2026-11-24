@@ -19,9 +19,9 @@ const differentiators = [
   },
   {
     icon: Shield,
-    title: "Court-Accepted & Lender-Approved",
+    title: "Independent & Professional",
     description:
-      "Our GLA certifications are court-accepted and lender-approved, making them defensible in legal proceedings, real estate transactions, and formal financing scenarios.",
+      "Independent, professional real estate appraisals for lenders, attorneys, homeowners, and real estate professionals.",
   },
   {
     icon: MapPin,
@@ -47,9 +47,9 @@ const trustSignals = [
   "USPAP Compliant",
   "Licensed Appraisers",
   "Fannie Mae Guidelines",
-  "Court-Accepted",
+  "Independent Valuations",
   "ANSI Z765-2021",
-  "Lender-Approved",
+  "Serving Clients Since 1986",
 ];
 
 const containerVariants = {

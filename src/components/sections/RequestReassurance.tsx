@@ -3,6 +3,7 @@ import { SITE_BASE_URL } from "@/pages/Request";
 import { motion } from "framer-motion";
 import { Shield, Clock, Phone, Mail, CheckCircle, Lock } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { siteConfig, businessStatements } from "@/config/site";
 
 const RequestReassurance = React.forwardRef<HTMLElement>((props, ref) => {
   const trustPoints = [
@@ -10,19 +11,17 @@ const RequestReassurance = React.forwardRef<HTMLElement>((props, ref) => {
       icon: Lock,
       title: "All Inquiries Are Confidential",
       body:
-        "Your information is handled with the utmost discretion. We never share client details with third parties.",
+        "Your information is handled with discretion and used to respond to your inquiry. See our Privacy Policy for details.",
     },
     {
       icon: Clock,
       title: "1 Business Day Response",
-      body:
-        "We review every request promptly. Expect a response from our team within one business day of submission.",
+      body: `${businessStatements.response} ${businessStatements.scheduling}`,
     },
     {
       icon: Shield,
-      title: "USPAP-Compliant Appraisers",
-      body:
-        "All appraisals are performed by licensed, USPAP-compliant appraisers with deep Dallas–Fort Worth market expertise.",
+      title: "Texas Certified Residential Appraiser",
+      body: `USPAP-compliant appraisals. ${businessStatements.license}. ${businessStatements.experience}`,
     },
     {
       icon: CheckCircle,
@@ -68,12 +67,13 @@ const RequestReassurance = React.forwardRef<HTMLElement>((props, ref) => {
             className="text-lg md:text-xl font-semibold text-foreground"
             style={{ fontFamily: "Inter, sans-serif" }}
           >
-            All inquiries are confidential. We respond within 1 business day.
+            All inquiries are confidential. {businessStatements.response}
           </p>
           <p className="mt-2 text-muted-foreground max-w-2xl mx-auto text-base leading-relaxed">
-            Submitting an appraisal request carries no obligation. Our licensed
-            team will review your property details and reach out to confirm scope,
-            timeline, and fee — with no pressure and complete transparency.
+            Submitting an inquiry carries no obligation and does not establish an
+            appraisal engagement. We will review your request and reach out to
+            discuss the assignment details, scope, fee, and scheduling.{" "}
+            {businessStatements.scheduling}
           </p>
         </motion.div>
 
@@ -142,16 +142,16 @@ const RequestReassurance = React.forwardRef<HTMLElement>((props, ref) => {
           </h3>
           <p className="text-white/80 max-w-xl mx-auto text-sm leading-relaxed mb-8">
             Whether you have a question about appraisal scope, turnaround time, or
-            which report type is right for your situation, our licensed DFW
-            appraisers are available to assist you directly.
+            which report type is right for your situation, call or email us
+            directly during business hours ({siteConfig.hoursShort}).
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
             {/* Phone */}
             <a
-              href="tel:+12145550198"
+              href={siteConfig.phoneHref}
               className="flex items-center gap-3 group"
-              aria-label="Call us at (214) 555-0198"
+              aria-label={`Call us at ${siteConfig.phone}`}
             >
               <div
                 className="flex h-10 w-10 items-center justify-center rounded-full"
@@ -167,7 +167,7 @@ const RequestReassurance = React.forwardRef<HTMLElement>((props, ref) => {
                   Phone
                 </p>
                 <p className="text-white font-semibold group-hover:text-[hsl(42_92%_58%)] transition-colors duration-200">
-                  (214) 555-0198
+                  {siteConfig.phone}
                 </p>
               </div>
             </a>
@@ -177,9 +177,9 @@ const RequestReassurance = React.forwardRef<HTMLElement>((props, ref) => {
 
             {/* Email */}
             <a
-              href="mailto:info@americanappraisalalliance.com"
+              href={`mailto:${siteConfig.ordersEmail}`}
               className="flex items-center gap-3 group"
-              aria-label="Email us at info@americanappraisalalliance.com"
+              aria-label={`Email us at ${siteConfig.ordersEmail}`}
             >
               <div
                 className="flex h-10 w-10 items-center justify-center rounded-full"
@@ -195,7 +195,7 @@ const RequestReassurance = React.forwardRef<HTMLElement>((props, ref) => {
                   Email
                 </p>
                 <p className="text-white font-semibold group-hover:text-[hsl(42_92%_58%)] transition-colors duration-200 break-all text-sm">
-                  info@americanappraisalalliance.com
+                  {siteConfig.ordersEmail}
                 </p>
               </div>
             </a>
@@ -205,7 +205,7 @@ const RequestReassurance = React.forwardRef<HTMLElement>((props, ref) => {
           <p
             className="mt-8 text-xs text-white/50 max-w-lg mx-auto leading-relaxed"
           >
-            All appraisals are performed by licensed, USPAP-compliant appraisers.{" "}
+            {businessStatements.professionalServices}{" "}
             <a
               href={SITE_BASE_URL}
               className="text-white/60 underline hover:text-white/80 transition-colors"

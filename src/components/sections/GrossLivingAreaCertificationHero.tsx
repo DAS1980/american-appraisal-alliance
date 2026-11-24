@@ -17,7 +17,7 @@ const GrossLivingAreaCertificationHero = React.forwardRef<HTMLElement>((props, r
     },
     {
       icon: Shield,
-      label: "Lender & Court Accepted",
+      label: "Independent & Professional",
     },
     {
       icon: CheckCircle,

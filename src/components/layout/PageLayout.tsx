@@ -18,8 +18,9 @@
  * </PageLayout>
  */
 
-import { ReactNode } from 'react';
+import { ReactNode, useEffect } from 'react';
 import { cn } from '@/lib/utils';
+import { registerAnalyticsListeners } from '@/lib/analyticsEvents';
 
 interface PageLayoutProps {
   children: ReactNode;
@@ -41,7 +42,13 @@ export function PageLayout({
 }: PageLayoutProps) {
   // Note: currentPage, hideHeader, hideFooter are kept for backward compatibility
   // but are no longer used. The agent creates Header/Footer as section components.
-  
+
+  // GTM dataLayer click events (click_to_call, appraisal_request_click).
+  // Idempotent — registers a single document listener per page load.
+  useEffect(() => {
+    registerAnalyticsListeners();
+  }, []);
+
   return (
     <div className={cn('min-h-screen flex flex-col', className)}>
       {children}
