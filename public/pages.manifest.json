@@ -442,9 +442,8 @@
       },
       "sections": [
         "Header",
-        "RequestHero",
-        "RequestServiceArea",
         "RequestIntakeForm",
+        "RequestServiceArea",
         "RequestReassurance",
         "Footer"
       ],

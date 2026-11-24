@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { MapPin, CheckCircle, Phone } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 import { siteConfig } from "@/config/site";
 
 const cities = [
@@ -72,8 +71,8 @@ const RequestServiceArea = React.forwardRef<HTMLElement>((props, ref) => {
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Left: map illustration using a pool image */}
           <motion.div
-            initial={{ opacity: 0, x: -32 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
             className="relative rounded-2xl overflow-hidden shadow-lg"
@@ -116,8 +115,8 @@ const RequestServiceArea = React.forwardRef<HTMLElement>((props, ref) => {
 
           {/* Right: city badge grid + trust items */}
           <motion.div
-            initial={{ opacity: 0, x: 32 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
           >
@@ -164,7 +163,7 @@ const RequestServiceArea = React.forwardRef<HTMLElement>((props, ref) => {
             <ul className="space-y-3 mb-8">
               {[
                 "USPAP-compliant appraisals across the entire DFW metroplex",
-                "Licensed and certified appraisers with deep local market knowledge",
+                "Appraisals by a Texas Certified Residential Real Estate Appraiser familiar with local DFW markets",
                 "Serving residential and specialized appraisal needs throughout North Texas",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3 text-sm text-foreground">
@@ -212,7 +211,7 @@ const RequestServiceArea = React.forwardRef<HTMLElement>((props, ref) => {
                 color: "hsl(218 65% 14%)",
               }}
             >
-              <Link to="/request">Request an Appraisal</Link>
+              <a href="#appraisal-form">Request an Appraisal</a>
             </Button>
           </motion.div>
         </div>
