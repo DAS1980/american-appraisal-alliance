@@ -759,18 +759,106 @@
       "isHome": false,
       "filePath": "src/pages/CelinaTx.tsx",
       "seo": {
-        "title": "Celina, TX Real Estate Appraisals - American Appraisal Alliance",
-        "description": "USPAP-compliant real estate appraisal services in Celina, Texas from American Appraisal Alliance.",
+        "title": "Celina, TX Home Appraisals | American Appraisal Alliance",
+        "description": "Celina, TX home appraisals for a market built mostly since 2010, with city-versus-ETJ, two-county and new-construction comparable issues addressed.",
         "keywords": [
-          "Celina TX real estate appraisal",
-          "Celina Texas appraiser",
+          "Celina TX home appraisal",
+          "Celina appraiser",
+          "Celina new construction appraisal",
           "American Appraisal Alliance"
         ],
         "ogImage": "",
         "canonicalUrl": "",
         "noindex": false,
         "structuredDataType": "Service",
-        "structuredData": null
+        "structuredData": {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Service",
+              "@id": "https://americanappraisalalliance.com/service-areas/collin-county/celina/#service",
+              "name": "Residential appraisal in Celina, Texas",
+              "serviceType": "Residential real estate appraisal",
+              "url": "https://americanappraisalalliance.com/service-areas/collin-county/celina/",
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://americanappraisalalliance.com/#organization",
+                "name": "American Appraisal Alliance",
+                "legalName": "JAS Appraisal Services LLC",
+                "url": "https://americanappraisalalliance.com/",
+                "telephone": "+1-469-936-4240",
+                "email": "orders@aaarea.net"
+              },
+              "areaServed": {
+                "@type": "City",
+                "name": "Celina",
+                "containedInPlace": {
+                  "@type": "State",
+                  "name": "Texas"
+                }
+              }
+            },
+            {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://americanappraisalalliance.com/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Service Areas",
+                  "item": "https://americanappraisalalliance.com/service-areas/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": "Collin County",
+                  "item": "https://americanappraisalalliance.com/service-areas/collin-county/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 4,
+                  "name": "Celina",
+                  "item": "https://americanappraisalalliance.com/service-areas/collin-county/celina/"
+                }
+              ]
+            },
+            {
+              "@type": "FAQPage",
+              "@id": "https://americanappraisalalliance.com/service-areas/collin-county/celina/#faq",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "My address says Celina. Is the home inside the City of Celina?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Not necessarily. Celina\u2019s 2040 plan covers about 76 square miles that include the city, its extraterritorial jurisdiction and areas covered by boundary agreements, and some master-planned communities with Celina addresses lie in the ETJ. Whether a home is inside the city affects taxes, services and land-use rules, so the appraiser confirms it from boundary and parcel records."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How are comparables chosen when so many Celina homes are new?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "In a market built largely since 2010, recent resales and builder sales from the same or a similar subdivision are often the most relevant evidence. The appraiser looks closely at lot size, builder, upgrades and the terms of new-construction sales, rather than assuming a new home and a five-year-old resale are interchangeable."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Which county is my Celina property in?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The City of Celina lies in both Collin and Denton counties according to the U.S. Census Bureau\u2019s 2020 place-by-county records. The parcel record, not the mailing address, establishes the county and therefore the appraisal district that values the property for taxes."
+                  }
+                }
+              ]
+            }
+          ]
+        }
       },
       "sections": [
         "Header",
@@ -1154,18 +1242,106 @@
       "isHome": false,
       "filePath": "src/pages/ProsperTx.tsx",
       "seo": {
-        "title": "Prosper, TX Real Estate Appraisals - American Appraisal Alliance",
-        "description": "USPAP-compliant real estate appraisal services in Prosper, Texas from American Appraisal Alliance.",
+        "title": "Prosper, TX Home Appraisals | American Appraisal Alliance",
+        "description": "Prosper, TX appraisals that confirm Collin or Denton County, weigh builder and resale evidence, and follow the town's plan and tollway guidelines.",
         "keywords": [
-          "Prosper TX real estate appraisal",
-          "Prosper Texas appraiser",
+          "Prosper TX home appraisal",
+          "Prosper appraiser",
+          "Prosper tax protest appraisal",
           "American Appraisal Alliance"
         ],
         "ogImage": "",
         "canonicalUrl": "",
         "noindex": false,
         "structuredDataType": "Service",
-        "structuredData": null
+        "structuredData": {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Service",
+              "@id": "https://americanappraisalalliance.com/service-areas/collin-county/prosper/#service",
+              "name": "Residential appraisal in Prosper, Texas",
+              "serviceType": "Residential real estate appraisal",
+              "url": "https://americanappraisalalliance.com/service-areas/collin-county/prosper/",
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://americanappraisalalliance.com/#organization",
+                "name": "American Appraisal Alliance",
+                "legalName": "JAS Appraisal Services LLC",
+                "url": "https://americanappraisalalliance.com/",
+                "telephone": "+1-469-936-4240",
+                "email": "orders@aaarea.net"
+              },
+              "areaServed": {
+                "@type": "City",
+                "name": "Prosper",
+                "containedInPlace": {
+                  "@type": "State",
+                  "name": "Texas"
+                }
+              }
+            },
+            {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://americanappraisalalliance.com/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Service Areas",
+                  "item": "https://americanappraisalalliance.com/service-areas/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": "Collin County",
+                  "item": "https://americanappraisalalliance.com/service-areas/collin-county/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 4,
+                  "name": "Prosper",
+                  "item": "https://americanappraisalalliance.com/service-areas/collin-county/prosper/"
+                }
+              ]
+            },
+            {
+              "@type": "FAQPage",
+              "@id": "https://americanappraisalalliance.com/service-areas/collin-county/prosper/#faq",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "Prosper is in two counties. Why does that matter for an appraisal?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The Town of Prosper extends into both Collin and Denton counties. The county determines which appraisal district values the property for taxes and which public records apply, so it matters most for tax protests and for comparing homes on either side of the line."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Are homes along the Dallas North Tollway corridor treated differently?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Not automatically. Prosper has adopted design guidelines for the tollway corridor as part of its comprehensive plan, and corridor location is a characteristic the appraiser describes. Any effect on value has to be shown by comparable sales, such as homes with similar exposure to the corridor."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Do new-construction sales count as comparables in Prosper?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "They can. With most of Prosper\u2019s housing built since 2010, builder sales are part of the market. The appraiser verifies the sale terms, any incentives and the finished features, and weighs them against resales of similar homes."
+                  }
+                }
+              ]
+            }
+          ]
+        }
       },
       "sections": [
         "Header",
@@ -1241,18 +1417,106 @@
       "isHome": false,
       "filePath": "src/pages/Addison.tsx",
       "seo": {
-        "title": "Addison, TX Real Estate Appraisals - American Appraisal Alliance",
-        "description": "USPAP-compliant real estate appraisal services in Addison, Texas from American Appraisal Alliance.",
+        "title": "Addison, TX Appraisals | American Appraisal Alliance",
+        "description": "Addison, TX residential appraisals for a mostly multifamily market: condominium, townhome and detached-home comparables, compared like with like.",
         "keywords": [
-          "Addison TX real estate appraisal",
-          "Addison Texas appraiser",
+          "Addison TX appraisal",
+          "Addison townhome appraisal",
+          "Addison appraiser",
           "American Appraisal Alliance"
         ],
         "ogImage": "",
         "canonicalUrl": "",
         "noindex": false,
         "structuredDataType": "Service",
-        "structuredData": null
+        "structuredData": {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Service",
+              "@id": "https://americanappraisalalliance.com/service-areas/dallas-county/addison/#service",
+              "name": "Residential appraisal in Addison, Texas",
+              "serviceType": "Residential real estate appraisal",
+              "url": "https://americanappraisalalliance.com/service-areas/dallas-county/addison/",
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://americanappraisalalliance.com/#organization",
+                "name": "American Appraisal Alliance",
+                "legalName": "JAS Appraisal Services LLC",
+                "url": "https://americanappraisalalliance.com/",
+                "telephone": "+1-469-936-4240",
+                "email": "orders@aaarea.net"
+              },
+              "areaServed": {
+                "@type": "City",
+                "name": "Addison",
+                "containedInPlace": {
+                  "@type": "State",
+                  "name": "Texas"
+                }
+              }
+            },
+            {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://americanappraisalalliance.com/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Service Areas",
+                  "item": "https://americanappraisalalliance.com/service-areas/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": "Dallas County",
+                  "item": "https://americanappraisalalliance.com/service-areas/dallas-county/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 4,
+                  "name": "Addison",
+                  "item": "https://americanappraisalalliance.com/service-areas/dallas-county/addison/"
+                }
+              ]
+            },
+            {
+              "@type": "FAQPage",
+              "@id": "https://americanappraisalalliance.com/service-areas/dallas-county/addison/#faq",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "How are Addison condominiums and townhomes compared?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "It is compared primarily with other condominiums or townhomes \u2014 ideally in the same project or similar projects \u2014 because their buyers, ownership structure and association costs differ from detached homes. The appraiser also considers association dues, project characteristics and any limits on rentals or financing that affect the market."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Can sales in neighboring Dallas be used for an Addison home?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sometimes, when Addison itself lacks recent similar sales. Because Addison is a separate town with its own taxes and services, the appraiser explains why any outside sale is a reasonable substitute and adjusts for the differences the market supports."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Does Addison Airport or the Silver Line affect home values?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "They are location characteristics to examine, not automatic adjustments. The appraiser describes the property\u2019s setting and relies on sales evidence \u2014 for example, homes with and without similar exposure \u2014 before making any adjustment."
+                  }
+                }
+              ]
+            }
+          ]
+        }
       },
       "sections": [
         "Header",
@@ -1267,18 +1531,106 @@
       "isHome": false,
       "filePath": "src/pages/NorthDallas.tsx",
       "seo": {
-        "title": "North Dallas, TX Real Estate Appraisals - American Appraisal Alliance",
-        "description": "USPAP-compliant real estate appraisal services in North Dallas, Texas from American Appraisal Alliance.",
+        "title": "North Dallas Home Appraisals | American Appraisal Alliance",
+        "description": "Home appraisals in northern Dallas that start with records: city limits, which of five counties applies, current zoning and conservation districts.",
         "keywords": [
-          "North Dallas TX real estate appraisal",
-          "North Dallas Texas appraiser",
+          "North Dallas home appraisal",
+          "Dallas appraiser",
+          "North Dallas appraisal",
           "American Appraisal Alliance"
         ],
         "ogImage": "",
         "canonicalUrl": "",
         "noindex": false,
         "structuredDataType": "Service",
-        "structuredData": null
+        "structuredData": {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Service",
+              "@id": "https://americanappraisalalliance.com/service-areas/dallas-county/north-dallas/#service",
+              "name": "Residential appraisal in Dallas, Texas",
+              "serviceType": "Residential real estate appraisal",
+              "url": "https://americanappraisalalliance.com/service-areas/dallas-county/north-dallas/",
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://americanappraisalalliance.com/#organization",
+                "name": "American Appraisal Alliance",
+                "legalName": "JAS Appraisal Services LLC",
+                "url": "https://americanappraisalalliance.com/",
+                "telephone": "+1-469-936-4240",
+                "email": "orders@aaarea.net"
+              },
+              "areaServed": {
+                "@type": "City",
+                "name": "Dallas",
+                "containedInPlace": {
+                  "@type": "State",
+                  "name": "Texas"
+                }
+              }
+            },
+            {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://americanappraisalalliance.com/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Service Areas",
+                  "item": "https://americanappraisalalliance.com/service-areas/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": "Dallas County",
+                  "item": "https://americanappraisalalliance.com/service-areas/dallas-county/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 4,
+                  "name": "Dallas",
+                  "item": "https://americanappraisalalliance.com/service-areas/dallas-county/north-dallas/"
+                }
+              ]
+            },
+            {
+              "@type": "FAQPage",
+              "@id": "https://americanappraisalalliance.com/service-areas/dallas-county/north-dallas/#faq",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "What exactly is North Dallas?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "It is a commonly used description for the northern part of the City of Dallas rather than an official municipality, and its edges are described differently by different people. For an appraisal, the meaningful facts are the property\u2019s actual city, county, zoning and subdivision, which are confirmed from public records."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Can a Dallas address be outside Dallas County?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. According to the U.S. Census Bureau, the City of Dallas extends into Dallas, Collin, Denton, Kaufman and Rockwall counties. The county controls which appraisal district values the property and which records apply."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Does ForwardDallas change my property\u2019s zoning?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. The City of Dallas describes ForwardDallas 2.0, adopted in September 2024, as a land-use planning guide that does not rezone property. The appraiser relies on the property\u2019s current zoning and any applicable conservation-district or planned-development ordinance."
+                  }
+                }
+              ]
+            }
+          ]
+        }
       },
       "sections": [
         "Header",
@@ -1441,18 +1793,106 @@
       "isHome": false,
       "filePath": "src/pages/Aubrey.tsx",
       "seo": {
-        "title": "Aubrey, TX Real Estate Appraisals - American Appraisal Alliance",
-        "description": "USPAP-compliant real estate appraisal services in Aubrey, Texas from American Appraisal Alliance.",
+        "title": "Aubrey, TX Property Appraisals | American Appraisal Alliance",
+        "description": "Aubrey, TX appraisals for subdivision homes and rural acreage, with the one-mile ETJ and Ray Roberts Lake flowage easements considered.",
         "keywords": [
-          "Aubrey TX real estate appraisal",
-          "Aubrey Texas appraiser",
+          "Aubrey TX appraisal",
+          "Aubrey acreage appraisal",
+          "Aubrey appraiser",
           "American Appraisal Alliance"
         ],
         "ogImage": "",
         "canonicalUrl": "",
         "noindex": false,
         "structuredDataType": "Service",
-        "structuredData": null
+        "structuredData": {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Service",
+              "@id": "https://americanappraisalalliance.com/service-areas/denton-county/aubrey/#service",
+              "name": "Residential appraisal in Aubrey, Texas",
+              "serviceType": "Residential real estate appraisal",
+              "url": "https://americanappraisalalliance.com/service-areas/denton-county/aubrey/",
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://americanappraisalalliance.com/#organization",
+                "name": "American Appraisal Alliance",
+                "legalName": "JAS Appraisal Services LLC",
+                "url": "https://americanappraisalalliance.com/",
+                "telephone": "+1-469-936-4240",
+                "email": "orders@aaarea.net"
+              },
+              "areaServed": {
+                "@type": "City",
+                "name": "Aubrey",
+                "containedInPlace": {
+                  "@type": "State",
+                  "name": "Texas"
+                }
+              }
+            },
+            {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://americanappraisalalliance.com/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Service Areas",
+                  "item": "https://americanappraisalalliance.com/service-areas/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": "Denton County",
+                  "item": "https://americanappraisalalliance.com/service-areas/denton-county/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 4,
+                  "name": "Aubrey",
+                  "item": "https://americanappraisalalliance.com/service-areas/denton-county/aubrey/"
+                }
+              ]
+            },
+            {
+              "@type": "FAQPage",
+              "@id": "https://americanappraisalalliance.com/service-areas/denton-county/aubrey/#faq",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "My Aubrey-area property is outside the city limits. Does that matter?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Aubrey maintains a one-mile extraterritorial jurisdiction where the city regulates the subdivision of land but not zoning. Properties in the ETJ and inside the city can differ in rules and services, so the appraiser confirms which applies before selecting comparables."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How are acreage or horse properties near Aubrey appraised?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "They are compared with sales of similar rural or acreage properties, with attention to land size, improvements such as barns and fencing, access and utilities. Subdivision homes on small lots are generally a different market and are not substituted without explanation."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What is a flowage easement near Ray Roberts Lake?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The U.S. Army Corps of Engineers describes a flowage easement as privately owned land on which the government holds the perpetual right to flood, with restrictions on what owners may do there. If a property is affected, the easement is part of the property rights being appraised."
+                  }
+                }
+              ]
+            }
+          ]
+        }
       },
       "sections": [
         "Header",
@@ -1467,18 +1907,106 @@
       "isHome": false,
       "filePath": "src/pages/Carrollton.tsx",
       "seo": {
-        "title": "Carrollton, TX Real Estate Appraisals - American Appraisal Alliance",
-        "description": "USPAP-compliant real estate appraisal services in Carrollton, Texas from American Appraisal Alliance.",
+        "title": "Carrollton, TX Home Appraisals | American Appraisal Alliance",
+        "description": "Carrollton, TX home appraisals across Dallas, Denton and Collin counties, focused on 1970s-era housing, renovations and finished square footage.",
         "keywords": [
-          "Carrollton TX real estate appraisal",
-          "Carrollton Texas appraiser",
+          "Carrollton TX home appraisal",
+          "Carrollton appraiser",
+          "Carrollton tax appeal appraisal",
           "American Appraisal Alliance"
         ],
         "ogImage": "",
         "canonicalUrl": "",
         "noindex": false,
         "structuredDataType": "Service",
-        "structuredData": null
+        "structuredData": {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Service",
+              "@id": "https://americanappraisalalliance.com/service-areas/denton-county/carrollton/#service",
+              "name": "Residential appraisal in Carrollton, Texas",
+              "serviceType": "Residential real estate appraisal",
+              "url": "https://americanappraisalalliance.com/service-areas/denton-county/carrollton/",
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://americanappraisalalliance.com/#organization",
+                "name": "American Appraisal Alliance",
+                "legalName": "JAS Appraisal Services LLC",
+                "url": "https://americanappraisalalliance.com/",
+                "telephone": "+1-469-936-4240",
+                "email": "orders@aaarea.net"
+              },
+              "areaServed": {
+                "@type": "City",
+                "name": "Carrollton",
+                "containedInPlace": {
+                  "@type": "State",
+                  "name": "Texas"
+                }
+              }
+            },
+            {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://americanappraisalalliance.com/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Service Areas",
+                  "item": "https://americanappraisalalliance.com/service-areas/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": "Denton County",
+                  "item": "https://americanappraisalalliance.com/service-areas/denton-county/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 4,
+                  "name": "Carrollton",
+                  "item": "https://americanappraisalalliance.com/service-areas/denton-county/carrollton/"
+                }
+              ]
+            },
+            {
+              "@type": "FAQPage",
+              "@id": "https://americanappraisalalliance.com/service-areas/denton-county/carrollton/#faq",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "Which county is my Carrollton home in?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Carrollton extends into Dallas, Denton and Collin counties. The parcel record establishes the county and the appraisal district that values the property for taxes, which is especially important for tax-protest appraisals."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How does the age of Carrollton\u2019s housing affect an appraisal?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Much of Carrollton was built during a 1970s growth period, and many homes have since been updated to very different degrees. The appraiser compares homes of similar era and pays close attention to the extent and quality of renovations, which often explain differences between otherwise similar sales."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Does being near a DART station change a Carrollton home\u2019s value?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Not automatically. Rail access is a location characteristic, and any influence must be shown by sales of comparable homes with similar proximity. The appraisal reflects the market as of its effective date."
+                  }
+                }
+              ]
+            }
+          ]
+        }
       },
       "sections": [
         "Header",
@@ -1493,18 +2021,106 @@
       "isHome": false,
       "filePath": "src/pages/Lewisville.tsx",
       "seo": {
-        "title": "Lewisville, TX Real Estate Appraisals - American Appraisal Alliance",
-        "description": "USPAP-compliant real estate appraisal services in Lewisville, Texas from American Appraisal Alliance.",
+        "title": "Lewisville, TX Home Appraisals | American Appraisal Alliance",
+        "description": "Lewisville, TX appraisals that separate detached, attached and condo markets and check lake flood zones and Corps of Engineers flowage easements.",
         "keywords": [
-          "Lewisville TX real estate appraisal",
-          "Lewisville Texas appraiser",
+          "Lewisville TX home appraisal",
+          "Lewisville appraiser",
+          "Lewisville Lake property appraisal",
           "American Appraisal Alliance"
         ],
         "ogImage": "",
         "canonicalUrl": "",
         "noindex": false,
         "structuredDataType": "Service",
-        "structuredData": null
+        "structuredData": {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Service",
+              "@id": "https://americanappraisalalliance.com/service-areas/denton-county/lewisville/#service",
+              "name": "Residential appraisal in Lewisville, Texas",
+              "serviceType": "Residential real estate appraisal",
+              "url": "https://americanappraisalalliance.com/service-areas/denton-county/lewisville/",
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://americanappraisalalliance.com/#organization",
+                "name": "American Appraisal Alliance",
+                "legalName": "JAS Appraisal Services LLC",
+                "url": "https://americanappraisalalliance.com/",
+                "telephone": "+1-469-936-4240",
+                "email": "orders@aaarea.net"
+              },
+              "areaServed": {
+                "@type": "City",
+                "name": "Lewisville",
+                "containedInPlace": {
+                  "@type": "State",
+                  "name": "Texas"
+                }
+              }
+            },
+            {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://americanappraisalalliance.com/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Service Areas",
+                  "item": "https://americanappraisalalliance.com/service-areas/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": "Denton County",
+                  "item": "https://americanappraisalalliance.com/service-areas/denton-county/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 4,
+                  "name": "Lewisville",
+                  "item": "https://americanappraisalalliance.com/service-areas/denton-county/lewisville/"
+                }
+              ]
+            },
+            {
+              "@type": "FAQPage",
+              "@id": "https://americanappraisalalliance.com/service-areas/denton-county/lewisville/#faq",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "Could my Lewisville property be affected by a lake flowage easement?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Properties near Lewisville Lake can be. The U.S. Army Corps of Engineers describes flowage easements as private land on which the government holds the perpetual right to flood, with restrictions on use. If one applies, the appraiser identifies it and considers its effect on the property rights being valued."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Lewisville has many apartments and townhomes. How does that affect comparables?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Each housing type is compared with its own kind. A detached home is compared with detached homes, and an attached or condominium unit with similar attached units, because the buyers and ownership costs differ."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Is all of Lewisville in Denton County?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. According to the U.S. Census Bureau, Lewisville extends into both Denton and Dallas counties. The parcel record determines the county and appraisal district."
+                  }
+                }
+              ]
+            }
+          ]
+        }
       },
       "sections": [
         "Header",
@@ -1519,18 +2135,106 @@
       "isHome": false,
       "filePath": "src/pages/LittleElm.tsx",
       "seo": {
-        "title": "Little Elm, TX Real Estate Appraisals - American Appraisal Alliance",
-        "description": "USPAP-compliant real estate appraisal services in Little Elm, Texas from American Appraisal Alliance.",
+        "title": "Little Elm, TX Home Appraisals | American Appraisal Alliance",
+        "description": "Little Elm, TX home appraisals that confirm current flood-map status, lake easements and rental registration before comparing lakeside sales.",
         "keywords": [
-          "Little Elm TX real estate appraisal",
-          "Little Elm Texas appraiser",
+          "Little Elm TX home appraisal",
+          "Little Elm appraiser",
+          "Little Elm lakefront appraisal",
           "American Appraisal Alliance"
         ],
         "ogImage": "",
         "canonicalUrl": "",
         "noindex": false,
         "structuredDataType": "Service",
-        "structuredData": null
+        "structuredData": {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Service",
+              "@id": "https://americanappraisalalliance.com/service-areas/denton-county/little-elm/#service",
+              "name": "Residential appraisal in Little Elm, Texas",
+              "serviceType": "Residential real estate appraisal",
+              "url": "https://americanappraisalalliance.com/service-areas/denton-county/little-elm/",
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://americanappraisalalliance.com/#organization",
+                "name": "American Appraisal Alliance",
+                "legalName": "JAS Appraisal Services LLC",
+                "url": "https://americanappraisalalliance.com/",
+                "telephone": "+1-469-936-4240",
+                "email": "orders@aaarea.net"
+              },
+              "areaServed": {
+                "@type": "City",
+                "name": "Little Elm",
+                "containedInPlace": {
+                  "@type": "State",
+                  "name": "Texas"
+                }
+              }
+            },
+            {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://americanappraisalalliance.com/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Service Areas",
+                  "item": "https://americanappraisalalliance.com/service-areas/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": "Denton County",
+                  "item": "https://americanappraisalalliance.com/service-areas/denton-county/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 4,
+                  "name": "Little Elm",
+                  "item": "https://americanappraisalalliance.com/service-areas/denton-county/little-elm/"
+                }
+              ]
+            },
+            {
+              "@type": "FAQPage",
+              "@id": "https://americanappraisalalliance.com/service-areas/denton-county/little-elm/#faq",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "My Little Elm home was outside the flood zone before 2011. Has that changed?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "It may have. The Town of Little Elm notes that FEMA revised the Denton County flood maps effective April 18, 2011, including base flood elevations for streams and Lake Lewisville. The appraiser reports the property\u2019s current flood-zone designation from the effective map."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Does a rental home in Little Elm need anything special for an appraisal?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The appraisal values the real property under the agreed scope. Little Elm requires non-owner-occupied homes to be registered annually as rental properties, so for a rental the appraiser may ask about leases, condition and registration as part of understanding the property."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Is a lake view automatically worth more in Little Elm?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. Lake proximity is examined through comparable sales, together with flood-zone status, any flowage easement and the specific view and access the property has."
+                  }
+                }
+              ]
+            }
+          ]
+        }
       },
       "sections": [
         "Header",
@@ -1545,18 +2249,106 @@
       "isHome": false,
       "filePath": "src/pages/TheColony.tsx",
       "seo": {
-        "title": "The Colony, TX Real Estate Appraisals - American Appraisal Alliance",
-        "description": "USPAP-compliant real estate appraisal services in The Colony, Texas from American Appraisal Alliance.",
+        "title": "The Colony, TX Home Appraisals | American Appraisal Alliance",
+        "description": "The Colony, TX appraisals organized by development era, from the 1970s planned community to newer subdivisions, with lakeshore checks.",
         "keywords": [
-          "The Colony TX real estate appraisal",
-          "The Colony Texas appraiser",
+          "The Colony TX home appraisal",
+          "The Colony appraiser",
+          "The Colony TX appraisal",
           "American Appraisal Alliance"
         ],
         "ogImage": "",
         "canonicalUrl": "",
         "noindex": false,
         "structuredDataType": "Service",
-        "structuredData": null
+        "structuredData": {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Service",
+              "@id": "https://americanappraisalalliance.com/service-areas/denton-county/the-colony/#service",
+              "name": "Residential appraisal in The Colony, Texas",
+              "serviceType": "Residential real estate appraisal",
+              "url": "https://americanappraisalalliance.com/service-areas/denton-county/the-colony/",
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://americanappraisalalliance.com/#organization",
+                "name": "American Appraisal Alliance",
+                "legalName": "JAS Appraisal Services LLC",
+                "url": "https://americanappraisalalliance.com/",
+                "telephone": "+1-469-936-4240",
+                "email": "orders@aaarea.net"
+              },
+              "areaServed": {
+                "@type": "City",
+                "name": "The Colony",
+                "containedInPlace": {
+                  "@type": "State",
+                  "name": "Texas"
+                }
+              }
+            },
+            {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://americanappraisalalliance.com/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Service Areas",
+                  "item": "https://americanappraisalalliance.com/service-areas/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": "Denton County",
+                  "item": "https://americanappraisalalliance.com/service-areas/denton-county/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 4,
+                  "name": "The Colony",
+                  "item": "https://americanappraisalalliance.com/service-areas/denton-county/the-colony/"
+                }
+              ]
+            },
+            {
+              "@type": "FAQPage",
+              "@id": "https://americanappraisalalliance.com/service-areas/denton-county/the-colony/#faq",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "Why do The Colony\u2019s oldest neighborhoods need different comparables?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The Colony began as a single planned development in the 1970s and has added newer neighborhoods since. Homes from the original development era are best compared with each other, with careful attention to updates, while newer subdivisions form their own comparison sets."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Does living near Lewisville Lake change an appraisal in The Colony?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Lake proximity is examined, not assumed. The appraiser checks flood-zone status and any U.S. Army Corps of Engineers flowage easement, and relies on sales of homes with similar lake exposure before making any adjustment."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Is The Colony in more than one county?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "According to the U.S. Census Bureau\u2019s 2020 place-by-county records, The Colony lies within Denton County. The parcel record confirms the county for any individual property."
+                  }
+                }
+              ]
+            }
+          ]
+        }
       },
       "sections": [
         "Header",

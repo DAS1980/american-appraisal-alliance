@@ -1,5 +1,145 @@
 {
   "_comment": "Single source for geographic-page FAQs. Rendered on each page and mirrored into that page's FAQPage JSON-LD in pages.manifest.json (both copies). Edit here, then re-sync the manifest.",
+  "celina": [
+    {
+      "q": "My address says Celina. Is the home inside the City of Celina?",
+      "a": "Not necessarily. Celina’s 2040 plan covers about 76 square miles that include the city, its extraterritorial jurisdiction and areas covered by boundary agreements, and some master-planned communities with Celina addresses lie in the ETJ. Whether a home is inside the city affects taxes, services and land-use rules, so the appraiser confirms it from boundary and parcel records."
+    },
+    {
+      "q": "How are comparables chosen when so many Celina homes are new?",
+      "a": "In a market built largely since 2010, recent resales and builder sales from the same or a similar subdivision are often the most relevant evidence. The appraiser looks closely at lot size, builder, upgrades and the terms of new-construction sales, rather than assuming a new home and a five-year-old resale are interchangeable."
+    },
+    {
+      "q": "Which county is my Celina property in?",
+      "a": "The City of Celina lies in both Collin and Denton counties according to the U.S. Census Bureau’s 2020 place-by-county records. The parcel record, not the mailing address, establishes the county and therefore the appraisal district that values the property for taxes."
+    }
+  ],
+  "prosper": [
+    {
+      "q": "Prosper is in two counties. Why does that matter for an appraisal?",
+      "a": "The Town of Prosper extends into both Collin and Denton counties. The county determines which appraisal district values the property for taxes and which public records apply, so it matters most for tax protests and for comparing homes on either side of the line."
+    },
+    {
+      "q": "Are homes along the Dallas North Tollway corridor treated differently?",
+      "a": "Not automatically. Prosper has adopted design guidelines for the tollway corridor as part of its comprehensive plan, and corridor location is a characteristic the appraiser describes. Any effect on value has to be shown by comparable sales, such as homes with similar exposure to the corridor."
+    },
+    {
+      "q": "Do new-construction sales count as comparables in Prosper?",
+      "a": "They can. With most of Prosper’s housing built since 2010, builder sales are part of the market. The appraiser verifies the sale terms, any incentives and the finished features, and weighs them against resales of similar homes."
+    }
+  ],
+  "addison": [
+    {
+      "q": "How are Addison condominiums and townhomes compared?",
+      "a": "It is compared primarily with other condominiums or townhomes — ideally in the same project or similar projects — because their buyers, ownership structure and association costs differ from detached homes. The appraiser also considers association dues, project characteristics and any limits on rentals or financing that affect the market."
+    },
+    {
+      "q": "Can sales in neighboring Dallas be used for an Addison home?",
+      "a": "Sometimes, when Addison itself lacks recent similar sales. Because Addison is a separate town with its own taxes and services, the appraiser explains why any outside sale is a reasonable substitute and adjusts for the differences the market supports."
+    },
+    {
+      "q": "Does Addison Airport or the Silver Line affect home values?",
+      "a": "They are location characteristics to examine, not automatic adjustments. The appraiser describes the property’s setting and relies on sales evidence — for example, homes with and without similar exposure — before making any adjustment."
+    }
+  ],
+  "north-dallas": [
+    {
+      "q": "What exactly is North Dallas?",
+      "a": "It is a commonly used description for the northern part of the City of Dallas rather than an official municipality, and its edges are described differently by different people. For an appraisal, the meaningful facts are the property’s actual city, county, zoning and subdivision, which are confirmed from public records."
+    },
+    {
+      "q": "Can a Dallas address be outside Dallas County?",
+      "a": "Yes. According to the U.S. Census Bureau, the City of Dallas extends into Dallas, Collin, Denton, Kaufman and Rockwall counties. The county controls which appraisal district values the property and which records apply."
+    },
+    {
+      "q": "Does ForwardDallas change my property’s zoning?",
+      "a": "No. The City of Dallas describes ForwardDallas 2.0, adopted in September 2024, as a land-use planning guide that does not rezone property. The appraiser relies on the property’s current zoning and any applicable conservation-district or planned-development ordinance."
+    }
+  ],
+  "aubrey": [
+    {
+      "q": "My Aubrey-area property is outside the city limits. Does that matter?",
+      "a": "Yes. Aubrey maintains a one-mile extraterritorial jurisdiction where the city regulates the subdivision of land but not zoning. Properties in the ETJ and inside the city can differ in rules and services, so the appraiser confirms which applies before selecting comparables."
+    },
+    {
+      "q": "How are acreage or horse properties near Aubrey appraised?",
+      "a": "They are compared with sales of similar rural or acreage properties, with attention to land size, improvements such as barns and fencing, access and utilities. Subdivision homes on small lots are generally a different market and are not substituted without explanation."
+    },
+    {
+      "q": "What is a flowage easement near Ray Roberts Lake?",
+      "a": "The U.S. Army Corps of Engineers describes a flowage easement as privately owned land on which the government holds the perpetual right to flood, with restrictions on what owners may do there. If a property is affected, the easement is part of the property rights being appraised."
+    }
+  ],
+  "carrollton": [
+    {
+      "q": "Which county is my Carrollton home in?",
+      "a": "Carrollton extends into Dallas, Denton and Collin counties. The parcel record establishes the county and the appraisal district that values the property for taxes, which is especially important for tax-protest appraisals."
+    },
+    {
+      "q": "How does the age of Carrollton’s housing affect an appraisal?",
+      "a": "Much of Carrollton was built during a 1970s growth period, and many homes have since been updated to very different degrees. The appraiser compares homes of similar era and pays close attention to the extent and quality of renovations, which often explain differences between otherwise similar sales."
+    },
+    {
+      "q": "Does being near a DART station change a Carrollton home’s value?",
+      "a": "Not automatically. Rail access is a location characteristic, and any influence must be shown by sales of comparable homes with similar proximity. The appraisal reflects the market as of its effective date."
+    }
+  ],
+  "lewisville": [
+    {
+      "q": "Could my Lewisville property be affected by a lake flowage easement?",
+      "a": "Properties near Lewisville Lake can be. The U.S. Army Corps of Engineers describes flowage easements as private land on which the government holds the perpetual right to flood, with restrictions on use. If one applies, the appraiser identifies it and considers its effect on the property rights being valued."
+    },
+    {
+      "q": "Lewisville has many apartments and townhomes. How does that affect comparables?",
+      "a": "Each housing type is compared with its own kind. A detached home is compared with detached homes, and an attached or condominium unit with similar attached units, because the buyers and ownership costs differ."
+    },
+    {
+      "q": "Is all of Lewisville in Denton County?",
+      "a": "No. According to the U.S. Census Bureau, Lewisville extends into both Denton and Dallas counties. The parcel record determines the county and appraisal district."
+    }
+  ],
+  "little-elm": [
+    {
+      "q": "My Little Elm home was outside the flood zone before 2011. Has that changed?",
+      "a": "It may have. The Town of Little Elm notes that FEMA revised the Denton County flood maps effective April 18, 2011, including base flood elevations for streams and Lake Lewisville. The appraiser reports the property’s current flood-zone designation from the effective map."
+    },
+    {
+      "q": "Does a rental home in Little Elm need anything special for an appraisal?",
+      "a": "The appraisal values the real property under the agreed scope. Little Elm requires non-owner-occupied homes to be registered annually as rental properties, so for a rental the appraiser may ask about leases, condition and registration as part of understanding the property."
+    },
+    {
+      "q": "Is a lake view automatically worth more in Little Elm?",
+      "a": "No. Lake proximity is examined through comparable sales, together with flood-zone status, any flowage easement and the specific view and access the property has."
+    }
+  ],
+  "the-colony": [
+    {
+      "q": "Why do The Colony’s oldest neighborhoods need different comparables?",
+      "a": "The Colony began as a single planned development in the 1970s and has added newer neighborhoods since. Homes from the original development era are best compared with each other, with careful attention to updates, while newer subdivisions form their own comparison sets."
+    },
+    {
+      "q": "Does living near Lewisville Lake change an appraisal in The Colony?",
+      "a": "Lake proximity is examined, not assumed. The appraiser checks flood-zone status and any U.S. Army Corps of Engineers flowage easement, and relies on sales of homes with similar lake exposure before making any adjustment."
+    },
+    {
+      "q": "Is The Colony in more than one county?",
+      "a": "According to the U.S. Census Bureau’s 2020 place-by-county records, The Colony lies within Denton County. The parcel record confirms the county for any individual property."
+    }
+  ],
+  "denton-county": [
+    {
+      "q": "My city is in more than one county. Which appraisal district values my home?",
+      "a": "The appraisal district for the county where the parcel sits. Several cities, including Carrollton, Lewisville, Frisco, Plano, Prosper, Celina and Dallas, extend into Denton County and at least one neighboring county, so the parcel record is the reliable guide."
+    },
+    {
+      "q": "Can sales from another part of Denton County be used as comparables?",
+      "a": "Only when they genuinely compete with the subject. Denton County ranges from lakeside suburbs to rural acreage, so the appraiser looks first to the subject’s own neighborhood and city and explains any wider search."
+    },
+    {
+      "q": "Do lake-area properties have special considerations?",
+      "a": "They can. Properties near Lewisville Lake or Ray Roberts Lake may be affected by flood-zone designations or U.S. Army Corps of Engineers flowage easements, both of which are identified for the specific property."
+    }
+  ],
   "plano": [
     {
       "q": "Does living near Oak Point or Arbor Hills automatically raise a Plano home’s appraised value?",
