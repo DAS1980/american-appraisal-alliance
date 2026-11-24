@@ -1,0 +1,75 @@
+{
+  "_comment": "Single source for geographic-page FAQs. Rendered on each page and mirrored into that page's FAQPage JSON-LD in pages.manifest.json (both copies). Edit here, then re-sync the manifest.",
+  "plano": [
+    {
+      "q": "Does living near Oak Point or Arbor Hills automatically raise a Plano home’s appraised value?",
+      "a": "No. Proximity to a preserve, greenbelt or trail is a location characteristic the appraiser analyzes, not a fixed adjustment. Where the market shows a measurable difference, it is supported with comparable sales — ideally homes with and without similar open-space exposure. Where the evidence does not show a difference, none is made."
+    },
+    {
+      "q": "My home is in or near Historic Downtown Plano. What should the appraiser know?",
+      "a": "Tell the appraiser whether the property is a designated heritage resource or lies within a heritage district, and share any records of approved exterior work. Plano’s heritage program can affect what owners may change, so the appraiser confirms the designation at the property level and looks for comparable homes with similar status rather than relying on a neighborhood name."
+    },
+    {
+      "q": "Can DART Silver Line service be factored into a Plano appraisal?",
+      "a": "Only to the extent buyers and sellers have actually reacted to it. An appraisal reflects the market as of its effective date, so rail service or planned public projects are considered through observable sales evidence, not through assumptions about future demand."
+    },
+    {
+      "q": "I own a Plano rental property. Is an appraisal different for a rental?",
+      "a": "The appraisal still values the real property under the scope you request. For a rental, the appraiser may ask about lease terms, condition and any applicable city registration, and the intended use — such as an estate, divorce or financing matter — determines which approaches to value are appropriate."
+    }
+  ],
+  "frisco": [
+    {
+      "q": "Frisco spans two counties. Does that affect my appraisal?",
+      "a": "It can. Frisco lies in both Collin and Denton counties, and a Frisco mailing address does not tell you which one applies. The appraiser identifies the county from the parcel record, which matters most for property tax matters, where the appraisal district and its records follow the parcel’s county."
+    },
+    {
+      "q": "Is my HOA part of the appraisal?",
+      "a": "The HOA is part of the property’s market context. Dues, amenities and deed restrictions differ between Frisco communities, so the appraiser favors comparable sales from the same or a similar association and may ask you for the HOA name and governing documents."
+    },
+    {
+      "q": "Should I order an appraisal before protesting my Frisco property value?",
+      "a": "An independent appraisal can document market value as of a specific date and be offered as evidence in a protest. It is prepared impartially under USPAP; no appraiser can promise a particular value or protest outcome."
+    },
+    {
+      "q": "Does the Rail District reinvestment change values near downtown Frisco?",
+      "a": "Completed improvements are part of the neighborhood as it exists on the effective date, and their influence is measured through sales. Programs that are still being funded or built are not treated as completed features of the market."
+    }
+  ],
+  "mckinney": [
+    {
+      "q": "Does a historic designation raise or lower a McKinney home’s value?",
+      "a": "Neither automatically. A designation can affect what an owner may change and may make the property eligible for certain programs. The appraiser treats the designation as a property characteristic, identifies it for the subject and the comparables, and lets local sales evidence show whether it matters."
+    },
+    {
+      "q": "How can I tell whether my McKinney home is in a historic district?",
+      "a": "The City of McKinney publishes historic district, overlay and incentive-zone maps through its historic preservation resources and GIS portal. Because McKinney uses several distinct designations, confirm the specific one that applies to your address rather than relying on a neighborhood description."
+    },
+    {
+      "q": "My address says McKinney. Is the property inside the city limits?",
+      "a": "Not necessarily. Postal addresses and municipal boundaries are different things. McKinney’s city-limit map is built from annexation ordinances, so the appraiser checks the parcel’s jurisdiction, which can affect taxes, zoning and the comparables that best fit the property."
+    },
+    {
+      "q": "Will downtown McKinney’s redevelopment plans be reflected in my appraisal?",
+      "a": "Adopted plans and scheduled infrastructure work are noted as market context, but the appraisal values the property as of its effective date. Planned work is not treated as completed, and any influence on value must be visible in market evidence."
+    }
+  ],
+  "richardson": [
+    {
+      "q": "Does being near a Silver Line station affect a Richardson home’s value?",
+      "a": "Proximity to the CityLine/Bush or UT Dallas station is a location factor the appraiser can examine, but there is no automatic adjustment. Service began in October 2025, so any effect has to be demonstrated through sales that reflect buyers’ actual response."
+    },
+    {
+      "q": "What does the Envision Richardson plan mean for my appraisal?",
+      "a": "Envision Richardson is a policy framework adopted in November 2024. It signals where the city expects reinvestment, but a plan is not a completed project. The appraiser considers current zoning and existing conditions, and treats future change only as far as the market already reflects it."
+    },
+    {
+      "q": "Is my home part of CityLine or the Innovation Quarter?",
+      "a": "Both are planning and development districts, not ZIP codes or neighborhoods in the residential sense. CityLine is divided into three separately zoned areas, and the Innovation Quarter is described by the city in general terms. The appraiser confirms how a specific parcel is zoned using Richardson’s interactive Zoning Atlas."
+    },
+    {
+      "q": "Which Richardson sales are comparable to my home?",
+      "a": "The best comparables share the subject’s market area, property type and setting. In Richardson that means paying attention to which side of a major corridor, district boundary or creek greenbelt a sale sits on, rather than simply measuring distance."
+    }
+  ]
+}

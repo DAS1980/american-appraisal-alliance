@@ -520,8 +520,8 @@
       "isHome": false,
       "filePath": "src/pages/ServiceAreas.tsx",
       "seo": {
-        "title": "Service Areas - American Appraisal Alliance",
-        "description": "American Appraisal Alliance service areas across Collin, Dallas, and Denton counties.",
+        "title": "DFW Appraisal Service Areas | American Appraisal Alliance",
+        "description": "Residential appraisal service areas across Dallas\u2013Fort Worth, with local guides for Plano, Frisco, McKinney and Richardson in Collin and Dallas counties.",
         "keywords": [
           "DFW appraisal service areas",
           "American Appraisal Alliance"
@@ -530,7 +530,37 @@
         "canonicalUrl": "",
         "noindex": false,
         "structuredDataType": "WebPage",
-        "structuredData": null
+        "structuredData": {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebPage",
+              "@id": "https://americanappraisalalliance.com/service-areas/#webpage",
+              "name": "Appraisal Service Areas in Dallas\u2013Fort Worth",
+              "url": "https://americanappraisalalliance.com/service-areas/",
+              "publisher": {
+                "@id": "https://americanappraisalalliance.com/#organization"
+              }
+            },
+            {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://americanappraisalalliance.com/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Service Areas",
+                  "item": "https://americanappraisalalliance.com/service-areas/"
+                }
+              ]
+            }
+          ]
+        }
       },
       "sections": [
         "Header",
@@ -546,7 +576,7 @@
       "filePath": "src/pages/CollinCounty.tsx",
       "seo": {
         "title": "Collin County Service Areas - American Appraisal Alliance",
-        "description": "American Appraisal Alliance appraisal service areas in Collin County, Texas.",
+        "description": "Residential appraisals in Collin County communities including Allen, Celina, Frisco, McKinney, Plano and Prosper, with local guides for select cities.",
         "keywords": [
           "Collin County appraisal",
           "American Appraisal Alliance"
@@ -555,7 +585,43 @@
         "canonicalUrl": "",
         "noindex": false,
         "structuredDataType": "WebPage",
-        "structuredData": null
+        "structuredData": {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebPage",
+              "@id": "https://americanappraisalalliance.com/service-areas/collin-county/#webpage",
+              "name": "Collin County Service Areas",
+              "url": "https://americanappraisalalliance.com/service-areas/collin-county/",
+              "publisher": {
+                "@id": "https://americanappraisalalliance.com/#organization"
+              }
+            },
+            {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://americanappraisalalliance.com/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Service Areas",
+                  "item": "https://americanappraisalalliance.com/service-areas/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": "Collin County",
+                  "item": "https://americanappraisalalliance.com/service-areas/collin-county/"
+                }
+              ]
+            }
+          ]
+        }
       },
       "sections": [
         "Header",
@@ -622,18 +688,115 @@
       "isHome": false,
       "filePath": "src/pages/FriscoTx.tsx",
       "seo": {
-        "title": "Frisco, TX Real Estate Appraisals - American Appraisal Alliance",
-        "description": "USPAP-compliant real estate appraisal services in Frisco, Texas from American Appraisal Alliance.",
+        "title": "Frisco, TX Appraisal Services | American Appraisal Alliance",
+        "description": "Frisco, TX home appraisals that account for Collin vs. Denton County parcels, HOA and planned-development rules, and Rail District reinvestment.",
         "keywords": [
-          "Frisco TX real estate appraisal",
-          "Frisco Texas appraiser",
+          "Frisco TX home appraisal",
+          "Frisco appraiser",
+          "Frisco property tax appeal appraisal",
+          "Frisco HOA appraisal",
           "American Appraisal Alliance"
         ],
         "ogImage": "",
         "canonicalUrl": "",
         "noindex": false,
         "structuredDataType": "Service",
-        "structuredData": null
+        "structuredData": {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Service",
+              "@id": "https://americanappraisalalliance.com/service-areas/collin-county/frisco/#service",
+              "name": "Residential appraisal in Frisco, Texas",
+              "serviceType": "Residential real estate appraisal",
+              "url": "https://americanappraisalalliance.com/service-areas/collin-county/frisco/",
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://americanappraisalalliance.com/#organization",
+                "name": "American Appraisal Alliance",
+                "legalName": "JAS Appraisal Services LLC",
+                "url": "https://americanappraisalalliance.com/",
+                "telephone": "+1-469-936-4240",
+                "email": "orders@aaarea.net"
+              },
+              "areaServed": {
+                "@type": "City",
+                "name": "Frisco",
+                "containedInPlace": {
+                  "@type": "State",
+                  "name": "Texas"
+                }
+              }
+            },
+            {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://americanappraisalalliance.com/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Service Areas",
+                  "item": "https://americanappraisalalliance.com/service-areas/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": "Collin County",
+                  "item": "https://americanappraisalalliance.com/service-areas/collin-county/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 4,
+                  "name": "Frisco",
+                  "item": "https://americanappraisalalliance.com/service-areas/collin-county/frisco/"
+                }
+              ]
+            },
+            {
+              "@type": "FAQPage",
+              "@id": "https://americanappraisalalliance.com/service-areas/collin-county/frisco/#faq",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "Frisco spans two counties. Does that affect my appraisal?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "It can. Frisco lies in both Collin and Denton counties, and a Frisco mailing address does not tell you which one applies. The appraiser identifies the county from the parcel record, which matters most for property tax matters, where the appraisal district and its records follow the parcel\u2019s county."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Is my HOA part of the appraisal?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The HOA is part of the property\u2019s market context. Dues, amenities and deed restrictions differ between Frisco communities, so the appraiser favors comparable sales from the same or a similar association and may ask you for the HOA name and governing documents."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Should I order an appraisal before protesting my Frisco property value?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "An independent appraisal can document market value as of a specific date and be offered as evidence in a protest. It is prepared impartially under USPAP; no appraiser can promise a particular value or protest outcome."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Does the Rail District reinvestment change values near downtown Frisco?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Completed improvements are part of the neighborhood as it exists on the effective date, and their influence is measured through sales. Programs that are still being funded or built are not treated as completed features of the market."
+                  }
+                }
+              ]
+            }
+          ]
+        }
       },
       "sections": [
         "Header",
@@ -648,18 +811,115 @@
       "isHome": false,
       "filePath": "src/pages/MckinneyTx.tsx",
       "seo": {
-        "title": "McKinney, TX Real Estate Appraisals - American Appraisal Alliance",
-        "description": "USPAP-compliant real estate appraisal services in McKinney, Texas from American Appraisal Alliance.",
+        "title": "McKinney, TX Home Appraiser | American Appraisal Alliance",
+        "description": "USPAP-compliant McKinney, TX appraisals that verify historic designations, city limits and downtown redevelopment timelines. Request an appraisal.",
         "keywords": [
-          "McKinney TX real estate appraisal",
-          "McKinney Texas appraiser",
+          "McKinney TX home appraisal",
+          "McKinney appraiser",
+          "historic home appraisal McKinney",
+          "McKinney estate appraisal",
           "American Appraisal Alliance"
         ],
         "ogImage": "",
         "canonicalUrl": "",
         "noindex": false,
         "structuredDataType": "Service",
-        "structuredData": null
+        "structuredData": {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Service",
+              "@id": "https://americanappraisalalliance.com/service-areas/collin-county/mckinney/#service",
+              "name": "Residential appraisal in McKinney, Texas",
+              "serviceType": "Residential real estate appraisal",
+              "url": "https://americanappraisalalliance.com/service-areas/collin-county/mckinney/",
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://americanappraisalalliance.com/#organization",
+                "name": "American Appraisal Alliance",
+                "legalName": "JAS Appraisal Services LLC",
+                "url": "https://americanappraisalalliance.com/",
+                "telephone": "+1-469-936-4240",
+                "email": "orders@aaarea.net"
+              },
+              "areaServed": {
+                "@type": "City",
+                "name": "McKinney",
+                "containedInPlace": {
+                  "@type": "State",
+                  "name": "Texas"
+                }
+              }
+            },
+            {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://americanappraisalalliance.com/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Service Areas",
+                  "item": "https://americanappraisalalliance.com/service-areas/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": "Collin County",
+                  "item": "https://americanappraisalalliance.com/service-areas/collin-county/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 4,
+                  "name": "McKinney",
+                  "item": "https://americanappraisalalliance.com/service-areas/collin-county/mckinney/"
+                }
+              ]
+            },
+            {
+              "@type": "FAQPage",
+              "@id": "https://americanappraisalalliance.com/service-areas/collin-county/mckinney/#faq",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "Does a historic designation raise or lower a McKinney home\u2019s value?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Neither automatically. A designation can affect what an owner may change and may make the property eligible for certain programs. The appraiser treats the designation as a property characteristic, identifies it for the subject and the comparables, and lets local sales evidence show whether it matters."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How can I tell whether my McKinney home is in a historic district?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The City of McKinney publishes historic district, overlay and incentive-zone maps through its historic preservation resources and GIS portal. Because McKinney uses several distinct designations, confirm the specific one that applies to your address rather than relying on a neighborhood description."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "My address says McKinney. Is the property inside the city limits?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Not necessarily. Postal addresses and municipal boundaries are different things. McKinney\u2019s city-limit map is built from annexation ordinances, so the appraiser checks the parcel\u2019s jurisdiction, which can affect taxes, zoning and the comparables that best fit the property."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Will downtown McKinney\u2019s redevelopment plans be reflected in my appraisal?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Adopted plans and scheduled infrastructure work are noted as market context, but the appraisal values the property as of its effective date. Planned work is not treated as completed, and any influence on value must be visible in market evidence."
+                  }
+                }
+              ]
+            }
+          ]
+        }
       },
       "sections": [
         "Header",
@@ -674,18 +934,115 @@
       "isHome": false,
       "filePath": "src/pages/PlanoTx.tsx",
       "seo": {
-        "title": "Plano, TX Real Estate Appraisals - American Appraisal Alliance",
-        "description": "USPAP-compliant real estate appraisal services in Plano, Texas from American Appraisal Alliance.",
+        "title": "Plano, TX Home Appraisals | American Appraisal Alliance",
+        "description": "Independent, USPAP-compliant home appraisals in Plano, TX, informed by local preserves, heritage districts and rental rules. Request an appraisal.",
         "keywords": [
-          "Plano TX real estate appraisal",
-          "Plano Texas appraiser",
+          "Plano TX home appraisal",
+          "Plano appraiser",
+          "Historic Downtown Plano appraisal",
+          "Plano rental property appraisal",
           "American Appraisal Alliance"
         ],
         "ogImage": "",
         "canonicalUrl": "",
         "noindex": false,
         "structuredDataType": "Service",
-        "structuredData": null
+        "structuredData": {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Service",
+              "@id": "https://americanappraisalalliance.com/service-areas/collin-county/plano/#service",
+              "name": "Residential appraisal in Plano, Texas",
+              "serviceType": "Residential real estate appraisal",
+              "url": "https://americanappraisalalliance.com/service-areas/collin-county/plano/",
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://americanappraisalalliance.com/#organization",
+                "name": "American Appraisal Alliance",
+                "legalName": "JAS Appraisal Services LLC",
+                "url": "https://americanappraisalalliance.com/",
+                "telephone": "+1-469-936-4240",
+                "email": "orders@aaarea.net"
+              },
+              "areaServed": {
+                "@type": "City",
+                "name": "Plano",
+                "containedInPlace": {
+                  "@type": "State",
+                  "name": "Texas"
+                }
+              }
+            },
+            {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://americanappraisalalliance.com/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Service Areas",
+                  "item": "https://americanappraisalalliance.com/service-areas/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": "Collin County",
+                  "item": "https://americanappraisalalliance.com/service-areas/collin-county/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 4,
+                  "name": "Plano",
+                  "item": "https://americanappraisalalliance.com/service-areas/collin-county/plano/"
+                }
+              ]
+            },
+            {
+              "@type": "FAQPage",
+              "@id": "https://americanappraisalalliance.com/service-areas/collin-county/plano/#faq",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "Does living near Oak Point or Arbor Hills automatically raise a Plano home\u2019s appraised value?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. Proximity to a preserve, greenbelt or trail is a location characteristic the appraiser analyzes, not a fixed adjustment. Where the market shows a measurable difference, it is supported with comparable sales \u2014 ideally homes with and without similar open-space exposure. Where the evidence does not show a difference, none is made."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "My home is in or near Historic Downtown Plano. What should the appraiser know?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Tell the appraiser whether the property is a designated heritage resource or lies within a heritage district, and share any records of approved exterior work. Plano\u2019s heritage program can affect what owners may change, so the appraiser confirms the designation at the property level and looks for comparable homes with similar status rather than relying on a neighborhood name."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Can DART Silver Line service be factored into a Plano appraisal?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Only to the extent buyers and sellers have actually reacted to it. An appraisal reflects the market as of its effective date, so rail service or planned public projects are considered through observable sales evidence, not through assumptions about future demand."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "I own a Plano rental property. Is an appraisal different for a rental?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The appraisal still values the real property under the scope you request. For a rental, the appraiser may ask about lease terms, condition and any applicable city registration, and the intended use \u2014 such as an estate, divorce or financing matter \u2014 determines which approaches to value are appropriate."
+                  }
+                }
+              ]
+            }
+          ]
+        }
       },
       "sections": [
         "Header",
@@ -727,7 +1084,7 @@
       "filePath": "src/pages/DallasCounty.tsx",
       "seo": {
         "title": "Dallas County Service Areas - American Appraisal Alliance",
-        "description": "American Appraisal Alliance appraisal service areas in Dallas County, Texas.",
+        "description": "Residential appraisals in Dallas County communities including Addison, North Dallas and Richardson, from a Texas Certified Residential Appraiser.",
         "keywords": [
           "Dallas County appraisal",
           "American Appraisal Alliance"
@@ -736,7 +1093,43 @@
         "canonicalUrl": "",
         "noindex": false,
         "structuredDataType": "WebPage",
-        "structuredData": null
+        "structuredData": {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebPage",
+              "@id": "https://americanappraisalalliance.com/service-areas/dallas-county/#webpage",
+              "name": "Dallas County Service Areas",
+              "url": "https://americanappraisalalliance.com/service-areas/dallas-county/",
+              "publisher": {
+                "@id": "https://americanappraisalalliance.com/#organization"
+              }
+            },
+            {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://americanappraisalalliance.com/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Service Areas",
+                  "item": "https://americanappraisalalliance.com/service-areas/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": "Dallas County",
+                  "item": "https://americanappraisalalliance.com/service-areas/dallas-county/"
+                }
+              ]
+            }
+          ]
+        }
       },
       "sections": [
         "Header",
@@ -803,18 +1196,115 @@
       "isHome": false,
       "filePath": "src/pages/Richardson.tsx",
       "seo": {
-        "title": "Richardson, TX Real Estate Appraisals - American Appraisal Alliance",
-        "description": "USPAP-compliant real estate appraisal services in Richardson, Texas from American Appraisal Alliance.",
+        "title": "Richardson, TX Home Appraisals | American Appraisal Alliance",
+        "description": "Richardson, TX home appraisals by a Texas Certified Residential Appraiser, grounded in Silver Line, CityLine and Envision Richardson planning facts.",
         "keywords": [
-          "Richardson TX real estate appraisal",
-          "Richardson Texas appraiser",
+          "Richardson TX home appraisal",
+          "Richardson appraiser",
+          "CityLine Richardson appraisal",
+          "Richardson real estate appraisal",
           "American Appraisal Alliance"
         ],
         "ogImage": "",
         "canonicalUrl": "",
         "noindex": false,
         "structuredDataType": "Service",
-        "structuredData": null
+        "structuredData": {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Service",
+              "@id": "https://americanappraisalalliance.com/service-areas/dallas-county/richardson/#service",
+              "name": "Residential appraisal in Richardson, Texas",
+              "serviceType": "Residential real estate appraisal",
+              "url": "https://americanappraisalalliance.com/service-areas/dallas-county/richardson/",
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://americanappraisalalliance.com/#organization",
+                "name": "American Appraisal Alliance",
+                "legalName": "JAS Appraisal Services LLC",
+                "url": "https://americanappraisalalliance.com/",
+                "telephone": "+1-469-936-4240",
+                "email": "orders@aaarea.net"
+              },
+              "areaServed": {
+                "@type": "City",
+                "name": "Richardson",
+                "containedInPlace": {
+                  "@type": "State",
+                  "name": "Texas"
+                }
+              }
+            },
+            {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://americanappraisalalliance.com/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Service Areas",
+                  "item": "https://americanappraisalalliance.com/service-areas/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": "Dallas County",
+                  "item": "https://americanappraisalalliance.com/service-areas/dallas-county/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 4,
+                  "name": "Richardson",
+                  "item": "https://americanappraisalalliance.com/service-areas/dallas-county/richardson/"
+                }
+              ]
+            },
+            {
+              "@type": "FAQPage",
+              "@id": "https://americanappraisalalliance.com/service-areas/dallas-county/richardson/#faq",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "Does being near a Silver Line station affect a Richardson home\u2019s value?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Proximity to the CityLine/Bush or UT Dallas station is a location factor the appraiser can examine, but there is no automatic adjustment. Service began in October 2025, so any effect has to be demonstrated through sales that reflect buyers\u2019 actual response."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What does the Envision Richardson plan mean for my appraisal?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Envision Richardson is a policy framework adopted in November 2024. It signals where the city expects reinvestment, but a plan is not a completed project. The appraiser considers current zoning and existing conditions, and treats future change only as far as the market already reflects it."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Is my home part of CityLine or the Innovation Quarter?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Both are planning and development districts, not ZIP codes or neighborhoods in the residential sense. CityLine is divided into three separately zoned areas, and the Innovation Quarter is described by the city in general terms. The appraiser confirms how a specific parcel is zoned using Richardson\u2019s interactive Zoning Atlas."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Which Richardson sales are comparable to my home?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The best comparables share the subject\u2019s market area, property type and setting. In Richardson that means paying attention to which side of a major corridor, district boundary or creek greenbelt a sale sits on, rather than simply measuring distance."
+                  }
+                }
+              ]
+            }
+          ]
+        }
       },
       "sections": [
         "Header",

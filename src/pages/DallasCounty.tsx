@@ -18,7 +18,8 @@ const DallasCounty = React.forwardRef<HTMLDivElement>((props, ref) => {
             Dallas County Service Areas
           </h1>
           <p className="text-muted-foreground leading-relaxed mb-8">
-            American Appraisal Alliance serves the following Dallas County cities. Full content for this page is coming soon.
+            American Appraisal Alliance serves the following Dallas County communities. A property’s county and
+            city limits are confirmed from parcel records during each assignment.
           </p>
           <ul className="space-y-2 text-left max-w-xs mx-auto">
             <li>
@@ -35,8 +36,20 @@ const DallasCounty = React.forwardRef<HTMLDivElement>((props, ref) => {
               <Link to="/service-areas/dallas-county/richardson/" className="underline hover:text-foreground transition-colors">
                 Richardson
               </Link>
+              <span className="block text-sm text-muted-foreground">
+                Local guide: Silver Line stations, CityLine zoning and the Innovation Quarter.
+              </span>
             </li>
           </ul>
+          <p className="mt-10">
+            <Link
+              to="/request/#appraisal-form"
+              className="inline-flex min-h-[48px] items-center justify-center rounded-lg px-7 py-3 font-semibold shadow-lg hover:opacity-90 transition-opacity"
+              style={{ background: "linear-gradient(135deg, hsl(42 92% 52%) 0%, hsl(36 88% 44%) 100%)", color: "hsl(218 65% 14%)" }}
+            >
+              Request an Appraisal
+            </Link>
+          </p>
         </main>
         <Footer />
       </div>
