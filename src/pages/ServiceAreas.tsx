@@ -9,6 +9,11 @@ import { siteConfig } from "@/config/site";
 /** City guides with substantive, research-backed local content (11/24/2026). */
 const cityGuides = [
   {
+    to: "/service-areas/collin-county/allen/",
+    city: "Allen",
+    summary: "Neighborhood plat eras and housing types from the city’s own map, subdivision-first comparables, and the new Downtown District.",
+  },
+  {
     to: "/service-areas/collin-county/plano/",
     city: "Plano",
     summary: "Nature preserves and greenbelts, the heritage program around Historic Downtown Plano, and rental-property registration.",

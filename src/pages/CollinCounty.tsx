@@ -27,6 +27,9 @@ const CollinCounty = React.forwardRef<HTMLDivElement>((props, ref) => {
               <Link to="/service-areas/collin-county/allen/" className="underline hover:text-foreground transition-colors">
                 Allen
               </Link>
+              <span className="block text-sm text-muted-foreground">
+                Local guide: neighborhood plat eras, housing types and the Downtown District.
+              </span>
             </li>
             <li>
               <Link to="/service-areas/collin-county/celina/" className="underline hover:text-foreground transition-colors">

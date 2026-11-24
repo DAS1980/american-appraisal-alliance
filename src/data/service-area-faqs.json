@@ -54,6 +54,24 @@
       "a": "Adopted plans and scheduled infrastructure work are noted as market context, but the appraisal values the property as of its effective date. Planned work is not treated as completed, and any influence on value must be visible in market evidence."
     }
   ],
+  "allen": [
+    {
+      "q": "My Allen subdivision was platted in phases. Does that matter for comparables?",
+      "a": "It can. Phases of the same subdivision may differ in lot sizes, builders, floor plans or amenities, and later phases can be years newer than earlier ones. The appraiser identifies the subject’s phase and plat, then favors sales from the same phase or from phases that are genuinely similar."
+    },
+    {
+      "q": "Is every 75002 or 75013 address inside the City of Allen?",
+      "a": "Not necessarily. Nearly all City of Allen addresses use one of those two ZIP codes, but ZIP codes are delivery areas, not city limits. The city’s own address map includes a small number of 75002 addresses coded to neighboring communities, and Allen also has an extraterritorial jurisdiction outside its limits. The appraiser confirms jurisdiction from parcel and boundary records."
+    },
+    {
+      "q": "Does a creek or greenbelt behind my Allen home affect the appraisal?",
+      "a": "It is examined, not assumed. Allen’s creek corridors, including Cottonwood, Rowlett and Watters creeks, can bring open views and also flood-zone and drainage considerations. The appraiser checks the property’s flood-zone status and looks for comparable sales with similar exposure before making any adjustment."
+    },
+    {
+      "q": "How does the Downtown District affect older property near downtown Allen?",
+      "a": "In 2023 the city replaced its Central Business District zoning with a Downtown District and created a Downtown Design Review Board that oversees modifications within the district. If a property lies inside that district, its zoning and any review requirements are part of what the appraiser verifies; planned downtown projects are considered only as far as the market already reflects them."
+    }
+  ],
   "richardson": [
     {
       "q": "Does being near a Silver Line station affect a Richardson home’s value?",

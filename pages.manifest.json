@@ -521,7 +521,7 @@
       "filePath": "src/pages/ServiceAreas.tsx",
       "seo": {
         "title": "DFW Appraisal Service Areas | American Appraisal Alliance",
-        "description": "Residential appraisal service areas across Dallas\u2013Fort Worth, with local guides for Plano, Frisco, McKinney and Richardson in Collin and Dallas counties.",
+        "description": "Residential appraisal service areas across Dallas\u2013Fort Worth, with local guides for Allen, Plano, Frisco, McKinney and Richardson.",
         "keywords": [
           "DFW appraisal service areas",
           "American Appraisal Alliance"
@@ -636,18 +636,115 @@
       "isHome": false,
       "filePath": "src/pages/AllenTx.tsx",
       "seo": {
-        "title": "Allen, TX Real Estate Appraisals - American Appraisal Alliance",
-        "description": "USPAP-compliant real estate appraisal services in Allen, Texas from American Appraisal Alliance.",
+        "title": "Allen, TX Home Appraisals | American Appraisal Alliance",
+        "description": "Allen, TX home appraisals grounded in the city's neighborhood records: plat eras, housing types, subdivision phases and Downtown District rules.",
         "keywords": [
-          "Allen TX real estate appraisal",
-          "Allen Texas appraiser",
+          "Allen TX home appraisal",
+          "Allen appraiser",
+          "Allen subdivision appraisal",
+          "Allen pre-listing appraisal",
           "American Appraisal Alliance"
         ],
         "ogImage": "",
         "canonicalUrl": "",
         "noindex": false,
         "structuredDataType": "Service",
-        "structuredData": null
+        "structuredData": {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Service",
+              "@id": "https://americanappraisalalliance.com/service-areas/collin-county/allen/#service",
+              "name": "Residential appraisal in Allen, Texas",
+              "serviceType": "Residential real estate appraisal",
+              "url": "https://americanappraisalalliance.com/service-areas/collin-county/allen/",
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://americanappraisalalliance.com/#organization",
+                "name": "American Appraisal Alliance",
+                "legalName": "JAS Appraisal Services LLC",
+                "url": "https://americanappraisalalliance.com/",
+                "telephone": "+1-469-936-4240",
+                "email": "orders@aaarea.net"
+              },
+              "areaServed": {
+                "@type": "City",
+                "name": "Allen",
+                "containedInPlace": {
+                  "@type": "State",
+                  "name": "Texas"
+                }
+              }
+            },
+            {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://americanappraisalalliance.com/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Service Areas",
+                  "item": "https://americanappraisalalliance.com/service-areas/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": "Collin County",
+                  "item": "https://americanappraisalalliance.com/service-areas/collin-county/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 4,
+                  "name": "Allen",
+                  "item": "https://americanappraisalalliance.com/service-areas/collin-county/allen/"
+                }
+              ]
+            },
+            {
+              "@type": "FAQPage",
+              "@id": "https://americanappraisalalliance.com/service-areas/collin-county/allen/#faq",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "My Allen subdivision was platted in phases. Does that matter for comparables?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "It can. Phases of the same subdivision may differ in lot sizes, builders, floor plans or amenities, and later phases can be years newer than earlier ones. The appraiser identifies the subject\u2019s phase and plat, then favors sales from the same phase or from phases that are genuinely similar."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Is every 75002 or 75013 address inside the City of Allen?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Not necessarily. Nearly all City of Allen addresses use one of those two ZIP codes, but ZIP codes are delivery areas, not city limits. The city\u2019s own address map includes a small number of 75002 addresses coded to neighboring communities, and Allen also has an extraterritorial jurisdiction outside its limits. The appraiser confirms jurisdiction from parcel and boundary records."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Does a creek or greenbelt behind my Allen home affect the appraisal?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "It is examined, not assumed. Allen\u2019s creek corridors, including Cottonwood, Rowlett and Watters creeks, can bring open views and also flood-zone and drainage considerations. The appraiser checks the property\u2019s flood-zone status and looks for comparable sales with similar exposure before making any adjustment."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How does the Downtown District affect older property near downtown Allen?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "In 2023 the city replaced its Central Business District zoning with a Downtown District and created a Downtown Design Review Board that oversees modifications within the district. If a property lies inside that district, its zoning and any review requirements are part of what the appraiser verifies; planned downtown projects are considered only as far as the market already reflects them."
+                  }
+                }
+              ]
+            }
+          ]
+        }
       },
       "sections": [
         "Header",
