@@ -9,7 +9,7 @@
   "blog": {
     "pageId": "blog",
     "pageSlug": "blog",
-    "pageName": "Blog",
+    "pageName": "Appraisal Insights",
     "pathPrefix": "/blog/"
   },
   "output": {

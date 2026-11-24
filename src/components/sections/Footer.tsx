@@ -22,7 +22,7 @@ const Footer = React.forwardRef<HTMLElement>((props, ref) => {
       to: "/measurement-analysis-services",
     },
   
-    { to: "/blog/", label: "Blog" },
+    { to: "/blog/", label: "Appraisal Insights" },
   ];
 
   const quickLinks = [
@@ -31,7 +31,7 @@ const Footer = React.forwardRef<HTMLElement>((props, ref) => {
     { label: "Request an Appraisal", to: "/request" },
     { label: "Contact", to: "/contact" },
   
-    { to: "/blog/", label: "Blog" },
+    { to: "/blog/", label: "Appraisal Insights" },
   ];
 
   const fadeInUp = {

@@ -2188,7 +2188,7 @@
     },
     {
       "id": "blog",
-      "name": "Blog",
+      "name": "Appraisal Insights",
       "slug": "blog",
       "isHome": false,
       "filePath": "src/pages/Blog.tsx",
@@ -2196,8 +2196,8 @@
       "hasInlineBlogSection": true,
       "inNavigation": true,
       "seo": {
-        "title": "Blog",
-        "description": "Latest articles, updates, and stories.",
+        "title": "Appraisal Insights | American Appraisal Alliance",
+        "description": "Explore professional real estate appraisal insights, property valuation guidance, and industry updates from American Appraisal Alliance, serving the Dallas\u2013Fort Worth Metroplex.",
         "keywords": [],
         "ogImage": "",
         "canonicalUrl": "",
