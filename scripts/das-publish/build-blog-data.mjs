@@ -127,6 +127,20 @@ const allPosts = [...kept, ...posts].sort((a, b) => Date.parse(b.published_at) -
 const pages = existing.pages_with_blog.map((p) =>
   p.page_id === config.blog.pageId ? { ...p, post_count: allPosts.filter((x) => x.page_id === p.page_id).length } : p,
 );
+// Internal links to other articles must point at posts that are live now —
+// a link to a future-dated or held article would render "Post not found".
+const livePaths = new Set(allPosts.map((p) => p.post_path));
+for (const p of posts) {
+  for (const [, href] of p.body_html.matchAll(/href="(\/blog\/[^"#?]+)"/g)) {
+    const normalized = href.endsWith("/") ? href : `${href}/`;
+    if (!livePaths.has(normalized)) errors.push(`${p.slug}: links to ${href}, which is not a live post`);
+  }
+}
+if (errors.length) {
+  console.error("[das-publish] Validation failed:\n  - " + errors.join("\n  - "));
+  process.exit(1);
+}
+
 const next = { ...existing, pages_with_blog: pages, posts: allPosts };
 const serialized = JSON.stringify(next, null, 2) + "\n";
 
