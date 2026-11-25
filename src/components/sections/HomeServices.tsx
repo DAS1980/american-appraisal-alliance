@@ -10,7 +10,7 @@ const services = [
     title: "Core Appraisal Services",
     description:
       "Full URAR, divorce, estate, PMI removal, tax appeal, and more — USPAP-compliant reports for every need.",
-    link: "/core-appraisal-services",
+    link: "/core-appraisal-services/",
     icon: FileText,
     detail:
       "Independent, professional real estate appraisals for lenders, attorneys, homeowners, and real estate professionals across the Dallas–Fort Worth metroplex. Every engagement meets USPAP standards.",
@@ -24,7 +24,7 @@ const services = [
     title: "Valuation Updates & Reports",
     description:
       "Market value updates, 1004D recertifications, and FHA/HUD compliance observation reports.",
-    link: "/valuation-updates-reports",
+    link: "/valuation-updates-reports/",
     icon: BarChart2,
     detail:
       "When your prior appraisal has expired or your lender requires updated documentation, our valuation update services keep your transaction on track — fully compliant with Fannie Mae Form 1004D and FHA/HUD requirements.",
@@ -38,7 +38,7 @@ const services = [
     title: "Measurement & Analysis Services",
     description:
       "ANSI Z765-2021 property measurement, GLA certification, floor plans, and square footage analysis.",
-    link: "/measurement-analysis-services",
+    link: "/measurement-analysis-services/",
     icon: Ruler,
     detail:
       "Precise, defensible property measurements following ANSI Z765-2021 standards. From Gross Living Area certification to detailed floor plan sketches, our measurement services protect buyers, sellers, lenders, and agents in the DFW market.",
@@ -212,7 +212,7 @@ const HomeServices = React.forwardRef<HTMLElement>((props, ref) => {
               color: "hsl(218 60% 20%)",
             }}
           >
-            <Link to="/request">Request an Appraisal</Link>
+            <Link to="/request/">Request an Appraisal</Link>
           </Button>
         </motion.div>
       </div>

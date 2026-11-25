@@ -134,7 +134,7 @@ const ExteriorOnlyAppraisalCTA = React.forwardRef<HTMLElement>((props, ref) => {
                 fontFamily: "'Inter', sans-serif",
               }}
             >
-              <Link to="/request">Request an Appraisal</Link>
+              <Link to="/request/">Request an Appraisal</Link>
             </Button>
 
             <Button
@@ -144,7 +144,7 @@ const ExteriorOnlyAppraisalCTA = React.forwardRef<HTMLElement>((props, ref) => {
               className="h-13 px-10 text-base font-semibold w-full sm:w-auto bg-transparent text-white border-white/40 hover:bg-white/10 transition-all duration-300"
               style={{ fontFamily: "'Inter', sans-serif" }}
             >
-              <Link to="/contact">Speak With an Appraiser</Link>
+              <Link to="/contact/">Speak With an Appraiser</Link>
             </Button>
           </motion.div>
 

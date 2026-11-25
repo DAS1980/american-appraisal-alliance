@@ -260,7 +260,7 @@ const ValuationUpdatesWhoNeeds = React.forwardRef<HTMLElement>((props, ref) => {
             className="text-sm font-medium gap-1"
             style={{ color: "hsl(218 60% 20%)" }}
           >
-            <Link to="/valuation-updates-reports">
+            <Link to="/valuation-updates-reports/">
               View our Valuation Update services
               <ArrowRight className="h-4 w-4" />
             </Link>

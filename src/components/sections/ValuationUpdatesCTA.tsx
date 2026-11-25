@@ -119,7 +119,7 @@ const ValuationUpdatesCTA = React.forwardRef<HTMLElement>((props, ref) => {
                 boxShadow: "0 4px 20px -4px hsl(42 88% 48% / 0.5)",
               }}
             >
-              <Link to="/request">
+              <Link to="/request/">
                 Request an Appraisal
                 <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
               </Link>
@@ -131,7 +131,7 @@ const ValuationUpdatesCTA = React.forwardRef<HTMLElement>((props, ref) => {
               variant="outline"
               className="text-base font-semibold h-12 px-8 bg-transparent text-white border-white/40 hover:bg-white/10 hover:border-white/60 transition-all"
             >
-              <Link to="/valuation-updates-reports">
+              <Link to="/valuation-updates-reports/">
                 View All Services
               </Link>
             </Button>

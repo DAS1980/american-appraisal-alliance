@@ -11,15 +11,15 @@ const Footer = React.forwardRef<HTMLElement>((props, ref) => {
   const serviceCategories = [
     {
       label: "Core Appraisal Services",
-      to: "/core-appraisal-services",
+      to: "/core-appraisal-services/",
     },
     {
       label: "Valuation Updates & Reports",
-      to: "/valuation-updates-reports",
+      to: "/valuation-updates-reports/",
     },
     {
       label: "Measurement & Analysis Services",
-      to: "/measurement-analysis-services",
+      to: "/measurement-analysis-services/",
     },
   
     { to: "/blog/", label: "Appraisal Insights" },
@@ -27,9 +27,9 @@ const Footer = React.forwardRef<HTMLElement>((props, ref) => {
 
   const quickLinks = [
     { label: "Home", to: "/" },
-    { label: "About Us", to: "/about" },
-    { label: "Request an Appraisal", to: "/request" },
-    { label: "Contact", to: "/contact" },
+    { label: "About Us", to: "/about/" },
+    { label: "Request an Appraisal", to: "/request/" },
+    { label: "Contact", to: "/contact/" },
   
     { to: "/blog/", label: "Appraisal Insights" },
   ];

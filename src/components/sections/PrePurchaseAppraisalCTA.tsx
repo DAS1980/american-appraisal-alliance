@@ -88,7 +88,7 @@ const PrePurchaseAppraisalCTA = React.forwardRef<HTMLElement>((props, ref) => {
                   border: "none",
                 }}
               >
-                <Link to="/request">
+                <Link to="/request/">
                   Request an Appraisal
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>

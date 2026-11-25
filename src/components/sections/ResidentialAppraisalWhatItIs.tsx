@@ -334,7 +334,7 @@ const ResidentialAppraisalWhatItIs = React.forwardRef<HTMLElement>(
               licensed appraisers serving the Dallas&ndash;Fort Worth metroplex
               are available to help you determine the most appropriate product.{" "}
               <Link
-                to="/contact"
+                to="/contact/"
                 className="font-medium underline underline-offset-2 text-[hsl(218_60%_20%)] hover:text-[hsl(42_88%_48%)] transition-colors"
               >
                 Contact us for a no-obligation consultation.

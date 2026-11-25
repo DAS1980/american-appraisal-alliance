@@ -90,7 +90,7 @@ const ContactHero = React.forwardRef<HTMLElement>((props, ref) => {
                 boxShadow: "var(--shadow-gold)",
               }}
             >
-              <Link to="/request">Request an Appraisal</Link>
+              <Link to="/request/">Request an Appraisal</Link>
             </Button>
           </motion.div>
         </div>

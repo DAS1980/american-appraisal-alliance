@@ -103,7 +103,7 @@ const Hero = React.forwardRef<HTMLElement>((props, ref) => {
                 boxShadow: "0 4px 20px -4px hsl(42 88% 48% / 0.50)",
               }}
             >
-              <Link to="/request">Request an Appraisal</Link>
+              <Link to="/request/">Request an Appraisal</Link>
             </Button>
 
             {/* Secondary CTA */}
@@ -113,7 +113,7 @@ const Hero = React.forwardRef<HTMLElement>((props, ref) => {
               variant="outline"
               className="text-base h-12 px-8 bg-transparent text-white border-white/60 hover:bg-white/10 hover:border-white font-medium"
             >
-              <Link to="/core-appraisal-services">Explore Services</Link>
+              <Link to="/core-appraisal-services/">Explore Services</Link>
             </Button>
           </motion.div>
 

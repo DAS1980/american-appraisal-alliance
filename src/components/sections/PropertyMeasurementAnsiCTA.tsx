@@ -126,7 +126,7 @@ const PropertyMeasurementAnsiCTA = React.forwardRef<HTMLElement>((props, ref) =>
               boxShadow: "0 4px 20px -4px hsl(42 88% 48% / 0.50)",
             }}
           >
-            <Link to="/request">
+            <Link to="/request/">
               Request an Appraisal
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>

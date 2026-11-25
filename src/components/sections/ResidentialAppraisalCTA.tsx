@@ -142,7 +142,7 @@ const ResidentialAppraisalCTA = React.forwardRef<HTMLElement>((props, ref) => {
                 boxShadow: "0 4px 20px -4px hsl(42 88% 48% / 0.5)",
               }}
             >
-              <Link to="/request">Request an Appraisal</Link>
+              <Link to="/request/">Request an Appraisal</Link>
             </Button>
 
             <Button
@@ -151,7 +151,7 @@ const ResidentialAppraisalCTA = React.forwardRef<HTMLElement>((props, ref) => {
               variant="outline"
               className="text-base font-medium px-8 py-6 rounded-lg border-white/40 bg-transparent text-white hover:bg-white/10 transition-all duration-200"
             >
-              <Link to="/contact">Contact Us</Link>
+              <Link to="/contact/">Contact Us</Link>
             </Button>
           </motion.div>
 

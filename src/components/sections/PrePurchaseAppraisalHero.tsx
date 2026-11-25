@@ -117,7 +117,7 @@ const PrePurchaseAppraisalHero = React.forwardRef<HTMLElement>((props, ref) => {
               size="lg"
               className="h-12 px-8 text-base font-semibold bg-[hsl(42_88%_48%)] hover:bg-[hsl(42_88%_42%)] text-[hsl(218_65%_14%)] border-0 shadow-[0_4px_20px_-4px_hsl(42_88%_48%/0.45)] transition-all duration-300"
             >
-              <Link to="/request">Request an Appraisal</Link>
+              <Link to="/request/">Request an Appraisal</Link>
             </Button>
 
             <Button
@@ -126,7 +126,7 @@ const PrePurchaseAppraisalHero = React.forwardRef<HTMLElement>((props, ref) => {
               variant="outline"
               className="h-12 px-8 text-base font-semibold bg-transparent text-white border-white/50 hover:bg-white/10 hover:border-white transition-all duration-300"
             >
-              <Link to="/core-appraisal-services">
+              <Link to="/core-appraisal-services/">
                 <Home className="h-4 w-4 mr-2" />
                 All Appraisal Services
               </Link>

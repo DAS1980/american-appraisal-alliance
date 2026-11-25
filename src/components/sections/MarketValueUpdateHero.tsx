@@ -135,7 +135,7 @@ const MarketValueUpdateHero = React.forwardRef<HTMLElement>((props, ref) => {
                 fontFamily: "'Inter', sans-serif",
               }}
             >
-              <Link to="/request">Request an Appraisal</Link>
+              <Link to="/request/">Request an Appraisal</Link>
             </Button>
 
             <Button
@@ -145,7 +145,7 @@ const MarketValueUpdateHero = React.forwardRef<HTMLElement>((props, ref) => {
               className="text-base font-medium px-8 py-3 h-12 bg-transparent text-white border-white/60 hover:bg-white/10"
               style={{ fontFamily: "'Inter', sans-serif" }}
             >
-              <Link to="/valuation-updates-reports">View All Valuation Reports</Link>
+              <Link to="/valuation-updates-reports/">View All Valuation Reports</Link>
             </Button>
           </motion.div>
 

@@ -108,7 +108,7 @@ const ExteriorOnlyDriveByAppraisalHero = React.forwardRef<HTMLElement>((props, r
               size="lg"
               className="bg-amber-500 hover:bg-amber-400 text-white font-semibold px-8 h-12 text-base shadow-lg transition-colors duration-200"
             >
-              <Link to="/request">Request an Appraisal</Link>
+              <Link to="/request/">Request an Appraisal</Link>
             </Button>
 
             <Button
@@ -117,7 +117,7 @@ const ExteriorOnlyDriveByAppraisalHero = React.forwardRef<HTMLElement>((props, r
               variant="outline"
               className="bg-transparent text-white border-white/60 hover:bg-white/10 h-12 text-base transition-colors duration-200"
             >
-              <Link to="/core-appraisal-services">View All Services</Link>
+              <Link to="/core-appraisal-services/">View All Services</Link>
             </Button>
           </motion.div>
 

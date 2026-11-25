@@ -133,7 +133,7 @@ const TaxAssessmentAppealHero = React.forwardRef<HTMLElement>((props, ref) => {
               className="h-12 px-8 text-base font-semibold bg-amber-500 hover:bg-amber-400 text-white border-0 shadow-lg transition-all duration-200"
               style={{ fontFamily: "'Inter', sans-serif" }}
             >
-              <Link to="/request">Request an Appraisal</Link>
+              <Link to="/request/">Request an Appraisal</Link>
             </Button>
             <Button
               asChild
@@ -142,7 +142,7 @@ const TaxAssessmentAppealHero = React.forwardRef<HTMLElement>((props, ref) => {
               className="h-12 px-8 text-base font-semibold bg-transparent text-white border-white/50 hover:bg-white/10 hover:border-white transition-all duration-200"
               style={{ fontFamily: "'Inter', sans-serif" }}
             >
-              <Link to="/contact">Contact Us</Link>
+              <Link to="/contact/">Contact Us</Link>
             </Button>
           </motion.div>
 

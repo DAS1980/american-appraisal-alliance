@@ -113,7 +113,7 @@ const DesktopAppraisalHero = React.forwardRef<HTMLElement>((props, ref) => {
                 boxShadow: "0 4px 20px -4px hsl(42 88% 48% / 0.5)",
               }}
             >
-              <Link to="/request">Request an Appraisal</Link>
+              <Link to="/request/">Request an Appraisal</Link>
             </Button>
 
             <Button
@@ -122,7 +122,7 @@ const DesktopAppraisalHero = React.forwardRef<HTMLElement>((props, ref) => {
               variant="outline"
               className="text-base font-medium h-12 px-8 bg-transparent text-white border-white/40 hover:bg-white/10 hover:border-white/70"
             >
-              <Link to="/core-appraisal-services">View All Services</Link>
+              <Link to="/core-appraisal-services/">View All Services</Link>
             </Button>
           </motion.div>
 

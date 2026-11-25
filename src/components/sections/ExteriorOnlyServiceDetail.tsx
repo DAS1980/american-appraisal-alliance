@@ -439,7 +439,7 @@ const ExteriorOnlyServiceDetail = React.forwardRef<HTMLElement>((props, ref) => 
           <p className="text-muted-foreground text-sm">
             Ready to get started?{" "}
             <Link
-              to="/request"
+              to="/request/"
               className="text-primary font-medium hover:underline underline-offset-2 transition-colors"
             >
               Request an Appraisal →

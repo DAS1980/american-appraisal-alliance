@@ -155,7 +155,7 @@ const TaxAssessmentTurnaround = React.forwardRef<HTMLElement>((props, ref) => {
             </div>
 
             <Button asChild size="sm" className="bg-[hsl(42_88%_48%)] hover:bg-[hsl(36_88%_44%)] text-[hsl(218_65%_14%)] font-semibold mt-1 w-full sm:w-auto self-start">
-              <Link to="/request">Inquire About Rush Delivery</Link>
+              <Link to="/request/">Inquire About Rush Delivery</Link>
             </Button>
           </motion.div>
         </motion.div>
@@ -279,7 +279,7 @@ const TaxAssessmentTurnaround = React.forwardRef<HTMLElement>((props, ref) => {
             </p>
           </div>
           <Button asChild size="sm" variant="outline" className="flex-shrink-0 border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-colors">
-            <Link to="/request">Get Started</Link>
+            <Link to="/request/">Get Started</Link>
           </Button>
         </motion.div>
 

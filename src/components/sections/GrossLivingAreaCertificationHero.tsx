@@ -107,7 +107,7 @@ const GrossLivingAreaCertificationHero = React.forwardRef<HTMLElement>((props, r
               className="text-base font-semibold px-8 h-12"
               style={{ backgroundColor: "hsl(42 88% 48%)", color: "#1a1a1a" }}
             >
-              <Link to="/request">Request an Appraisal</Link>
+              <Link to="/request/">Request an Appraisal</Link>
             </Button>
             <Button
               asChild
@@ -115,7 +115,7 @@ const GrossLivingAreaCertificationHero = React.forwardRef<HTMLElement>((props, r
               variant="outline"
               className="text-base font-semibold px-8 h-12 bg-transparent text-white border-white hover:bg-white/10"
             >
-              <Link to="/measurement-analysis-services">View All Measurement Services</Link>
+              <Link to="/measurement-analysis-services/">View All Measurement Services</Link>
             </Button>
           </motion.div>
 

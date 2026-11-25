@@ -516,7 +516,7 @@ const PrePurchaseAppraisalDetails = React.forwardRef<HTMLElement>(
                 <p className="text-sm text-muted-foreground mt-6">
                   Ready to protect your investment?{" "}
                   <Link
-                    to="/request"
+                    to="/request/"
                     className="text-primary font-medium hover:underline underline-offset-2"
                   >
                     Request a pre-purchase appraisal →

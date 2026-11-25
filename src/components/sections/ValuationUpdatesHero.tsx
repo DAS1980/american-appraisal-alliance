@@ -13,7 +13,7 @@ const ValuationUpdatesHero = React.forwardRef<HTMLElement>((props, ref) => {
       subtitle: "1004D / Recertification",
       description:
         "Updates a prior appraisal to reflect current market conditions. Fannie Mae Form 1004D compliant.",
-      link: "/market-value-update-1004d-recertification",
+      link: "/market-value-update-1004d-recertification/",
     },
     {
       icon: FileCheck,
@@ -21,7 +21,7 @@ const ValuationUpdatesHero = React.forwardRef<HTMLElement>((props, ref) => {
       subtitle: "Observation Report",
       description:
         "Identifies property conditions that may affect FHA loan eligibility. Supports FHA/HUD underwriting requirements.",
-      link: "/fhahud-compliance-observation-report",
+      link: "/fhahud-compliance-observation-report/",
     },
   ];
 
@@ -133,7 +133,7 @@ const ValuationUpdatesHero = React.forwardRef<HTMLElement>((props, ref) => {
                 color: "#1a1a1a",
               }}
             >
-              <Link to="/request">Request an Appraisal</Link>
+              <Link to="/request/">Request an Appraisal</Link>
             </Button>
             <Button
               asChild
@@ -141,7 +141,7 @@ const ValuationUpdatesHero = React.forwardRef<HTMLElement>((props, ref) => {
               variant="outline"
               className="text-base h-12 px-8 bg-transparent text-white border-white/50 hover:bg-white/10 hover:border-white"
             >
-              <Link to="/request">
+              <Link to="/request/">
                 View Our Services
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>

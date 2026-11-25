@@ -106,7 +106,7 @@ const MeasurementAnalysisHero = React.forwardRef<HTMLElement>((props, ref) => {
                 color: "#1a1a2e",
               }}
             >
-              <Link to="/request">Request an Appraisal</Link>
+              <Link to="/request/">Request an Appraisal</Link>
             </Button>
 
             <Button
@@ -115,7 +115,7 @@ const MeasurementAnalysisHero = React.forwardRef<HTMLElement>((props, ref) => {
               variant="outline"
               className="text-base h-12 px-8 bg-transparent text-white border-white hover:bg-white/10 font-medium"
             >
-              <Link to="/measurement-analysis-services">Explore Services</Link>
+              <Link to="/measurement-analysis-services/">Explore Services</Link>
             </Button>
           </motion.div>
 

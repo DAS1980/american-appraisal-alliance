@@ -104,7 +104,7 @@ const AboutHero = React.forwardRef<HTMLElement>((props, ref) => {
               size="lg"
               className="h-12 px-8 text-base font-semibold bg-[hsl(42_88%_48%)] text-[hsl(218_65%_14%)] hover:bg-[hsl(42_88%_42%)] border-0 shadow-lg"
             >
-              <Link to="/request">Request an Appraisal</Link>
+              <Link to="/request/">Request an Appraisal</Link>
             </Button>
           </motion.div>
         </div>

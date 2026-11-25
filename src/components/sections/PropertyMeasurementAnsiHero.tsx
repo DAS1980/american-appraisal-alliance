@@ -132,7 +132,7 @@ const PropertyMeasurementAnsiHero = React.forwardRef<HTMLElement>((props, ref) =
                 boxShadow: "0 4px 20px -4px hsl(42 88% 48% / 0.5)",
               }}
             >
-              <Link to="/request">Request an Appraisal</Link>
+              <Link to="/request/">Request an Appraisal</Link>
             </Button>
 
             <Button
@@ -141,7 +141,7 @@ const PropertyMeasurementAnsiHero = React.forwardRef<HTMLElement>((props, ref) =
               variant="outline"
               className="text-base font-medium h-12 px-8 bg-transparent text-white border-white/50 hover:bg-white/10 hover:border-white"
             >
-              <Link to="/measurement-analysis-services">View All Measurement Services</Link>
+              <Link to="/measurement-analysis-services/">View All Measurement Services</Link>
             </Button>
           </motion.div>
 

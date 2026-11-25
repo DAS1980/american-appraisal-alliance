@@ -194,7 +194,7 @@ const ContactDetails = React.forwardRef<HTMLElement>((props, ref) => {
             size="lg"
             className="bg-[hsl(42,88%,48%)] text-[hsl(218,65%,14%)] hover:bg-[hsl(42,88%,42%)] font-semibold px-8 font-sans"
           >
-            <Link to="/request">Request an Appraisal</Link>
+            <Link to="/request/">Request an Appraisal</Link>
           </Button>
         </motion.div>
       </div>

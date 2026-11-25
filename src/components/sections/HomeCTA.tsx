@@ -110,7 +110,7 @@ const HomeCTA = React.forwardRef<HTMLElement>((props, ref) => {
                 boxShadow: "0 4px 20px -4px hsl(42 88% 48% / 0.5)",
               }}
             >
-              <Link to="/request">Request an Appraisal</Link>
+              <Link to="/request/">Request an Appraisal</Link>
             </Button>
 
             <Button
@@ -124,7 +124,7 @@ const HomeCTA = React.forwardRef<HTMLElement>((props, ref) => {
                 color: "white",
               }}
             >
-              <Link to="/contact">Contact Us</Link>
+              <Link to="/contact/">Contact Us</Link>
             </Button>
           </motion.div>
 

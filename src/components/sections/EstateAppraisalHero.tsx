@@ -151,7 +151,7 @@ const EstateAppraisalHero = React.forwardRef<HTMLElement>((props, ref) => {
                 color: "hsl(218 65% 14%)",
               }}
             >
-              <Link to="/request">Request an Appraisal</Link>
+              <Link to="/request/">Request an Appraisal</Link>
             </Button>
 
             <Button
@@ -160,7 +160,7 @@ const EstateAppraisalHero = React.forwardRef<HTMLElement>((props, ref) => {
               variant="outline"
               className="text-base font-medium px-8 h-12 bg-transparent text-white border-white/50 hover:bg-white/10 hover:border-white"
             >
-              <Link to="/about">About Our Appraisers</Link>
+              <Link to="/about/">About Our Appraisers</Link>
             </Button>
           </motion.div>
 

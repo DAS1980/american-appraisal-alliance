@@ -138,7 +138,7 @@ const TaxAssessmentCTA = React.forwardRef<HTMLElement>((props, ref) => {
                   color: "hsl(218 65% 14%)",
                 }}
               >
-                <Link to="/request">Request an Appraisal</Link>
+                <Link to="/request/">Request an Appraisal</Link>
               </Button>
 
               {/* Reassurance */}

@@ -114,7 +114,7 @@ const GrossLivingAreaCTA = React.forwardRef<HTMLElement>((props, ref) => {
                 boxShadow: "0 4px 20px -4px hsl(42 88% 48% / 0.5)",
               }}
             >
-              <Link to="/request" className="flex items-center gap-2">
+              <Link to="/request/" className="flex items-center gap-2">
                 Request an Appraisal
                 <ArrowRight className="h-5 w-5" />
               </Link>
@@ -126,7 +126,7 @@ const GrossLivingAreaCTA = React.forwardRef<HTMLElement>((props, ref) => {
               variant="outline"
               className="text-base font-semibold px-8 py-6 h-auto bg-transparent text-white border-white/40 hover:bg-white/10"
             >
-              <Link to="/contact">Contact Our Team</Link>
+              <Link to="/contact/">Contact Our Team</Link>
             </Button>
           </motion.div>
 
