@@ -41,7 +41,7 @@ import { BlogListing } from "@/components/blog/BlogListing";
 import { BlogArticle } from "@/components/blog/BlogArticle";
 // LPS-1667: the posts' own frozen paths are the only record of a hub's earlier
 // slugs, so the router reads them to keep pre-rename article URLs resolving.
-import { getPostsForPage } from "@/lib/blog-data";
+import { getPostsForPage, getBlogPages } from "@/lib/blog-data";
 
 // Loading component for lazy-loaded pages
 const PageLoader = () => (
@@ -86,6 +86,25 @@ function stripRouterBase(slug: string): string {
 }
 
 /**
+ * Reload the page once per path per browser session when a bundled page chunk
+ * cannot be fetched (stale deployment). Returns true if a reload was started.
+ * The sessionStorage guard prevents a reload loop if the chunk is genuinely
+ * unavailable; storage errors (private mode) disable the reload safely.
+ */
+function reloadOnceForStaleChunk(): boolean {
+  if (typeof window === 'undefined') return false;
+  try {
+    const key = `aaa:chunk-reload:${window.location.pathname}`;
+    if (window.sessionStorage.getItem(key)) return false;
+    window.sessionStorage.setItem(key, String(Date.now()));
+    window.location.reload();
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+/**
  * Get or create a lazy-loaded page component for a slug.
  * Uses a cache to ensure the same component instance is returned for the same slug.
  */
@@ -122,6 +141,12 @@ function getLazyPageComponent(slug: string, filePath?: string): ComponentType {
             return await loader();
           } catch (e2) {
             if (!miss(e2)) throw e2;
+            // The chunk is part of the build, so a fetch failure usually means
+            // this tab is running an older deployment whose hashed chunks no
+            // longer exist (Cloudflare answers them with the HTML fallback).
+            // Reload once to pick up the current deployment instead of
+            // showing a false 404. (11/25/2026)
+            if (reloadOnceForStaleChunk()) return new Promise<never>(() => {});
             console.warn(`[Router] filePath chunk failed after retry: ${filePath}, falling back to convention`);
           }
         }
@@ -142,6 +167,12 @@ function getLazyPageComponent(slug: string, filePath?: string): ComponentType {
       return await import(`./pages/${componentName}.tsx`);
     } catch (e) {
       if (!miss(e)) throw e;
+      // The page IS in this build (it is in the bundled page glob), so a fetch
+      // failure means a stale deployment rather than a missing page: reload
+      // once instead of rendering a false 404. (11/25/2026)
+      if (`./pages/${componentName}.tsx` in pageModules && reloadOnceForStaleChunk()) {
+        return new Promise<never>(() => {});
+      }
       try {
         return await import(`./pages/${relSlug.charAt(0).toUpperCase() + relSlug.slice(1)}.tsx`);
       } catch (e2) {
@@ -798,7 +829,10 @@ function LinkInterceptor({ routes }: { routes: PageRoute[] }) {
         const pathname = url.pathname.toLowerCase().replace(/\/$/, '') || '/';
         if (isHandled(pathname)) {
           e.preventDefault();
-          navigate(pathname + url.search + url.hash);
+          // Navigate to the canonical trailing-slash URL (matching the
+          // canonical tags, sitemap and Cloudflare's 308s) and keep any query
+          // string and fragment, e.g. /request/#appraisal-form. (11/25/2026)
+          navigate(withTrailingSlash(pathname) + url.search + url.hash);
         }
       } catch {
         return;
@@ -812,15 +846,49 @@ function LinkInterceptor({ routes }: { routes: PageRoute[] }) {
   return null;
 }
 
+/** "/request" -> "/request/"; "/" unchanged. */
+function withTrailingSlash(pathname: string): string {
+  return pathname === '/' || pathname.endsWith('/') ? pathname : `${pathname}/`;
+}
+
 /**
  * Resets scroll position to the top whenever the route changes.
+ * Keyed on the slash-insensitive path so canonicalizing "/request" to
+ * "/request/" is not treated as a second navigation.
  */
 function ScrollToTop() {
   const { pathname } = useLocation();
+  const routeKey = pathname.replace(/\/+$/, '') || '/';
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [pathname]);
+  }, [routeKey]);
+
+  return null;
+}
+
+/**
+ * Client-side counterpart of Cloudflare's trailing-slash 308s (11/25/2026).
+ * When the router is showing a KNOWN page or blog post at a URL without its
+ * trailing slash (e.g. after a <Link to="/request">), replace the history
+ * entry with the canonical "/request/" form, keeping search and hash.
+ * Unknown paths are left alone so they still render NotFound.
+ */
+function CanonicalTrailingSlash({ routes }: { routes: PageRoute[] }) {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const { pathname, search, hash } = location;
+    if (pathname === '/' || pathname.endsWith('/') || /\.[a-z0-9]+$/i.test(pathname)) return;
+    const key = pathname.toLowerCase();
+    const known =
+      routes.some((r) => !r.filePath?.endsWith('.html') && r.path.toLowerCase() === key) ||
+      getBlogPages().some((page) =>
+        getPostsForPage(page.page_id).some((post) => post.post_path.replace(/\/+$/, '').toLowerCase() === key),
+      );
+    if (known) navigate(`${pathname}/${search}${hash}`, { replace: true });
+  }, [location, routes, navigate]);
 
   return null;
 }
@@ -937,6 +1005,7 @@ const App = () => {
           }}
         >
           <ScrollToTop />
+          <CanonicalTrailingSlash routes={routes} />
           <ParentNavigationListener />
           <LinkInterceptor routes={routes} />
           <RouteErrorBoundary>
